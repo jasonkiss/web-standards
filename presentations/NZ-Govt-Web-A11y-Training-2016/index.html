@@ -1,0 +1,1592 @@
+<!doctype html>
+<html lang="en-NZ">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>NZ Govt Web A11y Training &#8212; 2016</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black-custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<script src="js/jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="s1">
+					<h1><img style="display: block; margin: 0 auto 40px;" src="img/All-of-govt_NZ_Gov.jpg" alt="New Zealand Government"> <span class="yellow">Web A11y Training 2016</span></h1>
+					<p>Jason Kiss<br>Senior Advisor, Digital Engagement</p>
+					<div style="margin-top: 50px;">
+						<img src="img/dia-logo.png" alt="Department of Internal Affairs - Te Tari Taiwhenua">
+					</div>
+				</section>
+				<section id="s5" class="align-left">
+					<figure>
+						<img src="img/ramp-fail.jpg" alt="">
+						<cite><a href="https://www.pinterest.com/pin/395120567277695115/">Image source</a></cite>
+					</figure>
+					<div class="right middle">
+						<h2>Web accessibility</h2>
+						<p>What is it?</p>
+					</div>
+					<aside class="notes">
+						<p>Accessibility is typically understood to be about ensuring that people with disabilities and special devices or assistive technologies can access your establishment or website.</p>
+					</aside>
+				</section>
+				<section id="s6" class="align-left">
+					<figure>
+						<img src="img/traffic-light.jpg" alt="">
+						<cite><a href="http://www.flickr.com/photos/wasabicube/156080502/">Image source</a></cite>
+					</figure>
+					<div class="right middle">
+						<h2>Inclusive design</h2>
+					</div>
+					<aside class="notes">
+						<p>When I think about accessibility, I tend to consider it more as part of a broader social imperative to include all people, regardless of ability or technology, but with special attention being paid to the disabled, at which point we are really talking about universal or inclusive design, or inclusion in general.</p>
+					</aside>
+				</section>
+				<section id="s7" class="big">
+					<p>A <strong>broad range</strong> of people use the web.<p>
+					<p class="yellow">Accessibility / inclusive design benefit all of them<br><strong>(and all of us)</strong></p>
+					<aside class="notes">
+						<p>When we think of it this way, as a matter of inclusion, we have an increase in scope, making it easier to consider the very wide range of scenarios and individuals, some disabled, some not, that benefit from accessibility. We are talking about all the people that our websites communicate with and serve, or should, and how accessible and inclusive design benefits them, but equally all of us and society in general.</p>
+					</aside>
+				</section>
+				<section id="s8" class="align-left">
+					<figure>
+						<img src="img/vision.jpg" alt="">
+						<cite><a href="https://www.flickr.com/photos/jox1989/4764186425/">Image source</a></cite>
+					</figure>
+					<h2 class="top-right">Sensory</h2>
+					<div class="right middle">
+						<h3>Vision Impairments</h3>
+						<ul>
+							<li>Blindness</li>
+							<li>Low Vision</li>
+							<li>Color Blindness</li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>From experience, I'd say that while many more people than ever before have now heard of web accessibility, they tend mainly think of blind users, which is reasonable considering the highly visual and mouse-oriented nature of most web design and interaction.</p>
+						<p>But most people with visual impairments are not blind, but have varying degrees of low or impaired vision. Some individuals might have 20/20 vision, but lack the ability to clearly distinguish different colours.</p>
+					</aside>
+				</section>
+				<section id="s9" class="align-left" data-transition="zoom-in slide-out">
+					<figure>
+						<img src="img/hearing.jpg" alt="">
+						<cite><a href="https://www.flickr.com/photos/ingmar/4778027031/">Image source</a></cite>
+					</figure>
+					<h2 class="top-right">Sensory</h2>
+					<div class="right middle">
+						<h3>Hearing Impairments</h3>
+						<ul>
+							<li>Deafness</li>
+							<li>Hard of hearing</li>
+							<li>Tinnitus</li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>Another form of sensory disability is hearing impairment, which ranges from those who are hard of hearing, to those who are profoundly deaf and who communicate primarily by means of sign language, which is a unique language quite distinct from the local primary written and spoken language. In terms of how closely connected language and culture are, many in the Deaf community consider themselves to constitute a unique culture or linguistic group.</p>
+						<p>Other people might suffer from tinnitus, or a ringing in the ears. This can be distracting, cause headaches, and make it difficult to concentrate, and listen.</p>
+					</aside>
+				</section>
+				<section id="s10" class="align-left">					
+					<figure>
+						<img src="img/hands.jpg" alt="">
+						<cite><a href="https://www.flickr.com/photos/chrisjones/24970847">Image source</a></cite>
+					</figure>
+					<h2 class="top-right">Physical</h2>
+					<div class="right middle">
+						<h3>Diminished motor control</h3>
+						<ul>
+							<li>Arthritis</li>
+							<li>Cerebral Palsy</li> 
+							<li>Multiple Sclerosis (MS)</li>
+							<li>Parkinson’s Disease</li>
+							<li>Muscular Dystrophy (MD)</li>
+							<li>Paralysis</li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>Then there's a whole range of conditions that involve motor control, which translates to an inability or difficulty in doing things like using a mouse or typing.</p>
+						<p>This might be caused by things like arthritis, or conditions of the central nervous system like Cerebral Palsy, Multiple Sclerosis, and Parkinson's. Or degeneration of muscle tissue as is the case with Muscular Dystrophy.</p>
+						<p>Others might suffer some degree of paralysis, partial or complete, that prevents them from using one or both arms. This can be caused by an accident, or a stroke, or as a result of disease. One can also be born with some degree of paralysis.</p>
+					</aside>
+				</section>
+				<section id="s11">
+					<figure>
+						<img src="img/cognitive.jpg" alt="">
+						<cite><a href="https://www.flickr.com/photos/pinkcotton/3913458235">Image source</a></cite>
+					</figure>
+					<h2 class="top-right" style="line-height: 1;">Cognitive / Neurological</h2>
+					<div class="right middle">
+						<ul style="margin-top: 80px;">
+							<li>ADD/ADHD</li>
+							<li>Autism</li>
+							<li>Down syndrome</li>
+							<li>Dyslexia</li>
+							<li>Dyscalculia</li>
+							<li>Learning Disabilities</li>
+							<li>Memory Loss</li>
+							<li>Photo-sensitive epilepsy</li>
+							<li>Traumatic Brain Injury</li>
+						</ul>						
+					</div>
+					<aside class="notes">
+						<p>In terms of cognitive and neurological disabilities, again there is a whole range of conditions that can variously affect a person's ability to interact and communicate with the web.</p>
+					</aside>
+				</section>
+				<section id="s12">
+					<figure>
+						<img src="img/arm.jpg" alt="">
+						<cite><a href="https://www.flickr.com/photos/santheo/2438840018">Image source</a></cite>
+					</figure>
+					<figure>
+						<img src="img/tired.jpg" alt="">
+						<cite><a href="https://www.flickr.com/photos/lady_lush/1907184179">Image source</a></cite>
+					</figure>
+					<h2 class="top-right">Other</h2>
+					<div class="right middle">
+						<ul>
+							<li>Repetitive Stress Injury</li> 
+							<li>Carpal Tunnel Syndrome</li>
+							<li>Fatigue, lack of sleep</li>
+							<li>Temporary injury</li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>And there are a number of other conditions that we don't normally associate with or consider disabilities, but nonetheless can seriously impact one's ability to communicate, learn, and manipulate information and physical objects. These are conditions such as repetitive stress injuries, carpal tunnel syndrome, simple fatique or lack of sleep, and all kinds of temporary injuries such as breaking an arm.</p>
+					</aside>
+				</section>
+				<section id="s13" data-background="img/nz.png" data-background-transition="zoom" data-transition-speed="slow">
+					<h2>Percentage of people with disability, 2013</h2>
+					<figure>
+						<table>
+							<thead>
+								<tr>
+									<th>0–14 yrs</th>
+									<th>15–44 yrs</th>
+									<th>45–64 yrs</th>
+									<th>65+ yrs</th>
+									<th>Total</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>11%</td>
+									<td>16%</td>
+									<td>28%</td>
+									<td>59%</td>
+									<td>24%</td>
+								</tr>
+							</tbody>
+						</table>
+						<cite class="align-center" style="top: 100%; width: 100%; font-size: 0.6em;">2013 Disability Survey, Statistics NZ</cite>
+					</figure>
+					<div class="align-center" style="max-width: 460px; margin: 100px auto 0;">
+						<p class="yellow align-left">In 25 years, between 22–25% of New Zealanders will be 65+ years old or older.</p>
+						<cite class="small align-right"><i><a href="http://www.stats.govt.nz/browse_for_stats/population/estimates_and_projections/NationalPopulationProjections_HOTP2014.aspx">National Population Projections: 2014(base)–2068<br>Statistics NZ</a></i></cite>						
+					</div>
+					<aside class="notes">
+						<p>In New Zealand, based on the 2013 Disability Survey, 24% of New Zealanders have one or more disability. Note the high percentage of disability among those who are 65 years of age and older.</p>
+						<p>In 2014, 14% of New Zealanders were 65 or over. This number could almost double in the next 25 years.</p>
+						<p>Disability or some kind of impairment will be, for many or most of us, just a natural part of ageing, so while you or I might not see any personal connection to the need for accessibility at this point in our lives, do remember that more likely than not, we will as we get older. Be selfish about it!</p>
+					</aside>
+				</section>
+				<section id="s14" data-transition="zoom-in fade-out">
+					<h2>But, not just disabilities...</h2>
+					<aside class="notes">
+						<p>But accessibility and inclusive design are not concerned simply with improving things for people with disabilities. There are all sorts of other conditions and situations to which they are directly related and mean to address.</p>
+					</aside>
+				</section>
+				<section id="s15" data-transition="zoom-in fade-out">
+					<h2>Cultural, linguistic, and generational differences...</h2>
+					<figure class="center">
+						<img src="img/cultures.jpg" alt="Collage of photos of individuals from all over the world.">
+						<cite><a href="https://www.flickr.com/photos/danorth1/482228268">Image source</a></cite>
+					</figure>
+					<figure class="center">
+						<img src="img/vcr.gif" alt="Photo of a VCR machine.">
+						<cite><a href="https://www.flickr.com/photos/churbuck/230037778">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>Our communities are more and more multicultural.</p>
+						<p>Different cultures have different sensibilities to things like colours and certain phrases or uses of language.</p>
+						<p>Older generations can be less familiar with newer, everyday technology and how to use it.</p>
+					</aside>
+				</section>
+				<section id="s16" data-transition="zoom-in fade-out">
+					<h2>Different devices...</h2>
+					<figure class="float-left">
+						<img src="img/mobiles.jpg" alt="Photo of two feature phones and an iPad.">
+						<cite><a href="https://www.flickr.com/photos/seanhobson/4504828599">Image source</a></cite>
+					</figure>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/modem.jpg" alt="3Com US Robotics 56K modem.">
+							<cite><a href="https://www.flickr.com/photos/zigazou76/16278483738">Image source</a></cite>
+						</figure>
+						<figure>
+							<img src="img/old-computer.jpg" alt="An old desktop monitor showing WinXP wallpaper, with joystick, keyboard, and printer.">
+							<cite><a href="https://www.flickr.com/photos/mrmunningsontour/2479535655">Image source</a></cite>
+						</figure>
+					</div>
+					<aside class="notes">
+						<p>There are too many devices to keep track of! Many people are still using older technologies that need to be considered. Some people can't afford or simply don't have access to high-speed internet access, and so they get online by using dial-up modems. Similarly, many people are unable to upgrade their computers, so are working with machines that may be slow or unable to provide a pleasant experience when working with some of the more current and resource intensive websites or software.</p>
+					</aside>
+				</section>
+				<section id="s17" data-transition="zoom-in fade-out">
+					<h2>Different browsers...</h2>
+					<figure class="center">
+						<img src="img/browsers.png" alt="Logos for Chrome, Firefox, Opera, Safari, and Internet Explorer.">
+						<cite><a href="http://www.paulirish.com/lovesyou/new-browser-logos/browser_logos-512.png">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>Things are getting much better in the browser support space. Most current versions of popular browsers deliver a similar standards-compliant experience. It's not perfect--you still need to perform cross-browser and cross-device testing, but it's much better than it used to be.</p>
+					</aside> 
+				</section>
+				<section id="s18" data-transition="zoom-in fade-out">
+					<h2>Different environments...</h2>
+					<div style="display: inline-block;">
+						<figure>
+							<img width="377" height="275" src="img/driving.jpg" alt="A man texting while seated behind wheel of car.">
+							<cite><a href="https://www.flickr.com/photos/indyplanets/3926147797">Image source</a></cite>
+						</figure>
+						<figure>
+							<img width="377" height="275" src="img/concert.jpg" alt="Fans at a rock concert.">
+							<cite><a href="https://www.flickr.com/photos/anirudhkoul/2841482484">Image source</a></cite>
+						</figure>
+					</div>
+					<div style="display: inline-block;">
+						<figure>
+							<img width="377" height="275" src="img/bus.jpg" alt="People hanging on to railing in a crowded bus.">
+							<cite><a href="https://www.flickr.com/photos/benchilada/2468200488">Image source</a></cite>
+						</figure>
+						<figure>
+							<img width="377" height="275" src="img/theatre.jpg" alt="People in a large theatre hall.">
+							<cite><a href="https://www.flickr.com/photos/damiavos/4135959259">Image source</a></cite>
+						</figure>
+					</div>
+					<aside class="notes">
+						<p>Then there are all the different environments in which, largely thanks to mobile computing, people are able to get online and use the web:</p>
+						<ul>
+							<li>in their car</li>
+							<li>on a crowded bus</li>
+							<li>in noisy environments, e.g., a concert</li>
+							<li>in environments requiring quiet, e.g., a lecture or theatre play</li>
+						</ul>
+					</aside>
+				</section>
+				<section id="s19" data-transition="slide-in fade-out">
+					<h2>Assistive technologies</h2>
+					<aside class="notes">
+						<p>People with disabilities access the web using all sorts of different technologies to assist their interaction with computers.</p>
+					</aside>
+				</section>
+				<section id="s20" data-transition="zoom-in fade-out">
+					<h2>Keyboards</h2>
+					<figure class="center">
+						<img src="img/kbd.jpg" alt="Close up of left hand on a Mac keyboard.">
+						<cite><a href="https://www.flickr.com/photos/matsuyuki/6902212467">Image source</a></cite>
+					</figure>
+				</section>
+				<section id="s21" data-transition="zoom-in fade-out">
+					<h2>Large print keyboards</h2>
+					<figure class="center">
+						<img src="img/kbd2.jpg" alt="Large print keyboard with yellow keys on black body.">
+						<cite><a href="http://www.aisquared.com/products/large-print-bluetooth-mini-keyboards">Image source</a></cite>
+					</figure>
+				</section>
+				<section id="s22" data-transition="zoom-in fade-out">
+					<h2>One-handed keyboards</h2>
+					<figure class="center">
+						<img src="img/kbd3.jpg" alt="Maltron one-handed keyboard for the right hand.">
+						<cite><a href="https://www.enablemart.com/maltron-one-handed-keyboards-right-and-left-hand">Image source</a></cite>
+					</figure>
+				</section>
+				<section id="s23">
+					<h2>Mice and trackballs</h2>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/trackball.jpg" alt="Large Kensington trackball.">
+							<cite><a href="http://www.ergovancouver.net/mouse_trackball_kensington_slimblade.htm">Image source</a></cite>
+						</figure>
+					</div>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/minicute.jpg" alt="EZ Minicute vertical mouse.">
+							<cite><a href="http://www.m4gic.net/2013/04/minicute-ezmouse-test-review-maus/">Image source</a></cite>
+						</figure>
+					</div>
+				</section>
+				<section id="s24">
+					<h2>Headwands</h2>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/headwand.jpg" alt="Straight headwand strapped to a styrofoam head for display.">
+							<cite><a href="https://syeqahz.wordpress.com/2010/02/16/hardware-characteristics-and-performance-of-peripherals/">Image source</a></cite>
+						</figure>
+						<figure>
+							<img src="img/headwand2.jpg" alt="Articulated headwand with head brace.">
+							<cite><a href="http://t3h1onlineb.wikispaces.com/Wands+and+Sticks">Image source</a></cite>
+						</figure>
+					</div>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/headwand3.jpg" alt="Man with curved headwand typing at keyboard in front of monitor.">
+							<cite><a href="http://t3h1onlineb.wikispaces.com/Wands+and+Sticks">Image source</a></cite>
+						</figure>
+						<figure>
+							<img src="img/headwand4.jpg" alt="Man with short headwand using onscreen keyboard on iPad.">
+							<cite><a href="https://www.technibble.com/interview-with-computer-repair-inspiration-kevin-burg/">Image source</a></cite>
+						</figure>
+					</div>
+				</section>
+				<section id="s25">
+					<h2>Mouthsticks</h2>
+					<div>
+						<figure class="center">
+							<img height="300" width="510" src="img/mouthstick2.jpg" alt="Mouthstick being used to type on iPad.">
+							<cite><a href="http://www.mundstab.de/">Image source</a></cite>
+						</figure>
+					</div>
+					<div>
+						<figure style="display: inline-block;">
+							<img src="img/mouthstick.jpg" alt="Man using short mouthstick on special keyboard for mouthsticks.">
+							<cite><a href="http://www.livingmadeeasy.org.uk/communication/alternative-computer-inputs-_-head-operated-p/head-mouth-stick-keboard-0110707-1326-information.htm">Image source</a></cite>
+						</figure>
+						<figure style="display: inline-block;">
+							<img src="img/mouthstick3.jpg" alt="4 mouthsticks.">
+							<cite><a href="http://t3h1onlineb.wikispaces.com/Wands+and+Sticks">Image source</a></cite>
+						</figure>
+					</div>
+				</section>
+				<section id="s26">
+					<h2>Button switches</h2>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/moon-switch.jpg" alt="Red AMDI moon switch.">
+							<cite><a href="http://www.perkinsproducts.org/store/en/learning-disability/1334-amdi-moon-switch.html">Image source</a></cite>
+						</figure>
+					</div>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/mount-switch.jpg" alt="Blue AMDI moon switch on articultated mounting brace.">
+							<cite><a href="http://www.amdi.net/index.php?route=product/product&amp;product_id=498">Image source</a></cite>
+						</figure>
+					</div>
+				</section>
+				<section id="s27" data-transition="zoom-in fade-out">
+					<h2>Sip and puff switches</h2>
+					<div>
+						<figure class="center">
+							<img src="img/sip-and-puff.jpg" alt="Man using sip and puff switch with onscreen keyboard.">
+							<cite><a href="https://matty713.wordpress.com/2013/09/12/sip-and-puff-device-2/">Image source</a></cite>
+						</figure>
+					</div>
+					<figure class="center">
+						<img src="img/sip-and-puff2.jpg" alt="Girl with sip and puff switch.">
+						<cite><a href="http://orin.com/">Image source</a></cite>
+					</figure>
+				</section>
+				<section id="s28" data-transition="zoom-in fade-out">
+					<h2>Eye blink switch</h2>
+					<div>
+						<figure class="center">
+							<img src="img/eye-blink-switch.gif" alt="Close up of fibre optic eye blink switch next to woman's eye.">
+							<cite><a href="https://www.specialneedscomputers.ca/index.php?l=product_detail&amp;p=222">Image source</a></cite>
+						</figure>
+					</div>
+				</section>
+				<section id="s29" data-transition="zoom-in fade-out">
+					<h2>Proximity switch</h2>
+					<div>
+						<figure class="center">
+							<img src="img/proximity-switch.jpg" alt="Hand hovering over an Ablenet Candy Corn proximitiy switch.">
+							<cite><a href="http://www.ergocanada.com/detailed_specification_pages/ablenet_candy_corn_proximity_switch.html">Image source</a></cite>
+						</figure>
+					</div>
+				</section>
+				<section id="s30" data-transition="zoom-in fade-out">
+					<h2>Switch scanning</h2>
+					<div>
+						<figure class="center">
+							<img src="img/switch-scanning.gif" alt="Animated gif of scanning software selecting letter on SwithXS onscreen keyboard.">
+							<cite><a href="http://www.orin.com/access/switchxs/">Image source</a></cite>
+						</figure>
+					</div>
+				</section>
+				<section id="s30b">
+					<h2>Speech/voice recognition</h2>
+					<div class="center" style="display: inline-block;">
+						<figure>
+							<img src="img/dragon.jpg" alt="Dragon Naturally Speaking.">
+							<cite><a href="http://assistivetechcaraiman.weebly.com/motor-aspects-for-writing.html">Image source</a></cite>
+						</figure>
+					</div>
+					<div>
+						<div style="display: inline-block;">
+						<figure>
+							<img src="img/cortana.png" alt="Cortana logo.">
+							<cite><a href="https://twitter.com/cortanaquotes">Image source</a></cite>
+						</figure>
+					</div>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/siri.png" alt="VoiceOver logo.">
+							<cite><a href="http://www.icons101.com/icon/id_70095/setid_2194/iOS_7_by_dtafalonso/Siri">Image source</a></cite>
+						</figure>
+					</div>
+				</div>
+				</section>
+				<section id="s31">
+					<h2>Screen readers</h2>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/jaws.jpg" alt="JAWS for Windows banner image.">
+							<cite><a href="http://georgialibraries.org/glass/jaws/">Image source</a></cite>
+						</figure>
+					</div>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/window-eyes.jpg" alt="Window-Eyes banner image.">
+							<cite><a href="http://www.gwmicro.com/">Image source</a></cite>
+						</figure>
+					</div>
+					<div>
+						<div style="display: inline-block;">
+						<figure>
+							<img height="200" width="200" src="img/nvda.png" alt="NVAccess logo.">
+							<cite><a href="http://www.nvaccess.org">Image source</a></cite>
+						</figure>
+					</div>
+					<div style="display: inline-block;">
+						<figure>
+							<img height="200" width="200" src="img/voiceover.png" alt="VoiceOver logo.">
+							<cite><a href="http://espirian.co.uk/speaking-text-on-your-mac/">Image source</a></cite>
+						</figure>
+					</div>
+					<div  style="display: inline-block;">
+						<figure>
+							<img height="200" width="200" src="img/orca.jpg" alt="Orca logo.">
+							<cite><a href="http://portale.siva.it/en-GB/databases/products/detail/id-19185">Image source</a></cite>
+						</figure>
+					</div>
+				</div>
+				</section>
+				<section id="s31b" data-transition="slide-in fade-out">
+					<h2>Screen magnifiers</h2>
+					<div>
+						<figure class="center">
+							<img src="img/zoom.png" alt="Screen magnifier in Mac OS.">
+							<cite><a href="http://www.zoomitapp.com/">Image source</a></cite>
+						</figure>
+					</div>
+					<div style="display: inline-block;">
+						<figure>
+							<img src="img/zoom2.jpg" alt="Screen magnifier in Windows 8.">
+							<cite><a href="https://www.microsoft.com/enable/products/windows8/">Image source</a></cite>
+						</figure>
+					</div>
+				</section>
+				<section id="s32" data-transition="slide-in fade-out">
+					<h2>Braille displays</h2>
+					<div>
+						<figure class="center">
+							<img src="img/braille2.jpg" alt="Braille Memo BM46 40 cell Braille display.">
+							<cite><a href="https://www.flickr.com/photos/kazuhito/132436943">Image source</a></cite>
+						</figure>
+					</div>
+					<figure class="center">
+						<img src="img/braille.jpg" alt="Humanware Braille Notetaker.">
+						<cite><a href="https://www.flickr.com/photos/jpasden/2705451575">Image source</a></cite>
+					</figure>
+				</section>
+				<section id="s33" data-transition="zoom-in fade-out">
+					<h2>Affordable Braille display</h2>
+					<figure class="center">
+						<img src="img/orbit-braille.jpg" alt="Neil Jarvis from the RNZFB holding the new, affordable Orbit Braille display.">
+						<cite><a href="https://blindfoundation.org.nz/tech-innovation/first-affordable-braille-reader-launched/">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>Even the simplest of Braille displays have costed thousands of dollars. This year, a new model, the Orbit, has been released with a cost of approximately NZD$700. It takes flash cards, and is USB and Bluetooth enabled.</p>
+					</aside>
+				</section>
+				<section id="s34">
+					<h2>Why should we care?</h2>
+					<aside class="notes">
+						<p>But why should we care? </p>
+						<p>It's certainly easy enough, without even considering the question of disabled persons, to understand that it makes good sense to cater to the use of different devices in different scenarios: users are more and more visiting sites using different devices, and doing so in a variety of different environments as opposed to the traditional desktop home or office computer scenario.</p>
+						<p>But there are good reasons to be equally concerned with including or accommodating people with disabilities.</p>
+					</aside>
+				</section>
+				<section id="s35">
+					<figure class="center">
+						<img width="960" height="700" src="img/stick.jpg" alt="">
+						<cite><a href="https://www.flickr.com/photos/found_drama/3564483107">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>There is of course, the Stick.</p>
+					</aside>
+				</section>
+				<section id="s36" data-transition="zoom-in fade-out">
+					<img class="center" src="img/coat-of-arms.png" alt="NZ coat of arms">
+					<h2>NZ Human Rights Act 1993</h2>
+					<p class="yellow">Prohibits discrimination in the provision of goods and services on the basis of disability</p>
+					<aside class="notes">
+						<p>The New Zealand Human Rights Act of 1993 prohibits discrimination in the provision of goods and services on the basis of disability.</p>
+						<p>And while this legislation doesn't specifically address online goods and services, it's not unreasonable, by way of what we call the “bricks and mortar” analogy, to consider your online presence as a simple extension of your physical one.</p>
+					</aside>
+				</section>
+				<section id="s37" data-transition="zoom-in fade-out">
+					<img class="center" src="img/un.png" alt="United Nations">
+					<h2 style="font-size: 1em;">UN Convention on the Rights of Persons with Disabilities (Article 9)</h2>
+					<p class="align-left">2. States Parties shall also take appropriate measures:<br>
+					<span class="yellow">a) To develop, promulgate and monitor...the accessibility of facilities and services open or provided to the public;<br>
+					....<br>
+					g) To promote access for persons with disabilities to new information and communications technologies and systems, including the Internet;</span></p>
+					<aside class="notes">
+						<p>On an international scale, New Zealand was one of the first countries to fully ratify the UN Convention on the Rights of Persons with Disabilities (or UNCRPD), which explicitly addresses the provision of services on the Internet.</p>
+						<p>So the legislative stick, so to speak, is only getting bigger.</p>
+					</aside>
+				</section>
+				<section id="s38" data-transition="zoom-in fade-out">
+					<h2 class="offscreen">Litigation</h2>
+					<figure class="center">
+						<img src="img/gavel.jpg" alt="">
+						<cite><a href="https://www.flickr.com/photos/fabliaux/383476178">Image source</a></cite>
+					</figure>
+					<div style="background: rgba(255,255,255,0.7); padding: 5px 10px 0; position: absolute; top: 50px; right: 200px;">
+						<h3 class="black" style="margin-bottom: 0;">Australia</h3>
+						<p class="black" style="margin-top: 0;">SOCOG (2000)</p>
+					</div>
+					<div style="background: rgba(255,255,255,0.7); padding: 5px 10px 0; position: absolute; top: 250px; right: 50px;">
+						<h3 class="black" style="margin-bottom: 0;">Canada</h3>
+						<p class="black" style="margin-top: 0;">Jodhan <i>v.</i><br>Govt of Canada (2010)</p>
+					</div>
+					<div style="background: rgba(255,255,255,0.7); padding: 5px 10px 0; position: absolute; top: 500px; right: 50px;">
+						<h3 class="black" style="margin-bottom: 0;">United States</h3>
+						<p class="black" style="margin-top: 0;">...</p>
+					</div>
+					<aside class="notes">
+						<p>Under such legislation, there is the possibility that members of the public might take you to court if your website unduly discriminates against them.
+						<p>This happened in Australia with the Sydney Organising Committee for the Olympic Games website, which was inaccessible to the blind. SOCOG lost and was forced to fix their site and pay money.</p>
+						<p>In 2010, the Canadian Government was found guilty of not providing “equitable access to all content on Government of Canada websites.”</p>
+						<p>In the US, all sorts of businesses and organisations are being sued because their websites are inaccessible.</p>
+						<p>While this hasn't happened everywhere, it's very possibly only a matter of time.</p>
+					</aside>
+				</section>
+				<section id="s39">
+					<figure class="center">
+						<img src="img/carrot.jpg" alt="Print of an orange carrot on white paper.">
+						<cite><a href="https://www.flickr.com/photos/kathryn_rotondo/2252129369">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>But there are also a number of more positive reasons to make your sites and services accessible. These we can call the “carrots”.</p>
+					</aside>
+				</section>
+				<section id="s40">
+					<figure class="center">
+						<img src="img/nzse.jpg" alt="New Zealand Stock Exchange, Wellington.">
+						<cite><a href="https://www.flickr.com/photos/flissphil/337959035">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>The one that most often gets pitched to commercial clients is the better business case, but this applies equally to government organisations.</p>
+						<p>We saw the numbers: an organisation can reach a significantly larger market if it considers the disabled.</p>
+						<p>Accessible sites are easier for search engines to harvest.</p>
+						<p>The cost of fixing bugs after a product has shipped is orders of magnitude greater than fixing it up front during development. Similarly, building an accessible site from the beginning drastically reduces the costs of adding accessibility after the fact.</p>
+						<p>Accessible sites tend to be easier for everyone to use. Studies have shown significant increases in conversion rates with all users when sites are accessible.</p>
+						<p>And even if what your website provides targets people that don't have disabilities, don't forget that their family and friends can be blind, have low vision, a motor impairment, reading/learning difficulties, use English as a second language, come from a different culture. If they can't access your site, they can't buy or use what you are offering.</p>
+						<p>So it makes good business sense.</p>
+					</aside>
+				</section>
+				<section id="s41" data-transition="slide-in zoom-out">
+					<h2>Empower and Enable Individuals</h2>
+					<ul class="yellow">
+						<li>reading and learning</li>
+						<li>playing</li>
+						<li>working</li>
+						<li>shopping</li>
+						<li>communicating with friends and family</li>
+						<li>participating in community</li>
+					</ul>
+					<aside class="notes">
+						<p>A more socially conscious reason for building inclusive websites is that they offer individuals, especially those with disabilities, the opportunity to be independent, productive human beings, to participate in the world, to do all those everyday things that most of us take for granted.</p>						
+					</aside>
+				</section>
+				<section id="s42" data-transition="zoom">
+					<h2>Empower and Enable<br>Community and Society</h2>
+					<h3 class="green">Inclusion:</h3> 
+					<ul class="yellow">
+						<li>helps society increase its potential</li>
+						<li>increases cooperation, creativity, productivity</li>
+						<li>enables greater civic and political participation</li>
+						<li>spurs innovation</li>
+					</ul>
+					<aside class="notes">
+						<p>Inclusive design allows more people to participate, which serves to provide all our social, civic, and technological discussions with a greater number of perspectives we wouldn't otherwise have.</p>
+						<p>Inclusion also, and importantly, serves to spur innovation.</p>						
+					</aside>
+				</section>
+				<section id="s43" data-transition="zoom-in fade-out">
+					<h2>Empower and enable<br>design</h2>
+					<p class="yellow">Constraints are fundamental to<br>design and all creative work.</p>
+				</section>
+				<section id="s44" data-transition="zoom-in fade-out">
+					<figure class="center">
+						<img src="img/typewriter.jpg" alt="Horton typewriter, circa 1887.">
+						<cite><a href="https://www.flickr.com/photos/cstmweb/4294112158">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>In the early 19th century, Pellegrino Turri invented the typewriter for a blind friend and lover so that she could write love letters that were legible.</p>
+					</aside>
+				</section>
+				<section id="s45" data-transition="zoom-in fade-out">
+					<figure class="center">
+						<img src="img/telephone.jpg" alt="Black and white engraving of an old telephone.">
+						<cite><a href="https://www.flickr.com/photos/zigazou76/4482734462">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>In the late 19th century, Alexander Graham Bell, through working to help members of the deaf community hear better, ended up inventing the telephone. This led in turn to the invention of things like speech recognition, speech synthesis, stereophonic recording and the transistor.</p>
+					</aside>
+				</section>
+				<section id="s46" data-transition="zoom-in fade-out">
+					<figure class="center">
+						<img src="img/oxo.jpg" alt="Oxo Good Grips swivel peeler with large, black rubber handle.">
+						<cite><a href="https://www.oxo.com/products/preparing/peelers-choppers/swivel-peeler">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>A more recent and everyday example of this effect is the OXO Good Grips line of kitchen utensils. Originally designed to help arthritis patients, it was found that everyone appreciates tools that are easier to grasp and handle. They were a huge success and are now one of the more popular brands of kitchen utensils.</p>
+					</aside>
+				</section>
+				<section id="s47" data-transition="zoom-in fade-out">
+					<figure class="center">
+						<img src="img/cerf.jpg" alt="Vint Cerf, inventor of the Internet.">
+						<cite><a href="https://www.flickr.com/photos/jdlasica/292902975">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>Vint Cerf, inventor of the internet, has been hard-of-hearing since birth, and married a Deaf woman. Even in the early 70s, they were communicating by text message. This led to the development of email, which was integrated into ARPANET, what eventually became the internet we have now.</p>
+					</aside>
+				</section>
+				<section id="s48" data-transition="zoom-in fade-out">
+					<figure class="center">
+						<img src="img/curb-cut.jpg" alt="Curb cuts with red street Braille at an intersection.">
+						<cite><a href="https://www.flickr.com/photos/50393252@N02/4822063888/">Image source</a></cite>
+					</figure>
+					<aside class="notes">
+						<p>In all these cases we have a scenario where, in an attempt to overcome the barriers associated with a certain disability, a truly innovative technological advance occurred that changed things for all of us and enabled significant outcomes for society as a whole. This “side-effect” of accessible design, is something we call the “curb-cut effect”, and is a great example of how accessibility contributes to inclusion.</p>
+					</aside>
+				</section>
+				<section id="s49">
+					<h2>How?<br>What's required?</h2>
+				</section>
+				<section id="s50">
+					<h2>Open Web Platform</h2>
+					<h3><img src="img/w3c.png" alt="" style="vertical-align: middle;"> World Wide Web Consortium</h3>
+					<div style="text-align: left; margin-left: 100px;">
+						<ul class="yellow">
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>SVG</li>
+							<li>ARIA</li>
+							<li>WOFF</li>
+							<li>XML</li>
+							<li>RDFa</li>
+							<li>more…</li>
+						</ul>
+					</div>
+					<div style="position: absolute; top: 200px; right: 0px; width: 700px;">
+						<blockquote><p>“The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”</p><cite style="text-align: right;">– Tim Berners-Lee</cite></blockquote>
+					</div>
+					<aside class="notes">
+						<p>Use standards. The Open Web Platform is built to enable the delivery of web content so that everyone, regardless of disability, can access it.</p>
+					</aside>
+				</section>
+				<section id="s51">
+					<div>
+						<img src="img/w3c.png" alt=""> <h2>Web Content Accessibility Guidelines (WCAG) 2.0</h2>
+					</div>
+					<div>
+						<ul>
+							<li><span class="big2 yellow">P</span>erceivable</li>
+							<li><span class="big2 yellow">O</span>perable</li>
+							<li><span class="big2 yellow">U</span>nderstandable</li>
+							<li><span class="big2 yellow">R</span>obust</li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>The Web Content Accessible Guidelines (WCAG) 2.0 from the W3C is a collection of testable requirements for building accessible websites.</p>
+					</aside>
+				</section>
+				<section id="s51b">
+					<h2>How to meet WCAG 2.0</h2>
+					<p class="yellow">Customisable quick reference to WCAG 2.0.</p>
+					<div class="center"><img src="img/wcag-quickref.png" alt="Screenshot of 'How to Meet WCAG 2.0' web page."></div>
+					<aside class="notes">
+						<p>Check out the quick reference guide to WCAG 2.0 techniques and failures from the W3C.</p>
+					</aside>
+				</section>
+				<section id="s52">
+					<h2>Use best practices</h2>
+					<ul class="yellow">
+						<li class="fragment">Progressive enhancement</li>
+						<li class="fragment">Responsive web design</li>
+						<li class="fragment">"Mobile-first"</li>
+					</ul>
+					<aside class="notes">
+						<p>Follow best practices, like progressive enhancement, responsive web design, and mobile-first design.</p>
+					</aside>
+				</section>
+				<section id="s52b">
+					<h2>If you do one thing...</h2>
+					<p class="big2 green">Make sure it works with keyboard only!</p>
+					<aside class="notes">
+						<p>So many assistive technologies like screen readers and switches and voice recognition translate their commands into keyboard equivalent commands that if you do this one thing, make sure everything on your site that works with a mouse also works with a keyboard, you'll catch a whole number of simple access issues. It's not guaranteed, but your site will also me more likely to work in touch interfaces.</p>
+					</aside>
+				</section>
+				<section id="s53">
+					<h2>NZ Government<br>Web Accessibility Standard</h2>
+					<h3 class="yellow"><span class="green" aria-hidden="true">√</span> WCAG 2.0 Level-AA compliance</h3>
+					<div class="center"><img src="img/nzgwas.png" alt="Screenshot of NZ Government Web Accessibility Standard web page."></div>
+					<aside class="notes">
+						<p>New Zealand Government websites are required to conform to WCAG 2.0 Level A and AA requirements. If you design/develop websites for NZ Government agencies, you should already be building to level of accessibility.</p>
+					</aside>
+				</section>
+				<section id="s54">
+					<h2 style="font-size: 1.2em;">2014 Web Standards Self-Assessments</h2>
+					<h3 class="green">Top 10 accessibility issues</h3>
+					<ol class="yellow">
+						<li>WCAG 1.3.1 Info and relationships</li>
+						<li>WCAG 1.1.1 Non-text content
+						<li>WCAG 1.4.3 Contrast (minimum)</li>
+						<li>WCAG 4.1.2 Name, role, value</li>
+						<li>WCAG 2.4 7 Focus visible</li>
+						<li>WCAG 4.1.1 Parsing</li>
+						<li>WCAG 1.4.1 Use of color</li>
+						<li>WCAG 2.4.4 Link purpose (In context)</li>
+						<li>WCAG 2.1.1 Keyboard</li>
+						<li>WCAG 1.4.5 Images of text</li>
+					</ol>
+					<aside class="notes">
+						<p>In 2014, New Zealand Government agencies self-assessed their websites against the Web Standards. These were the top accessibility issues.</p>
+					</aside>
+				</section>
+				<section id="s55">
+					<h2>Future workshops</h2>
+					<p class="yellow">We'll be focussing on these top accessibility issues.</p>
+					<p class="green big2">But what do *you* want to learn?</p>
+					<p>Email us: <a href="mailto:web.standards@dia.govt.nz">web.standards@dia.govt.nz</a></p>
+				</section>
+				<section id="s58" data-transition="slide-in fade-out">
+					<h2>How is web content made accessible?</h2>
+					<p class="fragment green big3">Answer #1: <span class="yellow">Well-written content</span></p>
+				</section>
+				<section id="s58b" data-transition="zoom-in fade-out">
+					<h2>WCAG SC 1.1.1 Non-text content</h2>
+					<p style="font-style:italic;">All <span class="yellow">non-text content</span> that is presented to the user has a <span class="yellow">text alternative</span> that serves the <span class="yellow">equivalent purpose</span>.</p>
+					<ul>
+						<li class="fragment"><span class="green">Images:</span>
+							<ul>
+								<li><code class="yellow">alt</code> attribute for short description (~150 chars max)</li>
+								<li>long descriptions when <code class="yellow">alt</code> won't cut it</li>
+								<li class="fragment">see the HTML5 spec:<br> <a href="https://www.w3.org/TR/html51/semantics-embedded-content.html#alt-text">Requirements for providing text to act as an alternative for images</a></li>
+							</ul>
+						</li>
+						<li class="fragment"><span class="green">Audio/video:</span> captions and transcripts</li>
+					</ul>	
+				</section>
+				<section id="s58bb" data-transition="zoom-in fade-out">
+					<h2>WCAG SC 2.4.4 Link purpose (In context)</h2>
+					<p style="font-style:italic;">The <span class="yellow">purpose of each link</span> can be determined from the <span class="yellow">link text alone</span> or from the link text together with its programmatically determined link context.</p>
+					<div class="float-left" style="font-size: 0.75em; width: 330px; border: 1px solid #fff; padding: 10px;">
+						<h3>Poor link text</h3>
+						<ul>
+							<li><a href="#">Click here</a></li>
+							<li><a href="#">Here</a></li>
+							<li><a href="#">More</a></li>
+							<li><a href="#">Read more...</a></li>
+							<li><a href="#">Click here for more</a></li>
+						</ul>
+					</div>
+					<div class="float-right" style="font-size: 0.75em; width: 560px;  border: 1px solid #fff; padding: 10px;">
+						<h3>Good link text</h3>
+						<ul>
+							<li>Find out about the <a href="#">Treaty of Waitangi</a></li>
+							<li>Visit <a href="#">Te Ara’s history pages</a></li>
+							<li>More about the <a href="#">Treaty settlement process</a></li>
+							<li><a href="#">Buy tickets to Te Papa events</a></li>
+							<li><a href="#">Search historic locations in New Zealand</a></li>
+						</ul>
+					</div>
+				</section>
+				<section id="s58bbb" data-transition="zoom-in fade-out">
+					<h2>Programmatically determined link context</h2>
+						<h3 class="yellow">Example</h3>
+						<pre><code class="html" data-trim>
+<h4>Programmatically determined link context</h4>
+<p>
+    A link's programmatically determined context is 
+    additional information that can be programmatically 
+    determined from its relationships with other elements, 
+    combined with the link text itself. 
+    <a href="#">Read more...</a>.
+</p>
+</code></pre>
+					<p><a href="https://www.w3.org/TR/WCAG20/#pdlinkcontextdef">Read the full definition</a></p>
+				</section>
+				<section id="s58c" data-transition="slide-in fade-out">
+					<h2>How is web content made accessible?</h2>
+					<p class="fragment green big3">Answer #2: <span class="yellow">Well-designed UI</span></p>
+				</section>
+				<section id="s58d" data-transition="zoom-in fade-out">
+					<h2>WCAG SC 1.4.3 Contrast (minimum)</h2>
+					<p style="font-style:italic;">The <span class="yellow">visual presentation of text</span> and images of text has a <span class="yellow">luminosity contrast ratio</span> of at least <span class="yellow">4.5:1</span>.</p>
+					<div class="float-left fragment" style="border: 2px solid #fff; width: 460px;">
+						<p style=" color: #666;">This text has low contrast and is difficult to read</p>
+						<p>Contrast ratio 2.7:1 </p>
+					</div>
+					<div class="float-right fragment" style="width: 460px; border: 2px solid #fff; ">
+						<p class="green">This text has high contrast and is easy to read</p>
+						<p>Contrast ratio 11.6:1</p>
+					</div>
+					<ul style="margin-top: 40px; clear: both;" class="yellow fragment">
+						<li>Only 3:1 ratio for large text (~19px and bold, or 24px)</li>
+						<li>Text in logos or brand names are exempt</li>
+					</ul>
+				</section>
+				<section id="s58e" data-transition="zoom-in fade-out">
+					<h2>WCAG SC 2.4.7 Focus visible</h2>
+					<p style="font-style:italic;">Any keyboard operable user interface has a mode of operation where the <span class="yellow">keyboard focus indicator is visible</span>.</p>
+					<div class="center fragment" style="text-align: left; background: white; display: inline-block; padding: 10px 20px 0;">
+						<style scoped>
+							.reveal a.defaultOutline:focus {outline: 1px dotted #999; background: white;}
+							.reveal a.noOutline:focus {outline: none; background: white;}
+						</style>
+						<p><a class="noOutline" href="#" style="color: #0072E8">Link with no focus indicator</a></p>
+						<p><a class="defaultOutline" href="#" style="color: #0072E8;">Link with default outline focus indicator</a></p>
+						<p><a href="#" style="color: #0072E8;">Link with custom focus indicator</a></p>
+					</div>
+					<p class="fragment big3">If you set<br><code class="css green">a:focus {outline: none;}</code>,<br>replace it with something else!</p>
+				</section>
+				<section id="s58f" data-transition="zoom-in fade-out">
+					<h2>WCAG SC 1.4.1 Use of color</h2>
+					<p style="font-style:italic;">Color is <span class="yellow">not used</span> as the <span class="yellow">only visual means</span> of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</p>
+					<p class="fragment big2 green">Especially links!</p>
+					<p class="fragment">Here's some text with <a href="#" style="color: #00FFFF; text-decoration: none;">a link</a> distinguished only by colour. </p>
+					<div> 
+						<p class="fragment yellow">Visually indicate links in other ways. For example,</p>
+						<ul>
+							<li class="fragment"><a href="#">link with an underline</a></li>
+							<li class="fragment"><a href="#" style="text-decoration: none; background: #666; color: #fff;">link with a highlight</a></li>
+							<li class="fragment"><a href="#" style="text-decoration: none; color: #8888FE;">link with contrast ratio of >=3:1</a> with non-link text</li>
+						</ul>
+					</div>
+				</section>
+				<section id="s58g">
+					<h2>How is web content made accessible?</h2>
+					<p class="fragment green big3">Answer #3: <span class="yellow">Proper HTML</span></p>
+				</section>
+				<section id="s58h" data-transition="zoom-in fade-out">
+					<h2>WCAG SC 1.3.1 Info and relationships</h2>
+					<p style="font-style:italic;">Information, structure, and relationships <span class="yellow">conveyed through presentation</span> can be <span class="yellow">programmatically determined</span> or are available in text.</p>
+				</section>
+				<section id="s59" data-transition="zoom-in fade-out">
+					<h2>Semantic structure</h2>
+					<div class="center" style="display: inline-block; width: 70%;"><pre><code data-trim> 
+&lt;h3&gt;Types of pet&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href="/cat/"&gt;cat&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/dog/"&gt;dog&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/kunekune/"&gt;kunekune&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+					</code></pre></div>
+					<div>
+						<h3 class="yellow">Types of pet</h3>
+						<ul>
+							<li><a href="/cat/">cat</a></li>
+							<li><a href="/dog/">dog</a></li>
+							<li><a href="/kunekune/">kunekune</a></li>
+						</ul>
+					</div>						
+				</section>
+				<section id="s59b" data-transition="zoom-in fade-out">
+					<h2>WCAG SC 4.1.2 Name, role, value</h2>
+					<p style="font-style:italic;">For all user interface components:</p>
+					<ul>
+						<li><span class="yellow">name and role</span> can be programmatically determined</li>
+						<li><span class="yellow">states, properties, and values</span> can be programmatically set</li>
+						<li><span class="yellow">notification of changes</span> to these items is available to user agents, including	assistive technologies</li>
+					</ul>
+				</section>
+				<section id="s60" data-transition="zoom-in fade-out">
+					<h2>Roles, states, and properties</h2>
+					<div>
+						<div class="left"><pre><code data-trim class="html"> 
+&lt;form&gt;
+  &lt;fieldset&gt;
+     &lt;legend&gt;Do you like cats?&lt;/legend&gt;
+     &lt;input type=&quot;radio&quot; name=&quot;cats&quot; id=&quot;yes&quot; value=&quot;yes&quot; checked&gt;
+     &lt;label for=&quot;yes&quot;&gt;Yes&lt;/label&gt;
+     &lt;input type=&quot;radio&quot; name=&quot;cats&quot; id=&quot;no&quot; value=&quot;no&quot;&gt;
+     &lt;label for=&quot;no&quot;&gt;No&lt;/label&gt;
+  &lt;/fieldset&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+						</code></pre></div>
+						<div>
+							<form style="margin: 10px; padding: 10px; border: 1px solid #999; text-align: left; display: inline-block; width: 400px;">
+								<fieldset>
+									<legend class="yellow">Do you like cats?</legend>
+									<input style="vertical-align: middle" type="radio" name="cats" id="yes" value="yes" checked>
+									<label for="yes">Yes</label>
+									<br>
+									<input style="vertical-align: middle" type="radio" name="cats" id="no" value="no">
+									<label for="no">No</label>
+								</fieldset>
+								<input type="submit" value="Submit"  class="submit">
+							</form>
+						</div>
+					</div>										
+				</section>
+				<section id="s60b" data-transition="zoom-in fade-out">
+					<h2>WCAG SC 2.1.1 Keyboard</h2>
+					<p style="font-style:italic;">All functionality of the content is <span class="yellow">operable through a keyboard interface</span>.</p>
+				</section>
+				<section id="s61" data-transition="zoom-in fade-out">
+					<h2>Keyboard accessibility</h2>
+					<h3 class="yellow">Types of pet</h3>
+					<ul>
+						<li><a href="/cat/">cat</a></li>
+						<li><a href="/dog/">dog</a></li>
+						<li><a href="/kunekune/">kunekune</a></li>
+					</ul>
+					<div>
+						<form style="margin: 10px; padding: 10px; border: 1px solid #999; text-align: left; display: inline-block; width: 400px;">
+							<fieldset>
+								<legend class="yellow">Do you like cats?</legend>
+								<input style="vertical-align: middle" type="radio" name="cats" id="yes2" value="yes" checked>
+								<label for="yes2">Yes</label>
+								<br>
+								<input style="vertical-align: middle" type="radio" name="cats" id="no2" value="no">
+								<label for="no2">No</label>
+							</fieldset>
+							<input type="submit" value="Submit" class="submit">
+						</form>
+					</div>
+				</section>
+				<section id="s62">
+					<h2>Why is all this important?</h2>
+					<div class="fragment">
+						<p class="green big2">Remember all those devices and AT?</p>
+					</div>
+				</section>
+				<section id="s63">
+					<h2>First there's the DOM</h2>
+					<figure class="center">
+						<img src="img/dom.png" alt="Tree diagram of the document object model.">
+						<cite style="display: none;"><a href="https://commons.wikimedia.org/wiki/File:ADOM-model.svg">Image source</a></cite>
+					</figure>
+				</section>
+				<section id="s64">
+					<h2>Next, accessibility APIs</h2>
+					<figure class="center">
+						<img src="img/apis.png" alt="Tree diagram of the document object model.">
+						<cite style="display: none;"><a href="https://www.w3.org/WAI/PF/aria/introduction#desc_contractmodel">Image source</a></cite>
+						<details style="position: absolute; padding-top: 10px; text-align: left;"><summary style="font-size: 0.3em;">text description</summary><p style="background-color: #000; padding: 10px; font-size: 0.4em;">This image <q cite="https://www.w3.org/WAI/PF/aria/introduction#desc_contractmodel">illustrates the relationship between user agents (e.g., browsers), accessibility APIs, and assistive technologies. It describes the 'contract' provided by the user agent to assistive technologies, which includes typical accessibility information found in the accessibility API for many of our accessible platforms for GUIs (role, state, selection, event notification, relationship information, and descriptions). The DOM, usually HTML, acts as the data model and view in a typical model-view-controller relationship, and JavaScript acts as the controller by manipulating the style and content of the displayed data. The user agent conveys relevant information to the operating system's accessibility API, which can be used by any assistive technologies, such as screen readers.</q></p></details>
+					</figure>
+					<div style="margin-top: 30px; font-size: 0.75em;">
+						<div class="float-left" style="width: 38%;">
+							<h3 class="yellow">Mac OS</h3>
+							<div><ul style="list-style: none; margin: 0; text-align: center;">
+								<li>Mac OS X Accessibility Protocol</li>
+							</ul></div>
+						</div>
+						<div class="float-left" style="width: 30%;">
+							<h3 class="yellow">Windows</h3>
+							<ul style="margin: 0;">
+								<li>MSAA</li>
+								<li>IAccessible2</li>
+								<li>UI Automation</li>
+							</ul>
+						</div>
+						<div class="float-left" style="width: 30%;">
+							<h3 class="yellow">Linux</h3>
+							<ul style="list-style: none; margin: 0; text-align: center;">
+								<li>ATK/AT-SPI</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="s65" data-transition="zoom-in fade-out">
+					<h2>Inspecting the APIs</h2>
+					<h3 class="yellow">Windows</h3>
+					<ul style="margin: 0 0 40px; list-style: none; text-align: center;">
+						<li>AViewer</li>
+						<li>Accessibility Probe</li>
+						<li>Inspect Objects (MS Windows SDK)</li>
+					</ul>
+					<h3 class="yellow">Mac OS</h3>
+					<ul style="margin: 0 0 40px; list-style: none; text-align: center;">
+						<li>Accessibility Inspector (Xcode)</li>
+					</ul>
+					<h3 class="yellow">Gnome/Linux</h3>
+					<ul style="margin: 0 0 40px; list-style: none; text-align: center;">
+						<li>Accerciser</li>
+					</ul>
+				</section>
+				<section id="s66" data-transition="zoom-in fade-out">
+					<h2>Demo: Mac Accessibility Inspector</h2>
+					<div class="float-left align-left" style="">
+						<h3 class="yellow">Types of pet</h3>
+						<ul style="margin-left: 60px;">
+							<li><a href="/cat/">cat</a></li>
+							<li><a href="/dog/">dog</a></li>
+							<li><a href="/kunekune/">kunekune</a></li>
+						</ul>
+						<div>
+							<form style="margin: 10px; padding: 10px; border: 1px solid #999; text-align: left; display: inline-block; width: 400px;">
+								<fieldset>
+									<legend class="yellow">Do you like cats?</legend>
+									<input style="vertical-align: middle" type="radio" name="cats" id="yes3" value="yes" checked>
+									<label for="yes3">Yes</label>
+									<br>
+									<input style="vertical-align: middle" type="radio" name="cats" id="no3" value="no">
+									<label for="no3">No</label>
+								</fieldset>
+								<input type="submit" value="Submit" class="submit">
+							</form>
+						</div>
+					</div>
+					<img src="img/accessibility-inspector.png" alt="">
+				</section>
+				<section id="s67" data-transition="zoom-in fade-out">
+					<h2>Still, there's the DOM</h2>
+					<p class="green big2">It's useful when:</p>
+					<ul>
+						<li>the API doesn't support certain information, <br>or</li>
+						<li>the info passed to the API is incomplete</li>
+					</ul>
+				</section>
+				<section id="s68">
+					<h2>Native vs. Custom Widgets</h2>
+					<h3 class="yellow">Example: Checkbox (1/3)</h3>
+					<div class="left" style="width: 65%;"><pre><code data-trim> 
+&lt;input type=&quot;checkbox&quot; id=&quot;dogs&quot;...&gt;
+&lt;label for=&quot;dogs&quot;&gt;Dogs&lt;/label&gt;
+
+&lt;div class=&quot;checkbox&quot;&gt;Dogs&lt;/div&gt;	
+</code></pre><pre style="margin-top:30px;"><code data-trim class="javascript">
+$('.checkbox').on('click', function() {
+   $(this).toggleClass('checked');
+});	
+</code></pre><pre style="margin-top:30px;"><code data-trim class="css">
+.checkbox {
+  background: #222 url(../img/checkbox.png) 
+    no-repeat 0 8px;
+}
+.checkbox.checked {
+  background-image: 
+    url(../img/checkbox-checked.png);
+}
+					</code></pre></div>
+					<div class="right middle" style=" top: 400px; left: 620px; width: 25%; display: inline-block;">
+						<script>
+						(function() {
+							$(function() {
+								$("#checkbox1").on('click', function() {
+									$(this).toggleClass('checked');
+								});
+							});
+						})();
+						</script>
+						<div style="border: 1px solid #fff; padding: 10px;">
+							<input type="checkbox" id="dogs" style="vertical-align: middle; height: 17px; width: 17px;"><label for="dogs">Dogs</label>
+							
+							<div id="checkbox1" class="checkbox">Dogs</div>
+						</div>
+						
+						<div style="font-size: 0.75em;">
+							<p>No keyboard access.</p>
+							<p>No role or state information.</p>
+						</div>
+
+					</div>
+				</section>
+				<section id="s69">
+					<h2>What to do?</h2>
+					<p class="fragment green big2">Just use native checkboxes already!</p>
+					<p class="fragment">But, if you must...</p>
+				</section>
+				<section id="s70" data-transition="zoom-in fade-out">
+					<h2>The solution: WAI-ARIA</h2>
+					<figure class="center">
+						<a href="http://www.w3.org/TR/wai-aria/"><img src="img/aria.png" alt="Screenshot of WAI-ARIA 1.0 specification web page."></a>
+					</figure>
+				</section>
+				<section id="s71" data-transition="zoom-in fade-out">
+					<h2>It's just attributes and values</h2>
+					<ul>
+						<li><span class="yellow">roles</span> use @<code>role</code>, e.g. <pre style="font-size: 1em; display: inline;"><code style="display: inline;" data-trim>role="navigation"</code></pre></li>
+						<li><span class="yellow">states and properties</span> use @<code>aria-*</code>, <br>e.g. <pre style="font-size: 1em; display: inline;"><code style="display: inline;" data-trim>aria-expanded="true"</code></pre></li>
+					</ul>
+					<p class="green">It's part of the HTML5 specification.</p>
+				</section>
+				<section id="s72" data-transition="zoom-in fade-out">
+					<div class="float-left" style="font-size: 0.6em;">
+						<h2>Landmark roles</h2>
+						<ul>
+							<li><code>application</code></li>
+							<li><code>banner</code></li>
+							<li><code>complementary</code></li>
+							<li><code>contentinfo</code></li>
+							<li><code>form</code></li>
+							<li><code>main</code></li>
+							<li><code>navigation</code></li>
+							<li><code>search</code></li>
+						</ul>
+						<p style="margin-top: 150px; text-align: right;"><a href="http://www.w3.org/TR/wai-aria/">http://www.w3.org/TR/wai-aria/</a></p>
+					</div>
+					<div class="right" style=" left: 450px; width: 50%; font-size: 0.6em;">
+						<h2>Document structure roles</h2>
+						<ul>
+							<li><code>article</code></li>
+							<li><code>columnheader</code></li>
+							<li><code>definition</code></li>
+							<li><code>directory</code></li>
+							<li><code>document</code></li>
+							<li><code>group</code></li>
+							<li><code>heading</code></li>
+							<li><code>img</code></li>
+							<li><code>list</code></li>
+							<li><code>listitem</code></li>
+							<li><code>math</code></li>
+							<li><code>note</code></li>
+							<li><code>presentation</code></li>
+							<li><code>region</code></li>
+							<li><code>row</code></li>
+							<li><code>rowheader</code></li>
+							<li><code>separator</code></li>
+							<li><code>toolbar</code></li>
+						</ul>
+					</div>
+				</section>
+				<section id="s73" data-transition="zoom-in fade-out">
+					<h2>Native ARIA semantics</h2>
+					<ul style="line-height: 1.4; font-size: 0.8em;">
+						<li><code class="yellow">header</code> → “banner” role, if not a child of <code class="green">section</code> or <code class="green">article</code></li>
+						<li><code class="yellow">nav</code> → “navigation” role</li>
+						<li><code class="yellow">main</code> → “main” role</li>
+						<li><code class="yellow">aside</code> → “complementary” role</li>
+						<li><code class="yellow">footer</code> → “contentinfo” role, if not a child of <code class="green">section</code> or <code class="green">article</code></li>
+					</ul>
+				</section>
+				<section id="s74" data-transition="zoom-in fade-out">
+					<div class="float-left" style="width: 50%; font-size: 0.6em;">
+						<h2>Standalone widget roles</h2>
+						<ul style="float: left; margin-right: 60px;">
+							<li><code>alert</code></li>
+							<li><code>alertdialog</code></li>
+							<li><code>button</code></li>
+							<li><code>checkbox</code></li>
+							<li><code>dialog</code></li>
+							<li><code>gridcell</code></li>
+							<li><code>link</code></li>
+							<li><code>log</code></li>
+							<li><code>marquee</code></li>
+							<li><code>menuitem</code></li>
+							<li><code>menuitemcheckbox</code></li>
+							<li><code>menuitemradio</code></li>
+							<li><code>option</code></li>
+						</ul>
+						<ul style="float: left;">
+							<li><code>progressbar</code></li>
+							<li><code>radio</code></li>
+							<li><code>scrollbar</code></li>
+							<li><code>slider</code></li>
+							<li><code>spinbutton</code></li>
+							<li><code>status</code></li>
+							<li><code>tab</code></li>
+							<li><code>tabpanel</code></li>
+							<li><code>textbox</code></li>
+							<li><code>timer</code></li>
+							<li><code>tooltip</code></li>
+							<li><code>treeitem</code></li>
+						</ul>
+					</div>
+					<div class="float-right" style=" width: 40%; font-size: 0.6em;">
+						<h2>Composite widget roles</h2>
+						<ul>
+							<li><code>combobox</code></li>
+							<li><code>grid</code></li>
+							<li><code>listbox</code></li>
+							<li><code>menu</code></li>
+							<li><code>menubar</code></li>
+							<li><code>radiogroup</code></li>
+							<li><code>tablist</code></li>
+							<li><code>tree</code></li>
+							<li><code>treegrid</code></li>
+						</ul>
+					</div>
+					<p style="padding-top: 80px; clear: left;"><a href="http://www.w3.org/TR/wai-aria/roles#widget_roles">http://www.w3.org/TR/wai-aria/roles#widget_roles</a></p>
+				</section>
+				<section id="s75" data-transition="zoom-in fade-out">
+					<h2>Native ARIA semantics</h2>
+					<ul style="line-height: 1.4;">
+						<li><code class="yellow">button</code> → “button” role</li>
+						<li><code class="yellow">input type="checkbox</code> → “checkbox” role</li>
+						<li><code class="yellow">input type="radio"</code> → “radio” role</li>
+					</ul>
+				</section>
+				<section id="s76" data-transition="zoom-in fade-out">
+					<h2 style="margin-bottom: 50px;">Overriding native HTML semantics</h2>
+					<div class="float-left" style="width: 600px;"><pre><code class="html" data-trim> 
+&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+
+&lt;a href=&quot;#&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt;
+					</code></pre></div>
+					<div class="right" style="top: 185px; left: 650px;">
+						<div style="margin-bottom: 20px;"><a href="#">Link</a></div>
+						<a href="#" role="button" style="border: 1px solid #999; text-decoration: none; padding: 5px; border-radius: 5px;">Button</a><br><br>
+					</div>
+					<div style="margin-top: 200px;">
+						<div class="float-left" style="width: 600px;"><pre><code class="html" data-trim> 
+&lt;ul&gt;
+   &lt;li role=&quot;button&quot;&gt;list item button&lt;/li&gt;
+&lt;/ul&gt;
+						</code></pre></div>
+						<div class="right" style="top: 375px; left: 600px;">
+							<ul>
+								<li role="button">list item button</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="s77" data-transition="zoom-in fade-out" style="font-size: 0.5em;">
+					<h2>States and properties</h2>
+					<div class="float-left" style="width: 50%;">
+						<h3>Widget attributes</h3>
+						<ul>
+							<li><code>aria-autocomplete</code></li>
+							<li><code>aria-checked</code> (state)</li>
+							<li><code>aria-disabled</code> (state)</li>
+							<li><code>aria-expanded</code> (state)</li>
+							<li><code>aria-haspopup</code></li>
+							<li><code>aria-hidden</code> (state)</li>
+							<li><code>aria-invalid</code> (state)</li>
+							<li><code>aria-label</code></li>
+							<li><code>aria-level</code></li>
+							<li><code>aria-multiline</code></li>
+							<li><code>aria-multiselectable</code></li>
+							<li><code>aria-orientation</code></li>
+							<li><code>aria-pressed</code> (state)</li>
+							<li><code>aria-readonly</code></li>
+							<li><code>aria-required</code></li>
+							<li><code>aria-selected</code> (state)</li>
+							<li><code>aria-sort</code></li>
+							<li><code>aria-valuemax</code></li>
+							<li><code>aria-valuemin</code></li>
+							<li><code>aria-valuenow</code></li>
+							<li><code>aria-valuetext</code></li>
+						</ul>
+					</div>
+					<div class="right middle">
+						<h3>Live region attributes</h3>
+						<ul>
+							<li><code>aria-atomic</code></li>
+							<li><code>aria-busy</code> (state)</li>
+							<li><code>aria-live</code></li>
+							<li><code>aria-relevant</code></li>
+						</ul>
+						<h3 style="margin-top: 50px;">Relationship attributes</h3>
+						<ul>
+							<li><code>aria-activedescendant</code></li>
+							<li><code>aria-controls</code></li>
+							<li><code>aria-describedby</code></li>
+							<li><code>aria-flowto</code></li>
+							<li><code>aria-labelledby</code></li>
+							<li><code>aria-owns</code></li>
+							<li><code>aria-posinset</code></li>
+							<li><code>aria-setsize</code></li>
+						</ul>
+					</div>
+					<p style="padding-top: 15px; clear: left;"><a href="http://www.w3.org/TR/wai-aria/states_and_properties#state_prop_taxonomy">http://www.w3.org/TR/wai-aria/states_and_properties#state_prop_taxonomy</a></p>
+				</section>
+				<section id="s78">
+					<h2>Labels and descriptions</h2>
+					<h3 style="font-weight: normal;">@<code class="yellow">aria-labelledby</code></h3>	
+					<div>
+						<div class="center" style="display: inline-block; width: 80%;"><pre><code data-trim class="html">
+&lt;div id=&quot;label&quot;&gt;Date&lt;/div&gt;
+
+&lt;input type=&quot;text&quot; aria-labelledby=&quot;label format&quot;&gt;
+
+&lt;span id=&quot;format&quot;&gt;(DD-MM-YYYY)&lt;/span&gt;						
+						</code></pre></div>
+						<div class="center" style="border: 1px solid #fff; padding: 10px; display: inline-block; text-align: left; width: 50%;">
+							<div id="label">Date</div>
+							<input type="text" style="width: 7em; font-size: 0.75em" aria-labelledby="label format">
+							<span id="format" style="font-size: 83.33%;">(DD-MM-YYYY)</span>
+						</div>
+					</div>
+				</section>
+				<section id="s79" data-transition="zoom-in fade-out">
+					<h2>Labels and descriptions</h2>
+					<h3 style="font-weight: normal">@<code class="yellow">aria-label</code></h3>
+					<div>
+						<div class="center" style="width: 770px; display: inline-block;"><pre><code data-trim class="html">
+&lt;nav role=&quot;navigation&quot; aria-label="Example main menu"&gt;
+   &lt;ul&gt;
+      &hellip;
+   &lt;/ul&gt;
+&lt;/nav&gt;
+						</code></pre></div>
+						<div>
+							<nav role="navigation" aria-label="Example main menu" style="margin: 0 0 25px;">
+								<ul style="list-style: none; margin: 0;">
+									<li style="float: left; margin-right: 20px;"><a href="#">Home</a></li>
+									<li style="float: left; margin-right: 20px;"><a href="#">Articles</a></li>
+									<li style="float: left;"><a href="#">Contact us</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div>
+						<div class="center" style="width: 600px; display: inline-block;"><pre style=" text-align: center; "><code data-trim class="html">
+&lt;button aria-label=&quot;Close&quot;&gt;X&lt;/button&gt;
+						</code></pre></div>
+						<div>
+							<button style="font-size: 83.33%" aria-label="Close">X</button>
+						</div>
+					</div>
+				</section>
+				<section id="s80" data-transition="zoom-in fade-out">
+					<h2>Labels and descriptions</h2>
+					<h3 style="font-weight: normal;">@<code class="yellow">aria-describedby</code></h3>
+					<div class="center" style="display: inline-block; width: 860px;"><pre><code data-trim class="html">
+&lt;label for=&quot;comment&quot;&gt;Leave a comment&lt;/label&gt;
+
+&lt;textarea id=&quot;comment&quot; aria-describedby=&quot;notice&quot;&gt;&lt;/textarea&gt;
+
+&lt;p id=&quot;notice&quot;&gt;Note: Your comment may be published.&lt;/p&gt;
+					</code></pre></div>
+					<div class="center" style="display: inline-block; width: 500px; text-align: left; border: 1px solid #fff; padding: 10px 10px 0;">
+						<label for="comment">Leave a comment</label>
+						<textarea id="comment" aria-describedby="notice" rows="4" cols="50" style="width: 98%;"></textarea>
+						<p id="notice" style="font-size: 75%; margin-top: 0;">Note: Your comment may be published.</p>
+					</div>
+				</section>
+				<section id="s81">
+					<h2>Example: Checkbox (1/3) Revisited</h2>
+					<div class="left" style="width: 65%;"><pre><code data-trim> 
+&lt;input type=&quot;checkbox&quot; id=&quot;dogs&quot;...&gt;
+&lt;label for=&quot;dogs&quot;&gt;Dogs&lt;/label&gt;
+
+&lt;div class=&quot;checkbox&quot;&gt;Dogs&lt;/div&gt;	
+</code></pre><pre style="margin-top:30px;"><code data-trim class="javascript">
+$('.checkbox').on('click', function() {
+   $(this).toggleClass('checked');
+});	
+</code></pre><pre style="margin-top:30px;"><code data-trim class="css">
+.checkbox {
+  background: #222 url(../img/checkbox.png) 
+    no-repeat 0 8px;
+}
+.checkbox.checked {
+  background-image: 
+    url(../img/checkbox-checked.png);
+}
+					</code></pre></div>
+					<div class="right middle" style=" top: 400px; left: 620px; width: 25%; display: inline-block;">
+						<script>
+						(function() {
+							$(function() {
+								$("#checkbox2").on('click', function() {
+									$(this).toggleClass('checked');
+								});
+							});
+						})();
+						</script>
+						<div style="border: 1px solid #fff; padding: 10px;">
+							<input type="checkbox" id="dogs2" style="vertical-align: middle; height: 17px; width: 17px;"><label for="dogs2">Dogs</label>
+							
+							<div id="checkbox2" class="checkbox">Dogs</div>
+						</div>
+						
+						<div style="font-size: 0.75em;">
+							<p>No keyboard access.</p>
+							<p>No role or state information.</p>
+						</div>
+
+					</div>
+				</section>
+				<section id="s82">
+					<h2>Example: Checkbox (2/3)</h2>
+					<h3 class="yellow" style="font-size: 0.8em;">Add keyboard support</h3>
+					<div class="float-left" style="width: 68%;">
+						<ol style="margin-left: 0; margin-bottom: 0; font-size: 0.75em; text-align: left;">
+							<li>add <code class="green">tabindex="0"</code></li>
+						</ol><pre style="margin-top: 10px;"><code data-trim> 
+&lt;div class=&quot;checkbox&quot; tabindex="0"&gt;Dogs&lt;/div&gt;	
+</code></pre>
+						<ol style="margin-top: 20px; margin-bottom: 0; font-size: 0.75em;" start="2">
+							<li>add handler for <kbd>Space</kbd> key</li>
+						</ol>
+<pre style="margin-top:10px;"><code data-trim class="javascript">
+$('.checkbox').on('click', function() {
+   $(this).toggleClass('checked');
+});	
+
+$('.checkbox').keydown(function(e) {
+   if (e.which == 32) {
+      $(this).click();
+   }
+});
+</code></pre></div>
+					<div class="right middle" style=" top: 300px; left: 640px; width: 25%; display: inline-block;">
+						<script>
+						(function() {
+							$(function() {
+								$("#checkbox3").on('click', function() {
+									$(this).toggleClass('checked');
+								});
+								$('#checkbox3').keydown(function(e) {
+									if (e.which == 32) {
+										e.stopPropagation();
+										$(this).click();
+									}
+								});
+							});
+						})();
+						</script>
+						<div style="border: 1px solid #fff; padding: 10px;">							
+							<div id="checkbox3" tabindex="0" class="checkbox">Dogs</div>
+						</div>
+						
+						<div style="font-size: 0.75em;">
+							<p class="yellow">Still no role or state information.</p>
+						</div>
+					</div>
+				</section>
+				<section id="s83">
+					<h2>Example: Checkbox (3/3)</h2>
+					<h3 class="yellow" style="font-size: 0.8em;">Add role and state</h3>
+					<div class="float-left" style="width: 74%;">
+						<ol style="margin-left: 0; margin-bottom: 0; font-size: 0.75em; text-align: left;">
+							<li>add <code class="green">role="checkbox"</code> and @<code class="green">aria-checked</code></li>
+						</ol><pre style="margin-top:5px;"><code data-trim> 
+&lt;div class=&quot;checkbox&quot; tabindex="0" 
+   role="checkbox" aria-checked="false"&gt;Dogs&lt;/div&gt;	</code></pre>
+						<ol style="margin-top: 20px; margin-bottom: 0; font-size: 0.75em;" start="2">
+							<li>add toggle for @<code class="green">aria-checked</code></li>
+						</ol>
+<pre style="margin-top:5px;"><code data-trim class="javascript">
+$('.checkbox').on('click', function() {
+   if ($(this).attr('aria-checked') == 'false') {
+      $(this).attr('aria-checked', 'true');
+   } else {
+      $(this).attr('aria-checked', 'false');
+   }
+});	
+
+$('.checkbox').keydown(function(e) {
+   if (e.which == 32) {
+      $(this).click();
+   }
+});
+</code></pre></div>
+					<div class="right middle" style=" top: 300px; left: 700px; width: 25%; display: inline-block;">
+						<script>
+						(function() {
+							$(function() {
+								$("#checkbox4").on('click', function() {
+									if ($(this).attr('aria-checked') == 'false') {
+										$(this).attr('aria-checked', 'true');
+									} else {
+										$(this).attr('aria-checked', 'false');
+									}
+								});
+								$('#checkbox4').keydown(function(e) {
+									if (e.which == 32) {
+										e.stopPropagation();
+										$(this).click();
+									}
+								});
+							});
+						})();
+						</script>
+						<div style="border: 1px solid #fff; padding: 10px;">							
+						<div id="checkbox4" class="checkbox" tabindex="0" role="checkbox" aria-checked="false">Dogs</div>
+						</div>
+						
+						<div style="font-size: 0.75em;">
+							<p class="yellow">Role and state provided.</p>
+						</div>
+					</div>
+				</section>
+				<section id="s83b" data-background="img/fight-club.jpg">
+					<h2>A word of caution...</h2>
+					<h3><cite><a style="color: #fff" href="https://www.w3.org/TR/aria-in-html/">Using WAI-ARIA in HTML</a></cite></h3>
+					<div>
+						<div style="background: rgba(0,0,0,0.5);">
+							<h4 class="yellow">First rule of ARIA use</h4>
+							<p>Use native HTML elements and attributes as much as possible.</p>
+							<h4 class="yellow">Second rule of ARIA use</h4>
+							<p>Don't override native HTML semantics, unless absolutely necessary.</p>
+						</div>
+					</div>
+					<p style="float: left; margin-top: 150px; font-size: 0.25em;"><a style="color: #fff;" href="https://www.flickr.com/photos/pejess/13145428175">Background image source</a></p>
+				</section>
+				<section id="s85">
+					<h2>Due diligence</h2>
+					<figure class="center">
+						<img src="img/dig.jpg" alt="Black and white photo of small white dog digging with caption 'Dig Dig Dig'.">
+						<cite><a href="https://www.flickr.com/photos/aivas14/7783044204">Image source</a></cite>
+					</figure>
+					<p class="big2 yellow">Do the research, as you do&hellip;</p>
+				</section>
+				<section id="s86">
+					<h2>Thanks!</h2>
+					<p class="big2 yellow">Questions?</p>
+					<p>Jason Kiss<br>Senior Advisor, Digital Engagement<br>Dept. of Internal Affairs<br><a href="mailto:web.standards@dia.govt.nz">web.standards@dia.govt.nz</a><br><span class="green">Twitter: @jkiss</span></p>
+				</section>
+				<section id="s136">
+					<h2>Copyright</h2>
+					<p><small><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Attribution 4.0 International Licence" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>Crown copyright ©. Copyright material in <span property="http://purl.org/dc/terms/title">this presentation</span> is protected by copyright owned by the <a href="https://www.dia.govt.nz/" vocab="http://creativecommons.org/ns#" property="attributionURL"><span property="attributionName">Department of Internal Affairs on behalf of the Crown</span></a>. Unless indicated otherwise for specific items or collections of content (either below or within specific items or collections), this copyright material is licensed for re-use under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International Licence</a>. In essence, you are free to copy, distribute and adapt the material, as long as you attribute it to the Department of Internal Affairs and abide by the other licence terms. Please note that this licence does not apply to any logos, emblems and trade marks in the presentation or to the presentation's design elements. Where a photograph used in this presentation is accompanied by a link to its source, see the photograph's source for its copyright and licence terms.</small></p>
+					<p><small>The framework used to build this presentation, <a href="https://github.com/hakimel/reveal.js">Reveal.js</a> is protected by copyright owned by <a href="http://hakim.se">Hakim El Hattab</a> and licensed for use under the <a href="LICENSE.txt">MIT License</a>. </small></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="js/jk-custom.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				showNotes: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
