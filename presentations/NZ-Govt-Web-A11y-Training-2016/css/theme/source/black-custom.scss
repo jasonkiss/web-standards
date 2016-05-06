@@ -60,9 +60,7 @@ section.has-light-background {
 
 
 .reveal .controls {background: rgba(34,34,34,0.5);}
-.reveal .controls .navigate-left, 
 .reveal .controls .navigate-left.enabled, 
-.reveal .controls .navigate-right, 
 .reveal .controls .navigate-right.enabled {color: #5590C8; opacity: 1;}
 
 .reveal .controls .navigate-left.enabled:hover, .reveal .controls .navigate-left.enabled:focus {
