@@ -60,9 +60,7 @@ section.has-light-background {
 
 
 .reveal .controls {background: rgba(34,34,34,0.5);}
-.reveal .controls .navigate-left, 
 .reveal .controls .navigate-left.enabled, 
-.reveal .controls .navigate-right, 
 .reveal .controls .navigate-right.enabled {color: #5590C8; opacity: 1;}
 
 .reveal .controls .navigate-left.enabled:hover, .reveal .controls .navigate-left.enabled:focus {
@@ -164,11 +162,11 @@ section.has-light-background {
 
 .reveal .checkbox {
     display: inline-block;
-    background: #222 url(/img/checkbox.png) no-repeat 7px 24px;
+    background: #222 url(../../img/checkbox.png) no-repeat 7px 24px;
     padding: 5px 5px 5px 28px;
 }
 .reveal .checkbox.checked, .reveal .checkbox[aria-checked="true"] {
-    background: url(/img/checkbox-checked.png) no-repeat 7px 24px;
+    background: url(../../img/checkbox-checked.png) no-repeat 7px 24px;
     padding-left: 28px;
 }
 
