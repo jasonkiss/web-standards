@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+	<meta charset="utf-8">
+	<title>Making your web content accessible — Quick reference for content editors</title>
+</head>
+<body>
+	<header>
+		<p class="draft"><strong>DRAFT</strong></p>
+		<img class="nz" src="../../common/img/nz-govt-logo.png" alt="New Zealand Government — Te Kāwanatanga o Aotearoa" width="285" height="57">
+		<h1>Making your web content accessible</h1>
+		<p>Quick reference for content editors</p>
+	</header>
+	<main>
+		<h2>Introduction</h2>
+		<p>Web accessibility is about making your site and its content inclusive. Making your content accessible increases your potential audience and gives them a better experience.</p>
+		<p>It’s easiest to make sure your content is accessible right from the start of your project. Fixing issues later takes a lot more effort.</p>
+		<p>This document is meant to be like a ‘pre-flight check’ to help you assess your content in terms of its accessibility. It also includes considerations to share with business owners to help them set realistic expectations.</p>
+		<h2>Non-text content</h2>
+		<h3>Images</h3>
+		<ul>
+			<li>
+				<p><strong>Images containing meaningful information have a descriptive text alternative.</strong></p>
+				<p>Images need text alternatives (alt text, max. ~150 characters) to describe their meaning.<p>
+			</li>
+			<li>
+				<p><strong>Decorative images have empty alt values.</strong></p>
+				<p>The image’s alt text should be empty, e.g. <code>&lt;img alt="" src="/flower.jpg"&gt;</code>.</p>
+			</li>
+			<li>
+				<p><strong>Images containing words have alt text containing those words.</strong></p> 
+				<p>Some images contain text, e.g. logos, graphs, screenshots, and diagrams. The alt text for these images needs to include the text in the image. If the text in an image is complex, it may need a long description.</p>
+			</li>
+			<li>
+				<p><strong>Linked image uses alt text to describe the link’s destination.</strong></p> 
+				<p>If the link has an image and text, and the text describes the link’s destination, the alt text should be empty. If the linked image has more information that isn’t text, put it in the image alt text.</p>
+			</li>
+			<li>
+				<p><strong>For complex images, provide a longer text alternative.</strong></p> 
+				<p>Alt text may not be enough to describe a complex image like an infographic or a flowchart. Use a longer text alternative to describe any meaningful information.</p>
+			</li>
+		</ul>
+		<p>For more detailed guidance, see <a href="https://www.w3.org/TR/html51/semantics.html#alt">Requirements for providing text to act as an alternative for images</a>.</p>
+		<p>The W3C website also has a <a href="https://www.w3.org/WAI/tutorials/images/">great tutorial about alt text</a>, information about what you need to do with different types of images and an alt text decision tree.</p>
+		<h3>Video and/or audio content</h3>
+		<ul>
+			<li>
+				<p><strong>For video and audio, provide descriptive text alternatives.</strong></p> 
+				<p>Video, audio, and audio-video content need descriptive text alternatives that include all meaningful information conveyed visually or aurally.</p>
+			</li>
+			<li>
+				<p><strong>For videos with audio, provide captions.</strong></p> 
+				<p>Videos with audio content need captions for all meaningful information conveyed through the audio.</p>
+			</li>
+		</ul>
+		<h2>Text content</h2>
+		<ul>
+			<li>
+				<p><strong>Instructions do not refer to shape, location or size.</strong></p> 
+				<p>Instructions shouldn’t rely solely on sensory characteristics (e.g. shape, visual location, or size). The instruction “Use the button on the right” doesn’t work if you’re using a different layout. Will the button necessarily be in the same place? An instruction like “Use the Search button on the right” identifies the button both by both name and location.</p>
+			</li>
+			<li>
+				<p><strong>Text on a coloured background is easy to see.</strong></p> 
+				<p>There is enough contrast between text and its background so that it can be read easily. The contrast ratio between text colour and the background needs to be at least 4.5:1. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1. There are several helpful <a href="https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools">online tools for checking</a> your contrast ratio.</p>
+			</li>
+			<li>
+				<p><strong>Link text provides its own context.</strong></p> 
+				<p>Each link’s purpose is clear from the link’s text content (or image alt text if applicable) and its immediate context, ie, the previous heading, paragraph, list item, or table cell it is in.</p>
+			</li>
+			<li>
+				<p><strong>Language changes are marked up in the HTML.</strong></p> 
+				<p>Any text that differs from the main language of the site (most of the time this will be English), it needs to be identified as by its language code, e.g. “mi” for Māori:</p>
+				<code>&lt;p&gt;This section talks about translating English into &lt;span lang="mi"&gt;te reo Māori&lt;/span&gt;&lt;/p&gt;.</code>
+				<p>The <a href="https://www.loc.gov/standards/iso639-2/php/code_list.php">language codes</a> can be found in the Standards section of the Library of Congress website.</p>
+			</li>
+			<li>
+				<p><strong>Pages have a unique, descriptive title.</strong></p> 
+				<p>Each web page’s <code>&lt;title&gt;</code> element is descriptive and distinguishes it from every other page on the website.</p>
+				<p>There are some <a href="http://www.w3.org/WAI/gettingstarted/tips/writing.html#provide-informative-unique-page-titles">great examples of page titles</a> on the W3C website.</p>
+			</li>
+		</ul>
+		<h3>Headings</h3>
+		<ul>
+			<li>
+				<p><strong>Headings are marked up as HTML headings.</strong></p> 
+				<p>If something looks like a heading, it should be marked up as a heading. Similarly, something that is marked up as an HTML heading should look like a heading.</p>
+				<p>Don’t choose heading styles based on what they look like. If a level-3 heading looks smaller than a level-5 heading, talk to your designer.</p>
+			</li>
+			<li>
+				<p><strong>Headings accurately explain their content.</strong></p> 
+				<p>Headings must clearly describe the content underneath them.</p>
+			</li>
+			<li>
+				<p><strong>Headings reflect content hierarchy.</strong></p> 
+				<p>Check headings match the correct content hierarchy. For example an <code>&lt;h3&gt;</code> under an <code>&lt;h2&gt;</code> is a subsection, while an <code>&lt;h3&gt;</code> under another <code>&lt;h3&gt;</code> is a new section at the same level.</p>
+			</li>
+		</ul>
+		<h3>Bulleted or numbered lists</h3>
+		<ul>
+			<li>
+				<p>Lists are marked up as HTML lists.</p>
+				<p>If something looks like or acts as a list, it should be marked up as an ordered, unordered or definition list.</p>
+			</li>
+		</ul>
+		<h3>Tables</h3>
+		<ul>
+			<li>
+				<p><strong>Tables are used for data, and not for layout.</strong></p> 
+				<p>Use tables for displaying data, rather than for layout purposes. If the table’s content is not tabular data (ie, has clear row and column relationships), do not use a table.</p>
+			</li>
+			<li>
+				<p><strong>Data table columns and rows have headers.</strong></p> 
+				<p>Use column and row header cells (e.g. <code>&lt;th&gt;</code>) as appropriate to indicate table structure.</p>
+			</li>
+		</ul>
+		<h2>Navigating the page</h2>
+		<ul>
+			<li>
+				<p><strong>Web page can be used with only a keyboard.</strong></p> 
+				<p>You must be able to use keyboard controls to do everything on a web page. This includes completing form fields, accessing menus and submenus, using video or audio controls, and clicking links.</p>
+			</li>
+			<li>
+				<p><strong>Keyboard focus is easily visible.</strong></p> 
+				<p>When someone is tabbing through a web page they must easily be able to see where they are, e.g. with an outline or change in colour.</p>
+			</li>
+			<li>
+				<p><strong>Features don’t prohibit moving through the page from the keyboard.</strong></p> 
+				<p>Features like embedded videos, carousels, and plugins can trap keyboard users. Users are able to navigate to and around the feature but can’t navigate away from it. They get trapped in a loop.</p>
+			</li>
+			<li>
+				<p><strong>Users can skip straight to the main page content without a mouse.</strong></p> 
+				<p>Allow keyboard users to jump straight to the main content of a page by providing a skip link, ARIA landmarks or by having headings at the beginning of sections of content.</p>
+			</li>
+		</ul>
+		<h2>Forms</h2>
+		<ul>
+			<li>
+				<p><strong>Form fields have a visible, descriptive label.</strong></p> 
+				<p>Each form field (text inputs, radio buttons, checkboxes, dropdowns, and textareas) has a label that clearly describes its topic or purpose.</p>
+			</li>
+			<li>
+				<p><strong>Form fields that have been grouped together have a group title or caption.</strong></p> 
+				<p>Each group of form fields like radio buttons or checkboxes needs a title or caption (e.g. <code>&lt;legend&gt;</code>) that clearly describes the reason for the grouping.</p>
+			</li>
+			<li>
+				<p><strong>Instructions for entering information are clear and easily understood.</strong></p> 
+				<p>To help users avoid making errors, clearly indicate the expected content or format, ideally by including this information in the field’s label.</p>
+			</li>
+			<li>
+				<p><strong>Error messages help users fix them.</strong></p> 
+				<p>Error messages should clearly indicate which fields have errors and how users can fix them.</p>
+				<p>There are some helpful <a href="http://www.w3.org/WAI/gettingstarted/tips/writing.html#provide-clear-instructions">examples of clear instructions and error messages</a> on the W3C website.</p>
+			</li>
+		</ul>
+	</main>
+	<footer>
+		<img class="dia" src="../../common/img/dia-logo.png" alt="Department of Internal Affairs — Te Tari Taiwhenua" width="285" height="50">
+	</footer>
+</body>
+</html>
