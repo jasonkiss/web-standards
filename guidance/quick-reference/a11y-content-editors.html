@@ -12,7 +12,7 @@
 		<p><a class="back" href="index.html"><span aria-hidden="true">← </span>Back to Quick reference guides</a></p>
 	</header>
 	<main>
-		<h1>Web accessibility quick reference for content editors</h1><h2>Introduction</h2>
+		<h1>Web accessibility for content editors</h1><h2>Introduction</h2>
 		<p>Web accessibility is about making your site and its content inclusive. Making your content accessible increases your potential audience and gives them a better experience.</p>
 		<p>It’s easiest to make sure your content is accessible right from the start of your project. Fixing issues later takes a lot more effort.</p>
 		<p>This document is meant to be like a ‘pre-flight check’ to help you assess your content in terms of its accessibility. It also includes considerations to share with business owners to help them set realistic expectations.</p>
@@ -25,11 +25,11 @@
 			</li>
 			<li>
 				<p><strong>Decorative images have empty alt values.</strong></p>
-				<p>The image’s alt text should be empty, e.g. <code>&lt;img alt="" src="/flower.jpg"&gt;</code>.</p>
+				<p>The image’s alt text should be empty, eg <code>&lt;img alt="" src="/flower.jpg"&gt;</code>.</p>
 			</li>
 			<li>
 				<p><strong>Images containing words have alt text containing those words.</strong></p> 
-				<p>Some images contain text, e.g. logos, graphs, screenshots, and diagrams. The alt text for these images needs to include the text in the image. If the text in an image is complex, it may need a long description.</p>
+				<p>Some images contain text, eg logos, graphs, screenshots, and diagrams. The alt text for these images needs to include the text in the image. If the text in an image is complex, it may need a long description.</p>
 			</li>
 			<li>
 				<p><strong>Linked image uses alt text to describe the link’s destination.</strong></p> 
@@ -57,7 +57,7 @@
 		<ul>
 			<li>
 				<p><strong>Instructions do not refer to shape, location or size.</strong></p> 
-				<p>Instructions shouldn’t rely solely on sensory characteristics (e.g. shape, visual location, or size). The instruction “Use the button on the right” doesn’t work if you’re using a different layout. Will the button necessarily be in the same place? An instruction like “Use the Search button on the right” identifies the button both by both name and location.</p>
+				<p>Instructions shouldn’t rely solely on sensory characteristics, eg shape, visual location, or size. The instruction 'Use the button on the right' doesn’t work if you’re using a different layout. Will the button necessarily be in the same place? An instruction like 'Use the Search button on the right' identifies the button both by both name and location.</p>
 			</li>
 			<li>
 				<p><strong>Text on a coloured background is easy to see.</strong></p> 
@@ -69,8 +69,8 @@
 			</li>
 			<li>
 				<p><strong>Language changes are marked up in the HTML.</strong></p> 
-				<p>Any text that differs from the main language of the site (most of the time this will be English), it needs to be identified as by its language code, e.g. “mi” for Māori:</p>
-				<code>&lt;p&gt;This section talks about translating English into &lt;span lang="mi"&gt;te reo Māori&lt;/span&gt;&lt;/p&gt;.</code>
+				<p>Any text that differs from the main language of the site (most of the time this will be English), it needs to be identified as by its language code, eg  “mi” for Māori:</p>
+				<pre class=prettyprintbox><code>&lt;p&gt;This section talks about translating English into &lt;span lang="mi"&gt;te reo Māori&lt;/span&gt;&lt;/p&gt;.</code></pre>
 				<p>The <a href="https://www.loc.gov/standards/iso639-2/php/code_list.php">language codes</a> can be found in the Standards section of the Library of Congress website.</p>
 			</li>
 			<li>
@@ -98,7 +98,7 @@
 		<h3>Bulleted or numbered lists</h3>
 		<ul>
 			<li>
-				<p>Lists are marked up as HTML lists.</p>
+				<p><strong>Lists are marked up as HTML lists.</strong></p>
 				<p>If something looks like or acts as a list, it should be marked up as an ordered, unordered or definition list.</p>
 			</li>
 		</ul>
@@ -110,7 +110,7 @@
 			</li>
 			<li>
 				<p><strong>Data table columns and rows have headers.</strong></p> 
-				<p>Use column and row header cells (e.g. <code>&lt;th&gt;</code>) as appropriate to indicate table structure.</p>
+				<p>Use column and row header cells, eg <code>&lt;th&gt;</code> as appropriate to indicate table structure.</p>
 			</li>
 		</ul>
 		<h2>Navigating the page</h2>
@@ -121,7 +121,7 @@
 			</li>
 			<li>
 				<p><strong>Keyboard focus is easily visible.</strong></p> 
-				<p>When someone is tabbing through a web page they must easily be able to see where they are, e.g. with an outline or change in colour.</p>
+				<p>When someone is tabbing through a web page they must easily be able to see where they are, eg with an outline or change in colour.</p>
 			</li>
 			<li>
 				<p><strong>Features don’t prohibit moving through the page from the keyboard.</strong></p> 
@@ -136,11 +136,11 @@
 		<ul>
 			<li>
 				<p><strong>Form fields have a visible, descriptive label.</strong></p> 
-				<p>Each form field (text inputs, radio buttons, checkboxes, dropdowns, and textareas) has a label that clearly describes its topic or purpose.</p>
+				<p>Each form field text inputs, radio buttons, checkboxes, dropdowns, and textareas) has a label that clearly describes its topic or purpose.</p>
 			</li>
 			<li>
 				<p><strong>Form fields that have been grouped together have a group title or caption.</strong></p> 
-				<p>Each group of form fields like radio buttons or checkboxes needs a title or caption (e.g. <code>&lt;legend&gt;</code>) that clearly describes the reason for the grouping.</p>
+				<p>Each group of form fields like radio buttons or checkboxes needs a title or caption, eg <code>&lt;legend&gt;</code>) that clearly describes the reason for the grouping.</p>
 			</li>
 			<li>
 				<p><strong>Instructions for entering information are clear and easily understood.</strong></p> 
