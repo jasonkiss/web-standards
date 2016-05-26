@@ -1,0 +1,7 @@
+# Site settings
+title: New Zealand Government Web Standards on GitHub
+email: web.standards@dia.govt.nz
+baseurl: "/web-standards" # the subpath of your site, e.g. /blog
+
+# Build settings
+markdown: kramdown
