@@ -1,0 +1,15 @@
+  <header>
+    {% if page.draft %}
+      {% include draft.html %}
+    {% endif %}
+    <div class="site-name">New Zealand Government Web Standards on GitHub</div>
+    <nav class="main" aria-label="Main menu">
+      <ul>
+        <li><a href="{{site.baseurl}}/">Home</a></li>
+        <li><a href="{{site.baseurl}}/guidance/">Guidance</a></li>
+        <li><a href="{{site.baseurl}}/presentations/">Presentations</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>{{ page.title }}</h1>

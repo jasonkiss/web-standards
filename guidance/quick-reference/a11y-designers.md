@@ -1,4 +1,8 @@
-# Web accessibility quick reference for designers
+---
+layout: default
+title: Web accessibility quick reference for designers
+draft: true
+---
 
 ## Introduction
 
