@@ -21,6 +21,16 @@
     </ol>
   </nav>
   <main>
+    {% if page.url != page.dir %}
+      {% if page.url | slice: -4 == "html" %}
+        {% assign gh-src = page.url | replace: ".html", ".md" %}
+      {% else %}
+        {% assign gh-src = page.dir %}
+      {% endif %}
+    {% else %}
+      {% assign gh-src = page.url | append: "index.md" %}
+    {% endif %}    
+    <p class="gh-src"><a href="https://github.com/GOVTNZ/web-standards/blob/gh-pages{{ gh-src }}">View or contribute to this page in GitHub</a></p>
   {% if page.draft %}
     {% include draft.html %}
   {% endif %}

@@ -9,11 +9,12 @@ nav.bc {background: #eaeaea; padding-top: 1em; font-size: 0.875em; line-height: 
 nav ul, nav ol {padding: 0; margin: 0;}
 nav.main li, nav.bc li {display: inline; list-style-type: none;}
 nav.main li {margin: 0 10px;}
-nav.main a:link, nav.main a:visited {color: #fff;}
+nav.main a:link, nav.main a:visited, .gh-src a:link, .gh-src a:visited {color: #fff;}
 nav.bc ol {padding-left: 10px;}
 nav.bc li {margin: 0;}
 nav.bc li:not(:last-child):after {content: " →";}
 main {padding: 0 10px;}
+.gh-src {display: inline-block; padding: 10px; margin-bottom: 0; background-color: #666; color: #fff;}
 div.draft {margin: 1em 0; font-size: 1.6em;}
 footer {border-top: 1px solid #999; margin-top: 2em; padding: 1em 10px;}
 footer .nz-govt {float: left; margin-bottom: 1em;}
