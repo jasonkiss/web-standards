@@ -4,10 +4,15 @@ body {
 }
 header {background: #000;}
 header .site-name {color: #fff; font-size: 2em; padding: 10px;} 
-nav ul {padding: 0; margin: 0;}
-nav.main {padding: 0 0 1em;}
-nav.main li {display: inline; margin: 0 10px; list-style-type: none;}
+nav.main, nav.bc {padding: 0 0 1em;}
+nav.bc {background: #eaeaea; padding-top: 1em; font-size: 0.875em; line-height: 1.6;}
+nav ul, nav ol {padding: 0; margin: 0;}
+nav.main li, nav.bc li {display: inline; list-style-type: none;}
+nav.main li {margin: 0 10px;}
 nav.main a:link, nav.main a:visited {color: #fff;}
+nav.bc ol {padding-left: 10px;}
+nav.bc li {margin: 0;}
+nav.bc li:not(:last-child):after {content: " →";}
 main {padding: 0 10px;}
 div.draft {margin: 1em 0; font-size: 1.6em;}
 footer {border-top: 1px solid #999; margin-top: 2em; padding: 1em 10px;}

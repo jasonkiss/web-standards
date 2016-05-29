@@ -8,8 +8,20 @@
       </ul>
     </nav>
   </header>
-  <main>
-    {% if page.draft %}
-      {% include draft.html %}
+  <nav class="bc" aria-label="Breadcrumbs">
+  {% assign dirs = page.dir | split: "/" %}
+    <ol>
+      <li>{% if page.url != "/" %}<a href="{{ site.baseurl }}/">Home</a>{% else %}Home{% endif %}</li>
+    {% for d in dirs offset:1 %}
+      <li>{% if d != dirs.last or page.url != page.dir %}<a href="{{ site.baseurl }}{{ site.dirs[d].url }}">{{ site.dirs[d].title }}</a>{% else %}{{ site.dirs[d].title }}{% endif %}</li>
+    {% endfor %}
+    {% if page.url != page.dir %}
+      <li>{{ page.title }}</li>
     {% endif %}
+    </ol>
+  </nav>
+  <main>
+  {% if page.draft %}
+    {% include draft.html %}
+  {% endif %}
     <h1>{{ page.title }}</h1>

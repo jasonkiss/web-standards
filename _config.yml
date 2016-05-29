@@ -2,6 +2,17 @@
 title: New Zealand Government Web Standards on GitHub
 email: web.standards@dia.govt.nz
 baseurl: "/web-standards" # the subpath of your site, e.g. /blog
+# Site custom vars
+dirs:
+  'guidance':
+    url: /guidance/
+    title: Guidance
+  'quick-reference':
+    url: /guidance/quick-reference/
+    title: Quick Reference Guides
+  'presentations':
+    url: /presentations/
+    title: Presentations
 
 # Build settings
 markdown: kramdown
