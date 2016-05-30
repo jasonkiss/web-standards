@@ -8,11 +8,11 @@ draft: true
 
 This document is meant as an accessibility prompt for graphic and interaction designers and those responsible for producing HTML/CSS templates.
 
-## Text alternatives
-
-**When is something considered meaningful?**
+**A note about what's considered meaningful**
 
 Something is considered meaningful if it adds to the user's experience. For example, a page may include a picture of a kitten as something cute to make me smile. In this instance, it would be considered decorative and not meaningful. A picture of a kitten on another page may be looking at the growth stages of a cat. In this instance the picture would be considered meaningful.
+
+## Text alternatives
 
 * **Images containing meaningful information have a descriptive text alternative.**
 	
@@ -48,31 +48,33 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 	Don’t use layout tables. Data tables need column and row headers as appropriate. 
 
-* **Are headings hierarchically organised?**
+* **Heading levels reflect content hierarchy.**
 
 	Check headings denote the correct hierarchical structure e.g. an `<h3>` under an `<h2>` is a subsection, while an `<h3>` under another `<h3>` is a new section at the same level. 
 
-* **Is the reading order meaningful?**
+* **Reading order must still meaningful without visual styling.**
 
-	Users that read content sequentially, e.g. screen reader users, need to encounter content in the correct reading order so that they get the same meaning as everyone else.
+	Turn off styling to check that the native reading order of the page still flows in a meaningful order. Users that read content sequentially, eg screen reader users, need to encounter content in the correct reading order so that they get the same meaning as everyone else.
 
-* **Are icons or symbols used to convey information?**
+* **Icons or symbols used to convey information have a text alternative.**
 
-	Provide a text alternative if you are using icons or symbols to convey information.
+	Any graphic element, including icons or symbols conveying meaningful information must have a text alternative.
 
 ## Distinguishable
 
-* **Is colour the only method used to convey information?**
+* **Colour conveying meaning is augmented with other methods.**
 
-	If colour has a meaning assigned to it (e.g. coloured lines on a chart, link text is coloured, different-coloured buttons), use other methods to supplement this information.
+	If colour has a meaning assigned to it (eg coloured lines on a chart, coloured link text, different-coloured buttons), use other methods to supplement this information.
 
-* **Does audio automatically start playing when the page loads?**
+* **Audio must be manually started on a webpage.**
 
 	If background audio starts automatically, users need to be able to pause, stop, or mute it.
 
-* Is text colour easily read against the background colour?
+* **Text on a coloured background is easy to see.**
 
-	The contrast ratio between text colour and the background needs to be at least 4.5:1. Large text (18 points upwards or 14 points upwards if bold) can use a contrast ratio of 3:1. To find out if contrast ratio use online tools like the [WebAim colour contrast checker](http://webaim.org/resources/contrastchecker/) or the [Tanaguru contrast finder](http://contrast-finder.tanaguru.com/). You can also use offline tools like [Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/). The exception to this is decorative text that conveys no meaningful information or logos/brand names.
+    There is enough contrast between text and its background so that it can be read easily. The contrast ratio between text colour and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\. There are several helpful [online tools for checking](https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools) your contrast ratio.
+    
+    The exception to this rule is logos/brand names or decorative text that conveys no meaningful information.
 
 * **Can you still read the page content if the page is zoomed to 200%?**
 
@@ -92,7 +94,6 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 	Features like embedded videos, carousels, and plugins can trap keyboard users. Users are able to navigate to and around the feature but can’t navigate away from it. They get trapped in a loop.
 
-
 ## Enough time
 
 * **If there is a time limit on an activity, can users disable or extend the time limit?**
@@ -111,9 +112,11 @@ Is your content flashing more than 3 times in a second? Flashing or blinking con
 
 	Allow non-mouse users to jump straight to the main content of a page by providing a skip link, ARIA landmarks or by having headings at the beginning of sections of content.
 
-* **Does each web page have a unique, descriptive title?**
+* **Pages have a unique, descriptive title.**
 
 	Each web page’s `<title>` element is descriptive and distinguishes it from every other page on the website.
+    
+    There are some [great examples of page titles](http://www.w3.org/WAI/gettingstarted/tips/writing.html#provide-informative-unique-page-titles) on the W3C website.
 
 * **Is information encountered in a logical, consistent order?**
 
