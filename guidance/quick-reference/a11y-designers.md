@@ -6,7 +6,7 @@ draft: true
 
 ## Introduction
 
-This document is meant as an accessibility prompt for graphic and interaction designers and those responsible for producing HTML/CSS templates. We have also included a checklist in Appendix 1 as a reminder.
+This document is meant as an accessibility prompt for graphic and interaction designers and those responsible for producing HTML/CSS templates.
 
 ## Text alternatives
 
