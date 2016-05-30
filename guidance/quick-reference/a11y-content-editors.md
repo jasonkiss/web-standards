@@ -2,6 +2,7 @@
 layout: default
 title: Web accessibility for content editors
 draft: true
+draft_path: /guidance/design-and-development/quick-reference-guides/
 ---
 
 ## Introduction
