@@ -15,10 +15,10 @@ nav.bc ol {padding-left: 10px;}
 nav.bc li {margin: 0;}
 nav.bc li:not(:last-child):after {content: " →";}
 main {padding: 0 10px;}
-div.draft {margin: 1em 0; padding: 10px; background-color: #90b5df;}
+div.draft {margin: 1em 0 0; padding: 10px; background-color: #90b5df;}
 div.draft p.draft, div.draft p {margin: 0;}
 div.draft p.draft {font-size: 1.6em;}
-.gh-src {display: inline-block; padding: 10px; margin: 0; background-color: #666; color: #fff; font-weight: 100;}
+.gh-src {display: inline-block; padding: 10px; margin: 1em 0 0; background-color: #666; color: #fff; font-weight: 100;}
 footer {border-top: 1px solid #999; margin-top: 2em; padding: 1em 10px;}
 footer .nz-govt {float: left; margin-bottom: 1em;}
 footer .dia {float: right; margin-bottom: 1em;}
