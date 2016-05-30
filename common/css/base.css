@@ -20,3 +20,4 @@ footer {border-top: 1px solid #999; margin-top: 2em; padding: 1em 10px;}
 footer .nz-govt {float: left; margin-bottom: 1em;}
 footer .dia {float: right; margin-bottom: 1em;}
 footer .dia img {display: block;}
+footer .copyright {clear: both;}
