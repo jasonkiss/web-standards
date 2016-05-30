@@ -10,29 +10,31 @@ This document is meant as an accessibility prompt for graphic and interaction de
 
 ## Text alternatives
 
-* **Does the image serve a meaningful function in the page?**
-	
-	The image needs a text alternative (alt text, max ~150 characters) that is an appropriate replacement for the image’s function in the page.
+**When is something considered meaningful?**
 
-* **Is the image purely decorative?**
+Something is considered meaningful if it adds to the user's experience. For example, a page may include a picture of a kitten as something cute to make me smile. In this instance, it would be considered decorative and not meaningful. A picture of a kitten on another page may be looking at the growth stages of a cat. In this instance the picture would be considered meaningful.
+
+* **Images containing meaningful information have a descriptive text alternative.**
+	
+	Images need text alternatives (alt text, max ~150 characters) to describe their meaning.
+
+* **Decorative images have empty alt values.**
 
 	The image’s alt text should be empty, e.g. `<img alt="" src="/flower.jpg">`.
 
-* **Does the image contain words?**
+* **Images containing words have alt text containing those words.**
 	
-	Include the words in the image’s alt text.
+	Some images contain text. If that text is meaningful it needs to be included in the image's alt text.
 
-* **Is the image in a link?**
+* **Linked images use alt text to describe the link's destination.**
 
-	* If the link is just an image, the alt text should describe the link’s purpose or destination.
-
-	* If the link has an image and text, and the text describes the link’s purpose or destination, the alt text should be empty, ie, `alt=“”`.
+	If the link has an image and text, and the text describes the link’s destination, the alt text should be empty, ie, `alt=“”`.
 	
-	* If the link has an image and text, but the image has meaningful information that isn’t in the link text, include that information in the image’s alt text.
+	If the linked image has more information that isn’t included in the link text, put it in the image’s alt text.
 	
-* **Is the image purpose sufficiently addressed by alt text?**
+* **For complex images, provide a longer text alternative.**
 	
-	If alt text is not sufficient to describe the image, e.g. a complex image or infographic, use a longer text alternative to describe the image’s meaningful information.
+	Alt text may not be long enough to describe a complex image like an infographic or a flowchart. Use a longer text alternative to describe any meaningful information.
 
 For more detailed guidance, see [Requirements for providing text to act as an alternative for images](http://www.w3.org/TR/html51/semantics.html#alt).
 
