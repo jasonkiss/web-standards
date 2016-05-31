@@ -20,7 +20,7 @@ Something is considered meaningful if it adds to the user's experience. For exam
 
 * **Decorative images have empty alt values.**
 
-	The image’s alt text should be empty, e.g. `<img alt="" src="/flower.jpg">`.
+	The image’s alt text should be empty, eg `<img alt="" src="/flower.jpg">`.
 
 * **Images containing words have alt text containing those words.**
 	
@@ -28,7 +28,7 @@ Something is considered meaningful if it adds to the user's experience. For exam
 
 * **Linked images use alt text to describe the link's destination.**
 
-	If the link has an image and text, and the text describes the link’s destination, the alt text should be empty, ie, `alt=“”`.
+	If the link has an image and text, and the text describes the link’s destination, the alt text should be empty, ie `alt=“”`.
 	
 	If the linked image has more information that isn’t included in the link text, put it in the image’s alt text.
 	
@@ -40,13 +40,13 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 ## Adaptable
 
-* **Is visual appearance accurately reflected with correct HTML?**
+* **Structural and functional components are marked up with the correct HTML elements.**
 
-	If it looks like a heading, mark it up as a heading. If it is a list, mark it up as a list. If different blocks of content are visually related or distinct, reflect this in the HTML.
+	If it acts and looks like a heading, mark it up as a heading. If it is a list, mark it up as a list. If there are visual clues to mark out different blocks of content reflect this in the HTML. For example, a footer section might have a different background colour to separate it from the page content. Mark up with a footer element or with an ARIA label.
 
 *   **Tables are used to display data, and not for laying out content.**
 
-    Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data (ie, has clear relationships with row and column headings). Don't use tables as a way to layout content.
+    Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data, ie information in each cell is defined by row and column headings. Don't use tables as a way to layout content.
 
 *   **Data table columns and rows have defined headers.**
 
@@ -68,7 +68,7 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 * **Colour conveying meaning is augmented with other methods.**
 
-	If colour has a meaning assigned to it (eg coloured lines on a chart, coloured link text, different-coloured buttons), use other methods to supplement this information.
+	If colour has a meaning assigned to it (eg coloured lines on a chart, coloured link text, different-coloured buttons) use other methods to supplement this information. Examples of this might be dashed or dotted lines or having links underlined.
 
 * **Audio must be manually started on a webpage.**
 
