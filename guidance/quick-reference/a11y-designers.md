@@ -44,10 +44,14 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 	If it looks like a heading, mark it up as a heading. If it is a list, mark it up as a list. If different blocks of content are visually related or distinct, reflect this in the HTML.
 
-* **Are tables used properly for tabular data, and not for layout purposes?**
+*   **Tables are used to display data, and not for laying out content.**
 
-	Don’t use layout tables. Data tables need column and row headers as appropriate. 
+    Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data (ie, has clear relationships with row and column headings). Don't use tables as a way to layout content.
 
+*   **Data table columns and rows have defined headers.**
+
+    Use column and row header cells, eg `<th>` as appropriate to indicate table structure.
+    
 * **Heading levels reflect content hierarchy.**
 
 	Check headings denote the correct hierarchical structure e.g. an `<h3>` under an `<h2>` is a subsection, while an `<h3>` under another `<h3>` is a new section at the same level. 

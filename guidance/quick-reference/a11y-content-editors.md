@@ -107,7 +107,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Tables are used for data, and not for layout.**
 
-    Use tables for displaying data, rather than for layout purposes. If the table’s content is not tabular data (ie, has clear row and column relationships), do not use a table.
+    Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data (ie, has clear relationships with row and column headings). Don't use tables as a way to layout content.
 
 *   **Data table columns and rows have headers.**
 
