@@ -109,8 +109,12 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 	Moving, blinking, scrolling or auto-updating content that starts automatically is distracting. Users must be able to pause, stop or hide it if they find it too distracting. This also applies to keyboard-only users. The exception to this is all essential activity, e.g. real-time traffic information or weather warnings. 
 
 ## Seizures
+	
+* **Content does not flash more than 3 times in a second.**
+	
+	Flashing or blinking content on a web page can trigger seizures in people with photosensitivity.
 
-Content does not flash more than 3 times in a second. Flashing or blinking content on a web page can trigger seizures in people with photosensitivity.  
+## Navigable
 
 * **Users can skip straight to the main page content using a keyboard.**
 
