@@ -108,6 +108,12 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 	Moving, blinking, scrolling or auto-updating content that starts automatically is distracting. Users must be able to pause, stop or hide it if they find it too distracting. This also applies to keyboard-only users. The exception to this is all essential activity, e.g. real-time traffic information or weather warnings. 
 
+## Seizures
+	
+* **Is your content flashing more than 3 times in a second?**
+	
+	Flashing or blinking content on a web page can trigger seizures in people with photosensitivity.
+
 ## Navigable
 
 * **Can users bypass repeated blocks of content?**
@@ -143,12 +149,6 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 * **Is current keyboard focus easily visible?**
 
 	Web pages must visually indicate which element currently has keyboard focus, e.g. with an outline or change in colour.
-
-## Health Concerns
-
-* **Seizures**
-
-	Is your content flashing more than 3 times in a second? Flashing or blinking content on a web page can trigger seizures in people with photosensitivity.
 
 ## Predictable
 
