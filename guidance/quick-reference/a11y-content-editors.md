@@ -63,7 +63,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Link text provides its own context.**
 
-    Each link’s purpose is clear from the link’s text content (or image alt text if applicable) and its immediate context, ie, the previous heading, paragraph, list item, or table cell it is in.
+    Each link’s purpose is clear from the link’s text content (or image alt text, where applicable) and its immediate context, ie, the previous heading, paragraph, list item, or table cell it is in.
 
 *   **Language changes are marked up in the HTML.**
 
@@ -89,9 +89,9 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
     Don’t choose heading styles based on what they look like. If a level-3 heading looks smaller than a level-5 heading, talk to your designer.
 
-*   **Headings accurately explain their content.**
+* **Headings accurately describe their content.**
 
-    Headings must clearly describe the content underneath them.
+	Headings must clearly describe the topic or purpose of the content beneath them. This includes groups of form fields that need a title or caption that clearly describes the reason for the grouping.
 
 *   **Headings reflect content hierarchy.**
 
@@ -123,11 +123,11 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
     When someone is tabbing through a web page they must easily be able to see where they are, eg with an outline or change in colour.
 
-*   **Features don’t prohibit moving through the page from the keyboard.**
+*   **Features don't stop you from navigating around the page using just a keyboard.**
 
     Features like embedded videos, carousels, and plugins can trap keyboard users. Users are able to navigate to and around the feature but can’t navigate away from it. They get trapped in a loop.
 
-*   **Users can skip straight to the main page content without a mouse.**
+*   **Users can skip straight to the main page content using a keyboard.**
 
     Allow keyboard users to jump straight to the main content of a page by providing a skip link, ARIA landmarks or by having headings at the beginning of sections of content.
 
