@@ -23,19 +23,21 @@ This document is meant to be like a ‘pre-flight check’ to help you assess yo
 
 *   **Decorative images have empty alt values.**
 
-    The image’s alt text should be empty, eg `<img alt="" src="/flower.jpg">`.
+    The image’s alt text should be empty, e.g. `<img alt="" src="/flower.jpg">`.
 
 *   **Images containing words have alt text containing those words.**
 
-    Some images contain text, eg logos, graphs, screenshots, and diagrams. The alt text for these images needs to include the text in the image. If the text in an image is complex, it may need a long description.
+	Some images contain text. If that text is meaningful it needs to be included in the image's alt text.
 
-*   **Linked image uses alt text to describe the link’s destination.**
+*   **Linked images use alt text to describe the link’s destination.**
 
-    If the link has an image and text, and the text describes the link’s destination, the alt text should be empty. If the linked image has more information that isn’t text, put it in the image alt text.
-
+	If the link has an image and text, and the text describes the link’s destination, the alt text should be empty, i.e. `alt=“”`.
+	
+	If the linked image has more information that isn’t included in the link text, put it in the image’s alt text.
+    
 *   **For complex images, provide a longer text alternative.**
 
-    Alt text may not be enough to describe a complex image like an infographic or a flowchart. Use a longer text alternative to describe any meaningful information.
+	Alt text may not be long enough to describe a complex image like an infographic or a flowchart. Use a longer text alternative to describe any meaningful information.
 
 For more detailed guidance, see [Requirements for providing text to act as an alternative for images](https://www.w3.org/TR/html51/semantics.html#alt).
 
@@ -55,7 +57,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Instructions do not refer to shape, location or size.**
 
-    Instructions shouldn’t rely solely on sensory characteristics, eg shape, visual location, or size. The instruction 'Use the button on the right' doesn’t work if you’re using a different layout. Will the button necessarily be in the same place? An instruction like 'Use the Search button on the right' identifies the button both by both name and location.
+    Instructions shouldn’t rely solely on sensory characteristics, e.g. shape, visual location, or size. The instruction 'Use the button on the right' doesn’t work if you’re using a different layout. Will the button necessarily be in the same place? An instruction like 'Use the Search button on the right' identifies the button both by both name and location.
 
 *   **Text on a coloured background is easy to see.**
 
@@ -67,7 +69,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Language changes are marked up in the HTML.**
 
-    Any text that differs from the main language of the site (most of the time this will be English), it needs to be identified as by its language code, eg “mi” for Māori:
+    Any text that differs from the main language of the site (most of the time this will be English), it needs to be identified as by its language code, e.g. “mi” for Māori:
 
     ```
     <p>This section talks about translating English into <span lang="mi">te reo Māori</span></p>.
@@ -85,7 +87,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Headings are marked up as HTML headings.**
 
-    If something looks like a heading, it should be marked up as a heading. Similarly, something that is marked up as an HTML heading should look like a heading.
+    If something acts and looks like a heading, mark it up as a heading. Similarly, something that is marked up as an HTML heading should look like a heading.
 
     Don’t choose heading styles based on what they look like. If a level-3 heading looks smaller than a level-5 heading, talk to your designer.
 
@@ -93,7 +95,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 	Headings must clearly describe the topic or purpose of the content beneath them. This includes groups of form fields that need a title or caption that clearly describes the reason for the grouping.
 
-*   **Headings reflect content hierarchy.**
+*   **Heading levels reflect content hierarchy.**
 
     Check headings match the correct content hierarchy. For example an `<h3>` under an `<h2>` is a subsection, while an `<h3>` under another `<h3>` is a new section at the same level.
 
@@ -111,7 +113,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Data table columns and rows have headers.**
 
-    Use column and row header cells, eg `<th>` as appropriate to indicate table structure.
+    Use column and row header cells, e.g. `<th>` as appropriate to indicate table structure.
 
 ## Navigating the page
 
@@ -121,7 +123,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Keyboard focus is easily visible.**
 
-    When someone is tabbing through a web page they must easily be able to see where they are, eg with an outline or change in colour.
+    When someone is tabbing through a web page they must easily be able to see where they are, e.g. with an outline or change in colour.
 
 *   **Features don't stop you from navigating around the page using just a keyboard.**
 
@@ -139,7 +141,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Form fields that have been grouped together have a group title or caption.**
 
-    Each group of form fields like radio buttons or checkboxes needs a title or caption, eg `<legend>`) that clearly describes the reason for the grouping.
+    Each group of form fields like radio buttons or checkboxes needs a title or caption, e.g. `<legend>`) that clearly describes the reason for the grouping.
 
 *   **Instructions for entering information are clear and easily understood.**
 

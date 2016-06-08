@@ -8,10 +8,6 @@ draft: true
 
 This document is meant as an accessibility prompt for graphic and interaction designers and those responsible for producing HTML/CSS templates.
 
-**A note about what's considered meaningful**
-
-Something is considered meaningful if it adds to the user's experience. For example, a page may include a picture of a kitten as something cute to make me smile. In this instance, it would be considered decorative and not meaningful. A picture of a kitten on another page may be looking at the growth stages of a cat. In this instance the picture would be considered meaningful.
-
 ## Text alternatives
 
 * **Images containing meaningful information have a descriptive text alternative.**
@@ -38,15 +34,20 @@ Something is considered meaningful if it adds to the user's experience. For exam
 
 For more detailed guidance, see [Requirements for providing text to act as an alternative for images](http://www.w3.org/TR/html51/semantics.html#alt).
 
+The W3C website also has a [great tutorial about alt text](https://www.w3.org/WAI/tutorials/images/), information about what you need to do with different types of images and an alt text decision tree.
+
+
 ## Adaptable
 
 * **Structural and functional components are marked up with the correct HTML elements.**
 
-	If it acts and looks like a heading, mark it up as a heading. If it is a list, mark it up as a list. If there are visual clues to mark out different blocks of content reflect this in the HTML. For example, a footer section might have a different background colour to separate it from the page content. Mark up with a footer element or with an ARIA label.
+	If something acts and looks like a heading, mark it up as a heading. If it is a list, mark it up as a list.
+    
+    If there are visual clues to mark out different blocks of content reflect this in the HTML. For example, a footer section might have a different background colour to separate it from the page content. Mark up with a footer element or with an ARIA label.
 
-*   **Tables are used to display data, and not for laying out content.**
+*   **Tables are used for data, and not for layout.**
 
-    Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data, ie information in each cell is defined by row and column headings. Don't use tables as a way to layout content.
+    Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data, i.e. information in each cell is defined by row and column headings. Don't use tables as a way to layout content.
 
 *   **Data table columns and rows have defined headers.**
 
@@ -54,11 +55,11 @@ For more detailed guidance, see [Requirements for providing text to act as an al
     
 * **Heading levels reflect content hierarchy.**
 
-	Check headings denote the correct hierarchical structure e.g. an `<h3>` under an `<h2>` is a subsection, while an `<h3>` under another `<h3>` is a new section at the same level. 
+	Check headings match the correct content heirarchy. For example an `<h3>` under an `<h2>` is a subsection, while an `<h3>` under another `<h3>` is a new section at the same level. 
 
 * **Reading order must still meaningful without visual styling.**
 
-	Turn off styling to check that the native reading order of the page still flows in a meaningful order. Users that read content sequentially, eg screen reader users, need to encounter content in the correct reading order so that they get the same meaning as everyone else.
+	Turn off styling to check that the native reading order of the page still flows in a meaningful order. Users that read content sequentially, e.g. screen reader users, need to encounter content in the correct reading order so that they get the same meaning as everyone else.
 
 * **Icons or symbols used to convey information have a text alternative.**
 
@@ -68,7 +69,7 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 * **Colour conveying meaning is augmented with other methods.**
 
-	If colour has a meaning assigned to it (eg coloured lines on a chart, coloured link text, different-coloured buttons) use other methods to supplement this information. Examples of this might be dashed or dotted lines or having links underlined.
+	If colour has a meaning assigned to it (e.g. coloured lines on a chart, coloured link text, different-coloured buttons) use other methods to supplement this information. Examples of this might be dashed or dotted lines or having links underlined.
 
 * **Audio must be manually started on a webpage.**
 
@@ -138,7 +139,7 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 	Provide multiple ways for users to locate content within a web site. Examples could be a site map, list of related pages, table of contents, or site search function.
 
-* **Headings are an accurate description of their content.**
+* **Headings accurately describe their content.**
 
 	Headings must clearly describe the topic or purpose of the content beneath them. This includes groups of form fields that need a title or caption that clearly describes the reason for the grouping.
 
@@ -161,7 +162,7 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 	Changing the setting of a component must not cause a change of context. For example, selecting something from a drop-down list should not launch a new page. If you need to have this happen, advise the user of the behaviour beforehand.
     
-    **Note:** Clicking on a link, button or tab (while they are considered components) is not considered to be changing its setting. 
+    **Note:** Clicking on a link, button or tab, while they are considered components, is not considered to be changing its setting. 
 
 * **Items that are repeated on each page, e.g. menus, are in the same relative order.**
 
@@ -169,7 +170,7 @@ For more detailed guidance, see [Requirements for providing text to act as an al
 
 * **Items that do the same thing are identified consistently throughout the site.**
 
-	All components within a website that do the same thing (e.g. icons, checkmarks, links to PDFs) must be identified with consistent appearance and wording.
+	 Components functioning across the site, e.g. icons, checkmarks, or links to PDFs, must have consistent look and wording. This helps people who learn how one page  works find the same functions on other pages.
 
 ## Input assistance
 
