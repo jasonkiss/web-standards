@@ -6,7 +6,11 @@ draft: true
 
 ## Introduction
 
-This document is meant as an accessibility prompt for graphic and interaction designers and those responsible for producing HTML/CSS templates.
+Web accessibility is about making your site and its design inclusive. Making your site accessible increases your potential audience and gives them a better experience.
+
+It’s easiest to start thinking about accessibility right at the start of your project. Fixing issues later takes a lot more effort.
+
+This document is like a ‘pre-flight check’ to help you assess your content in terms of its accessibility. Its intended audience is anyone involved in any kind of design or those responsible for producing HTML/CSS templates.
 
 ## Text alternatives
 
@@ -32,9 +36,9 @@ This document is meant as an accessibility prompt for graphic and interaction de
 	
 	Alt text may not be long enough to describe a complex image like an infographic or a flowchart. Use a longer text alternative to describe any meaningful information.
 
-For more detailed guidance, see [Requirements for providing text to act as an alternative for images](http://www.w3.org/TR/html51/semantics.html#alt).
+For more detailed W3C guidance, see [Requirements for providing text to act as an alternative for images](http://www.w3.org/TR/html51/semantics.html#alt).
 
-The W3C website also has a [great tutorial about alt text](https://www.w3.org/WAI/tutorials/images/), information about what you need to do with different types of images and an alt text decision tree.
+The W3C also has a [great tutorial about alt text](https://www.w3.org/WAI/tutorials/images/), information about dealing with different image types, and an alt text decision tree.
 
 
 ## Adaptable
@@ -51,11 +55,11 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Data table columns and rows have defined headers.**
 
-    Use column and row header cells, e.g. `<th>` as appropriate to indicate table structure.
+    Use column and row header cells, e.g. `<th>` as appropriate to show table structure.
     
 * **Heading levels reflect content hierarchy.**
 
-	Check headings match the correct content heirarchy. For example an `<h3>` under an `<h2>` is a subsection, while an `<h3>` under another `<h3>` is a new section at the same level. 
+	Check headings match the correct content hierarchy. For example an `<h3>` under an `<h2>` is a subsection, while an `<h3>` under another `<h3>` is a new section at the same level. 
 
 * **Reading order must still meaningful without visual styling.**
 
@@ -63,29 +67,31 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 * **Icons or symbols used to convey information have a text alternative.**
 
-	Any graphic element, including icons or symbols conveying meaningful information must have a text alternative.
+	Graphic elements, including icons or symbols conveying meaningful information, must have a text alternative.
 
 ## Distinguishable
 
-* **Colour conveying meaning is augmented with other methods.**
+* **Colour conveying meaning is reinforced using other methods.**
 
-	If colour has a meaning assigned to it (e.g. coloured lines on a chart, coloured link text, different-coloured buttons) use other methods to supplement this information. Examples of this might be dashed or dotted lines or having links underlined.
+	If colour has a meaning assigned to it (e.g. coloured lines on a chart, coloured link text, different-coloured buttons) use other methods to supplement this information. Examples might include dashed or dotted lines or underlining links.
 
-* **Audio must be manually started on a webpage.**
+* **Audio must be manually started on a web page.**
 
 	If background audio starts automatically, users need to be able to pause, stop, or mute it.
 
 * **Text on a coloured background is easy to see.**
 
-    There is enough contrast between text and its background so that it can be read easily. The contrast ratio between text colour and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\. There are several helpful [online tools for checking](https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools) your contrast ratio.
+    There is enough contrast between text and its background so that people can easily read it. The contrast ratio between the colour of the text and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\.
     
-    The exception to this rule is logos/brand names or decorative text that conveys no meaningful information.
-
+    The exception to this rule is logos, brand names or decorative text that conveys no meaningful information.
+    
+    There are several helpful [online tools for checking](https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools) your contrast ratio.
+    
 * **Page content is not obscured if the page is magnified to 200%.**
 
 	If content is obscured when the page zoom is set to 200%, users won’t even be able to scroll to see content.
 
-* **Text has not been presented as an image or part of an image.**
+* **Text isn't presented as an image or part of an image.**
 
 	Text should not be delivered as an image, but presented using HTML and CSS. The exception to this is text that contains visual content e.g. logos, graphs, screenshots, and diagrams. These images will need alt text, and possibly a long description depending on the complexity of the image.
 

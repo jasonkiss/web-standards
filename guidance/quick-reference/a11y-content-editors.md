@@ -9,9 +9,9 @@ draft_path: /guidance/design-and-development/quick-reference-guides/
 
 Web accessibility is about making your site and its content inclusive. Making your content accessible increases your potential audience and gives them a better experience.
 
-It’s easiest to make sure your content is accessible right from the start of your project. Fixing issues later takes a lot more effort.
+It’s easiest to start thinking about accessibility right at the start of your project. Fixing issues later takes a lot more effort.
 
-This document is meant to be like a ‘pre-flight check’ to help you assess your content in terms of its accessibility. It also includes considerations to share with business owners to help them set realistic expectations.
+This document is like a ‘pre-flight check’ to help you assess your content in terms of its accessibility. It also includes considerations to share with business owners to help them set realistic expectations.
 
 ## Non-text content
 
@@ -47,7 +47,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **For video and audio, provide descriptive text alternatives.**
 
-    Video, audio, and audio-video content need descriptive text alternatives that include all meaningful information conveyed visually or aurally.
+    Video, audio, and audio-video content need text alternatives that describe all meaningful information conveyed visually or aurally.
 
 *   **For videos with audio, provide captions.**
 
@@ -61,7 +61,9 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Text on a coloured background is easy to see.**
 
-    There is enough contrast between text and its background so that it can be read easily. The contrast ratio between text colour and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\. There are several helpful [online tools for checking](https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools) your contrast ratio.
+There is enough contrast between text and its background so that people can easily read it. The contrast ratio between the colour of the text and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\. There are several helpful [online tools for checking](https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools) your contrast ratio.
+    
+    The exception to this rule is logos, brand names or decorative text that conveys no meaningful information.
 
 *   **Link text provides its own context.**
 
@@ -103,17 +105,17 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Lists are marked up as HTML lists.**
 
-    If something looks like or acts as a list, it should be marked up as an ordered, unordered or definition list.
+    If something looks like or acts as a list, marked it up as a list.
 
 ### Tables
 
 *   **Tables are used for data, and not for layout.**
 
-    Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data (ie, has clear relationships with row and column headings). Don't use tables as a way to layout content.
+    Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data, i.e. it has clear relationships with row and column headings. Don't use tables as a way to layout content.
 
 *   **Data table columns and rows have headers.**
 
-    Use column and row header cells, e.g. `<th>` as appropriate to indicate table structure.
+    Use column and row header cells, e.g. `<th>` as appropriate to show table structure.
 
 ## Navigating the page
 
@@ -141,7 +143,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Form fields that have been grouped together have a group title or caption.**
 
-    Each group of form fields like radio buttons or checkboxes needs a title or caption, e.g. `<legend>`) that clearly describes the reason for the grouping.
+    Each group of form fields like radio buttons or checkboxes needs a title or caption, e.g. `<legend>` that clearly describes the reason for the grouping.
 
 *   **Instructions for entering information are clear and easily understood.**
 
