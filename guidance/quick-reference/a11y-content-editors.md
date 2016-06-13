@@ -17,7 +17,7 @@ This document is like a ‘pre-flight check’ to help you assess your content i
 
 ### Images
 
-*   **Images containing meaningful information have a descriptive text alternative.**
+*   **Images containing meaningful information have descriptive text alternatives.**
 
     Images need text alternatives (alt text, max. ~150 characters) to describe their meaning.
 
@@ -27,7 +27,7 @@ This document is like a ‘pre-flight check’ to help you assess your content i
 
 *   **Images containing words have alt text containing those words.**
 
-	Some images contain text. If that text is meaningful it needs to be included in the image's alt text.
+	Some images contain text. If that text is meaningful, it needs to be included in the image's alt text.
 
 *   **Linked images use alt text to describe the link’s destination.**
 
@@ -35,9 +35,9 @@ This document is like a ‘pre-flight check’ to help you assess your content i
 	
 	If the linked image has more information that isn’t included in the link text, put it in the image’s alt text.
     
-*   **For complex images, provide a longer text alternative.**
+*   **Complex images also have longer text alternatives.**
 
-	Alt text may not be long enough to describe a complex image like an infographic or a flowchart. Use a longer text alternative to describe any meaningful information.
+	Alt text may not be long enough to describe a complex image like an infographic or a flowchart. In addition to the alt text, provide a longer text alternative to describe any meaningful information.
 
 For more detailed guidance, see [Requirements for providing text to act as an alternative for images](https://www.w3.org/TR/html51/semantics.html#alt).
 
@@ -61,7 +61,7 @@ The W3C website also has a [great tutorial about alt text](https://www.w3.org/WA
 
 *   **Text on a coloured background is easy to see.**
 
-There is enough contrast between text and its background so that people can easily read it. The contrast ratio between the colour of the text and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\. There are several helpful [online tools for checking](https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools) your contrast ratio.
+    There is enough contrast between text and its background so that people can easily read it. The contrast ratio between the colour of the text and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\. There are several helpful [online tools for checking](https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools) your contrast ratio.
     
     The exception to this rule is logos, brand names or decorative text that conveys no meaningful information.
 
