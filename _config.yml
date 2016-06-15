@@ -10,6 +10,9 @@ dirs:
   'quick-reference':
     url: /guidance/quick-reference/
     title: Quick Reference Guides
+  'online-govt-guide':
+    url: /guidance/online-govt-guide/
+    title: Online Government Guide
   'presentations':
     url: /presentations/
     title: Presentations
