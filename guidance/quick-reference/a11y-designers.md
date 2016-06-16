@@ -46,17 +46,17 @@ The W3C also has a [great tutorial about alt text](https://www.w3.org/WAI/tutori
 *	**Structural and functional components are marked up with the correct HTML elements.**
 
 	If something acts and looks like a heading, mark it up as a heading. If it is a list, mark it up as a list.
-    
-    If there are visual clues to mark out different blocks of content reflect this in the HTML. For example, a footer section might have a different background colour to separate it from the page content. Mark up with a footer element or with an ARIA label.
+	
+	If there are visual clues to mark out different blocks of content reflect this in the HTML. For example, a footer section might have a different background colour to separate it from the page content. Mark up with a footer element or with an ARIA label.
 
 *   **Tables are used for data, and not for layout.**
 
-    Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data, i.e. information in each cell is defined by row and column headings. Don't use tables as a way to layout content.
+	Use tables for displaying data, rather than for layout purposes. The table’s content should be tabular data, i.e. information in each cell is defined by row and column headings. Don't use tables as a way to layout content.
 
 *   **Data table columns and rows have defined headers.**
 
-    Use column and row header cells, e.g. `<th>` as appropriate to show table structure.
-    
+	Use column and row header cells, e.g. `<th>` as appropriate to show table structure.
+	
 *	**Heading levels reflect content hierarchy.**
 
 	Check headings match the correct content hierarchy. For example an `<h3>` under an `<h2>` is a subsection, while an `<h3>` under another `<h3>` is a new section at the same level. 
@@ -81,12 +81,12 @@ The W3C also has a [great tutorial about alt text](https://www.w3.org/WAI/tutori
 
 *	**Text on a coloured background is easy to see.**
 
-    There is enough contrast between text and its background so that people can easily read it. The contrast ratio between the colour of the text and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\.
-    
-    The exception to this rule is logos, brand names or decorative text that conveys no meaningful information.
-    
-    There are several helpful [online tools for checking](https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools) your contrast ratio.
-    
+	There is enough contrast between text and its background so that people can easily read it. The contrast ratio between the colour of the text and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\.
+	
+	The exception to this rule is logos, brand names or decorative text that conveys no meaningful information.
+	
+	There are several helpful [online tools for checking](https://webtoolkit.govt.nz/guidance/design-and-development/contrast-and-the-use-of-colour/#tools) your contrast ratio.
+	
 *	**Page content is not obscured if the page is magnified to 200%.**
 
 	If content is obscured when the page zoom is set to 200%, users won’t even be able to scroll to see content.
@@ -130,8 +130,8 @@ The W3C also has a [great tutorial about alt text](https://www.w3.org/WAI/tutori
 *	**Pages have unique, descriptive titles.**
 
 	Each web page’s `<title>` element is descriptive and distinguishes it from every other page on the website.
-    
-    There are some [great examples of page titles](http://www.w3.org/WAI/gettingstarted/tips/writing.html#provide-informative-unique-page-titles) on the W3C website.
+	
+	There are some [great examples of page titles](http://www.w3.org/WAI/gettingstarted/tips/writing.html#provide-informative-unique-page-titles) on the W3C website.
 
 * 	**Information chunks are in a logical, consistent order.**
 
@@ -139,7 +139,7 @@ The W3C also has a [great tutorial about alt text](https://www.w3.org/WAI/tutori
 
 *  	**Link text provides its own context.**
 
-    Each link’s purpose is clear from the link’s text content (or image alt text, where applicable) and its immediate context, i.e. the previous heading, paragraph, list item, or table cell it is in.
+	Each link’s purpose is clear from the link’s text content (or image alt text, where applicable) and its immediate context, i.e. the previous heading, paragraph, list item, or table cell it is in.
 
 *	**There are multiple ways for users to navigate around the site.**
 
@@ -158,17 +158,17 @@ The W3C also has a [great tutorial about alt text](https://www.w3.org/WAI/tutori
 *	**When a component gets focus it doesn't automatically change context.**
 
 	If a component gets focus, it must not trigger an automatic change of context. Change of context examples include:
-    
-    * opening a new window
-    * moving focus to a different component
-    * going to a new page, or
-    * significantly re-arranging the content of a page.
+	
+	* opening a new window
+	* moving focus to a different component
+	* going to a new page, or
+	* significantly re-arranging the content of a page.
 
 *	**Changing a component's setting (e.g. selecting a radio button) doesn't trigger an automatic action.**
 
 	Changing the setting of a component must not cause a change of context. For example, selecting something from a drop-down list should not launch a new page. If you need to have this happen, advise the user of the behaviour beforehand.
-    
-    **Note:** Clicking on a link, button or tab, while they are considered components, is not considered to be changing its setting. 
+	
+	**Note:** Clicking on a link, button or tab, while they are considered components, is not considered to be changing its setting. 
 
 *	**Items that are repeated on each page, e.g. menus, are in the same relative order.**
 
@@ -205,5 +205,3 @@ The W3C also has a [great tutorial about alt text](https://www.w3.org/WAI/tutori
 *	**Every component’s name, role, value is programmatically exposed to user agents, including assistive technologies.**
 
 	Native HTML is the best method for ensuring programmatic exposure to user agents. Where other solutions are in use name, role, state, properties, values and changes to any of these needs to be programmatically exposed to user agents, including assistive technologies.
-
-

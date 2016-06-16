@@ -18,8 +18,8 @@ This document is a working draft intended to gather in one place an overview of 
 
 #### Web design and development
 * [NZ Government Web Standards](https://webtoolkit.govt.nz/standards/)
-  * [Web Accessibility Standard](https://webtoolkit.govt.nz/standards/web-accessibility-standard/)
-  * [Web Usability Standard](https://webtoolkit.govt.nz/standards/web-usability-standard/)
+	* [Web Accessibility Standard](https://webtoolkit.govt.nz/standards/web-accessibility-standard/)
+	* [Web Usability Standard](https://webtoolkit.govt.nz/standards/web-usability-standard/)
 
 #### Procurement
 * [Government Rules of Sourcing](http://www.business.govt.nz/procurement/for-agencies/key-guidance-for-agencies/the-new-government-rules-of-sourcing) - in particular [Rule 58](http://www.business.govt.nz/procurement/for-agencies/key-guidance-for-agencies/the-new-government-rules-of-sourcing/6-other-rules-you-need-to-know#rule58)

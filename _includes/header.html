@@ -1,37 +1,37 @@
-  <header>
-    <div class="site-name">New Zealand Government Web Standards on GitHub</div>
-    <nav class="main" aria-label="Main menu">
-      <ul>
-        <li><a href="{{site.baseurl}}/">Home</a></li>
-        <li><a href="{{site.baseurl}}/guidance/">Guidance</a></li>
-        <li><a href="{{site.baseurl}}/presentations/">Presentations</a></li>
-      </ul>
-    </nav>
-  </header>
-  <nav class="bc" aria-label="Breadcrumbs">
-  {% assign dirs = page.dir | split: "/" %}
-    <ol>
-      <li>{% if page.url != "/" %}<a href="{{ site.baseurl }}/">Home</a>{% else %}Home{% endif %}</li>
-    {% for d in dirs offset:1 %}
-      <li>{% if d != dirs.last or page.url != page.dir %}<a href="{{ site.baseurl }}{{ site.dirs[d].url }}">{{ site.dirs[d].title }}</a>{% else %}{{ site.dirs[d].title }}{% endif %}</li>
-    {% endfor %}
-    {% if page.url != page.dir %}
-      <li>{{ page.title }}</li>
-    {% endif %}
-    </ol>
-  </nav>
-  <main>
-    {% if page.draft %}
-      {% include draft.html %}
-    {% endif %}
-    {% if page.url != page.dir %}
-      {% if page.url | slice: -4 == "html" %}
-        {% assign gh-src = page.url | replace: ".html", ".md" %}
-      {% else %}
-        {% assign gh-src = page.dir %}
-      {% endif %}
-    {% else %}
-      {% assign gh-src = page.url | append: "index.md" %}
-    {% endif %}    
-    <p class="gh-src"><a href="https://github.com/GOVTNZ/web-standards/blob/gh-pages{{ gh-src }}">Forks, edits, and comments are welcome in GitHub</a></p>
-    <h1>{{ page.title }}</h1>
+	<header>
+		<div class="site-name">New Zealand Government Web Standards on GitHub</div>
+		<nav class="main" aria-label="Main menu">
+			<ul>
+				<li><a href="{{site.baseurl}}/">Home</a></li>
+				<li><a href="{{site.baseurl}}/guidance/">Guidance</a></li>
+				<li><a href="{{site.baseurl}}/presentations/">Presentations</a></li>
+			</ul>
+		</nav>
+	</header>
+	<nav class="bc" aria-label="Breadcrumbs">
+	{% assign dirs = page.dir | split: "/" %}
+		<ol>
+			<li>{% if page.url != "/" %}<a href="{{ site.baseurl }}/">Home</a>{% else %}Home{% endif %}</li>
+		{% for d in dirs offset:1 %}
+			<li>{% if d != dirs.last or page.url != page.dir %}<a href="{{ site.baseurl }}{{ site.dirs[d].url }}">{{ site.dirs[d].title }}</a>{% else %}{{ site.dirs[d].title }}{% endif %}</li>
+		{% endfor %}
+		{% if page.url != page.dir %}
+			<li>{{ page.title }}</li>
+		{% endif %}
+		</ol>
+	</nav>
+	<main>
+		{% if page.draft %}
+			{% include draft.html %}
+		{% endif %}
+		{% if page.url != page.dir %}
+			{% if page.url | slice: -4 == "html" %}
+				{% assign gh-src = page.url | replace: ".html", ".md" %}
+			{% else %}
+				{% assign gh-src = page.dir %}
+			{% endif %}
+		{% else %}
+			{% assign gh-src = page.url | append: "index.md" %}
+		{% endif %}		
+		<p class="gh-src"><a href="https://github.com/GOVTNZ/web-standards/blob/gh-pages{{ gh-src }}">Forks, edits, and comments are welcome in GitHub</a></p>
+		<h1>{{ page.title }}</h1>
