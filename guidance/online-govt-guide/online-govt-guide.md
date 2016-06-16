@@ -37,16 +37,19 @@ This document is a working draft intended to gather in one place an overview of 
 #### .govt.nz domain names
 * [Policy for Moderation and Registration of .govt.nz Internet domain names](https://dns.govt.nz/moderation-policy/)
 
-### Policy and legislation
+### Legislation and policy
 
 Compliance with these policies and legislation occurs and is measured through the application of the related standards and formal rulesets listed in the [Standards and rules](#standards-and-rules) section.
 
+#### Legislation
 * [Human Rights Act 1993](http://www.legislation.govt.nz/act/public/1993/0082/latest/DLM304212.html)
-* [NZ Disability Strategy](http://www.odi.govt.nz/nzds/)
-* [UN Convention on the Rights of Persons with Disabilities](http://www.un.org/disabilities/convention/conventionfull.shtml)
 * [Privacy Act 1993](http://www.legislation.govt.nz/act/public/1993/0028/latest/DLM296639.html)
 * [Public Records Act 2005](http://www.legislation.govt.nz/act/public/2005/0040/latest/DLM345529.html)
 * [Copyright Act 1994](http://legislation.govt.nz/act/public/1994/0143/latest/DLM345634.html)
+
+#### Policy
+* [NZ Disability Strategy](http://www.odi.govt.nz/nzds/)
+* [UN Convention on the Rights of Persons with Disabilities](http://www.un.org/disabilities/convention/conventionfull.shtml)
 
 ## Best practice and guidance
 
