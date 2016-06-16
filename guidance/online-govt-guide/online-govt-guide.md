@@ -32,6 +32,11 @@ This document is a working draft intended to gather in one place an overview of 
 * [Protective Security Requirements](https://protectivesecurity.govt.nz/)
 * [NZ Information Security Manual](http://www.gcsb.govt.nz/publications/the-nz-information-security-manual/)
 
+#### Privacy
+
+#### .govt.nz domain names
+* [Policy for Moderation and Registration of .govt.nz Internet domain names](https://dns.govt.nz/moderation-policy/)
+
 ### Policy and legislation
 
 Compliance with these policies and legislation occurs and is measured through the application of the related standards and formal rulesets listed in the [Standards and rules](#standards-and-rules) section.
@@ -39,9 +44,20 @@ Compliance with these policies and legislation occurs and is measured through th
 * [Human Rights Act 1993](http://www.legislation.govt.nz/act/public/1993/0082/latest/DLM304212.html)
 * [NZ Disability Strategy](http://www.odi.govt.nz/nzds/)
 * [UN Convention on the Rights of Persons with Disabilities](http://www.un.org/disabilities/convention/conventionfull.shtml)
+* [Privacy Act 1993](http://www.legislation.govt.nz/act/public/1993/0028/latest/DLM296639.html)
+* [Public Records Act 2005](http://www.legislation.govt.nz/act/public/2005/0040/latest/DLM345529.html)
+* [Copyright Act 1994](http://legislation.govt.nz/act/public/1994/0143/latest/DLM345634.html)
 
 ## Best practice and guidance
 
 * [Digital lifecycle](https://webtoolkit.govt.nz/guidance/digital-lifecycle/)
 * [Online management good practice](https://webtoolkit.govt.nz/guidance/online-management-good-practice/)
 * Plain English
+
+### Privacy
+* [Privacy principles](https://www.privacy.org.nz/the-privacy-act-and-codes/privacy-principles/)
+* [Privacy Impact Assessment Toolkit](https://www.privacy.org.nz/news-and-publications/guidance-resources/privacy-impact-assessment/)
+
+### .govt.nz domain names
+* [Getting a Domain](https://dns.govt.nz/getting-a-domain/)
+* [Managing Your Domain](https://dns.govt.nz/managing-your-domain/)
