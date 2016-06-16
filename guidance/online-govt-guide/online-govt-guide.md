@@ -22,10 +22,10 @@ This document is a working draft intended to gather in one place an overview of 
 	* [Web Usability Standard](https://webtoolkit.govt.nz/standards/web-usability-standard/)
 
 #### Procurement
-* [Government Rules of Sourcing](http://www.business.govt.nz/procurement/for-agencies/key-guidance-for-agencies/the-new-government-rules-of-sourcing) - in particular [Rule 58](http://www.business.govt.nz/procurement/for-agencies/key-guidance-for-agencies/the-new-government-rules-of-sourcing/6-other-rules-you-need-to-know#rule58)
-* How [All of Government](http://www.business.govt.nz/procurement/all-of-government-contracts/current-all-of-government-contracts) contracts and syndicated buying agreeements work
-	* [Supplier panel for common web (professional) services](http://www.business.govt.nz/procurement/all-of-government-contracts/current-contracts/supplier-panel-for-common-web-services)
-	* [Common web platform](http://www.business.govt.nz/procurement/all-of-government-contracts/current-contracts/common-web-platform)
+* [Government Rules of Sourcing](http://www.business.govt.nz/procurement/for-agencies/key-guidance-for-agencies/the-new-government-rules-of-sourcing)—in particular [Rule 58](http://www.business.govt.nz/procurement/for-agencies/key-guidance-for-agencies/the-new-government-rules-of-sourcing/6-other-rules-you-need-to-know#rule58)
+* How [All-of-Government contracts](http://www.business.govt.nz/procurement/all-of-government-contracts/current-all-of-government-contracts)  and syndicated buying agreeements work
+	* [Supplier Panel for Common Web Services](http://www.business.govt.nz/procurement/all-of-government-contracts/current-contracts/supplier-panel-for-common-web-services)
+	* [Common Web Platform](http://www.business.govt.nz/procurement/all-of-government-contracts/current-contracts/common-web-platform)
 	* [ICT security and related services](http://www.business.govt.nz/procurement/all-of-government-contracts/current-contracts/ict-security-and-related-services)
 
 #### Security
