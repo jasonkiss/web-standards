@@ -13,6 +13,9 @@ dirs:
   'online-govt-guide':
     url: /guidance/online-govt-guide/
     title: Online Government Guide
+  'assessment-guides':
+    url: /guidance/assessment-guides/
+    title: Web Standards Assessment Guides
   'presentations':
     url: /presentations/
     title: Presentations
