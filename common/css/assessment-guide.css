@@ -1,0 +1,6 @@
+.ed {border: 1px solid #f00; padding: 10px; font-style: italic;}
+.ed:before {content: "Ed.: ";}
+.easy, .medium, .hard {padding: 0 2px;}
+.easy {background-color: #92d050;}
+.medium {background-color: #ffc000;}
+.hard {background-color: #f00;}
