@@ -47,6 +47,8 @@ The requirements in the Web Accessibility Standard address all of the above scen
 
 ## About this Guide
 
+<div class="ed">Add note re intended audience, i.e. non-technical, the consequent limitations to comprehensiveness of tests in the guide, and availability of more detailed, technical tests from other sources (e.g. ...).</div>
+
 The Web Accessibility Standard 1.0 Assessment Guide gives advice on how to test website and intranet pages against the WCAG 2.0 success criteria required by the New Zealand Government Web Accessibility Standard.
 
 The Guide:
