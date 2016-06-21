@@ -1,3 +1,5 @@
+blockquote {background-color: #eaeaea; padding: 5px; margin-left: 0;}
+blockquote footer {margin-top: 1em;}
 .ed {border: 1px solid #f00; padding: 10px; font-style: italic;}
 .ed:before {content: "Ed.: ";}
 .easy, .medium, .hard {padding: 0 2px;}

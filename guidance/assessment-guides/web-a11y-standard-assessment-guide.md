@@ -1530,226 +1530,96 @@ Web pages using standard, valid HTML and no custom scripted user interface compo
 ## Glossary
 
 <dl>
-
-<dt><dfn id="aria"><abbr title="Accessible Rich Internet Applications">ARIA</abbr></dfn></dt>
-
-<dd>
-
-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>, or [Accessible Rich Internet Applications](http://www.w3.org/TR/wai-aria/), is a W3C standard. It specifies a collection of attributes and values that can be used to provide user agents and assistive technologies, notably screen readers, with additional programmatic information regarding the name, role, state and value of elements.
-
-</dd>
-
-<dt><dfn id="captions">Captions</dfn></dt>
-
-<dd>
-
-synchronized visual and/or text alternative for both speech and non-speech audio information needed to understand the media content
-
-Note 1: Captions are similar to dialogue-only subtitles except captions convey not only the content of spoken dialogue, but also equivalents for non-dialogue audio information needed to understand the program content, including sound effects, music, laughter, speaker identification and location.
-
-Note 2: Closed Captions are equivalents that can be turned on and off with some players.
-
-Note 3: Open Captions are any captions that cannot be turned off. For example, if the captions are visual equivalent images of text embedded in video.
-
-Note 4: Captions should not obscure or obstruct relevant information in the video.
-
-Note 5: In some countries, captions are called subtitles.
-
-Note 6: Audio descriptions can be, but do not need to be, captioned since they are descriptions of information that is already presented visually.
-
-(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0\. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)
-
-</dd>
-
-<dt><dfn id="change-of-context">Change of context</dfn></dt>
-
-<dd>
-
-major changes in the content of the Web page that, if made without user awareness, can disorient users who are not able to view the entire page simultaneously
-
-Changes in context include changes of:
-
-1.	user agent;
-2.	viewport;
-3.	focus;
-4.	content that changes the meaning of the Web page.
-
-Note: A change of content is not always a change of context. Changes in content, such as an expanding outline, dynamic menu, or a <kbd>Tab</kbd> control do not necessarily change the context, unless they also change one of the above (e.g., focus).
-
-Example: Opening a new window, moving focus to a different component, going to a new page (including anything that would look to a user as if they had moved to a new page) or significantly re-arranging the content of a page are examples of changes of context.
-
-(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0\. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)
-
-</dd>
-
-<dt><dfn id="descriptive-text-transcript">Descriptive text transcript</dfn></dt>
-
-<dd>
-
-document including correctly sequenced text descriptions of time-based visual and auditory information and providing a means for achieving the outcomes of any time-based interaction
-
-Note: A screenplay used to create the synchronized media content would meet this definition only if it was corrected to accurately represent the final synchronized media after editing.
-
-(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0\. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)
-
-</dd>
-
-<dt><dfn id="high-stakes-information-or-services">High-stakes information or services</dfn></dt>
-
-<dd>
-
-Online information or services whose inaccessibility at the time of publication could reasonably be expected to have a negative impact on an individual's emergency preparedness and response, health and safety, or critical civil and political rights, entitlements, services, or obligations. Examples include information or services related to:
-
-*	civil emergencies and responses;
-*	entitlement or access to benefits, education, consumer or other community protections, passports, or visas;
-*	rights in criminal and civil proceedings;
-*	central government elections or referenda;
-*	tax obligations and rebates;
-*	general health information, specific health advice, health and safety in employment.
-
-</dd>
-
-<dt><dfn id="home-page">Home page</dfn></dt>
-
-<dd>
-
-A website's main landing or entry web page. For many websites, this is the web page at the root domain or subdomain level, e.g. [http://ministry.govt.nz/](http://ministry.govt.nz/) or [http://site.ministry.govt.nz/](http://site.ministry.govt.nz/) . For some websites, e.g. single web page applications, the home page is the initial state of the web application.
-
-</dd>
-
-<dt><dfn id="name">Name</dfn></dt>
-
-<dd>
-
-text by which software can identify a component within Web content to the user
-
-Note 1: The name may be hidden and only exposed by assistive technology, whereas a [label](http://www.w3.org/TR/WCAG20/#labeldef) is presented to all users. In many (but not all) cases, the label and the name are the same.
-
-Note 2: This is unrelated to the `name` attribute in HTML.
-
-(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0\. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)
-
-For example, the text within a link's `<a>` and `</a>` tags serves as the link's name. Similarly, the label text associated with a form control is that control's name.
-
-</dd>
-
-<dt><dfn id="programmatically-determined">Programmatically determined</dfn></dt>
-
-<dd>
-
-determined by software from author-supplied data provided in a way that different user agents, including assistive technologies, can extract and present this information to users in different modalities
-
-Example 1: Determined in a markup language from elements and attributes that are accessed directly by commonly available assistive technology.
-
-Example 2: Determined from technology-specific data structures in a non-markup language and exposed to assistive technology via an accessibility API that is supported by commonly available assistive technology.
-
-(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0\. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)
-
-</dd>
-
-<dt><dfn id="publicly-available">Publicly available</dfn></dt>
-
-<dd>
-
-A website or web page that:
-
-1.	is produced and maintained, in part or in whole, by the New Zealand Government organisation to which this Standard applies; and,
-2.	can be accessed by individuals who are not employed by a New Zealand Government Public Service department or Non-Public Service department in the State Services.
-
-This includes a website or web page behind a login authentication mechanism that controls access by users outside the responsible New Zealand Government organisation.
-
-</dd>
-
-<dt><dfn id="role">Role</dfn></dt>
-
-<dd>
-
-text or number by which software can identify the function of a component within Web content
-
-Example: A number that indicates whether an image functions as a hyperlink, command button, or check box.
-
-(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0\. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)
-
-For common HTML controls, such as the `a`, `button`, `input type="checkbox"` elements, the role is automatically included as part of the element's programmatic identity.
-
-For custom controls built from other HTML elements, the ARIA role attribute can be used to specify the control's intended role, e.g. `<div role="checkbox" aria-checked="false">`. Note that, with this example, additional CSS and JavaScript needs to provide the visual presentation and interactivity to mimic a checkbox's normal behaviour.
-
-</dd>
-
-<dt><dfn id="skip-links">Skip links</dfn></dt>
-
-<dd>
-
-A skip link is a link that offers users a way to skip to or passed a block of content. For example, activating a "Skip navigation" or "Skip to main content" link at the top of a web page allows a user to skip over the links in the banner and main navigation menu and go straight to the page's main content.
-
-Skip links are particularly helpful for sighted keyboard users who otherwise might be forced to use the <kbd>Tab</kbd> key to move through all the repeated menu links on a page before getting to the links or controls in the main area of the page.
-
-</dd>
-
-<dt><dfn id="synchronized-media">Synchronized media</dfn></dt>
-
-<dd>
-
-audio or video synchronized with another format for presenting information and/or with time-based interactive components, unless the media is a media alternative for text that is clearly labeled as such
-
-(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0\. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)
-
-</dd>
-
-<dt><dfn id="user-interface-component">User interface component</dfn></dt>
-
-<dd>
-
-a part of the content that is perceived by users as a single control for a distinct function
-
-Note 1: Multiple user interface components may be implemented as a single programmatic element. Components here is not tied to programming techniques, but rather to what the user perceives as separate controls.
-
-Note 2: User interface components include form elements and links as well as components generated by scripts.
-
-Example: An applet has a "control" that can be used to move through content by line or page or random access. Since each of these would need to have a name and be settable independently, they would each be a "user interface component."
-
-(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0\. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)
-
-</dd>
-
-<dt><dfn id="website">Website</dfn></dt>
-
-<dd>
-
-a coherent collection of one or more related web pages that together provide common use or functionality. It includes static web pages, dynamically generated web pages, and web applications
-
-Note: The focus of this methodology is on full, self-enclosed websites. Websites may be composed of smaller sub-sites, each of which can be considered to be an individual website. For example, a website may include an online shop, an area for each department within the organization, a blog area, and other areas that may each be considered to be a website.
-
-(Source: <cite>Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0\. Copyright © 2013 W3C® (MIT, ERCIM, Keio, Beihang), All Rights Reserved</cite>.)
-
-A department's corporate website (e.g. ministry.govt.nz) may comprise multiple sections (e.g. ministry.govt.nz/service-a and ministry.govt.nz/service-b) owned and/or administered by organisationally distinct units within the department. For the purposes of this Standard, these individual sections may be considered separate websites.
-
-Note that collections of web pages located at different fourth-level domains that belong to the same third-level domain, e.g. projectA.ministry.govt.nz and projectB.ministry.govt.nz, constitute separate websites.
-
-</dd>
-
-<dt><dfn id="web-page">Web page</dfn></dt>
-
-<dd>
-
-a non-embedded resource obtained from a single URI using HTTP plus any other resources that are used in the rendering or intended to be rendered together with it by a user agent
-
-Note 1: Although any "other resources" would be rendered together with the primary resource, they would not necessarily be rendered simultaneously with each other.
-
-Note 2: For the purposes of conformance with these guidelines, a resource must be "non-embedded" within the scope of conformance to be considered a Web page.
-
-Example 1: A Web resource including all embedded images and media.
-
-Example 2: A Web mail program built using Asynchronous JavaScript and XML (AJAX). The program lives entirely at http://example.com/mail, but includes an inbox, a contacts area and a calendar. Links or buttons are provided that cause the inbox, contacts, or calendar to display, but do not change the URI of the page as a whole.
-
-Example 3: A customizable portal site, where users can choose content to display from a set of different content modules.
-
-Example 4: When you enter "http://shopping.example.com/" in your browser, you enter a movie-like interactive shopping environment where you visually move around in a store dragging products off of the shelves around you and into a visual shopping cart in front of you. Clicking on a product causes it to be demonstrated with a specification sheet floating alongside. This might be a single-page Website or just one page within a Website.
-
-(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0\. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)
-
-Note that this definition of web page includes what are commonly referred to as web applications.
-
-</dd>
-
+	<dt><dfn id="aria"><abbr title="Accessible Rich Internet Applications">ARIA</abbr></dfn></dt>
+	<dd><p><abbr title="Accessible Rich Internet Applications">ARIA</abbr>, or <a href="http://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications</a>, is a W3C standard. It specifies a collection of attributes and values that can be used to provide user agents and assistive technologies, notably screen readers, with additional programmatic information regarding the name, role, state and value of elements.</p></dd>
+	<dt><dfn id="captions">Captions</dfn></dt>
+	<dd><blockquote><p>synchronized visual and/or text alternative for both speech and non-speech audio information needed to understand the media content</p>
+		<p>Note 1: Captions are similar to dialogue-only subtitles except captions convey not only the content of spoken dialogue, but also equivalents for non-dialogue audio information needed to understand the program content, including sound effects, music, laughter, speaker identification and location.</p>
+		<p>Note 2: Closed Captions are equivalents that can be turned on and off with some players.</p>
+		<p>Note 3: Open Captions are any captions that cannot be turned off. For example, if the captions are visual equivalent images of text embedded in video.</p>
+		<p>Note 4: Captions should not obscure or obstruct relevant information in the video.</p>
+		<p>Note 5: In some countries, captions are called subtitles.</p>
+		<p>Note 6: Audio descriptions can be, but do not need to be, captioned since they are descriptions of information that is already presented visually.</p>
+		<footer>(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)</footer></blockquote></dd>
+	<dt><dfn id="change-of-context">Change of context</dfn></dt>
+	<dd><blockquote><p>major changes in the content of the Web page that, if made without user awareness, can disorient users who are not able to view the entire page simultaneously</p>
+		<p>Changes in context include changes of:</p>
+		<ol>
+			<li>user agent;</li>
+			<li>viewport;</li>
+			<li>focus;</li>
+			<li>content that changes the meaning of the Web page.</li>
+		</ol>
+		<p>Note: A change of content is not always a change of context. Changes in content, such as an expanding outline, dynamic menu, or a <kbd>Tab</kbd> control do not necessarily change the context, unless they also change one of the above (e.g., focus).</p>
+		<p>Example: Opening a new window, moving focus to a different component, going to a new page (including anything that would look to a user as if they had moved to a new page) or significantly re-arranging the content of a page are examples of changes of context.</p>
+		<footer>(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)</footer></blockquote></dd>
+	<dt><dfn id="descriptive-text-transcript">Descriptive text transcript</dfn></dt>
+	<dd><blockquote><p>document including correctly sequenced text descriptions of time-based visual and auditory information and providing a means for achieving the outcomes of any time-based interaction</p>
+		<p>Note: A screenplay used to create the synchronized media content would meet this definition only if it was corrected to accurately represent the final synchronized media after editing.</p>
+		<footer>(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)</footer></blockquote></dd>
+	<dt><dfn id="high-stakes-information-or-services">High-stakes information or services</dfn></dt>
+	<dd><p>Online information or services whose inaccessibility at the time of publication could reasonably be expected to have a negative impact on an individual's emergency preparedness and response, health and safety, or critical civil and political rights, entitlements, services, or obligations. Examples include information or services related to:</p>
+		<ul>
+			<li>civil emergencies and responses;</li>
+			<li>entitlement or access to benefits, education, consumer or other community protections, passports, or visas;</li>
+			<li>rights in criminal and civil proceedings;</li>
+			<li>central government elections or referenda;</li>
+			<li>tax obligations and rebates;</li>
+			<li>general health information, specific health advice, health and safety in employment.</li>
+		</ul>
+	</dd>
+	<dt><dfn id="home-page">Home page</dfn></dt>
+	<dd><p>A website's main landing or entry web page. For many websites, this is the web page at the root domain or subdomain level, e.g. http://ministry.govt.nz/ or http://site.ministry.govt.nz/. For some websites, e.g. single web page applications, the home page is the initial state of the web application.</p></dd>
+	<dt><dfn id="name">Name</dfn></dt>
+	<dd><blockquote><p>text by which software can identify a component within Web content to the user</p>
+		<p>Note 1: The name may be hidden and only exposed by assistive technology, whereas a <a href="http://www.w3.org/TR/WCAG20/#labeldef">label</a> is presented to all users. In many (but not all) cases, the label and the name are the same.</p>
+		<p>Note 2: This is unrelated to the <code>name</code> attribute in HTML.</p>
+		<footer>(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)</footer></blockquote>
+		<p>For example, the text within a link's <code>&lt;a&gt;</code> and <code>&lt;/a&gt;</code> tags serves as the link's name. Similarly, the label text associated with a form control is that control's name.</p></dd>
+	<dt><dfn id="programmatically-determined">Programmatically determined</dfn></dt>
+	<dd><blockquote><p>determined by software from author-supplied data provided in a way that different user agents, including assistive technologies, can extract and present this information to users in different modalities</p>
+		<p>Example 1: Determined in a markup language from elements and attributes that are accessed directly by commonly available assistive technology.</p>
+		<p>Example 2: Determined from technology-specific data structures in a non-markup language and exposed to assistive technology via an accessibility API that is supported by commonly available assistive technology.</p>
+		<footer>(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)</footer></blockquote></dd>
+	<dt><dfn id="publicly-available">Publicly available</dfn></dt>
+	<dd><p>A website or web page that:</p>
+		<ol>
+			<li>is produced and maintained, in part or in whole, by the New Zealand Government organisation to which this Standard applies; and,</li>
+			<li>can be accessed by individuals who are not employed by a New Zealand Government Public Service department or Non-Public Service department in the State Services.</li>
+		</ol>
+		<p>This includes a website or web page behind a login authentication mechanism that controls access by users outside the responsible New Zealand Government organisation.</p></dd>
+	<dt><dfn id="role">Role</dfn></dt>
+	<dd><blockquote><p>text or number by which software can identify the function of a component within Web content</p>
+		<p>Example: A number that indicates whether an image functions as a hyperlink, command button, or check box.</p>
+		<footer>(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)</footer></blockquote>
+		<p>For common HTML controls, such as the <code>a</code>, <code>button</code>, <code>input type="checkbox"</code> elements, the role is automatically included as part of the element's programmatic identity.</p>
+		<p>For custom controls built from other HTML elements, the ARIA role attribute can be used to specify the control's intended role, e.g. <code>&lt;div role="checkbox" aria-checked="false"&gt;</code>. Note that, with this example, additional CSS and JavaScript needs to provide the visual presentation and interactivity to mimic a checkbox's normal behaviour.</p></dd>
+	<dt><dfn id="skip-links">Skip links</dfn></dt>
+	<dd><p>A skip link is a link that offers users a way to skip to or passed a block of content. For example, activating a "Skip navigation" or "Skip to main content" link at the top of a web page allows a user to skip over the links in the banner and main navigation menu and go straight to the page's main content.</p>
+		<p>Skip links are particularly helpful for sighted keyboard users who otherwise might be forced to use the <kbd>Tab</kbd> key to move through all the repeated menu links on a page before getting to the links or controls in the main area of the page.</p></dd>
+	<dt><dfn id="synchronized-media">Synchronized media</dfn></dt>
+	<dd><blockquote><p>audio or video synchronized with another format for presenting information and/or with time-based interactive components, unless the media is a media alternative for text that is clearly labeled as such</p>
+		<footer>(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)</footer></blockquote></dd>
+	<dt><dfn id="user-interface-component">User interface component</dfn></dt>
+	<dd><blockquote><p>a part of the content that is perceived by users as a single control for a distinct function</p>
+		<p>Note 1: Multiple user interface components may be implemented as a single programmatic element. Components here is not tied to programming techniques, but rather to what the user perceives as separate controls.</p>
+		<p>Note 2: User interface components include form elements and links as well as components generated by scripts.</p>
+		<p>Example: An applet has a "control" that can be used to move through content by line or page or random access. Since each of these would need to have a name and be settable independently, they would each be a "user interface component."</p>
+		<footer>(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)</footer></blockquote></dd>
+	<dt><dfn id="website">Website</dfn></dt>
+	<dd><blockquote><p>a coherent collection of one or more related web pages that together provide common use or functionality. It includes static web pages, dynamically generated web pages, and web applications</p>
+		<p>Note: The focus of this methodology is on full, self-enclosed websites. Websites may be composed of smaller sub-sites, each of which can be considered to be an individual website. For example, a website may include an online shop, an area for each department within the organization, a blog area, and other areas that may each be considered to be a website.</p>
+		<footer>(Source: <cite>Website Accessibility Conformance Evaluation Methodology (WCAG-EM) 1.0. Copyright © 2013 W3C® (MIT, ERCIM, Keio, Beihang), All Rights Reserved</cite>.)</footer></blockquote>
+		<p>A department's corporate website (e.g. ministry.govt.nz) may comprise multiple sections (e.g. ministry.govt.nz/service-a and ministry.govt.nz/service-b) owned and/or administered by organisationally distinct units within the department. For the purposes of this Standard, these individual sections may be considered separate websites.</p>
+		<p>Note that collections of web pages located at different fourth-level domains that belong to the same third-level domain, e.g. projectA.ministry.govt.nz and projectB.ministry.govt.nz, constitute separate websites.</p></dd>
+	<dt><dfn id="web-page">Web page</dfn></dt>
+	<dd><blockquote><p>a non-embedded resource obtained from a single URI using HTTP plus any other resources that are used in the rendering or intended to be rendered together with it by a user agent</p>
+		<p>Note 1: Although any "other resources" would be rendered together with the primary resource, they would not necessarily be rendered simultaneously with each other.</p>
+		<p>Note 2: For the purposes of conformance with these guidelines, a resource must be "non-embedded" within the scope of conformance to be considered a Web page.</p>
+		<p>Example 1: A Web resource including all embedded images and media.</p>
+		<p>Example 2: A Web mail program built using Asynchronous JavaScript and XML (AJAX). The program lives entirely at http://example.com/mail, but includes an inbox, a contacts area and a calendar. Links or buttons are provided that cause the inbox, contacts, or calendar to display, but do not change the URI of the page as a whole.</p>
+		<p>Example 3: A customizable portal site, where users can choose content to display from a set of different content modules.</p>
+		<p>Example 4: When you enter "http://shopping.example.com/" in your browser, you enter a movie-like interactive shopping environment where you visually move around in a store dragging products off of the shelves around you and into a visual shopping cart in front of you. Clicking on a product causes it to be demonstrated with a specification sheet floating alongside. This might be a single-page Website or just one page within a Website.</p>
+		<footer>(Source: <cite>Web Content Accessibility Guidelines (WCAG) 2.0. Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved</cite>.)</footer></blockquote>
+		<p>Note that this definition of web page includes what are commonly referred to as web applications.</p></dd>
 </dl>
