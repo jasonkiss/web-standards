@@ -426,7 +426,7 @@ Developer tools (F12)
 	<tbody>
 		<tr>
 			<td>All images &amp; styled text</td>
-			<td>Images of text or styled text that convey structural information also use proper semantic HTML markup to convey that structural information? For example, where an image of text, or a passage of text, is used to represent a heading, it is enclosed in an HTML heading (<code>h1</code>–<code>h6</code>) element.</td>
+			<td>Images of text or styled passages of text that convey structural information also use proper semantic HTML markup to convey that structural information. For example, content visually presented as a list of items is marked up using HTML list markup, <code>ol</code> when the items have a meaningful order, and <code>ul</code> where they do not. Similarly, where an image of text, or a passage of text, is used to represent a heading, it is enclosed in an HTML heading (<code>h1</code>–<code>h6</code>) element that reflects the hierarchical structure of the content. [Note that skipping heading levels, e.g. going from <code>h2</code> to <code>h4</code>, is not a WCAG failure. However, it is a failure to use heading levels in a way that does not reflect the hierachical order or rank of the heading content, e.g. using an <code>h3</code> heading for content that is visually presented as a subsection to content with an <code>h5</code> heading.]</td>
 		</tr>
 		<tr>
 			<td>Lists of items</td>
