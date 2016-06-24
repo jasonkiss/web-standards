@@ -136,7 +136,7 @@ All non-text content must also be available in text.
 
 *	[1.1.1 Non-text Content](#non-text-content-a)
 
-### 1.1.1 Non-text Content (A)
+<h3 class="sc">1.1.1 Non-text Content (A)</h3>
 
 This test is to ensure that non-text information, e.g. non-decorative photos, illustrations, charts, graphs, icons, images used for layout, images of text, Flash objects, etc. are accompanied by an appropriate, accessible text equivalent.
 
@@ -207,7 +207,7 @@ All time-based media must have an alternative provided. This includes media that
 *	[1.2.4 Captions (Live)](#captions-live-aa)
 *	[1.2.5 Audio Description (Prerecorded)](#audio-description-prerecorded-aa)
 
-### 1.2.1 Audio-only and Video-only (Prerecorded) (A)
+<h3 class="sc">1.2.1 Audio-only and Video-only (Prerecorded) (A)</h3>
 
 The Web Accessibility Standard currently requires that a [descriptive text transcript](#descriptive-text-transcript) be provided in all cases for prerecorded audio-only or prerecorded video-only content.
 
@@ -236,7 +236,7 @@ To ensure that anyone can get similar information from audio or video content, e
 *	The descriptive text transcript gives different or inaccurate information than that provided by the audio-only or video-only content.
 *	The descriptive text transcript is not clearly labelled as transcript of the audio-only or video-only content.
 
-### 1.2.2 Captions (Prerecorded) (A)
+<h3 class="sc">1.2.2 Captions (Prerecorded) (A)</h3>
 
 All prerecorded [synchronized media](#synchronized-media) must have [captions](#captions). Captions provide an onscreen textual representation of all the meaningful content in the audio track.
 
@@ -274,7 +274,7 @@ When the synchronized media is a media alternative for text and clearly labelled
 *	The synchronized media is more than 10 business days old and has no captions.
 *	The captions don't provide an accurate rendition of the meaningful audio information. (Note that automated captioning, e.g. that offered by YouTube, usually cannot be relied on to provide sufficient accuracy in the New Zealand context.)
 
-### 1.2.3 Audio Description or Media Alternative (A)
+<h3 class="sc">1.2.3 Audio Description or Media Alternative (A)</h3>
 
 The Web Accessibility Standard currently requires that a descriptive text transcript (i.e. alternative for time-based media) be provided in all cases for prerecorded synchronized media.
 
@@ -310,7 +310,7 @@ When the synchronized media is a media alternative for text and clearly labelled
 *	The descriptive text transcript gives different information or inaccurate information.
 *	The descriptive transcript is not clearly labelled as being a descriptive text transcript for the synchronized media.
 
-### 1.2.4 Captions (Live) (AA)
+<h3 class="sc">1.2.4 Captions (Live) (AA)</h3>
 
 Live synchronized media that presents high-stakes information or services must have visible captions. (If this type of content is not high-stakes, it is exempt from this requirement on New Zealand government websites.)
 
@@ -347,7 +347,7 @@ To ensure that people who are deaf or hard of hearing have access to the meaning
 
 *	The synchronized media is high-stakes and has no captions.
 
-### 1.2.5 Audio Description (Prerecorded) (AA)
+<h3 class="sc">1.2.5 Audio Description (Prerecorded) (AA)</h3>
 
 Beyond a descriptive text transcript, audio description provides an additional degree of accessibility for blind and vision impaired users. Audio description is an extra audio track that provides, during pauses in dialogue, information that's delivered in the video track but not described or included in the main audio track.
 
@@ -388,7 +388,7 @@ Content's structure and information must be able to be presented in different wa
 *	[1.3.2 Meaningful Sequence](#meaningful-sequence-a)
 *	[1.3.3 Sensory Characteristics](#sensory-characteristics-a)
 
-### 1.3.1 Info and Relationships (A)
+<h3 class="sc">1.3.1 Info and Relationships (A)</h3>
 
 This is a highly technical success criterion.
 
@@ -484,7 +484,7 @@ Developer tools (F12)
 *	Table headers have not been marked up appropriately.
 *	The ARIA `role="presentation"` has been applied to an element whose purpose is to convey information and/or relationships in the content.
 
-### 1.3.2 Meaningful Sequence (A)
+<h3 class="sc">1.3.2 Meaningful Sequence (A)</h3>
 
 The content of a web page must have a correct reading sequence that can be programmatically determined. If someone is using assistive technology or has applied a different style sheet to the page, there must be a way to determine a reading order that makes sense.
 
@@ -513,7 +513,7 @@ To ensure that people using assistive technologies or applying different style s
 *	Content laid out in a table that does not make sense when linearised (i.e. read left to right, row by row).
 *	White space has been used to lay out content in a table, to format a column, or to add decorative effects to text.
 
-### 1.3.3 Sensory Characteristics (A)
+<h3 class="sc">1.3.3 Sensory Characteristics (A)</h3>
 
 This test is to ensure that items on a web page are referenced in ways that do not depend on whether people can perceive shape, size, location or orientation.
 
@@ -555,7 +555,7 @@ The primary focus is on making it easier for people to separate foreground infor
 *	[1.4.4 Resizing Text](#resizing-text-aa)
 *	[1.4.5 Images of Text](#images-of-text-aa)
 
-### 1.4.1 Use of Color (A)
+<h3 class="sc">1.4.1 Use of Color (A)</h3>
 
 Colour must not be used as the only means of conveying information.
 
@@ -586,7 +586,7 @@ To ensure that everyone, including people who are vision impaired, can access in
 *	Links are distinguished solely by colour with no alternative visual indication (such as underline or bolding), making it hard to differentiate between a link and body text.
 *	There is no non-coloured way to identify the required field or error field.
 
-### 1.4.2 Audio Control (A)
+<h3 class="sc">1.4.2 Audio Control (A)</h3>
 
 If background audio starts automatically, it must be possible to pause it, or stop it, or control the volume.
 
@@ -607,7 +607,7 @@ To ensure that people can turn off any sound that plays automatically for more t
 
 *	The sound does not turn off automatically within 3 seconds and there is no obvious way in the page to turn the sound off or pause it or control its volume.
 
-### 1.4.3 Contrast (Minimum) (AA)
+<h3 class="sc">1.4.3 Contrast (Minimum) (AA)</h3>
 
 Web pages must have sufficient contrast between text and its background.
 
@@ -652,7 +652,7 @@ The font size of a certain bit of text can usually be checked using the browser'
 *	For non-bold text smaller than 18 point (~24px) and bold text smaller than 14 point (~19px), the contrast ratio is less than 4.5:1 between the text (including images of text) and its background.
 *	For non-bold text that is at least 18 point (~24px) and bold text that is at least 14 point (~19px), the contrast ratio is less than 3:1 between text (and images of text) and the background behind the text.
 
-### 1.4.4 Resizing Text (AA)
+<h3 class="sc">1.4.4 Resizing Text (AA)</h3>
 
 This test ensures that when a web page is magnified, text size increases to scale without any content overlapping or disappearing. The content must be fully readable and functional when magnified (although horizontal or vertical scrolling may be required).
 
@@ -686,7 +686,7 @@ When zooming the page to 200% you notice:
 *	Menu, buttons or links are obscured or disappear.
 *	Some elements are displayed on top of other elements such that they're meaning changes or is difficult to determine.
 
-### 1.4.5 Images of Text (AA)
+<h3 class="sc">1.4.5 Images of Text (AA)</h3>
 
 This test is to ensure that an image has not been used to deliver text with a particular visual presentation when that same presentation is possible with actual text and CSS.
 
@@ -728,7 +728,7 @@ People must be able to use all the functions of a website using only a keyboard.
 *	[2.1.1 Keyboard](#keyboard-a)
 *	[2.1.2 No Keyboard Trap](#no-keyboard-trap-a)
 
-### 2.1.1 Keyboard (A)
+<h3 class="sc">2.1.1 Keyboard (A)</h3>
 
 This test is to ensure that all content functionality can be operated using a keyboard only.
 
@@ -768,7 +768,7 @@ Functionality that depends on the path of a user's input, e.g. drawing curved li
 *	Links and buttons do not respond to <kbd>Enter</kbd> or the <kbd>Space</kbd> bar.
 *	You cannot activate a function (e.g. a video player or carousel control, etc.) that can be activated with a mouse.
 
-### 2.1.2 No Keyboard Trap (A)
+<h3 class="sc">2.1.2 No Keyboard Trap (A)</h3>
 
 This test is to ensure there are no keyboard traps within a web page.
 
@@ -803,7 +803,7 @@ People must be able to complete required tasks at their own individual pace. Eit
 *	[2.2.1 Timing Adjustable](#timing-adjustable-a)
 *	[2.2.2 Pause, Stop, Hide](#pause-stop-hide-a)
 
-### 2.2.1 Timing Adjustable (A)
+<h3 class="sc">2.2.1 Timing Adjustable (A)</h3>
 
 If a time limit is set on any activity, it must be possible for users to disable or extend the time limit.
 
@@ -833,7 +833,7 @@ There are a number of exceptions to this requirement. For examples, see [Underst
 
 *	The activity (reading or interacting) has a time limit, is not one of the exceptions listed above, and there is no opportunity, prior to engaging in the activity, to turn off or adjust the time limit, or to extend the time limit during the activity.
 
-### 2.2.2 Pause, Stop, Hide (A)
+<h3 class="sc">2.2.2 Pause, Stop, Hide (A)</h3>
 
 This test ensures that moving or auto-updating elements on a web page can easily be paused, stopped or hidden and not distract users from reading, navigating or interacting with the rest of the page.
 
@@ -865,7 +865,7 @@ Content must not be designed in a way that is known to cause seizures.
 
 *	[2.3.1 Three Flashes or Below Threshold](#three-flashes-or-below-threshold-a)
 
-### 2.3.1 Three Flashes or Below Threshold (A)
+<h3 class="sc">2.3.1 Three Flashes or Below Threshold (A)</h3>
 
 This test is to ensure there are no more than three flashes within one second on a web page.
 
@@ -902,7 +902,7 @@ Ways must be provided to help people navigate the website, find the content they
 *	[2.4.6 Headings and Labels](#headings-and-labels-aa)
 *	[2.4.7 Focus Visible](#focus-visible-aa)
 
-### 2.4.1 Bypass Blocks (A)
+<h3 class="sc">2.4.1 Bypass Blocks (A)</h3>
 
 Websites must provide a way to bypass blocks of content that are repeated on every web page, such as banners and navigation menus.
 
@@ -933,7 +933,7 @@ Developer tools
 
 *	There is no mechanism to quickly navigate to the page's main content while bypassing blocks of content that are repeated across other pages.
 
-### 2.4.2 Page Titled (A)
+<h3 class="sc">2.4.2 Page Titled (A)</h3>
 
 All web pages must have titles that describe their topic or purpose.
 
@@ -964,7 +964,7 @@ Developer tools (F12)
 *	The page's title is placeholder text, e.g. "Untitled Page".
 *	The page's title is not unique: some other pages have the same title.
 
-### 2.4.3 Focus Order (A)
+<h3 class="sc">2.4.3 Focus Order (A)</h3>
 
 If a web page can be navigated sequentially, components must receive focus in a sequence that enables people to understand and use the content.
 
@@ -992,7 +992,7 @@ When people navigate sequentially through content, they need to encounter inform
 *	A dialog or menu is opened, but focus is not set to the dialog or menu, and it is not adjacent to the control that triggered it, thereby forcing the user to <kbd>Tab</kbd> through the content in between to reach the dialog or menu.
 *	Upon closing a dialog or menu, focus returns to the underlying document, but not to the control that initially triggered the dialog or menu, forcing the user to <kbd>Tab</kbd> through the document from the beginning to reach that point in the document from which they originally opened the dialog or menu.
 
-### 2.4.4 Link Purpose (In Context) (A)
+<h3 class="sc">2.4.4 Link Purpose (In Context) (A)</h3>
 
 The purpose of every link must be obvious from its text alone, or from the link text in conjunction with its contextual relationships as determined through structural markup.
 
@@ -1021,7 +1021,7 @@ A link whose purpose would be ambiguous to all users, not just those with disabi
 
 *	A link contains only non-text content and its purpose is not conveyed by a meaningful text alternative or caption.
 
-### 2.4.5 Multiple Ways (AA)
+<h3 class="sc">2.4.5 Multiple Ways (AA)</h3>
 
 This test is to ensure that websites provide more than one way to locate content within a set of web pages.
 
@@ -1052,7 +1052,7 @@ Where the web page is the result of, or a step in, a process. Example: a search 
 
 *	Only one mechanism for finding content is provided.
 
-### 2.4.6 Headings and Labels (AA)
+<h3 class="sc">2.4.6 Headings and Labels (AA)</h3>
 
 Headings and labels used in the page must describe the topic or purpose of the information they are attached to. When headings and labels are clear and descriptive, people can more easily find and interact with the information and controls on a page.
 
@@ -1087,7 +1087,7 @@ While the `label` element can be used to mark up a label for a form control, not
 *	Headings do not describe the content of the sections of the page that they apply to.
 *	Labels do not describe or summarise their purpose and are not applied consistently.
 
-### 2.4.7 Focus Visible (AA)
+<h3 class="sc">2.4.7 Focus Visible (AA)</h3>
 
 Web pages must visually indicate which element currently has keyboard focus, for example with an outline or change in colour.
 
@@ -1120,7 +1120,7 @@ All text content must be readable and understandable.
 *	[3.1.1 Language of Page](#language-of-page-a)
 *	[3.1.2 Language of Parts](#language-of-parts-aa)
 
-### 3.1.1 Language of Page (A)
+<h3 class="sc">3.1.1 Language of Page (A)</h3>
 
 This test is to ensure that the language of a web page is correctly identified.
 
@@ -1152,7 +1152,7 @@ Developer tools (F12)
 *	The `<html>` tag does not have the `lang` attribute.
 *	The `<html>` tag has a `lang` attribute but its value identifies the wrong language.
 
-### 3.1.2 Language of Parts (AA)
+<h3 class="sc">3.1.2 Language of Parts (AA)</h3>
 
 Where the language (e.g. English or Māori) of a passage or phrase in the content is different from the page's main language, it must be identified in the HTML markup.
 
@@ -1197,7 +1197,7 @@ Web pages must appear and work in a predictable way.
 *	[3.2.3 Consistent Navigation](#consistent-navigation-aa)
 *	[3.2.4 Consistent Identification](#consistent-identification-aa)
 
-### 3.2.1 On Focus (A)
+<h3 class="sc">3.2.1 On Focus (A)</h3>
 
 When any component receives focus, this must not trigger an automatic [change of context](#change-of-context) (which is not the same thing as a change of content).
 
@@ -1225,7 +1225,7 @@ People get disoriented when context changes unexpectedly, for example, a new web
 *	Removing focus from an element as soon as it gets focus.
 *	Simply moving focus to or from an element on the page causes an unexpected change of context.
 
-### 3.2.2 On Input (A)
+<h3 class="sc">3.2.2 On Input (A)</h3>
 
 Changing the setting of a [user interface component](#user-interface-component) (e.g. selecting a radio button) must not automatically cause a change of context, unless the user is warned that the change will occur.
 
@@ -1256,7 +1256,7 @@ To ensure that simply changing the setting of a component (e.g. checking a check
 *	A new window is launched without prior warning when someone selects a radio button or checkbox.
 *	Instructional material or warnings about changes in context are located after the component that triggers the change in context when its setting is changed, or is located such that a user won't come across it before interacting with the component.
 
-### 3.2.3 Consistent Navigation (AA)
+<h3 class="sc">3.2.3 Consistent Navigation (AA)</h3>
 
 Navigation and links that are repeated on multiple web pages must follow the same order and structure on every page.
 
@@ -1279,7 +1279,7 @@ When a website has consistent presentation and layout of navigation menus, searc
 *	Recurring navigation items are not in the same relative order throughout the set of web pages.
 *	Recurring navigation items are not in the same position on the page.
 
-### 3.2.4 Consistent Identification (AA)
+<h3 class="sc">3.2.4 Consistent Identification (AA)</h3>
 
 All components within a website that do the same thing (e.g. icons, checkmarks, links to PDFs) must be identified with consistent appearance and wording.
 
@@ -1312,7 +1312,7 @@ Web pages must be designed and written to help people avoid making mistakes when
 *	[3.3.3 Error Suggestion](#error-suggestions-aa)
 *	[3.3.4 Error Prevention (Legal, Financial, Data)](#error-prevention-legal-financial-data-aa)
 
-### 3.3.1 Error Identification (A)
+<h3 class="sc">3.3.1 Error Identification (A)</h3>
 
 If people make a mistake filling in a form or performing a transaction (e.g. entering an invalid date), some text is provided that identifies and describes the error.
 
@@ -1337,7 +1337,7 @@ If people are informed about an error they have made, they won't be left wonderi
 *	The error message does not clearly identify which fields(s) are in error, and the nature of the error.
 *	An error message appears in a place that screen-reader users are unlikely to notice (e.g. following the "Submit" button).
 
-### 3.3.2 Labels or Instructions (A)
+<h3 class="sc">3.3.2 Labels or Instructions (A)</h3>
 
 Form fields must be accompanied by visible labels and instructions that make it clear what input is expected by each field.
 
@@ -1365,7 +1365,7 @@ Completing forms may be a demanding task for some people. Clear labels and instr
 *	The label and form control are not adjacent to each other.
 *	Data must be entered in a specific format but the required format is not clear.
 
-### 3.3.3 Error Suggestion (AA)
+<h3 class="sc">3.3.3 Error Suggestion (AA)</h3>
 
 If an input error is automatically detected, and ways to correct the error are known, then suggestions must be provided to the user who made the error.
 
@@ -1399,7 +1399,7 @@ If suggesting a correction would jeopardise the security or purpose of the conte
 *	A suggestion for correcting an error did not appear when submitting a form with an input error.
 *	An error message appeared but did not describe how the error could be corrected.
 
-### 3.3.4 Error Prevention (Legal, Financial, Data) (AA)
+<h3 class="sc">3.3.4 Error Prevention (Legal, Financial, Data) (AA)</h3>
 
 For web pages where the user can make legal commitments or financial transactions, modify or delete data in a data storage system (e.g. name and address for a user account), or submit test responses, at least one of the following must be true:
 
@@ -1441,7 +1441,7 @@ This test is to ensure that websites have maximum compatibility with current and
 *	[4.1.1 Parsing](#parsing-a)
 *	[4.1.2 Name, Role, Value](#name-role-value-aa)
 
-### 4.1.1 Parsing (A)
+<h3 class="sc">4.1.1 Parsing (A)</h3>
 
 This test is to ensure that the web page's HTML markup can be accurately parsed and interpreted by browsers and AT and then correctly presented to users.
 
@@ -1482,7 +1482,7 @@ To ensure that browsers, AT, and software that parses web content can accurately
 *	There are duplicate attribute names on the same element.
 *	There are duplicate `id` attribute values.
 
-### 4.1.2 Name, Role, Value (A)
+<h3 class="sc">4.1.2 Name, Role, Value (A)</h3>
 
 This is a highly technical success criterion for web authors who develop or script their own user interface components. Correctly assessing a web page against this success criterion requires advance technical knowledge. Assessing against this success criterion, more than others, will be aided by reviewing the [W3C's Understanding SC 4.1.2](http://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html) documentation and sufficient techniques.
 
