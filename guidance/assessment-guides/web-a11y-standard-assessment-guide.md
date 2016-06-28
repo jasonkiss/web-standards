@@ -134,8 +134,6 @@ If you still have difficulty determining if a page meets a certain success crite
 
 All non-text content must also be available in text.
 
-*	[1.1.1 Non-text Content](#non-text-content-a)
-
 <h3 class="sc">1.1.1 Non-text Content (A)</h3>
 
 This test is to ensure that non-text information, e.g. non-decorative photos, illustrations, charts, graphs, icons, images used for layout, images of text, Flash objects, etc. are accompanied by an appropriate, accessible text equivalent.
@@ -200,12 +198,6 @@ The Web Accessibility Standard currently exempts complex visual maps that associ
 <h2 class="g">1.2 Time-based Media</h2>
 
 All time-based media must have an alternative provided. This includes media that is audio- or video-only, synchronised audio and video, as well as audio and/or video combined with interaction.
-
-*	[1.2.1 Audio-only and Video-only (Prerecorded)](#audio-only-and-video-only-prerecorded-a)
-*	[1.2.2 Captions (Prerecorded)](#captions-prerecorded-a)
-*	[1.2.3 Audio Description or Media Alternative](#audio-description-or-media-alternative-a)
-*	[1.2.4 Captions (Live)](#captions-live-aa)
-*	[1.2.5 Audio Description (Prerecorded)](#audio-description-prerecorded-aa)
 
 <h3 class="sc">1.2.1 Audio-only and Video-only (Prerecorded) (A)</h3>
 
@@ -384,10 +376,6 @@ All synchronized media are currently exempt from the requirement to provide audi
 
 Content's structure and information must be able to be presented in different ways so that it can be perceived by all users through the software or devices they use, e.g. through a standard browser, a phone or computer screen, a Braille display, or a screen reader.
 
-*	[1.3.1 Info and Relationships](#info-and-relationships-a)
-*	[1.3.2 Meaningful Sequence](#meaningful-sequence-a)
-*	[1.3.3 Sensory Characteristics](#sensory-characteristics-a)
-
 <h3 class="sc">1.3.1 Info and Relationships (A)</h3>
 
 This is a highly technical success criterion.
@@ -548,12 +536,6 @@ To ensure that people can get the same meaning from web page content, even if th
 The following success criteria aim to make the web page's presentation as legible as possible for people with disabilities.
 
 The primary focus is on making it easier for people to separate foreground information from background images or sounds.
-
-*	[1.4.1 Use of Color](#use-of-color-a)
-*	[1.4.2 Audio Control](#audio-control-a)
-*	[1.4.3 Contrast (Minimum)](#contrast-minimum-aa)
-*	[1.4.4 Resizing Text](#resizing-text-aa)
-*	[1.4.5 Images of Text](#images-of-text-aa)
 
 <h3 class="sc">1.4.1 Use of Color (A)</h3>
 
@@ -725,9 +707,6 @@ Text that is part of an image that contains other visual content. Examples: logo
 
 People must be able to use all the functions of a website using only a keyboard.
 
-*	[2.1.1 Keyboard](#keyboard-a)
-*	[2.1.2 No Keyboard Trap](#no-keyboard-trap-a)
-
 <h3 class="sc">2.1.1 Keyboard (A)</h3>
 
 This test is to ensure that all content functionality can be operated using a keyboard only.
@@ -800,9 +779,6 @@ To ensure the cursor is not trapped in a section of content and a user cannot mo
 
 People must be able to complete required tasks at their own individual pace. Either there are no time constraints or people are given enough additional time to complete their tasks. Alternatives or exceptions are provided for cases where this is not possible.
 
-*	[2.2.1 Timing Adjustable](#timing-adjustable-a)
-*	[2.2.2 Pause, Stop, Hide](#pause-stop-hide-a)
-
 <h3 class="sc">2.2.1 Timing Adjustable (A)</h3>
 
 If a time limit is set on any activity, it must be possible for users to disable or extend the time limit.
@@ -863,8 +839,6 @@ An essential activity, e.g. real-time traffic information or weather warnings.
 
 Content must not be designed in a way that is known to cause seizures.
 
-*	[2.3.1 Three Flashes or Below Threshold](#three-flashes-or-below-threshold-a)
-
 <h3 class="sc">2.3.1 Three Flashes or Below Threshold (A)</h3>
 
 This test is to ensure there are no more than three flashes within one second on a web page.
@@ -893,14 +867,6 @@ Flashing that is below the [general flash and red flash thresholds](http://www.w
 <h2 class="g">2.4 Navigable</h2>
 
 Ways must be provided to help people navigate the website, find the content they need, and keep track of where they are.
-
-*	[2.4.1 Bypass Blocks](#bypass-blocks-a)
-*	[2.4.2 Page Titled](#page-titled-a)
-*	[2.4.3 Focus Order](#focus-order-a)
-*	[2.4.4 Link Purpose (In Context)](#link-purpose-in-context-a)
-*	[2.4.5 Multiple Ways](#multiple-ways-aa)
-*	[2.4.6 Headings and Labels](#headings-and-labels-aa)
-*	[2.4.7 Focus Visible](#focus-visible-aa)
 
 <h3 class="sc">2.4.1 Bypass Blocks (A)</h3>
 
@@ -1117,9 +1083,6 @@ To help people see which element on the web page has the keyboard focus so that 
 
 All text content must be readable and understandable.
 
-*	[3.1.1 Language of Page](#language-of-page-a)
-*	[3.1.2 Language of Parts](#language-of-parts-aa)
-
 <h3 class="sc">3.1.1 Language of Page (A)</h3>
 
 This test is to ensure that the language of a web page is correctly identified.
@@ -1191,11 +1154,6 @@ Where a word or short phrase is in common use in the main page language it is no
 <h2 class="g">3.2 Predictable</h2>
 
 Web pages must appear and work in a predictable way.
-
-*	[3.2.1 On Focus](#on-focus-a)
-*	[3.2.2 On Input](#on-input-a)
-*	[3.2.3 Consistent Navigation](#consistent-navigation-aa)
-*	[3.2.4 Consistent Identification](#consistent-identification-aa)
 
 <h3 class="sc">3.2.1 On Focus (A)</h3>
 
@@ -1306,11 +1264,6 @@ Predictable wording and design helps people to use a website intuitively and qui
 <h2 class="g">3.3 Input Assistance</h2>
 
 Web pages must be designed and written to help people avoid making mistakes when entering content, and notice and correct any mistakes they do make.
-
-*	[3.3.1 Error Identification](#error-identification-a)
-*	[3.3.2 Labels or Instructions](#labels-or-instructions-a)
-*	[3.3.3 Error Suggestion](#error-suggestions-aa)
-*	[3.3.4 Error Prevention (Legal, Financial, Data)](#error-prevention-legal-financial-data-aa)
 
 <h3 class="sc">3.3.1 Error Identification (A)</h3>
 
@@ -1437,9 +1390,6 @@ Possibly a dummy account and/or credit card.
 <h2 class="g">4.1 Compatible</h2>
 
 This test is to ensure that websites have maximum compatibility with current and future hardware and software, especially assistive technologies (ATs).
-
-*	[4.1.1 Parsing](#parsing-a)
-*	[4.1.2 Name, Role, Value](#name-role-value-aa)
 
 <h3 class="sc">4.1.1 Parsing (A)</h3>
 

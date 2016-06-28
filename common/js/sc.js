@@ -5,8 +5,10 @@ $(document).ready(function(){
 
 	$('summary').each(function(i){
 		$summary = $(this);
-		$details = $summary.add($summary.nextUntil('summary, h2'));
+		$detailsContent = $summary.nextUntil('summary, h2');
+		$details = $summary.add($detailsContent);
 		$details.wrapAll('<details></details>');
+		$detailsContent.wrapAll('<div class="detailsContent"></div>');
 	});
 	details();
 	
