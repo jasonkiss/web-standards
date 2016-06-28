@@ -130,7 +130,7 @@ If you still have difficulty determining if a page meets a certain success crite
 *	[Colour Contrast Check at Snook.ca](http://snook.ca/technical/colour_contrast/colour.html)
 *	[W3C Validator](http://validator.w3.org/)
 
-## 1.1 Text Alternatives
+<h2 class="g">1.1 Text Alternatives</h2>
 
 All non-text content must also be available in text.
 
@@ -197,7 +197,7 @@ The Web Accessibility Standard currently exempts complex visual maps that associ
 *	The text alternative is not an alternative, e.g. it is a filename or generic placeholder text.
 *	The text alternative of non-text content that serves as a CAPTCHA does not identify it as a CAPTCHA.
 
-## 1.2 Time-based Media
+<h2 class="g">1.2 Time-based Media</h2>
 
 All time-based media must have an alternative provided. This includes media that is audio- or video-only, synchronised audio and video, as well as audio and/or video combined with interaction.
 
@@ -380,7 +380,7 @@ All synchronized media are currently exempt from the requirement to provide audi
 *	The synchronized media content does not have audio description.
 *	The audio description gives different information or inaccurate information.
 
-## 1.3 Adaptable
+<h2 class="g">1.3 Adaptable</h2>
 
 Content's structure and information must be able to be presented in different ways so that it can be perceived by all users through the software or devices they use, e.g. through a standard browser, a phone or computer screen, a Braille display, or a screen reader.
 
@@ -543,7 +543,7 @@ To ensure that people can get the same meaning from web page content, even if th
 *	Content has been identified and referred to only by its shape, size, position or orientation.
 *	An icon or other graphic is the only thing conveying information. For example, an icon is not enough: its meaning must be available another way, e.g. as text on the page or in an `alt` attribute.
 
-## 1.4 Distinguishable
+<h2 class="g">1.4 Distinguishable</h2>
 
 The following success criteria aim to make the web page's presentation as legible as possible for people with disabilities.
 
@@ -721,7 +721,7 @@ Text that is part of an image that contains other visual content. Examples: logo
 
 *	An image is used to display text in a way that could be accomplished using actual text and CSS.
 
-## 2.1 Keyboard Accessible
+<h2 class="g">2.1 Keyboard Accessible</h2>
 
 People must be able to use all the functions of a website using only a keyboard.
 
@@ -796,7 +796,7 @@ To ensure the cursor is not trapped in a section of content and a user cannot mo
 
 *	Using the <kbd>Tab</kbd> key to move focus into a section of content, and not being able to move focus out of that section to reach other parts of the page.
 
-## 2.2 Enough Time
+<h2 class="g">2.2 Enough Time</h2>
 
 People must be able to complete required tasks at their own individual pace. Either there are no time constraints or people are given enough additional time to complete their tasks. Alternatives or exceptions are provided for cases where this is not possible.
 
@@ -859,7 +859,7 @@ An essential activity, e.g. real-time traffic information or weather warnings.
 
 *	There is no mechanism to pause, stop or hide the moving, blinking, scrolling, or auto-updating content.
 
-## 2.3 Seizures
+<h2 class="g">2.3 Seizures</h2>
 
 Content must not be designed in a way that is known to cause seizures.
 
@@ -890,7 +890,7 @@ Flashing that is below the [general flash and red flash thresholds](http://www.w
 
 *	Content that flashes or blinks more than three times within any one-second period.
 
-## 2.4 Navigable
+<h2 class="g">2.4 Navigable</h2>
 
 Ways must be provided to help people navigate the website, find the content they need, and keep track of where they are.
 
@@ -1113,7 +1113,7 @@ To help people see which element on the web page has the keyboard focus so that 
 *	Removing focus from an element as soon as it gets focus.
 *	Applying styles to an element in its unfocused state that hides the browser's default focus indicator.
 
-## 3.1 Readable
+<h2 class="g">3.1 Readable</h2>
 
 All text content must be readable and understandable.
 
@@ -1188,7 +1188,7 @@ Where a word or short phrase is in common use in the main page language it is no
 
 *	No `lang` attribute is applied to an HTML element containing the text which is in a language different from the language of the page.
 
-## 3.2 Predictable
+<h2 class="g">3.2 Predictable</h2>
 
 Web pages must appear and work in a predictable way.
 
@@ -1303,7 +1303,7 @@ Predictable wording and design helps people to use a website intuitively and qui
 *	Different labels or icons have been used for the same function one or more pages within a website
 *	A form that performs the same function across multiple pages has a submit button that is labelled differently in different instances of the form.
 
-## 3.3 Input Assistance
+<h2 class="g">3.3 Input Assistance</h2>
 
 Web pages must be designed and written to help people avoid making mistakes when entering content, and notice and correct any mistakes they do make.
 
@@ -1434,7 +1434,7 @@ Possibly a dummy account and/or credit card.
 	*	input is checked for errors and an opportunity to correct the errors is provided; or,
 	*	input is presented for review and confirmation or correction before the transaction is committed.
 
-## 4.1 Compatible
+<h2 class="g">4.1 Compatible</h2>
 
 This test is to ensure that websites have maximum compatibility with current and future hardware and software, especially assistive technologies (ATs).
 
