@@ -1,9 +1,12 @@
-blockquote {background-color: #eaeaea; padding: 5px; margin-left: 0;}
+blockquote {background-color: #eaeaea; padding: 0.3125em; margin-left: 0;}
 blockquote footer {margin-top: 1em;}
 summary h3 {display: inline;}
-.ed {border: 1px solid #f00; padding: 10px; font-style: italic;}
+details {border-bottom: 1px solid #ccc; padding: 0.5em;}
+summary {padding: 0.25em 0.25em 0.25em 1em;}
+summary:hover, summary:focus, details[open] summary:hover, details[open] summary:focus {background-color: #eee;}
+.ed {border: 1px solid #f00; padding: 0.625em; font-style: italic;}
 .ed:before {content: "Ed.: ";}
-.easy, .medium, .hard {padding: 0 2px;}
+.easy, .medium, .hard {padding: 0 0.125em;}
 .easy {background-color: #92d050;}
 .medium {background-color: #ffc000;}
 .hard {background-color: #f00;}
