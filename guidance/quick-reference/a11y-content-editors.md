@@ -17,7 +17,7 @@ This document is like a ‘pre-flight check’ to help you assess your content i
 
 ### A note about meaningful information
 
-Something is considered meaningful if it adds to the user's experience. Think carefully about the intent behind putting an image in a page. For example, a picture of a rose might be an example of the different species of flowers in a garden. It might be a red rose meant to symbolise romance. Or it might be a drawing of a line of roses someone is using as a page border.
+Something is considered meaningful if it adds to the user's experience. Think carefully about the intent behind an image on a page when you're deciding if it's meaningful or not. For example, a picture of a rose might be an example of the different species of flowers in a garden. It might be a red rose meant to symbolise romance. Or it might be a drawing of a line of roses someone is using as a page border.
 
 The rose in the first example was meaningful - one kind of flower distinct from another kind. The second example is meaningful because it conveys an emotion and enriches the page experience. The third example is decorative.
 
