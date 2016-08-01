@@ -394,7 +394,7 @@
 	<p><a href="index.html">Back to NZ Govt ARIA and A11y Workshop 2016 demo files</a></p>
 	<h1>Non-editable combobox with multiselect listbox</h1>
 	<p>Intended as an accessible combobox to mimic <a href="http://instructure-react.github.io/react-select-box/">this "accessible" multiselect combobox for ReactJS</a>.</p>
-	<p>The combobox container has <code>tabindex="0"</code> and gets initial focus instead of the <code>textbox</code>.</p>
+	<p>This combobox adopts the <a href="https://www.w3.org/TR/wai-aria-1.1/#combobox">ARIA 1.1 approach</a> where the combobox container has <code>tabindex="0"</code> and gets initial focus, instead of the <code>input</code>/<code>textbox</code> as was the case in ARIA 1.0.</p>
 	<p>And the <code>textbox</code> is a <code>div</code> with <code>role="textbox</code> instead of an <code>input type="text"</code>.</p>
 	<ol>
 		<li>Set focus to the combobox.</li>
