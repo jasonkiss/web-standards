@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Range slider demo &#8212; NZ Govt ARIA and A11y Workshop 2016</title>
+	<style>
+		html {background-color: #eee;}
+		code, kbd {font-size: 1.2em;}
+		kbd {background-color: #ededed; border-color: #fafafa #dadada #dadada #ededed; border-style: solid; border-width: 2px; padding: 0 2px 0 1px;}
+		pre {margin-top: 0;}
+		section {margin: 3em 0;}
+		.code {border: 1px solid #ccc; padding: 0 10px; margin: 1em 3em 0 0; display: inline-block; background-color: #fff; width: 500px;}
+		.demo {margin: 1em 0 3em; display: inline-block;vertical-align: top; position: relative;}
+
+		.slider-widget {position: relative; margin: 0 auto; width: 137px; height: 14px;  border-radius: 5px; background: #fff url(img/slider-bg.png) repeat-x left center;}
+		.slider {width: 17px; height: 17px; background: url(img/nub.png) no-repeat left center; position: absolute;left: 0;}
+		.slider:focus {background-image: url(img/nub-focus.png);}
+	</style>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		$(function() {
+			$('#slider0').on('change', function(){
+				$('#range-output0').val($(this).val() + "cm");
+			})
+
+			$('#slider2').keydown(function(e) {
+				var now = parseInt($('#range-output2').val().slice(0, -2));
+				var maxwidth = $(this).parent().width() - $(this).width();
+				var step = maxwidth/220;
+				var pos = parseInt($(this).css('left'));
+				switch (e.which) {					
+					case 37: //left
+						if (now > 30) {
+							$(this).css('left', step * (now + 1 - 30));
+							updateValue2(now - 1);
+						} else {
+							$(this).css('left', 0);
+						}			
+						e.preventDefault();					
+						e.stopPropagation();
+						break;
+					case 39: //right
+						if (now < 250) {
+							$(this).css('left', step * (now + 1 - 30));
+							updateValue2(now + 1);
+						} else {
+							$(this).css('left', maxwidth);
+						}
+						e.preventDefault();
+						e.stopPropagation();
+						break;
+				}
+			});
+			function updateValue2(now) {
+				var h = now + "cm";
+				$('#range-output2').val(h);
+			}
+
+			$('#slider3').keydown(function(e) {
+				var now = parseInt($('#range-output3').val().slice(0, -2));
+				var maxwidth = $(this).parent().width() - $(this).width();
+				var step = maxwidth/220;
+				var pos = parseInt($(this).css('left'));
+				switch (e.which) {					
+					case 37: //left
+						if (now > 30) {
+							$(this).css('left', step * (now + 1 - 30));
+							updateValue3(now - 1);
+						} else {
+							$(this).css('left', 0);
+						}								
+						e.stopPropagation();
+						break;
+					case 39: //right
+						if (now < 250) {
+							$(this).css('left', step * (now + 1 - 30));
+							updateValue3(now + 1);
+						} else {
+							$(this).css('left', maxwidth);
+						}
+						e.stopPropagation();
+						break;
+				}
+			});
+			function updateValue3(now) {
+				var h = now + "cm";
+				$('#slider3').attr({'aria-valuenow': now, 'aria-valuetext': h});
+				$('#range-output3').val(h);
+			}
+
+
+
+		});
+	</script>
+</head>
+<body>
+	<p><a href="index.html">Back to NZ Govt ARIA and A11y Workshop 2016 demo files</a></p>
+	<h1>Range slider demo</h1>
+	<section>
+		<h2>Example: range slider (1/3)</h2>
+		<h3><code>input type="range"</code></h3>
+		<div class="code"><pre><code>
+&lt;label for=&quot;slider&quot;&gt;Height (cm)&lt;/label&gt;
+
+&lt;input id=&quot;slider&quot; type=&quot;range&quot;
+min=&quot;30&quot; max=&quot;250&quot; step=&quot;1&quot; value=&quot;140&quot;&gt;
+		</code></pre>
+		<p>Supported in Opera, Safari, Chrome, IE10+, and FF.</p>
+		<p>Otherwise falls back to <code>input type="text"</code>.</p>
+		</div>
+		<div class="demo">
+			<br>
+			<div style="text-align:center;">
+				<label for="slider0">Height (cm)</label><br>
+  					<input style="margin-top:10px;" type="range" min="30" max="250" step="1" value="140" id="slider0" name="slider0">
+  					<p style="margin-top: 20px;"><label for="range-output0">Value:</label> <input type="text" disabled id="range-output0" value="140 cm" style="width: 4em; text-align: center;"></p>
+  				</div>
+  				<br>
+  			</div>
+	</section>
+	<section>
+		<h2>Example: range slider (2/3)</h2>
+		<h3>Custom slider with JavaScript</h3>
+		<div class="code"><pre><code>
+&lt;div&gt;Height (cm)&lt;/div&gt;
+
+&lt;div class=&quot;slider-widget&quot;&gt;
+  &lt;div id=&quot;slider&quot; tabindex=&quot;0&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+			</code></pre>
+			<p>Keyboard accessible with <code>tabindex="0"</code> and handlers<br>for <kbd>left arrow</kbd> and <kbd>right arrow</kbd>.</p>
+			<p>No programmatic label.</p>
+			<p>No role or state information.</p>
+			<p>[No mouse worky in this example.]</p>
+		</div>
+		<div class="demo">
+			<div style="text-align:center;">
+				<div id="slider-label" style="margin-bottom: 30px;">Height (cm)</div>
+				<div id="slider-widget2" class="slider-widget">
+					<div id="slider2" class="slider" style="left: 61.0909px;" tabindex="0"></div>
+				</div>
+				<p style="margin-top: 30px;"><label for="range-output2">Value:</label> <input type="text" disabled id="range-output2" value="140 cm" style="width: 4em; text-align: center; font-size: 100%;"></p>
+  		</div>
+  	</div>
+	</section>
+	<section>
+		<h2>Example: range slider (3/3)</h2>
+		<h3>Custom slider with JavaScript plus ARIA</h3>
+		<div class="code">
+			<ol>
+				<li>add <code>role="slider"</code></li>
+				<li>associate the label using @<code>aria-labelledby</code></li>
+				<li>add required ARIA attributes</li>
+				<li>dynamically update @<code>aria-valuenow</code><br>and @<code>aria-valuetext</code></li>
+			</ol>
+			<pre><code>
+&lt;div id=&quot;slider-label&quot;&gt;Height (cm)&lt;/div&gt;
+
+&lt;div class=&quot;slider-widget&quot;&gt;
+  &lt;div id=&quot;slider&quot; tabindex=&quot;0&quot; role=&quot;slider&quot;
+  aria-labelledby=&quot;slider-label&quot; 
+  aria-valuemin=&quot;30&quot; aria-valuemax=&quot;250&quot; 
+  aria-valuenow=&quot;140&quot; aria-valuetext=&quot;140 cm&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+			</code></pre>
+			<p><b>Label, role and state provided.</b></p>
+			<p>[No mouse worky in this example.]</p>
+		</div>
+		<div class="demo">
+			<div style="text-align:center;">
+				<div id="slider-label3" style="margin-bottom: 30px;">Height (cm)</div>
+				<div id="slider-widget3" class="slider-widget">
+					<div id="slider3" class="slider" role="slider" style="left: 61.0909px;" aria-labelledby="slider-label" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-valuetext="140 cm" tabindex="0"></div>
+				</div>
+				<p style="margin-top: 30px;"><label for="range-output3">Value:</label> <input type="text" disabled id="range-output3" value="140 cm" style="width:4em; text-align: center; font-size: 100%;"></p>
+  				</div>
+  				<br>
+  			</div>
+	</section>
+</body>
+</html>

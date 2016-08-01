@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Details/summary demos &#8212; NZ Govt ARIA and A11y Workshop 2016</title>
+	<style>
+		code, kbd {font-size: 1.2em;}
+		kbd {font-family: sans-serif; background-color: #ededed; border-color: #fafafa #dadada #dadada #ededed; border-style: solid; border-width: 2px; padding: 0 2px 0 1px;}
+		pre {margin-top: 0;}
+		section {margin: 3em 0;}
+		.code {border: 1px solid #ccc; padding: 0 10px; margin: 2em 0;}
+
+		summary::-webkit-details-marker {display: none;}
+		summary {background: #fff url("img/rightArrow.png") no-repeat 0.5em center; cursor: default; padding: 5px 5px 5px 30px;}
+		summary:hover, summary:focus, details[open] summary:hover, details[open] summary:focus {background-color: #eee;}
+		details[open] summary {background-color: #f5f5f5; background-image: url("img/downArrow.png");}
+		details > :not(summary) {display: none;}
+		details[open] > :not(summary) {display: block;}
+		
+		figure {position: relative; display: inline-block; margin: 0;}
+		figure summary {position: absolute; display: inline-block; bottom: 5px; right: 1px;}
+		figure details > :not(summary) {position: absolute; top: 0; left: 0; font-size: 1.6em; background-color: rgba(255, 255, 255, 0.5); width: 90%; padding: 5%;}
+		figure details p {margin: 0; }
+	</style>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		$(function () {
+			//test for native <details> support
+			function supports_details(){
+				return('open' in document.createElement('details'));
+			}
+			//add <details> support as applicable
+			function details() {
+				//for each <details> element
+				$('details').each(function(i){
+					//get refs to the <details> and <summary> element
+					var $details=$(this);
+					var $summary=$('summary',$details).first();
+					//add ARIA role to <details>
+					$details.attr('role','group');
+					//make sure <details> has unique @id
+					if(!$details.attr('id')){
+						$details.attr('id','details-'+i);
+					}
+					//get current <details> open state
+					var isOpen=$details.prop('open');
+					if(typeof isOpen==='undefined'){
+						isOpen=false;
+					}
+					//add ARIA attrs and state toggle to <summary> in all cases
+					$summary.attr({
+						'role':'button',
+						'aria-controls':$details.attr('id'),
+						'aria-expanded':isOpen
+					}).click(function(){
+						if($details.attr('open')){
+							$summary.attr('aria-expanded',false);
+						} else {
+							$summary.attr('aria-expanded',true);
+						}
+					});
+					//if no native <details> support
+					if(!supports_details()){
+						//add class to <html>
+						$('html').addClass('no-details');
+						//make <summary> focusable and enable kbd operation on Enter and Space 
+						$summary.attr('tabindex',0).keypress(function(event){
+							if(event.which==13||event.which==32){
+								event.preventDefault();
+								$summary.click();
+							}
+						}).click(function(){
+							if($details.attr('open')){
+								$details.removeAttr('open');
+							} else {
+								$details.attr('open','open');
+							}
+						});
+					}}
+				);
+			}
+			//run the polyfill
+			details();
+
+
+
+			$('figure summary').on('click', function(e) {
+				if ($(this).attr('aria-expanded') == "false") {
+					$(this).text("Description");
+				} else {
+					$(this).text("Hide Description");
+				}
+			});
+
+		});
+
+	</script>
+	
+</head>
+<body>
+	<p><a href="index.html">Back to NZ Govt ARIA and A11y Workshop 2016 demo files</a></p>
+	<h1><code>details</code>/<code>summary</code> demos</h1>
+	<section>
+		<h2>Native <code>details</code>/<code>summary</code> with polyfill</h2>
+		<ul>
+			<li>Native "support" for keyboard and mouse in WebKit, with disclosure "triangle" visuals</li>
+			<li>But a11y role and state information not provided in WebKit</li>
+			<li>No support (yet) in FF or IE or Edge</li>
+			<li>So need this polyfill to: add ARIA a11y for WebKit; visuals, behaviour, and ARIA for FF and IE</li>
+		</ul>
+		<div class="code"><pre><code>
+&lt;details&gt;
+  &lt;summary id="summary"&gt;More about this important announcement&lt;/summary&gt;
+  &lt;div id="details-content"&gt;
+    &lt;p&gt;Wow! What an important announcement...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+		</code></pre></div>
+		<details>
+			<summary id="summary">More about this important announcement</summary>
+			<div id="details-content">
+				<p>Wow! What an important announcement...</p>
+			</div>
+		</details>
+	</section>
+	<section>
+		<h2><code>details</code>/<code>summary</code> for image long description</h2>
+		<figure>
+			<img src="img/kitsch.jpg" alt="A very kitsch bracelet with colourful plastic bits." longdesc="#desc" aria-details="desc">
+			<details id="desc">
+				<summary>Description</summary>
+				<p>This stunning bracelet has 87 lovingly hand-crafted pieces of plastic, and no less than three blah blah blah...</p>
+			</details>
+		</figure>
+	</section>
+</body>
+</html>
