@@ -19,6 +19,9 @@ dirs:
   'presentations':
     url: /presentations/
     title: Presentations
+  'workshops':
+  	url: /workshops/
+  	title: Workshops
 
 # Build settings
 markdown: kramdown
