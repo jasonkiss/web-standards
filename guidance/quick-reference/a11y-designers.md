@@ -88,7 +88,7 @@ The W3C also has a [great tutorial about alt text](https://www.w3.org/WAI/tutori
 
 *	**Text on a coloured background is easy to see.**
 
-	There is enough contrast between text and its background so that people can easily read it. The contrast ratio between the colour of the text and the background needs to be at least 4.5:1\. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1\.
+	There is enough contrast between text and its background so that people can easily read it. The contrast ratio between the colour of the text and the background needs to be at least 4.5:1. Large text (18 pt upwards or bold 14 pt upwards) can use a contrast ratio of 3:1.
 	
 	The exception to this rule is logos, brand names or decorative text that conveys no meaningful information.
 	
