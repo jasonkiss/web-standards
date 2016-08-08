@@ -43,7 +43,7 @@ The rose in the first example was meaningful - one kind of flower distinct from 
 
 	Alt text may not be long enough to describe a complex image like an infographic or a flowchart. In addition to the alt text, provide a longer text alternative to describe any meaningful information.
 
-For more detailed W3C guidance, see [Requirements for providing text to act as an alternative for images](http://www.w3.org/TR/html51/semantics.html#alt).
+For more detailed W3C guidance, see [Requirements for providing text to act as an alternative for images](https://www.w3.org/TR/html51/semantics-embedded-content.html#alt-text).
 
 The W3C also has a [great tutorial about alt text](https://www.w3.org/WAI/tutorials/images/), information about dealing with different image types, and an alt text decision tree.
 
