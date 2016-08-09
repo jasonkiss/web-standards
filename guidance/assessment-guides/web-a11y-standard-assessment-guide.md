@@ -138,9 +138,11 @@ All non-text content must also be available in text.
 
 This test is to ensure that non-text information, e.g. non-decorative photos, illustrations, charts, graphs, icons, images used for layout, images of text, Flash objects, etc. are accompanied by an appropriate, accessible text equivalent.
 
-Where images are concerned, the text equivalent doesn't necessarily describe the image, but should serve as a textual replacement for it. What to look for in each case will depend on how the image has been added to the page. If it was inserted as a content image using the `img` element, there should be an `alt` attribute on the `img` tag. If the image was added using CSS, text on the page but visually hidden off-screen might be acting as the image's text alternative.
+Where images are concerned, the text equivalent doesn't necessarily describe the image, but should serve as a textual replacement for it. What to look for in each case will depend on how the image has been added to the page. If it was inserted as a content image using the `img` element, the `img` tag must have an `alt` attribute with a short text alternative. If the image was added using CSS, text that is located on the page but visually hidden off-screen might be acting as the image's text alternative.
 
 For more complex images, or things like Flash objects, the text equivalent might exist as text elsewhere on the page or on another page.
+
+Purely decorative or presentational images should ideally be added using CSS, but if they are added using the `img` element, they should have an empty or null `alt` attribute, i.e. `alt=""`.
 
 Note that in almost all cases, an MS Word or PDF document will not qualify as an accessible text alternative.
 
