@@ -136,58 +136,78 @@ All non-text content must also be available in text.
 
 <h3 class="sc">1.1.1 Non-text Content (A)</h3>
 
-This test is to ensure that non-text information, e.g. non-decorative photos, illustrations, charts, graphs, icons, images used for layout, images of text, Flash objects, etc. are accompanied by an appropriate, accessible text equivalent.
-
-Where images are concerned, the text equivalent doesn't necessarily describe the image, but should serve as a textual replacement for it. What to look for in each case will depend on how the image has been added to the page. If it was inserted as a content image using the `img` element, the `img` tag must have an `alt` attribute with a short text alternative. If the image was added using CSS, text that is located on the page but visually hidden off-screen might be acting as the image's text alternative.
-
-For more complex images, or things like Flash objects, the text equivalent might exist as text elsewhere on the page or on another page.
-
-Purely decorative or presentational images should ideally be added using CSS, but if they are added using the `img` element, they should have an empty or null `alt` attribute, i.e. `alt=""`.
-
-Note that in almost all cases, an MS Word or PDF document will not qualify as an accessible text alternative.
-
-<div class="ed">Need note re application of 1.1.1 to form controls</div>
+All non-text information (e.g. photos, drawings, charts, graphs, icons, audio/video, Flash objects, form controls) must have an appropriate, accessible text equivalent.
 
 #### Reason for testing
 
-To ensure information conveyed by non-text content is available in a text alternative.
+To ensure that information conveyed by non-text content is available in a text alternative.
 
 #### Technical difficulty
 
 <span class="medium">Medium</span>
+
+#### Notes
+
+<div class="ed">Probably need a note about use of `aria-label` and `aria-labelledby` as way to provide text alternative.</div>
+
+##### Images
+
+An image's text equivalent doesn't necessarily describe the image, but should serve as a textual replacement for it. What to look for in each case will depend on how the image has been added to the page. If the image was inserted using the `img` element, the `img` tag must have an `alt` attribute with a short text alternative. If the image was added using CSS, text that is located on the page but visually hidden might be acting as the image's text alternative.
+
+For more complex images, or things like Flash objects, where a short text alternative is insufficient to fully capture the meaning or purpose of the object, a longer text alternative is required. This longer text equivalent might exist as text elsewhere on the page or on another page in a way that the user can easily find. Note that in almost all cases, an MS Word or PDF document will not qualify as an accessible text alternative.
+
+If non-text content is primarily intended to create a specific sensory or emotional experience, e.g. a photo of a mountain range or drawing of a red rose, a simple text alternative at least identifies and describes the purpose of the non-text content.
+
+Purely decorative or presentational images that have no functionality should ideally be added using CSS with no alternative text in the HTML content. But if they are added using the `img` element, they should have an empty or null `alt` attribute, i.e. `alt=""`.
+
+For detailed examples of the different ways a text alternative might be provided, see [Requirements for providing text to act as an alternative for images](https://www.w3.org/TR/html51/semantics-embedded-content.html#alt-text).
+
+##### Form controls
+
+Form inputs and buttons must be accompanied by text that describes their purpose. For most form inputs, this text will be provided in an associated `label` element. For typical buttons, the text in the button itself should describe what the button does. Form image buttons also need text alternatives, which should be provided using the `alt` attribute (`<input type="image" src="image.jpg" alt="Submit feedback">`). 
+
+For the purposes of this assessment guide, the requirement for form controls and inputs to have text alternatives is  addressed by [4.1.2 Name, Role, Value](#412-name-role-value-a).
+
+##### Time-based media
+
+Time-based media, e.g. audio and video, is made accessible by applying the requirements in [1.2 Time-based Media](#12-time-based-media).
+
+##### CAPTCHA
+
+For an image-based CAPTCHA, a text alternative is required to describe the purpose of the CAPTCHA, but not its content. Additionally, at least one other form of CAPTCHA is provided that uses a different perceptual modality, e.g. an audio CAPTCHA.
+
+#### Exceptions
+
+The Web Accessibility Standard currently exempts complex visual maps that associate information with one or more points or shapes that cannot reasonably be represented by common identifiers such as postal addresses or the names of specific places or regions from the need to have a full text alternative that serves the equivalent purpose. However, a simple text alternative at least identifies and describes the purpose of the complex visual map.
 
 #### Tools required
 
 *	[Firefox Web Developer toolbar](https://addons.mozilla.org/en-US/firefox/addon/web-developer/)
 *	Developer tools (F12)
 
-#### Notes
-
-For detailed examples of the different ways a text alternative might be provided, see [Requirements for providing text to act as an alternative for images](https://www.w3.org/TR/html51/semantics-embedded-content.html#alt-text).
-
-If content is time-based media, e.g. audio and video, see [1.2 Time-based Media](#time-based-media).
-
-If non-text content is for pure decoration and only for visual formatting, then it is an image with an empty `alt` attribute (i.e. `alt=""`) or it is a CSS background image with no alternative text in the HTML content.
-
-If non-text content is primarily intended to create a specific sensory experience, e.g. showcase of works of art, and does not convey important information or perform a function, a simple text alternative at least identifies and describes the purpose of the non-text content.
-
-CAPTCHA functionality: a text alternative describes the purpose of the CAPTCHA, but not its content, and alternate forms of CAPTCHA are provided for different modalities of interaction.
-
-#### Exceptions
-
-The Web Accessibility Standard currently exempts complex visual maps that associate information with one or more points or shapes that cannot reasonably be represented by common identifiers such as postal addresses or the names of specific places or regions from the need to have a full text alternative that serves the equivalent purpose. However, a simple text alternative at least identifies and describes the purpose of the complex visual map.
-
 #### How to test
 
+##### Images
+
 1.	Open the web page to be tested.
-2.	Locate all non-text content (i.e. images, and Flash and Silverlight objects) on the page. This might be done in a number of ways.
-	*	In Firefox, with the Web Developer toolbar, select "Images > Display Alt Attributes" and "Images > Outline Images > Outline All Images" and "Images > Outline Images > Outline Background Images" for various effects that will help you find the images on the page.
-	*	Review the HTML markup using the browser's View Source feature. For example, you might search for "<img" to find instances of the `img` element, or look for instances of embed or object elements loading Flash or Silverlight objects.
-	*	Using the browser's Developer tools, inspect items on the page that you think might be images or Flash or Silverlight objects and confirm that they are part of the page or added via CSS.
-3.	For each instance of non-text content that is not purely decorative (i.e. is only aesthetic, provides no information, and has no functionality) check for a text alternative.
-	*	Where an `img` element has an associated `alt` attribute value, in most cases, that is its text alternative. If the image is more complex, a functional text equivalent may require more text than can be provided through the `alt` attribute. In that case, check that there is additional text information clearly associated with the image that serves as a functional text replacement for the image. For detailed examples of the different ways a text alternative might be provided, see the W3C's [Resources on Alternative Text for Images](https://www.w3.org/WAI/alt/#resources).
-	*	If the `alt` attribute on an `img` element is empty, i.e., `alt="`, confirm that the image is purely decorative
-	*	If the image or non-text content does not use an `img` element, the image is likely a CSS background image, or it could be a Flash or Silverlight object: use the Developer tools to find any text in the HTML that the non-text content replaces or that is visually hidden but meant to serve as the text alternative. For each text alternative, check that it is an appropriate functional replacement for the non-text content, that it conveys the same information (or function) as the non-text content, and does not describe content other than the currently-displayed non-text content. If the image is a CAPTCHA, check that the text alternative identifies it as such.
+2.	Locate all images, and static (not time-based) Flash and Silverlight objects on the page. This might be done in a number of ways.
+	*	In Firefox, with the Web Developer toolbar, select "Images > Display Alt Attributes", or "Images > Outline Images > Outline All Images", or "Images > Outline Images > Outline Background Images", for various effects that will help you find the images on the page.
+	*	Review the HTML markup using the browser's View Source feature. For example, you might search for "<img" to find instances of the `img` element, or `<embed` or `<object` to find elements used to load Flash or Silverlight content.
+	*	Using the browser's Developer tools, inspect items on the page that you think might be images or static media objects and confirm if they are part of the HTML page or added via CSS.
+3.	For each instance of non-text content that is not purely decorative, check for a text alternative.
+	*	Where an `img` element has an associated `alt` attribute value, in most cases, that is its text alternative. Check that it serves as an effective text replacement of the image. 
+	* If the image is more complex, a full text equivalent may require more text than can be provided through a short text alternative such as provided in an `alt` attribute. In that case, check that there is additional text information clearly associated with, and that serves as a functional text replacement for, that image. This might be provided in text that is next to the image, or text elsewhere on the page or on another page whose location is referenced by an `aria-describedby` or `longdesc` attribute on the image. For detailed examples of the different ways a text alternative might be provided, see the W3C's [Resources on Alternative Text for Images](https://www.w3.org/WAI/alt/#resources).
+	*	If the image is purely decorative, check that it is loaded using CSS, or, if it uses an `img` element, its `alt` attribute is empty, i.e., `alt=""`.
+	*	If the image or non-text content does not use an `img` element, the image could be a CSS background image, or it could be a Flash or Silverlight object. Use the Developer tools to find the HTML element that the non-text content is attached to, and check for one of the following:
+		* on the non-text content's HTML element, an `aria-label` attribute whose value serves as a text alternative
+		* on the non-text content's HTML element, an `aria-labelledby` attribute referencing the `id` value of another element in the HTML whose text serves as a text alernative
+		* text on the page next to the non-text content, or text that is visually hidden, that serves as the text alternative. For each such text alternative, check that:
+			* it is an appropriate functional replacement for the non-text content
+			* it conveys the same information or function as the non-text content, and 
+			* is not hidden with `display:none` in the CSS or `aria-hidden="true"` in the HTML. 
+	* If the image is a CAPTCHA, check that the text alternative identifies it as such.
+	* If the non-text content is a Flash or Silverlight object, [check the body of the `object` element](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/H53) for a text alternative.
+
 
 #### Failure points
 
