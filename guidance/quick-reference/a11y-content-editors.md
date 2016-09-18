@@ -9,7 +9,7 @@ draft_path: /guidance/design-and-development/quick-reference-guides/
 
 Web accessibility is about making your site and its content inclusive. Making your content accessible increases your potential audience and gives them a better experience.
 
-Most of the time people think about testing for accessibility just before something is deployed. This usually means that when an issue is found, deployment is either held up or else the issue is deployed to be fixed at some later time. This usually means more money and/or time than was originally scheduled. It’s easiest and cheapest to start thinking about accessibility right at the start of your project.
+Most people think about accessibility testing just before something is deployed. This means that if an issue is found, deployment is either held up or the issue is deployed, to be fixed at some later time. Fixing an issue after deployment often means more money and/or time than was originally scheduled. It’s easiest and cheapest to start thinking about accessibility right at the start of your project.
 
 This document is like a ‘pre-flight check’ to help you assess your content in terms of its accessibility. It also includes considerations to share with business owners to help them set realistic expectations.
 
