@@ -9,7 +9,7 @@ draft_path: /guidance/design-and-development/quick-reference-guides/
 
 Web accessibility is about making your site and its content inclusive. Making your content accessible increases your potential audience and gives them a better experience.
 
-It’s easiest to start thinking about accessibility right at the start of your project. Fixing issues later takes a lot more effort.
+Most of the time people think about testing for accessibility just before something is deployed. This usually means that when an issue is found, deployment is either held up or else the issue is deployed to be fixed at some later time. This usually means more money and/or time than was originally scheduled. It’s easiest and cheapest to start thinking about accessibility right at the start of your project.
 
 This document is like a ‘pre-flight check’ to help you assess your content in terms of its accessibility. It also includes considerations to share with business owners to help them set realistic expectations.
 
@@ -17,9 +17,13 @@ This document is like a ‘pre-flight check’ to help you assess your content i
 
 ### A note about meaningful information
 
-Something is considered meaningful if it adds to the user's experience. Think carefully about the intent behind an image on a page when you're deciding if it's meaningful or not. For example, a picture of a rose might be an example of the different species of flowers in a garden. It might be a red rose meant to symbolise romance. Or it might be a drawing of a line of roses someone is using as a page border.
+Something is considered meaningful if it adds to the user's experience. Think carefully about the intent behind an image on a page when you're deciding if it's meaningful or not. Here are 3 examples that might help you decide:
 
-The rose in the first example was meaningful - one kind of flower distinct from another kind. The second example is meaningful because it conveys an emotion and enriches the page experience. The third example is decorative.
+1. A picture of a rose as an example of the different types of flowers in a garden. The rose is meaningful because describing one kind of flower as distinct from a different kind.
+
+2. A picture of a red rose symbolising romance. This rose is meaningful because it conveys an emotion and enriches the page experience.
+
+3. A drawing of a line of roses someone is using as a page border. This rose is purely decorative.
 
 
 ### Images
