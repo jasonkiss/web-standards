@@ -123,7 +123,7 @@ If you still have difficulty determining if a page meets a certain success crite
 
 ## Tools used in this Guide
 
-*	[Firefox with the Web Developer toolbar add-on](https://addons.mozilla.org/en-US/firefox/addon/web-developer/)
+*	Firefox or Chrome with the [Web Developer extension](http://chrispederick.com/work/web-developer/)
 *	Developer tools: Pressing F12 in Firefox, Chrome, or IE8 and up, opens the browser's code inspection and developer tools.
 *	[WAVE Web Accessibility Evaluation Tool](http://wave.webaim.org/)
 *	[Paciello Group Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastAnalyser)
@@ -182,7 +182,7 @@ The Web Accessibility Standard currently exempts complex visual maps that associ
 
 #### Tools required
 
-*	[Firefox Web Developer toolbar](https://addons.mozilla.org/en-US/firefox/addon/web-developer/)
+*	[Web Developer extension](http://chrispederick.com/work/web-developer/)
 *	Developer tools (F12)
 
 #### How to test
@@ -191,7 +191,7 @@ The Web Accessibility Standard currently exempts complex visual maps that associ
 
 1.	Open the web page to be tested.
 2.	Locate all images, and static (not time-based) Flash and Silverlight objects on the page. This might be done in a number of ways.
-	*	In Firefox, with the Web Developer toolbar, select "Images > Display Alt Attributes", or "Images > Outline Images > Outline All Images", or "Images > Outline Images > Outline Background Images", for various effects that will help you find the images on the page.
+	*	With the Web Developer extension in Firefox or Chrome, select "Images > Display Alt Attributes", or "Images > Outline All Images", or "Images > Outline Background Images", for various effects that will help you find the images on the page.
 	*	Review the HTML markup using the browser's View Source feature. For example, you might search for "<img" to find instances of the `img` element, or `<embed` or `<object` to find elements used to load Flash or Silverlight content.
 	*	Using the browser's Developer tools, inspect items on the page that you think might be images or static media objects and confirm if they are part of the HTML page or added via CSS.
 3.	For each instance of non-text content that is not purely decorative, check for a text alternative.
@@ -508,13 +508,13 @@ To ensure that people using assistive technologies or applying different style s
 
 #### Tools required
 
-[Firefox Web Developer toolbar](https://addons.mozilla.org/en-US/firefox/addon/web-developer/)
+[Web Developer extension](http://chrispederick.com/work/web-developer/)
 
 #### How to test
 
 1.	Open the web page to be tested.
 2.	Check a meaningful reading order can be programmatically determined:
-	1.	Disable Cascading Style Sheets (CSS) to remove any visual styling: In Firefox, with the Web Developer toolbar, select "CSS > Disable Styles > Disable All Styles".
+	1.	Disable Cascading Style Sheets (CSS) to remove any visual styling: With the Web Developer extension in Firefox or Chrome, select "CSS > Disable All Styles".
 	2.	Ensure that, compared to the styled page, the order in which the content is presented doesn't change the meaning of the information in any way that could cause confusion or disorient the user. Note that if sections of the page such as the site menu, main content, or sidebar are in different relative positions compared to the style page, but their meaning and the meaning of the page overall are unaffected, then this is a pass.
 
 #### Failure points
@@ -539,7 +539,7 @@ To ensure that people can get the same meaning from web page content, even if th
 
 #### Tools required
 
-[Firefox Web Developer toolbar](https://addons.mozilla.org/en-US/firefox/addon/web-developer/)
+[Web Developer extension](http://chrispederick.com/work/web-developer/)
 
 #### How to test
 
@@ -573,7 +573,7 @@ To ensure that everyone, including people who are vision impaired, can access in
 
 #### Tools required
 
-[Firefox Web Developer toolbar](https://addons.mozilla.org/en-US/firefox/addon/web-developer/)
+[Web Developer extension](http://chrispederick.com/work/web-developer/)
 
 #### How to test
 
@@ -670,7 +670,7 @@ To ensure that information or content is not lost when the page is magnified. Ot
 
 #### Tools required
 
-Firefox
+Firefox or Chrome
 
 #### Exceptions
 
@@ -678,8 +678,8 @@ This test concerns page zoom, which changes the size of everything in the browse
 
 #### How to test
 
-1.	Using Firefox, open the web page to be tested.
-2.	Zoom the whole page (not just text) to 200%. If you don't have any Firefox add-ons related to page zoom functionality installed, press <kbd>CTRL + +</kbd> six times, which will set page zoom to 200%. Ensure that there is no loss of functionality or content overlapping or hidden.
+1.	Using Firefox or Chrome, open the web page to be tested.
+2.	Zoom the whole page (not just text) to 200%. In Firefox, press <kbd>CTRL + +</kbd> (or <kbd>CMD + +</kbd> on a Mac) six times to set page zoom to 200%. In Chrome, use the same keyboard command only five times to zoom to 200%.
 
 #### Failure points
 
@@ -705,7 +705,7 @@ To ensure images of text are not used unless necessary.
 #### Tools required
 
 *	[WAVE Web Accessibility Evaluation Tool](http://wave.webaim.org/)
-*	[Firefox Web Developer toolbar](https://addons.mozilla.org/en-US/firefox/addon/web-developer/)
+*	[Web Developer extension](http://chrispederick.com/work/web-developer/)
 
 #### Exceptions
 
@@ -715,7 +715,7 @@ Text that is part of an image that contains other visual content. Examples: logo
 
 1.	Open the web page to be tested.
 2.	Identify images of text.
-	*	In Firefox, with the Web Developer toolbar, select "Images > Display Alt Attributes", and "Images > Outline Images > Outline All Images", and "Images > Outline Images > Outline Background Images" for various effects that will help you find the images on the page.
+	*	With the Web Developer extension in Firefox or Chrome, select "Images > Display Alt Attributes", and "Images > Outline Images > Outline All Images", and "Images > Outline Images > Outline Background Images" for various effects that will help you find the images on the page.
 3.	Disregard any images of text that are:
 	*	essential, e.g. a logo, brand name, or facsimile of an historic document; or
 	*	customisable, i.e. the user can specify settings (font, size, etc.) for the text in the image.
