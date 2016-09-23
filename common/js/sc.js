@@ -1,7 +1,13 @@
 //convert all success criteria headings and tests to details/summary
 $(document).ready(function(){
+	//get all H3s that are success criteria, i.e. start with #.#.#
+	var $sc = $('h3').filter(function() {
+		return $(this).html().match(/^\d\.\d\.\d/);
+	});
 	//wrap every success criterion h3 in <summary>
-	$('h3.sc').wrap('<summary></summary>');
+	$sc.each(function() {
+		$(this).wrap('<summary></summary>');
+	});
 	//for each <summary>
 	$('summary').each(function(i){
 		$summary = $(this);
