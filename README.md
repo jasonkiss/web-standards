@@ -1,5 +1,5 @@
 [![New Zealand Government — Te Kāwanatanga o Aotearoa](common/img/nz-govt-logo.png)](https://www.govt.nz/)
-# New Zealand Government Web Standards
+#  New Zealand Government Web Standards
 
 This repository contains NZ Government Web Standards related documentation, guidance, tools, presentations, etc.
 
