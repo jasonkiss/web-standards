@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Web accessibility for content editors
+title: Web accessibility for content teams
 draft: true
 draft_path: /guidance/design-and-development/quick-reference-guides/
 ---
