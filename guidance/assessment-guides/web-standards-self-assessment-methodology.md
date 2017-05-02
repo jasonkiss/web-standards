@@ -4,8 +4,7 @@ title: Web Standards 2017 Self-Assessment Methodology
 draft: true
 ---
 
-Notes
------
+## Notes
 
 -   Start with easiest wcag sc
 
@@ -25,14 +24,12 @@ Notes
 
 -   Ask re a11y policy (organisational, for websites, projects, other)
 
-Page selection methodology
---------------------------
+## Page selection methodology
 
 copy into here. For GIS sanity testing, just pick a page known to have
 rich content on it.
 
-Web Accessibility Standard 
----------------------------
+## Web Accessibility Standard 
 
 ### Before you get started
 
@@ -61,8 +58,7 @@ testing. For automated testing, we recommend using aXe, an open source
 accessibility testing tool that comes as a browser extension for Firefox
 or Chrome. Follow these instructions to download and use it.
 
-[*Easy Accessibility Testing with
-aXe*](http://www.deque.com/products/axe/)
+[*Easy Accessibility Testing with aXe*](http://www.deque.com/products/axe/)
 
 ~~The instructions for each test will note when aXe is a reliable method
 for carrying out the test.~~
@@ -97,63 +93,52 @@ and Safari, and Command+U in Firefox.
 
 -   [*Overview*](https://developers.google.com/web/tools/chrome-devtools/)
 
--   *Inspect and Edit Pages and Styles*
-    ===================================
+-   [*Inspect and Edit Pages and Styles*](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/)  
 
--   [*Simulate Mobile Devices with Device
-    Mode*](https://developers.google.com/web/tools/chrome-devtools/device-mode/)
+-   [*Simulate Mobile Devices with Device Mode*](https://developers.google.com/web/tools/chrome-devtools/device-mode/)
 
 #### Firefox Developer Tools
 
--   [*Page
-    Inspector*](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
+-   [*Page Inspector*](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
 
--   [*Responsive Design
-    Mode*](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode)
+-   [*Responsive Design Mode*](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode)
 
 #### Microsoft Internet Explorer 11 F12 Developer Tools
 
--   [*Using the F12 developer
-    tools*](https://msdn.microsoft.com/en-us/library/bg182326(v=vs.85).aspx)
+-   [*Using the F12 developer tools*](https://msdn.microsoft.com/en-us/library/bg182326(v=vs.85).aspx)
 
--   [*DOM
-    Explorer*](https://msdn.microsoft.com/en-us/library/dn255008(v=vs.85).aspx)
+-   [*DOM Explorer*](https://msdn.microsoft.com/en-us/library/dn255008(v=vs.85).aspx)
 
 -   [*Emulation*](https://msdn.microsoft.com/en-us/library/dn255001(v=vs.85).aspx)
 
 #### Microsoft Edge F12 Developer Tools
 
--   [*Meet the Microsoft Edge F12 Dev
-    Tools*](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide)
+-   [*Meet the Microsoft Edge F12 Dev Tools*](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide)
 
--   [*DOM
-    Explorer*](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer)
+-   [*DOM Explorer*](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer)
 
 -   [*Emulation*](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/emulation)
 
 #### Safari Web Inspector
 
--   [*Get
-    Oriented*](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html)
+-   [*Get Oriented*](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html)
 
--   [*Resources and the
-    DOM*](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html)
+-   [*Resources and the DOM*](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html)
 
-Terms you need to know
-----------------------
+## Terms you need to know
 
-focus: when you use the Tab key to “tab” through a web page, the browser
+Focus
+:  When you use the Tab key to “tab” through a web page, the browser
 sets keyboard “focus” to each interactive component (e.g. links,
 buttons, text inputs, etc). When something has focus, you’re able to
 interact with it using your keyboard, like pressing Enter on a link.
 There should also be some kind of visual focus indicator that makes it
 clear to sighted users which element currently has focus.
 
-visual label: a label you can see that tells you what to enter in a form
-field.
+Visual label
+: A label you can see that tells you what to enter in a form field.
 
-Tests for each page
--------------------
+## Tests for each page
 
 ### Test 0: Automated testing
 
@@ -880,9 +865,7 @@ and audio.
 -   An iframe element is missing a title attribute with a
     descriptive name.
 
-Web Usability Standard
-----------------------
-
+## Web Usability Standard
 |                                                                                        |
 |----------------------------------------------------------------------------------------|
 | Usability 2.4.2 Website's privacy statement has required content                       |
