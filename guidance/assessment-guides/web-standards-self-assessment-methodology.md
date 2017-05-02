@@ -187,17 +187,17 @@ Similarly, something that is marked up as an HTML heading should look
 like a heading.
 
 Give headings the right hierarchy. Heading levels give content a
-ranking. An &lt;h1&gt; has the highest ranking and &lt;h6&gt; has the
+ranking. An `&lt;h1&gt;` has the highest ranking and `&lt;h6&gt;` has the
 lowest. So headings need to reflect the content hierarchy.
 
-This means that a level 3 heading &lt;h3&gt; can be a subheading for a
-section under a level 1 &lt;h1&gt; or level 2 &lt;h2&gt; heading, but
+This means that a level 3 heading, `&lt;h3&gt;`, can be a subheading for a
+section under a level 1, `&lt;h1&gt;`, or level 2, `&lt;h2&gt;`, heading, but
 not vice versa.
 
-Note: Skipping heading levels, e.g. going from &lt;h1&gt; to &lt;h3&gt;,
+Note: Skipping heading levels, e.g. going from `&lt;h1&gt;` to `&lt;h3&gt;`,
 is not a WCAG failure, but think about whether your content is
 structured logically. Content structure should follow in an order up and
-down the &lt;h1&gt; - &lt;h6&gt; hierarchy.
+down the `&lt;h1&gt;` - `&lt;h6&gt;` hierarchy.
 
 #### How to test
 
@@ -205,35 +205,32 @@ down the &lt;h1&gt; - &lt;h6&gt; hierarchy.
 
 2.  Inspect the source code associated with each heading.
 
-3.  Make sure the heading is wrapped in a heading element (&lt;h1&gt;,
-    &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt; or &lt;h6&gt;) or
-    another container element (e.g. &lt;div&gt;) with role=“heading” and
-    an aria-level.
+3.  Make sure the heading is either 
+    -   wrapped in a heading element (`&lt;h1&gt;`,
+    `&lt;h2&gt;`, `&lt;h3&gt;`, `&lt;h4&gt;`, `&lt;h5&gt;` or `&lt;h6&gt;`) or
+    
+    -   wrapped in a generic element (e.g. `&lt;div&gt;`) with an ARIA `role=“heading”` and
+    an `aria-level` attribute. Otherwise, record this as a failure.
 
-4.  Make sure the heaIf it is marked up correctly, make sure that the
-    heading level is appropriate compared to the previous heading level
-    and the overall structure of the content.
+4.  If the heading is marked up correctly, make sure that the heading level (as indicated by the number in the `&lt;h*&gt;` tag or the `aria-level` attribute) is appropriate given the previous heading's level and the overall structure of the content.
 
-5.  Remember to resize your browser window and test at the size of a
-    mobile device.
+5.  Remember to resize your browser window and test at the size of a smaller device, e.g. tablet and smartphone.
 
 #### Failure examples
 
 -   Words are styled to look like a heading with large bold type rather
     than marked up as an HTML heading.
 
--   An element is styled as a heading, using CSS instead of the proper
-    HTML markup.
+-   An element is styled as a heading, using CSS only and without proper
+    HTML and/or ARIA heading markup.
 
 -   Content that looks and acts as headings, and is not merely
-    decorative, has been inserted into the page using CSS :before and/or
-    :after pseudo-elements, instead of as HTML headings.
+    decorative, has been inserted into the page using CSS `:before` and/or
+    `:after` pseudo-elements, instead of as HTML headings.
 
--   Headings have an illogical hierarchy, for example, an &lt;h5&gt;
-    heading with a &lt;h3&gt; subheading. Note: skipping heading levels
-    is not a failure. Just not good practice.
-
-### 
+-   Headings have an illogical hierarchy, for example, an `&lt;h5&gt;`
+    heading with a `&lt;h3&gt;` subheading. Note: skipping heading levels
+    is not a failure. It's just not good practice.
 
 ### Test 2: Lists
 
