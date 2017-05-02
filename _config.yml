@@ -25,3 +25,6 @@ dirs:
 
 # Build settings
 markdown: kramdown
+
+# Exclude
+exclude: ["presentations/NZ-Govt-Web-A11y-Training-2016/node_modules"]
