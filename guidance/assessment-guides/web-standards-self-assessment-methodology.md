@@ -127,16 +127,18 @@ and Safari, and Command+U in Firefox.
 
 ## Terms you need to know
 
-Focus
-:  When you use the Tab key to “tab” through a web page, the browser
+<dl>
+<dt>Focus</dt>
+<dd>When you use the Tab key to “tab” through a web page, the browser
 sets keyboard “focus” to each interactive component (e.g. links,
 buttons, text inputs, etc). When something has focus, you’re able to
 interact with it using your keyboard, like pressing Enter on a link.
 There should also be some kind of visual focus indicator that makes it
-clear to sighted users which element currently has focus.
+clear to sighted users which element currently has focus.</dd>
 
-Visual label
-: A label you can see that tells you what to enter in a form field.
+<dt>Visual label</dt>
+<dd>A label you can see that tells you what to enter in a form field.</dd>
+</dl>
 
 ## Tests for each page
 
