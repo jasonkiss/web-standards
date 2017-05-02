@@ -142,9 +142,9 @@ Note: Skipping heading levels, e.g. going from `<h1>` to `<h3>`, is not a WCAG f
 
 2.  Inspect the source code associated with each heading.
 
-3.  Make sure the heading is either  -   wrapped in a heading element (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` or `<h6>`) or  -   wrapped in a generic element (e.g. `<div>`) with an ARIA `role=“heading”` and an `aria-level` attribute. Otherwise, record this as a failure.
+3.  Make sure the heading is either wrapped in a heading element (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` or `<h6>`) or wrapped in a generic element (e.g. `<div>`) with an ARIA `role=“heading”` and an `aria-level` attribute. Otherwise, record this as a failure.
 
-4.  If the heading is marked up correctly, make sure that the heading level (as indicated by the number in the `<h*>` tag or the `aria-level` attribute) is appropriate given the previous heading's level and the overall structure of the content.
+4.  If the heading is marked up correctly, make sure that the heading level (indicated by the number in the `<h*>` tag or the `aria-level` attribute value) is appropriate given the previous heading's level and the overall structure of the content. Otherwise, record this as a failure.
 
 5.  Remember to resize your browser window and test at the size of a smaller device, e.g. tablet and smartphone.
 
