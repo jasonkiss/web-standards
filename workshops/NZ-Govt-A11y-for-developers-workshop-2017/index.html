@@ -362,8 +362,9 @@
 					<ol>
 						<li>chrome://flags</li>
 						<li>Enable "Developer Tools Experiments"</li>
-						<li>Developer Tools -> Settings -> Experiments -> Accessibility</li>
+						<li>Developer Tools → Settings → Experiments → Accessibility</li>
 						<li>Restart Dev Tools</li>
+						<li>Inspect element → Check "Accessibility"</li>
 					</ol>
 				</section>
 				<section id="s24" data-transition="zoom-in fade-out">
@@ -827,22 +828,22 @@ $('.checkbox').on('click', function() {
 				</section>
 				<section id="s50" data-transition="zoom-in fade-out">
 					<h2 style="margin-bottom: 50px;">Overriding native HTML semantics</h2>
-					<div class="float-left" style="width: 600px;"><pre><code class="html" data-trim> 
+					<div class="float-left" style="width: 600px;"><h3>Valid</h3><pre><code class="html" data-trim> 
 &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
 
 &lt;a href=&quot;#&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt;
 					</code></pre></div>
-					<div class="right" style="top: 185px; left: 650px;">
+					<div class="right" style="top: 250px; left: 650px;">
 						<div style="margin-bottom: 20px;"><a href="#">Link</a></div>
 						<a href="#" role="button" style="border: 1px solid #999; text-decoration: none; padding: 5px; border-radius: 5px;">Button</a><br><br>
 					</div>
-					<div style="margin-top: 200px;">
-						<div class="float-left" style="width: 600px;"><pre><code class="html" data-trim> 
+					<div style="margin-top: 250px;">
+						<div class="float-left" style="width: 600px;"><h3>Invalid</h3><pre><code class="html" data-trim> 
 &lt;ul&gt;
    &lt;li role=&quot;button&quot;&gt;list item button&lt;/li&gt;
 &lt;/ul&gt;
 						</code></pre></div>
-						<div class="right" style="top: 375px; left: 600px;">
+						<div class="right" style="top: 475px; left: 600px;">
 							<ul>
 								<li role="button">list item button</li>
 							</ul>
@@ -1013,6 +1014,7 @@ $('.checkbox').on('click', function() {
 					</div>
 					<p>Elements that are <a href="https://www.w3.org/TR/wai-aria-1.1/#dfn-hidden">hidden</a> (e.g. <code class="green">display:none;</code>) are already not exposed.</p>
 					<p class="red"><span style="text-transform: uppercase;">Extreme caution</span> when hiding visually rendered content!</p>
+					<p><a href="aria-demos/modal.html">Modal dialog demo</a></p>
 				</section>
 				<section id="s58">
 					<h2>Live regions</h2>
