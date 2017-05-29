@@ -276,21 +276,21 @@
 					<h2>First there's the DOM</h2>
 					<figure class="center">
 						<img src="img/dom.png" alt="Tree diagram of the document object model.">
-						<cite style="display: none;"><a href="https://commons.wikimedia.org/wiki/File:ADOM-model.svg">Image source</a></cite>
+						<cite><a href="https://commons.wikimedia.org/wiki/File:ADOM-model.svg">Image source</a></cite>
 					</figure>
 				</section>
 				<section id="s21">
 					<h2>Next, accessibility APIs</h2>
 					<figure class="center">
 						<img src="img/apis.png" alt="Tree diagram of the document object model.">
-						<cite style="display: none;"><a href="https://www.w3.org/WAI/PF/aria/introduction#desc_contractmodel">Image source</a></cite>
+						<cite><a href="https://www.w3.org/WAI/PF/aria/introduction#desc_contractmodel">Image source</a></cite>
 						<details style="position: absolute; padding-top: 10px; text-align: left;"><summary style="font-size: 0.3em;">text description</summary><p style="background-color: #000; padding: 10px; font-size: 0.4em;">This image <q cite="https://www.w3.org/WAI/PF/aria/introduction#desc_contractmodel">illustrates the relationship between user agents (e.g., browsers), accessibility APIs, and assistive technologies. It describes the 'contract' provided by the user agent to assistive technologies, which includes typical accessibility information found in the accessibility API for many of our accessible platforms for GUIs (role, state, selection, event notification, relationship information, and descriptions). The DOM, usually HTML, acts as the data model and view in a typical model-view-controller relationship, and JavaScript acts as the controller by manipulating the style and content of the displayed data. The user agent conveys relevant information to the operating system's accessibility API, which can be used by any assistive technologies, such as screen readers.</q></p></details>
 					</figure>
 					<div style="margin-top: 30px; font-size: 0.75em;">
 						<div class="float-left" style="width: 38%;">
-							<h3 class="yellow">Mac OS</h3>
+							<h3 class="yellow">macOS</h3>
 							<div><ul style="list-style: none; margin: 0; text-align: center;">
-								<li>Mac OS X Accessibility Protocol</li>
+								<li>NSAccessibility protocol</li>
 							</ul></div>
 						</div>
 						<div class="float-left" style="width: 30%;">
@@ -309,6 +309,12 @@
 						</div>
 					</div>
 				</section>
+				<section id="s21a" data-transition="zoom-in fade-out">
+					<h2>Tree of accessible objects</h2>
+					<figure class="center">
+					<img src="img/treestructure.jpg" alt="Diagram of a fictional accessibility tree with nodes showing different accessible objects.">
+					<cite><a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Image source</a></cite>
+				</section>
 				<section id="s22" data-transition="zoom-in fade-out">
 					<h2>Inspecting the APIs</h2>
 					<h3 class="yellow">Windows</h3>
@@ -317,7 +323,7 @@
 						<li>Accessibility Probe</li>
 						<li>Inspect Objects (MS Windows SDK)</li>
 					</ul>
-					<h3 class="yellow">Mac OS</h3>
+					<h3 class="yellow">macOS</h3>
 					<ul style="margin: 0 0 40px; list-style: none; text-align: center;">
 						<li>Accessibility Inspector (Xcode)</li>
 					</ul>
@@ -350,15 +356,17 @@
 						</div>
 					</div>
 					<img src="img/accessibility-inspector.png" alt="">
-				</section>
-				<section id="s24" data-transition="zoom-in fade-out">
-					<h2>Still, there's the DOM</h2>
-					<p class="green big2">It's useful when:</p>
+				</section>	
+				<section id="s36a" data-transition="zoom-in fade-out">
+					<h2>Accessible object</h2>
+					<div style="border: 1px solid #fff; padding: 1em; margin-bottom: 1em;"><label for="sample-email">Your email address:</label> <input type="email" id="sample-email" aria-describedby="sample-email-desc" style="width: 7em; font-size: 0.75em"><div id="sample-email-desc" style="font-size: 0.5em; margin-top: 1em;">Your email address will never be shared.</div></div>
 					<ul>
-						<li>the API doesn't support certain information, <br>or</li>
-						<li>the info passed to the API is incomplete</li>
-					</ul>
-				</section>
+						<li><b class="yellow">Role</b>, e.g. textbox</li>
+						<li><b class="yellow">Name</b>, e.g. "Your email address:"</li>
+						<li><b class="yellow">Description</b>, e.g. "Your email address will never be shared."</li>
+						<li><b class="yellow">State</b>, e.g. focused</li>
+						<li><b class="yellow">Value</b>, e.g. "web.standards@dia.govt.nz"</li>
+				</section>			
 				<section id="s25">
 					<h2>What do developers need to do?</h2>
 				</section>
@@ -1186,8 +1194,7 @@ $('.checkbox').keydown(function(e) {
 					<p class="big2 yellow">Do the research, as you do&hellip;</p>
 				</section>
 				<section id="s64">
-					<h2>ARIA demos</h2>
-					<p><a href="aria-demos/index.html">ARIA and A11y Workshop 2016 demos</a></p>
+					<h2><a href="aria-demos/index.html">ARIA demos</a></h2>
 					<ul>
 						<li><a href="aria-demos/live-regions.html">Live region demos</a></li>
 						<li><a href="aria-demos/showing-hiding.html">Showing/hiding demos</a></li>
@@ -1195,6 +1202,7 @@ $('.checkbox').keydown(function(e) {
 						<li><a href="aria-demos/tabs.html">Tabbed interface demos</a></li>
 						<li><a href="aria-demos/accordion.html">Accordion demo</a></li>
 						<li><a href="aria-demos/combobox.html">Non-editable combobox demo</a></li>
+						<li><a href="aria-demos/modal.html">Modal dialog demo</a></li>
 					</ul>
 				</section>
 				<section id="s64a">
@@ -1210,7 +1218,7 @@ $('.checkbox').keydown(function(e) {
 				<section id="s65">
 					<h2>Thanks!</h2>
 					<p class="big2 yellow">Questions?</p>
-					<p>Jason Kiss<br>Senior Advisor, Digital Engagement<br>Dept. of Internal Affairs<br><a href="mailto:web.standards@dia.govt.nz">web.standards@dia.govt.nz</a><br><span class="green">Twitter: @jkiss</span></p>
+					<p>Jason Kiss<br>Senior Advisor<br>Dept. of Internal Affairs<br><a href="mailto:web.standards@dia.govt.nz">web.standards@dia.govt.nz</a><br><span class="green">Twitter: @jkiss</span></p>
 				</section>
 				<section id="s66">
 					<h2>Copyright</h2>
@@ -1229,7 +1237,7 @@ $('.checkbox').keydown(function(e) {
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				history: true,
-				showNotes: true,
+				showNotes: false,
 
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
