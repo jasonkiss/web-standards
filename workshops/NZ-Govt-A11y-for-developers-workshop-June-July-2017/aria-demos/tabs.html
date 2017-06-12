@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Tabbed interfaces (Tabs) &#8212; NZ Govt A11y for Developers Workshop 2017</title>
+	<style>
+		code, kbd {font-size: 1.2em;}
+		kbd {font-family: sans-serif; background-color: #ededed; border-color: #fafafa #dadada #dadada #ededed; border-style: solid; border-width: 2px; padding: 0 2px 0 1px;}
+		pre {margin-top: 0;}
+		section {margin: 3em 0;}
+		.code {border: 1px solid #ccc; padding: 0 10px; margin: 1em 2em 2em 0; display: inline-block;}
+
+		.demo {margin: 1em 0 3em; display: inline-block;vertical-align: top; position: relative;}
+		.tablist {float: left; list-style: none; margin: 0; padding: 0;}
+		.tablist li {
+			position: relative; /*for z-index*/
+			float: left;
+			margin: 0 5px 0 0;
+			z-index: 1;
+		}
+		.tablist li a {
+			position: relative;
+			float: left;
+			overflow: hidden;
+			font-weight: normal;
+			text-shadow: none;
+			color: #4C6478;
+			background: #e3e3e3;
+			margin: 4px 0 0;
+			padding: 8px 0.5em 6px;
+			border-style: solid;
+			border-color: #ccc;
+			border-width: 0;
+			-moz-border-radius-topleft: 0.5em;
+			-moz-border-radius-topright: 0.5em;
+			-webkit-border-top-left-radius: 0.5em;
+			-webkit-border-top-right-radius: 0.5em;
+			border-top-left-radius: 0.5em;
+			border-top-right-radius: 0.5em;
+			cursor: pointer;
+			text-decoration: none;
+			top: 1px;
+		}
+		.tablist li a:link {border-color: #ccc;}
+		.tablist li a:active {top: 2px;}
+		.tablist li.current {z-index: 10;}
+		.tablist li.current a {
+			font-weight: bold;
+			color: #333;
+			background: #fff;
+			border-color: #aaa;
+			border-width: 1px 1px 0 1px;
+			text-shadow: 0 1px 1px rgba(0, 0, 0,.2);
+		}
+		.tablist a span {
+			position: absolute;
+			top: auto;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			opacity: 0;
+		}		
+		.tablist li a:hover, .tablist li a:focus, .tablist li a:active {
+			background-color: #5c7891; /*default blue*/
+			border-color: #aaa;
+			color: #fff;
+			text-shadow: 0 1px 1px rgba(0, 0, 0,.2);
+		}
+
+		.tabpanel {
+			position: relative;  /*for z-index*/
+			display: block;
+			visibility: visible;
+			clear: left;
+			overflow: auto;
+			padding: 1em 1em;
+			-moz-border-radius: 0 1em 1em;
+			-webkit-border-radius: 0 1em 1em;
+			border-radius: 0 1em 1em;
+			border: 1px solid #aaa;
+			z-index: 5;
+			color: #333;
+			background-color: #fff;
+			width: 575px;
+		}
+		.tabpanel a {color: #00e; text-decoration: underline;}
+		.tabpanel:focus {outline: 1px dotted #999;}
+		.tabpanel h2 {display: inline-block; color: #333;}
+		.tabpanel h2:focus {outline: 1px dotted #999;}
+
+		.kbd-instr {
+			display: none;
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 0.75em;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #444;
+			color: #fff;
+			position: absolute;
+			left: 30%;
+			top: 5px;
+			height: 18px;
+			padding: 4px 8px;
+		}
+		.kbd-instr kbd {vertical-align: middle; color: #000;}
+	</style>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		var Tabs1 = (function() {
+			$(function() {
+				
+				var tabs=$("#tabs1");
+				//for each individual tab DIV, set class and aria role attributes, and hide it
+				$(tabs).find(">div").attr({"class": "tabpanel"}).hide();
+				//get the list of tab links
+				var tablist=$(tabs).find("ul:first").attr({"class": "tablist"}); 
+				//for each item in the tablist...
+				$(tablist).find("li>a").each(
+					function(a){
+						//set the click event for each tab link
+						$(this).click(
+							function(e){
+								//prevent default click event
+								e.preventDefault();
+								//change state of previously selected tabList item
+								$(tablist).find(">li.current").removeClass("current");
+								//hide previously selected tabpanel
+								$(tabs).find(".tabpanel:visible").hide();
+								//show newly selected tabpanel
+								$(tabs).find(".tabpanel").eq($(this).parent().index()).show();
+								//set state of newly selected tab list item
+								$(this).parent().addClass("current");
+								$(this).focus();
+							}
+						);
+					}
+				);
+				
+				//show the first tabpanel
+				$(tabs).find(".tabpanel:first").show();
+				//set state for the first tablist li
+				$(tablist).find("li:first").addClass("current");
+				
+			});
+		})();
+
+		var Tabs2 = (function() {
+			$(function() {
+				$('.tabs.a11y').each(function() {
+
+					var tabs=$(this);
+					//for each individual tab DIV, set class and aria role attributes, and hide it
+					$(tabs).find(">div").each(
+						function() {
+							$(this).attr({"id": "panel-" + $(this).find('>h3').attr("id"), "class": "tabpanel", "role": "tabpanel"}).hide();
+						}
+					);
+					//get the list of tab links
+					var tablist=$(tabs).find("ul:first").attr({"class": "tablist", "role": "tablist"}); 
+					//for each item in the tablist...
+					$(tablist).find("li>a").each(
+						function(a){
+							//assign tabId, aria and tabindex attributes to the tab control, but do not remove the href
+							$(this).attr({"role": "tab", "aria-selected": "false", "aria-controls": $(tabs).find(".tabpanel").eq(a).attr("id"), "tabindex": "-1"}).parent().attr("role", "presentation");
+							//assign aria attribute to the relevant tab panel
+							$(tabs).find(".tabpanel").eq(a).attr("aria-labelledby", $(this).attr("href").slice(1));
+							//set the click event for each tab link
+							$(this).click(
+								function(e){
+									//prevent default click event
+									e.preventDefault();
+									//change state of previously selected tabList item
+									$(tablist).find(">li.current").removeClass("current").find(">a").attr({"aria-selected": "false", "tabindex": "-1"});
+									//hide previously selected tabpanel
+									$(tabs).find(".tabpanel:visible").hide();
+									//show newly selected tabpanel
+									$(tabs).find(".tabpanel").eq($(this).parent().index()).show();
+									//set state of newly selected tab list item
+									$(this).attr({"aria-selected": "true", "tabindex": "0"}).parent().addClass("current");
+									$(this).focus();
+								}
+							);
+						}
+					);
+					
+					//set keydown events on tablist item for navigating tabs
+					$(tablist).delegate("a", "keydown",
+						function (e) {
+							switch (e.which) {
+								case 37: case 38:
+									if ($(this).parent().prev().length!=0) {
+										$(this).parent().prev().find(">a").click();
+									} else {
+										$(tablist).find("li:last>a").click();
+									}
+									e.preventDefault();
+									break;
+								case 39: case 40:
+									if ($(this).parent().next().length!=0) {
+										$(this).parent().next().find(">a").click();
+									} else {
+										$(tablist).find("li:first>a").click();
+									}
+									e.preventDefault();
+									break;
+							}
+						}
+					);
+					//show the first tabpanel
+					$(tabs).find(".tabpanel:first").show();
+					//set state for the first tablist li
+					$(tablist).find("li:first").addClass("current").find(">a").attr({"aria-selected": "true", "tabindex": "0"});
+				});
+
+				$('#tabs3 .tablist').after('<div class="kbd-instr">Use <kbd>←</kbd> <kbd>→</kbd> to change tabs</div>');
+				var keydown = false;
+				$(document).on('keydown', function(e) {			
+					if (e.which == 9) {
+						keydown = true;
+					}
+				});
+				$(document).on('keyup', function(e) {			
+					if (e.which == 9) {
+						keydown = false;
+					}
+				});
+				$('#tabs3 .tablist a').on('focus', function(e) {
+					if (keydown == true) {
+						$('.kbd-instr').show();
+					}
+				});
+				$('#tabs3 .tablist a').on('blur', function(e) {$('.kbd-instr').hide();});
+			});
+		})();
+	</script>
+</head>
+<body>
+	<p><a href="index.html">Back to NZ Govt A11y for Developers Workshop 2017 demo files</a></p>
+	<h1>Tabbed interfaces (Tabs)</h1>
+	<ul>
+		<li><a href="https://www.w3.org/TR/wai-aria-1.1/#tablist">ARIA 1.1 <code>tablist</code> role</a></li>
+		<li><a href="https://www.w3.org/TR/wai-aria-1.1/#tab">ARIA 1.1 <code>tab</code> role</a></li>
+		<li><a href="https://www.w3.org/TR/wai-aria-1.1/#tabpanel">ARIA 1.1 <code>tabpanel</code> role</a></li>
+		<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel">ARIA Authoring Practices 1.1 &#8212; Tab Panel</a></li>
+	</ul>
+	<p>Some reading (and check out the comments):</p>
+	<ul>
+		<li><a href="http://simplyaccessible.com/article/danger-aria-tabs/">Danger! ARIA tabs</a></li>
+		<li><a href="https://medium.com/@LeonieWatson/danger-testing-accessibility-with-real-people-4515f72db648#.cuvslq9fr">Danger! Testing Accessibility with real people</a></li>
+	</ul>
+	<section>
+		<h2>Tabs: Initial markup</h2>
+		<div class="code"><pre><code>   
+&lt;ul&gt;
+   &lt;li&gt;&lt;a href=&quot;#cat&quot;&gt;Cat&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#dog&quot;&gt;Dog&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#horse&quot;&gt;Horse&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+   &lt;h3 id=&quot;cat&quot;&gt;Man with cat&lt;/h2&gt;
+   ...
+&lt;/div&gt;
+
+&lt;div&gt;
+   &lt;h3 id=&quot;dog&quot;&gt;Man with dog&lt;/h2&gt;
+   ...
+&lt;/div&gt;
+
+&lt;div&gt;
+   &lt;h3 id=&quot;horse&quot;&gt;Horse and bridal party&lt;/h2&gt;
+   ...
+&lt;/div&gt;
+	</code></pre></div>
+	<div class="demo">
+		<ul>
+			<li><a href="#cat">Cat</a></li>
+			<li><a href="#dog">Dog</a></li>
+			<li><a href="#horse">Horse</a></li>
+		</ul>
+		<div>
+			<h3 id="cat">Man with cat</h3>
+			<p><img src="img/cat-small.jpg" alt="Topless dude standing in a Christmas tree and holding a cat."><a href="http://awkwardfamilyphotos.com/pets/2011/05/17/the-giving-tree-2/">The Giving Tree</a></p>
+		</div>
+		<div>
+			<h3 id="dog">Man with dog</h3>
+			<p><img src="img/dog-small.jpg" alt="Beefy topless dude posing with hairy dog."><a href="http://awkwardfamilyphotos.com/pets/2013/06/07/pet-a-like-5/">Pet-A-Likes: Primped</a></p>
+		</div>
+		<div>
+			<h3 id="horse">Horse and bridal party</h3>
+			<p><img src="img/horse-small.jpg" alt="Horse photobombing bridal party photo."><a href="http://awkwardfamilyphotos.com/pets/2010/12/04/saturday-night-special-horsing-around/">Saturday Night Special: Horsing Around</a></p>
+		</div>
+	</div>
+</section>
+<section>
+	<h2>Tabs: Styling</h2>
+		<div class="code code1">
+			<ol>
+			<li>add some class names and style appropriately</li>
+			<li>selected tab panel is visible</li>
+			<li>inactive tab panels are hidden</li>
+			<li><strong>No role or state information provided.</strong></li>
+		</ol>
+		<pre><code>   
+&lt;ul class=&quot;tablist&quot;&gt;
+   &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;#cat&quot;&gt;Cat&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#dog&quot;&gt;Dog&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#horse&quot;&gt;Horse&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;tabpanel&quot; style=&quot;display: block;&quot;&gt;
+   &lt;h3 id=&quot;cat&quot;&gt;Man with cat&lt;/h2&gt;
+   ...
+&lt;/div&gt;
+&lt;div class=&quot;tabpanel&quot; style=&quot;display: none;&quot;&gt;
+   &lt;h3 id=&quot;dog&quot;&gt;Man with dog&lt;/h2&gt;
+   ...
+&lt;/div&gt;
+&lt;div class=&quot;tabpanel&quot; style=&quot;display: none;&quot;&gt;
+   &lt;h3 id=&quot;horse&quot;&gt;Horse and bridal party&lt;/h2&gt;
+   ...
+&lt;/div&gt;
+		</code></pre></div>
+		<div id="tabs1" class="demo tabs">
+			<ul>
+				<li><a href="#cat1">Cat</a></li>
+				<li><a href="#dog1">Dog</a></li>
+				<li><a href="#horse1">Horse</a></li>
+			</ul>
+			<div>
+				<h3 id="cat1">Man with cat</h3>
+				<p><img src="img/cat.jpg" alt="Topless dude standing in a Christmas tree and holding a cat."><br><a href="http://awkwardfamilyphotos.com/pets/2011/05/17/the-giving-tree-2/">The Giving Tree</a></p>
+			</div>
+			<div>
+				<h3 id="dog1">Man with dog</h3>
+				<p><img src="img/dog.jpg" alt="Beefy topless dude posing with hairy dog."><br><a href="http://awkwardfamilyphotos.com/pets/2013/06/07/pet-a-like-5/">Pet-A-Likes: Primped</a></p>
+			</div>
+			<div>
+				<h3 id="horse1">Horse and bridal party</h3>
+				<p><img src="img/horse.jpg" alt="Horse photobombing bridal party photo."><br><a href="http://awkwardfamilyphotos.com/pets/2010/12/04/saturday-night-special-horsing-around/">Saturday Night Special: Horsing Around</a></p>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h2>Tabs: Accessible role, state, and keyboard</h2>
+		<div class="code">
+			<ol>
+				<li>add ARIA attributes and <code>tabindex</code></li>
+				<li>script appropriate keyboard interaction</li>
+			</ol>
+			<pre><code>   
+&lt;ul role=&quot;tablist&quot;&gt;
+   &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a role=&quot;tab&quot; aria-controls=&quot;panel-cat&quot; 
+         aria-selected=&quot;true&quot; tabindex=&quot;0&quot; 
+         href=&quot;#cat&quot;&gt;Cat&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a role=&quot;tab&quot; aria-controls=&quot;panel-dog&quot; 
+         aria-selected=&quot;false&quot; tabindex=&quot;-1&quot; 
+         href=&quot;#dog&quot;&gt;Dog&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a role=&quot;tab&quot; aria-controls=&quot;panel-horse&quot;
+         aria-selected=&quot;false&quot; tabindex=&quot;-1&quot; 
+         href=&quot;#horse&quot;&gt;Horse&lt;/a&gt;
+   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&quot;panel-cat&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;cat&quot;&gt; 
+   &lt;h3 id=&quot;cat&quot;&gt;Man with cat&lt;/h3&gt;
+   &hellip;
+&lt;/div&gt;
+&lt;div id=&quot;panel-dog&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;dog&quot;&gt;
+   &lt;h3 id=&quot;dog&quot;&gt;Man with dog&lt;/h3&gt;
+   &hellip;
+&lt;/div&gt;
+&lt;div id=&quot;panel-horse&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;horse&quot;&gt;
+   &lt;h3 id=&quot;horse&quot;&gt;
+      Horse and bridal party
+   &lt;/h3&gt;
+   &hellip;
+&lt;/div&gt;
+			</code></pre>
+		</div>
+		<div id="tabs2" class="demo tabs a11y">
+			<ul>
+				<li><a href="#cat2">Cat</a></li>
+				<li><a href="#dog2">Dog</a></li>
+				<li><a href="#horse2">Horse</a></li>
+			</ul>
+			<div>
+				<h3 id="cat2">Man with cat</h3>
+				<p><img src="img/cat.jpg" alt="Topless dude standing in a Christmas tree and holding a cat."><br><a href="http://awkwardfamilyphotos.com/pets/2011/05/17/the-giving-tree-2/">The Giving Tree</a></p>
+			</div>
+			<div>
+				<h3 id="dog2">Man with dog</h3>
+				<p><img src="img/dog.jpg" alt="Beefy topless dude posing with hairy dog."><br><a href="http://awkwardfamilyphotos.com/pets/2013/06/07/pet-a-like-5/">Pet-A-Likes: Primped</a></p>
+			</div>
+			<div>
+				<h3 id="horse2">Horse and bridal party</h3>
+				<p><img src="img/horse.jpg" alt="Horse photobombing bridal party photo."><br><a href="http://awkwardfamilyphotos.com/pets/2010/12/04/saturday-night-special-horsing-around/">Saturday Night Special: Horsing Around</a></p>
+			</div>
+		</div>
+
+	</section>
+
+	<section>
+		<h2>Tabs: Accessible and enhanced</h2>
+		<p>Keyboard instructions provided when tab gets focus</p>
+		<div id="tabs3" class="demo tabs a11y">
+			<ul>
+				<li><a href="#cat3">Cat</a></li>
+				<li><a href="#dog3">Dog</a></li>
+				<li><a href="#horse3">Horse</a></li>
+			</ul>
+			<div>
+				<h3 id="cat3">Man with cat</h3>
+				<p><img src="img/cat.jpg" alt="Topless dude standing in a Christmas tree and holding a cat."><br><a href="http://awkwardfamilyphotos.com/pets/2011/05/17/the-giving-tree-2/">The Giving Tree</a></p>
+			</div>
+			<div>
+				<h3 id="dog3">Man with dog</h3>
+				<p><img src="img/dog.jpg" alt="Beefy topless dude posing with hairy dog."><br><a href="http://awkwardfamilyphotos.com/pets/2013/06/07/pet-a-like-5/">Pet-A-Likes: Primped</a></p>
+			</div>
+			<div>
+				<h3 id="horse3">Horse and bridal party</h3>
+				<p><img src="img/horse.jpg" alt="Horse photobombing bridal party photo."><br><a href="http://awkwardfamilyphotos.com/pets/2010/12/04/saturday-night-special-horsing-around/">Saturday Night Special: Horsing Around</a></p>
+			</div>
+		</div>
+
+	</section>
+</body>
+</html>

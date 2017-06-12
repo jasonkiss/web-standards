@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Modal dialog demo &#8212; NZ Govt A11y for Developers Workshop 2017</title>
+    <style>
+      dialog, .dialog {
+        display: none;
+        position: absolute;
+        top: 240px; 
+        left:20px; 
+        width:260px;
+        border: 2px outset black;
+        padding:0 1em 1em 1em;
+        background-color: #ffffee;
+        z-index:100;
+        overflow: hidden;
+      }   
+      #modalDialogOverlay {
+        position:fixed;
+        top:0; left:0;
+        width:100%; height:100%;
+        background-color:#000; opacity:0.5;
+        margin:0;
+        padding:0;
+        z-index:10;
+      }
+      .close-dialog {position: absolute; top: 5px; right: 5px;}
+    </style>
+
+    <script>
+
+      var ModalDialog = (function () {
+        
+        var lastFocus, dialogId, dialog, nonDialog, overlay, focusableEls, firstFocusableEl, lastFocusableEl, 
+        focusableSelectorsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object:not([disabled]), embed, *[tabindex], *[contenteditable]";
+
+        function trapFocus(evt) {
+          // if TAB key pressed
+          if (evt.which == 9) {
+
+            // get list of all children elements in given object
+            var els = dialog.getElementsByTagName("*");
+
+            // if SHIFT-TAB pressed
+            if (evt.shiftKey) { 
+              // if first focusable element has focus, go to the last focusable element
+              if (evt.target == firstFocusableEl) {
+                lastFocusableEl.focus();
+                evt.preventDefault();
+              }
+
+            // else, if just TAB key pressed
+            } else { 
+              // if last focusable element has focus, go to the first focusable item
+              if (evt.target == lastFocusableEl) {
+                firstFocusableEl.focus();
+                evt.preventDefault();
+              }
+            }
+          }
+        }
+
+        function nonDialogAriaHidden(bool) {
+          // get all children of <body> that aren't the the dialog
+          var nonDialog = document.querySelectorAll("body > :not(#" + dialogId + ")");
+
+          // for each child of <body> that isn't the dialog...
+          for (var n = 0; n < nonDialog.length; ++n) {
+            if (bool == true) {
+              // set @aria-hidden="true" on non-dialog children of <body> to hide them from the a11y API
+              nonDialog[n].setAttribute("aria-hidden", "true");
+            } else {
+              // remove @aria-hidden from non-dialog children of <body>
+              nonDialog[n].removeAttribute("aria-hidden");
+            }
+          }
+        }        
+
+        return {
+
+          show: function(trigger, dId) {
+
+            // set reference to element that triggered the dialog
+            lastFocus = trigger || document.activeElement;
+
+            // set reference to current dialog ID
+            dialogId = dId;
+
+            // set reference to the dialog to be opened
+            dialog = document.getElementById(dialogId);       
+
+            // get node list of focusable elements in the object
+            focusableEls = dialog.querySelectorAll(focusableSelectorsString);
+
+            // get first and last focusable elements in the object
+            firstFocusableEl = focusableEls[0];
+            lastFocusableEl = focusableEls[focusableEls.length - 1];
+
+            // show the dialog 
+            dialog.style.display = "block";
+
+            // create the overlay
+            overlay = document.body.appendChild(document.createElement("div"));
+
+            // give overlay ID for styling hook
+            overlay.setAttribute("id", "modalDialogOverlay");
+
+            // listen for click events on the overlay and reset focus to dialog
+            overlay.addEventListener("click", function(event) {
+              dialog.focus();
+            }, true);
+
+            // set @open on the dialog
+            dialog.setAttribute("open", "open");
+            
+            // after displaying the dialog, focus the first focusable element inside it
+            firstFocusableEl.focus();
+
+            // set @aria-hidden="true" on all children of <body> that aren't the dialog
+            nonDialogAriaHidden(true);
+
+            // listen for keydown events 
+            dialog.addEventListener("keydown", function(event) {
+              // trap focus within dialog
+              trapFocus(event);
+            }, false);
+          },
+
+          hide: function() {
+
+            if (dialog) {
+              // remove @aria-hidden from non-dialog children of <body> to make them available to the a11y API 
+              nonDialogAriaHidden(false);
+
+              // set focus to the element that triggered the dialog
+              lastFocus.focus();
+
+              // remove @open on the dialog
+              dialog.removeAttribute("open");
+
+              // hide the dialog
+              dialog.style.display = "none";
+              
+              // remove the overlay
+              document.body.removeChild(overlay); 
+            }
+          }
+        }
+      })();
+
+      var DismissPolyfill = (function () {
+
+        // create custom "dismissrequest" Event -- is only returned by DismissPolyfill.init() if event not already supported
+        var dismiss = new Event("dismissrequest");
+
+        // array for elements with @uitrigger="dismiss"
+        var dismissTriggers = [];
+
+        // NodeList of all elements with @uiactions="dismiss"
+        var dismissReceivers;
+
+        function findDismissReceivers() {
+          
+          // get NodeList of all elements with @uiactions="dismiss"
+          dismissReceivers = document.querySelectorAll('*[uiactions~="dismiss"]');
+
+        }
+
+        function findDismissTriggers() {
+
+          // get NodeList of all elements with @uitrigger="dismiss"
+          var triggers = document.querySelectorAll('*[uitrigger="dismiss"]');
+
+          // for each trigger node in the NodeList...
+          for (var t = 0; t < triggers.length; ++t) {
+
+            // store temporary reference to the trigger node
+            var trigger = triggers[t];
+
+            // add the trigger node reference to the dismissTriggers array
+            dismissTriggers[t] = [trigger];
+
+            // get and add that trigger node's receiver to the dismissTrigger alongside the trigger reference
+            //dismissTriggers[t].push(getUITriggerReceiver(trigger));
+          }
+
+        }
+/*
+        function getUITriggerReceiver(target) {
+
+          // store reference to target's @uitrigger value
+          var uitrigger = target.getAttribute("uitrigger");
+
+          // at first, assume initial target has matching uitrigger and uiactions token, and is its own receiver
+          var receiver = target; 
+     
+          // while receiver doesn't have @uiactions...
+          while (!receiver.hasAttribute("uiactions")) {
+
+            // set receiver to be its parent
+            receiver = receiver.parentNode;
+
+            // if new receiver is the body or has @uiactions token value matching target's uitrigger, exit loop
+            if (receiver == document.body || receiver.getAttribute("uiactions").lastIndexOf(uitrigger) != -1) {break;}
+           
+          }
+          
+          // return the receiver
+          return receiver;
+
+        }
+*/
+        function setDismissUIEvents() {
+
+          // for each dismis uitrigger
+          for (var t in dismissTriggers) {
+
+            var trigger = dismissTriggers[t][0];
+            //var receiver = dismissTriggers[t][1];
+
+            // if trigger element is <a> or <button>...
+            if (trigger.tagName.match(/a|button/i)) {
+
+              // listen for click event on the trigger...
+              trigger.addEventListener("click", function(e) {
+
+                // ...and issue "dismissrequest" event
+                this.dispatchEvent(dismiss);
+                e.preventDefault();
+              
+              });
+            }
+          }
+
+          // for each receiver with @uiactions="dismiss"
+          for (var r = 0; r < dismissReceivers.length; ++r) {
+
+            // listen for ESC keypress event on the receiver element...
+            dismissReceivers[r].addEventListener("keypress", function(event) {
+              // if ESC, close dialog
+              if (event.keyCode == 27) {
+
+                // ...and issue "dismissrequest" event
+                this.dispatchEvent(dismiss);
+              }
+            });
+          }
+
+        }
+
+        return {
+
+          init: function() {
+
+            // if "dismissrequest" event not already supported...
+            if (!isEventSupported("dismissrequest")) {
+
+              // get all receiver elements with @uiactions="dismiss"
+              findDismissReceivers();
+
+              // get all trigger elements with @uitrigger="dismiss"
+              findDismissTriggers();
+
+              // set basic UI event behaviours for the dismiss triggers and receivers
+              setDismissUIEvents();
+
+              // add a "dismissrequest" custom event
+              return dismiss;
+
+            }
+
+          } 
+
+        }
+      })();
+
+      // From http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
+      var isEventSupported = (function(){
+        var TAGNAMES = {
+          'select':'input','change':'input',
+          'submit':'form','reset':'form',
+          'error':'img','load':'img','abort':'img'
+        }
+        function isEventSupported(eventName) {
+          var el = document.createElement(TAGNAMES[eventName] || 'div');
+          eventName = 'on' + eventName;
+          var isSupported = (eventName in el);
+          if (!isSupported) {
+            el.setAttribute(eventName, 'return;');
+            isSupported = typeof el[eventName] == 'function';
+          }
+          el = null;
+          return isSupported;
+        }
+        return isEventSupported;
+      })();
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <main id="main" role="main">
+      <p><a href="index.html">Back to NZ Govt A11y for Developers Workshop 2017 demo files</a></p>
+      <h1>Sample modal dialog</h1>
+      <p>The following button launches a modal dialog.</p>
+      <button id="show-dialog">Display the dialog</button>
+      <button id="show-dialog2">Display the dialog 2</button>
+      <p>Some text and a <a href="#">link to nowhere</a>.</p>
+    </main>
+
+    <dialog id="my-dialog" uiactions="dismiss" tabindex="-1" role="dialog" aria-labelledby="my-dialog-label" aria-describedby="my-dialog-description">
+      <h2 id="my-dialog-label">My Modal Dialog</h2>     
+      <button class="close-dialog" uitrigger="dismiss">Close</button>
+      <p id="my-dialog-description">This is a modal dialog. It can be closed via the "Close" button or by pressing the <kbd>Esc</kbd> key. </p>
+    </dialog>
+
+    <div class="dialog" id="my-dialog2" uiactions="dismiss" tabindex="-1" role="dialog" aria-labelledby="my-dialog-label2" aria-describedby="my-dialog-description2">
+      <h2 id="my-dialog-label2">My Modal Dialog 2</h2>      
+      <a href="#" class="close-dialog" uitrigger="dismiss">Close</a>
+      <p id="my-dialog-description2">This is a modal dialog. It can be closed via the "Close" button or by pressing the <kbd>Esc</kbd> key. </p>
+    </div>
+
+    <script>
+      // set show dialog button actions
+      document.getElementById("show-dialog").addEventListener("click", function(e){
+        ModalDialog.show(this, "my-dialog");
+      }, true);
+
+      document.getElementById("show-dialog2").addEventListener("click", function(e){
+        ModalDialog.show(this, "my-dialog2");
+      }, true);
+
+      // call the IndieUI "dismissrequest" UIRequestEvent polyfill
+      DismissPolyfill.init();
+
+      // function to call on "dismissrequest" events
+      function dismissHandler(e) {
+
+        // close the modal dialog
+        ModalDialog.hide();
+
+        // Then cancel the event.
+        e.stopPropagation(); // Stop the event from bubbling.
+        e.preventDefault(); // Let the UA/AT know the event was intercepted successfully.
+      
+      }
+
+      // handle dismissrequest events with dismissHandler
+      document.body.addEventListener("dismissrequest", dismissHandler, true);
+
+    </script>
+
+  </body>
+
+</html>
+

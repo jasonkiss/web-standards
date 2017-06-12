@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Combobox demo &#8212; NZ Govt A11y for Developers Workshop 2017</title>
+	<style>
+		html {background-color: #eee;}
+		code, kbd {font-size: 1.2em;}
+		kbd {background-color: #ededed; border-color: #fafafa #dadada #dadada #ededed; border-style: solid; border-width: 2px; padding: 0 2px 0 1px;}
+		pre {margin-top: 0;}
+		section {margin: 3em 0;}
+		.code {border: 1px solid #ccc; padding: 0 10px; margin: 1em 3em 0 0; background-color: #fff;}
+		.demo {margin: 1em 0 3em;}
+
+		body {
+			font-family: sans-serif;
+			font-size: 14px;
+			color: #6c6c6c;
+			background-color: #eee;
+		}
+
+		p {margin: 2em 0;}
+
+		ol {line-height: 1.6;}
+
+		:focus {
+			border-color: #78aeda;
+			box-shadow: 0 0 2px 3px #78aeda, 0 0 2px #78aeda inset;
+			border-radius: 2px;
+		}
+
+		.combobox {
+			width: 280px;
+			display: inline-block;
+			position: relative;
+		}
+
+		#textbox {
+			font-size: 1em;
+			color: #767676;
+			background-color: #fff;
+			font-weight: bold;
+			width: 220px;
+			outline: none;
+			padding: 15px 40px 15px 20px;
+			margin: 0;
+			border: 1px solid #999;
+			border-radius: 5px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		#textbox.selections {color: #069;}
+		.combobox button.toggle:focus {
+			outline: none;
+			box-shadow: none;
+		}
+		.combobox button.toggle {
+			background-color: #fff;
+			padding: 0;
+			border-top: 8px solid #6c6c6c;
+			border-right: 8px solid transparent;
+			border-bottom: none;
+			border-left: 8px solid transparent;
+			position: absolute;
+			right: 10px;
+			top: 21px;
+			width: 16px;
+		}
+
+		.combobox button.clear {
+			display: none;
+			position: absolute;
+			top: 13px;
+			right: 4px;
+			width: 31px;
+			height: 26px;
+			background-color: #fff;
+			border: none;
+		}
+
+		.combobox button.clear::before {
+			content: '×';
+			position: absolute;
+			top: 2px;
+			left: 6px;
+			z-index: 1;
+			background-color: #6c6c6c;
+			border-radius: 100%;
+			font-size: 19px;
+			color: #fff;
+			line-height: 1;
+			width: 21px;
+			height: 21px;
+		}
+
+		.combobox button.clear:focus::before,
+		.combobox button.clear:hover::before {background-color: #069;}
+
+		.combobox ul {
+			display: none;
+			list-style: none;
+			background-color: #fff;
+			font-size: 1em;
+			width: 100%;
+			margin: 0;
+			padding: 10px 0;
+			border: 1px solid #999;
+			border-radius: 5px;
+		}
+
+		.combobox li {
+			font-weight: bold;
+			padding: 15px 0 15px 50px;
+			position: relative;
+		}
+
+		.combobox .activedescendant {
+			background-color: #ddd;
+			color: #069;
+		}
+
+		.combobox li[aria-selected="true"] {color: #000;}
+
+		.combobox li[aria-selected="true"].activedescendant {color: #069;}
+
+		.combobox li span.check::before {
+			position: absolute;
+			content: ' ';
+			line-height: 1;
+			text-align: center;
+			left: 20px;
+			top: 14px;
+			border-radius: 3px;
+			width: 15px;
+			margin-right: 10px;
+			border: 1px solid #7B8E9B;
+			background: #f9f9f9;
+		}
+
+		.combobox li[aria-selected="true"] span.check::before {content: "✓";}
+
+	</style>
+	<script src="js/jquery-3.1.0.min.js"></script>
+		<script>
+		$(function () {
+
+			var $cbox = $('[role="combobox"]');
+			var $input = $('[role="textbox"]', $cbox);
+			var $togglebutt = $('button.toggle');
+			var $clearbutt = $('button.clear');
+			var $lbox = $('[role="listbox"]');
+
+			function isOpen() {
+				if ($cbox.attr('aria-expanded') == 'true') { return true; } else { return false; }
+			}	
+			function openLB() {
+				$cbox.attr('aria-expanded', 'true');
+				$lbox.show();
+			}
+			function closeLB() {
+				$cbox.attr('aria-expanded', 'false');
+				$lbox.hide();
+				clearActiveDescendant();
+			}
+			function toggleLB() {
+				if (isOpen()) {
+					closeLB();
+					$cbox.focus();
+				} else {
+					openLB();
+				}
+			}
+			function getActiveDescendant() {
+				if ($lbox.attr('aria-activedescendant')) {
+					return $('#' + $lbox.attr('aria-activedescendant'));
+				}
+			}
+			function setActiveDescendant($option) {
+				if (getActiveDescendant()) {
+					getActiveDescendant().removeClass('activedescendant');
+				} 
+				$lbox.attr('aria-activedescendant', $option.attr('id'));
+				$('#' + $lbox.attr('aria-activedescendant')).attr('class', 'activedescendant');
+			}
+			function clearActiveDescendant() {
+				if (getActiveDescendant()) {
+					getActiveDescendant().removeClass('activedescendant');
+				}		
+				$lbox.attr('aria-activedescendant', '');
+			}
+			function getSelectedOptionsStr() {
+				var options_str = '';
+				var $selectedOptions = $('li[aria-selected="true"]', $lbox);
+				if ($selectedOptions.length > 0) {
+					$selectedOptions.each(function() {
+						options_str += $(this).text() + ', ';
+					});
+					options_str = options_str.slice(0, -2);
+					$cbox.addClass('selections');
+					$togglebutt.hide();
+					$clearbutt.show();
+				} else {
+					options_str = $cbox.attr('aria-label');
+					$cbox.removeClass('selections');
+					$clearbutt.hide();
+					$togglebutt.show();
+				}
+				return options_str;
+			}
+			function clearSelectedOptions() {
+				$input.text($cbox.attr('aria-label'));
+				$('li[aria-selected="true"]', $lbox).attr('aria-selected', 'false');
+				$cbox.removeClass('selections');
+				$clearbutt.hide();
+				$togglebutt.show();
+				if (isOpen()) {closeLB();}
+				$cbox.focus();
+			}
+			
+			function toggleSelection($option) {
+				if ($option.attr('aria-selected') == 'false') {
+					$option.attr('aria-selected', 'true');
+				} else {
+					$option.attr('aria-selected', 'false');
+				}
+				$input.text(getSelectedOptionsStr());
+			}
+			function getDefaultOption() {
+				if ($('li[aria-selected="true"]', $lbox).length > 0) {
+					return $('li[aria-selected="true"]', $lbox).eq(0);
+				} else {
+					return $('li:first-child', $lbox);
+				}
+			}
+			function getNextOption() {
+				if (getActiveDescendant()) {
+					var ad_index = getActiveDescendant().index();
+					if (ad_index == $('li', $lbox).length - 1) {
+						return $('li:first-child', $lbox);
+					} else {
+						return $('li', $lbox).eq(ad_index + 1);
+					}
+				} else {
+					return getDefaultOption();
+				}
+			}
+			function getPreviousOption() {
+				if (getActiveDescendant()) {
+					var ad_index = getActiveDescendant().index();
+					if (ad_index === 0) {
+						return $('li:last-child', $lbox);
+					} else {
+						return $('li', $lbox).eq(ad_index - 1);
+					}
+				} else {
+					return getDefaultOption();
+				}
+			}
+			
+			//Events
+			$cbox.on('click', function (e) {
+				toggleLB();
+				e.stopPropagation();
+			});
+			$togglebutt.on('click', function (e) {
+				toggleLB();
+				$cbox.focus();
+				e.stopPropagation();
+			});
+			$clearbutt.on('click', function(e) {
+				clearSelectedOptions();
+				e.stopPropagation();
+			});
+			
+			var altPressed = false;
+			$cbox.on('keydown', function (e) {
+				switch (e.which) {
+					case 18:
+						altPressed = true;
+						break;
+					case 9:
+						if (isOpen()) {
+							closeLB();
+						}
+						break;
+					case 13:
+					case 32:
+						toggleLB();
+						if (isOpen()) {
+							$lbox.focus();
+							setActiveDescendant(getDefaultOption());
+						}
+						e.preventDefault();
+						break;
+					case 38:
+						if (altPressed == true) {
+							closeLB();
+						} else if (!isOpen()) {
+							openLB();		
+							$lbox.focus();
+							setActiveDescendant(getDefaultOption());
+							e.preventDefault();					
+						}				
+						break;
+					case 40:
+						if (!isOpen()) {
+							openLB();							
+						}				
+						$lbox.focus();
+						setActiveDescendant(getDefaultOption());
+						e.preventDefault();
+						break;
+					default:
+						return true;
+				}
+			});
+			$cbox.on('keyup', function (e) {
+				if (e.which == 18) {
+					altPressed = false;
+				}
+			});
+			$('li', $lbox).on('click', function(e) {
+				toggleSelection($(this));
+				setActiveDescendant($(this));
+				e.stopPropagation();
+			});
+			$lbox.on('keydown', function (e) {
+				switch (e.which) {
+					case 18:
+						altPressed = true;
+						break;
+					case 9:
+						if (isOpen()) {
+							closeLB();
+						}
+						break;
+					case 27:
+						if (isOpen()) {
+							closeLB();
+							$cbox.focus();
+						}	
+						break;
+					case 13:
+						toggleSelection(getActiveDescendant());
+						closeLB();
+						$cbox.focus();
+						break;
+					case 32:
+						toggleSelection(getActiveDescendant());
+						e.preventDefault();
+						break;
+					case 38:
+						if (altPressed == true) {
+							closeLB();
+							$cbox.focus();
+						} else {
+							setActiveDescendant(getPreviousOption());
+							e.preventDefault();							
+						}
+						break;
+					case 40:
+						setActiveDescendant(getNextOption());
+						e.preventDefault();
+						break;
+					default:
+						return true;
+				}
+			});
+			$lbox.on('keyup', function (e) {
+				if (e.which == 18) {
+					altPressed = false;
+				}
+			});
+			$('html').on('click', function() {
+				if (isOpen()) {
+					closeLB();
+				}
+			});
+			$('html').on('keydown', function (e) {
+				if (e.which == 27 && isOpen()) {
+					closeLB();
+				} 
+			});
+
+
+			//Init
+			$input.text($cbox.attr('aria-label'));
+		});
+	</script>
+</head>
+<body>
+	<p><a href="index.html">Back to NZ Govt A11y for Developers Workshop 2017 demo files</a></p>
+	<h1>Non-editable combobox with multiselect listbox</h1>
+	<p>Intended as an accessible combobox to mimic <a href="http://instructure-react.github.io/react-select-box/">this "accessible" multiselect combobox for ReactJS</a>.</p>
+	<p>This combobox adopts the <a href="https://www.w3.org/TR/wai-aria-1.1/#combobox">ARIA 1.1 approach</a> where the combobox container has <code>tabindex="0"</code> and gets initial focus, instead of the <code>input</code>/<code>textbox</code> as was the case in ARIA 1.0.</p>
+	<p>And the <code>textbox</code> is a <code>div</code> with <code>role="textbox</code> instead of an <code>input type="text"</code>.</p>
+	<ol>
+		<li>Set focus to the combobox.</li>
+		<li>Open the listbox with the <kbd>Enter</kbd>, <kbd>Space</kbd>, or up/down arrow keys.</li>
+		<li>Move through the options with the up/down arrow keys.</li>
+		<li>Select or unselect an option using <kbd>Enter</kbd> or <kbd>Space</kbd>. If you use <kbd>Enter</kbd>, the listbox will close.</li>
+	</ol>
+	<div class="demo">
+		<p><a href="#">Focusable content before the combobox</a></p>
+		<div class="combobox no-edit">	
+			<div role="combobox" aria-label="Favourite vegetables" aria-owns="vegetables" aria-expanded="false" tabindex="0">
+				<div id="textbox" role="textbox" aria-readonly="true" aria-multiline="false" aria-autocomplete="none" aria-controls="vegetables"></div>
+			</div>
+			<button class="toggle" aria-hidden="true" aria-label="Toggle list" tabindex="-1"></button>
+			<button class="clear" aria-label="Clear selected options"></button>
+			<ul role="listbox" id="vegetables" class="listbox" aria-multiselectable="true" tabindex="-1">
+				<li id="broccoli" role="option" aria-selected="false"><span class="check" aria-hidden="true"></span>Broccoli</li>
+				<li id="cabbage" role="option" aria-selected="false"><span class="check" aria-hidden="true"></span>Cabbage</li>
+				<li id="onion" role="option" aria-selected="false"><span class="check" aria-hidden="true"></span>Onion</li>
+				<li id="radish" role="option" aria-selected="false"><span class="check" aria-hidden="true"></span>Radish</li>
+				<li id="spinach" role="option" aria-selected="false"><span class="check" aria-hidden="true"></span>Spinach</li>
+			</ul>
+		</div>
+		<p><a href="#">Focusable content after the combobox</a></p>
+	</div>
+	<div class="code">
+		<pre><code>
+&lt;div role="combobox" aria-label="Favourite vegetables" aria-owns="vegetables" 
+aria-expanded="false" tabindex="0"&gt;
+	&lt;div id="textbox" role="textbox" aria-readonly="true" aria-multiline="false" 
+	aria-autocomplete="none" aria-controls="vegetables"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class="toggle" aria-hidden="true" aria-label="Toggle list" 
+tabindex="-1"&gt;&lt;/button&gt;
+&lt;button class="clear" aria-label="Clear selected options"&gt;&lt;/button&gt;
+&lt;ul role="listbox" id="vegetables" class="listbox" aria-multiselectable="true" 
+tabindex="-1"&gt;
+	&lt;li id="broccoli" role="option" aria-selected="false"&gt;
+	&lt;span class="check" aria-hidden="true"&gt;&lt;/span&gt;Broccoli&lt;/li&gt;
+	&lt;li id="cabbage" role="option" aria-selected="false"&gt;
+	&lt;span class="check" aria-hidden="true"&gt;&lt;/span&gt;Cabbage&lt;/li&gt;
+	&lt;li id="onion" role="option" aria-selected="false"&gt;
+	&lt;span class="check" aria-hidden="true"&gt;&lt;/span&gt;Onion&lt;/li&gt;
+	&lt;li id="radish" role="option" aria-selected="false"&gt;
+	&lt;span class="check" aria-hidden="true"&gt;&lt;/span&gt;Radish&lt;/li&gt;
+	&lt;li id="spinach" role="option" aria-selected="false"&gt;
+	&lt;span class="check" aria-hidden="true"&gt;&lt;/span&gt;Spinach&lt;/li&gt;
+&lt;/ul&gt;
+		</code></pre>
+	</div>
+	
+</body>
+</html>

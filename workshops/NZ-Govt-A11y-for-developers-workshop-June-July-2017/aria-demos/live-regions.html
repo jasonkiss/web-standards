@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Live region demos &#8212; NZ Govt A11y for Developers Workshop 2017</title>
+	<style>
+		code {font-size: 1.2em;}
+		footer {margin-top: 4em; font-size: small;}
+		.code {border: 1px solid #ccc; padding: 0 10px;}
+		#users {list-style: none; background-color: #ddd; border: 1px solid #ccc; display: inline-block; width: 100px; height: 200px; padding: 10px; margin-top: 0;list-style: none;}
+		#users li {margin-bottom: 5px;}
+		#alert {display: inline-block; border: 1px solid #ccc; margin-top: 20px; padding: 10px; background-color: #f00; position: relative;}
+		#alert h3 {text-align: center;}
+		#buy {text-align: center; position: absolute; top: 50%; width: 100%; left: 0;}
+		#buy a {font-size: 2em; padding: 10px; color: #333; background-color: rgba(255, 255, 255, 0.4); outline: 2px solid #fff; text-decoration: none;}
+		#buy a:hover, #buy a:focus {background-color: #333; color: #fff;}
+		#remaining {position: absolute; width: 100%; top: 15%; left: 0; text-align: center; background-color: #333; color: #fff; font-size: 1.8em;}
+	</style>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		(function() {
+			$(function() {
+				var userArr = ["Alice","Julia","Zach","Rob","Ryan","Silvia","François","Amy","Walter"];
+				var addUserInt;
+				var removeUserInt;
+				var currentUsersArr = [];
+				$('#start-users').on('click', function() {
+					if ($(this).hasClass('stopped')) {
+						addUserInt = setInterval(addUser,1500);
+						removeUserInt = setInterval(removeUser, 3000);
+						$(this).addClass('running').removeClass('stopped').css('color', 'red').text('Stop demo');
+
+					} else {
+						clearInterval(addUserInt);
+						clearInterval(removeUserInt);
+						$(this).addClass('stopped').removeClass('running').css('color', '#333').text('Start demo');
+					}
+				});
+				$('#start-users').keydown(function(e) {
+					switch (e.which) {
+						case 13:
+						case 32:
+							$(this).click();
+							e.preventDefault();
+							e.stopPropagation();
+							break;
+					}
+				});
+
+				function addUser() {
+					var rnd = Math.floor(Math.random()*userArr.length);
+					var name = userArr[rnd];
+					var match = false;
+					$('#users>li').each(function() {
+						if ($(this).text()==name) {
+							match = true;
+						}
+					});
+					if (match == false) {
+						$('#users').append('<li>' + name + '</li>');
+					}
+					match = false;
+				}
+				function removeUser() {
+					var rnd = Math.floor(Math.random()*userArr.length);
+					var name = userArr[rnd];
+					$('#users>li').each(function() {
+						if ($(this).text()==name) {
+							$(this).remove();
+						}
+					});
+				}
+			});
+		})();
+	</script>
+	<script>
+		(function() {
+			$(function() {
+				$('#buy>a').on('click', function(e) {
+					e.preventDefault();
+					var message = "<p>Aw shucks! Sorry, you were too slow.<br>That item is sold out.</p>";
+					$('#remaining').html(message);
+				});
+			});
+		})();
+	</script>
+</head>
+<body>
+	<p><a href="index.html">Back to NZ Govt A11y for Developers Workshop 2017 demo files</a></p>
+	<h1>Live region demos</h1>
+	<h2>Additions/Removals</h2>
+	<div class="code"><pre><code>
+&lt;h3 id="users-online"&gt;Users online&lt;/h3&gt;
+
+&lt;ul aria-labelledby="users-online" aria-live=&quot;polite&quot; aria-relevant=&quot;additions removals&quot;&gt;&lt;/ul&gt;
+	</code></pre></div>
+	<div>
+		<p><code>aria-atomic="false"</code> (default value): only announce the changed nodes</p>
+		<p>Note: NVDA in FF doesn't currently announce removals, at least not by default.</p>
+	</div>
+	<p>In the demo below, a <code>li</code> will be added/removed for each user as they sign in/out.</p>
+	<button id="start-users" class="stopped">Start demo</button>
+	<h3 id="users-online">Users online</h3> 
+	<ul aria-labelledby="users-online" id="users" aria-live="polite" aria-relevant="additions removals"></ul>
+	<hr>
+	<h2><code>role="alert"</code></h2>
+	<p><code>role="alert"</code> has <code>aria-live="assertive"</code> by default</p>
+	<div class="code"><pre><code>
+&lt;h3&gt;Make someone happy...&lt;/h3&gt;
+
+&lt;img ...&gt;
+
+&lt;a href="#"&gt;Buy now!&lt;/a&gt;
+
+&lt;div role="alert"&gt;&lt;/div&gt;
+	</code></pre>
+	</div>
+	<div id="alert">
+		<h3>Make someone happy with this stunning 87 piece bracelet.</h3>
+		<img src="img/kitsch.jpg" alt="A very kitsch bracelet with colourful plastic bits.">
+		<p id="buy"><a href="#">Buy now!</a></p>
+		<div id="remaining" role="alert"></div>
+	</div>
+	<footer>
+		<p><a href="https://www.flickr.com/photos/ikb/172843331/">Kitch bracelet image source</a></p>
+	</footer>
+</body>
+</html>

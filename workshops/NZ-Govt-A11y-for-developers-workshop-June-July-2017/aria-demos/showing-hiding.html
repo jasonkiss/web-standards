@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Showing/hiding demos &#8212; NZ Govt A11y for Developers Workshop 2017</title>
+	<style>
+		code, kbd {font-size: 1.2em;}
+		kbd {font-family: sans-serif; background-color: #ededed; border-color: #fafafa #dadada #dadada #ededed; border-style: solid; border-width: 2px; padding: 0 2px 0 1px;}
+		section {margin: 3em 0;}
+		.code {border: 1px solid #ccc; padding: 0 10px;}
+		#more-text, #more-text2 {display: none; border: 1px solid #ccc; padding: 10px;}
+		#more2 {font-size: 1em;}
+		#menu {font-size: 1.4em; position: relative; width: 110px; text-align: left;}
+		#menu::after {position: absolute;}
+		#menu[aria-expanded="false"]::after {
+			content: url("img/burger.svg");
+			 top: 0; 
+			 right: 0;
+		}
+		#menu[aria-expanded="true"]::after {
+			content: url("img/close.svg");
+			top: 5px;
+			right: 5px;
+		}
+		#main-menu {display: none;}
+	</style>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		$(function () {
+			$('#more').on('click', function(e) {
+				if ($('#more-text').is(':visible')) {
+					$('#more-text').hide();
+				} else {
+					$('#more-text').show();
+				}
+			});
+
+			$('#more2').on('click', function(e) {
+				if ($('#more-text2').is(':visible')) {
+					$('#more-text2').hide();
+					$('#more2').attr('aria-expanded', 'false');
+				} else {
+					$('#more-text2').show();
+					$('#more2').attr('aria-expanded', 'true');
+				}
+			});
+
+			$('#menu').on('click', function(e) {
+				if ($('#main-menu').is(':visible')) {
+					$('#main-menu').hide();
+					$('#menu').attr('aria-expanded', 'false');
+				} else {
+					$('#main-menu').show();
+					$('#menu').attr('aria-expanded', 'true');
+				}
+			});
+		});
+
+	</script>
+	
+</head>
+<body>
+	<p><a href="index.html">Back to NZ Govt A11y for Developers Workshop 2017 demo files</a></p>
+	<h1>Showing/hiding demos</h1>
+	<p>In addition to basic keyboard access, the thing to remember here is to programmatically indicate role, relationship, and state:</p>
+	<ul>
+		<li>what is this thing and what does it control?</li> 
+		<li>is the thing it controls showing or hidden? is it expanded or collapsed?</li>
+	</ul>
+	<section>
+		<h2>Example #1 - no (or wrong) role, relationship, or state</h2>
+		<a id="more" href="#">Read more about this important announcement</a>
+		<div id="more-text">
+			<p>This announcement is very important...</p>
+		</div>
+	</section>
+	<section>
+		<h2>Example #2 - better role, relationship, and state</h2>
+		<p>Notice that by using a <code>button</code>, we get <kbd>Enter</kbd> and <kbd>Space</kbd> keyboard access for free.</p>
+		<button id="more2" aria-controls="more-text2" aria-expanded="false">Read more about this important announcement</button>
+		<div id="more-text2">
+			<p>This important announcement is especially important...</p>
+		</div>
+	</section>
+	<section>
+		<h2>Example #3 - typical hamburger menu</h2>
+		<button id="menu" aria-controls="main-menu" aria-expanded="false">Menu</button>
+		<nav id="main-menu" aria-label="Main menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+	</section>
+	<section>
+		<h2>Example #4 - using native <code>details</code>/<code>summary</code></h2>
+		<ul>
+			<li>Native "support" for keyboard and mouse in WebKit, with disclosure "triangle"</li>
+			<li>But a11y role and state information not provided in WebKit</li>
+			<li>No support (yet) in FF or IE or Edge</li>
+			<li>So need <a href="details-summary.html"><code>details</code>/<code>summary</code> polyfill</a>: a11y info for WebKit; everything for FF and IE</li>
+		</ul>
+		<details id="details">
+			<summary id="summary">More about this important announcement</summary>
+			<div id="details-content">
+				<p>Wow! What an important announcement...</p>
+			</div>
+		</details>
+	</section>
+</body>
+</html>

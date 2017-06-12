@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Accordion Demo &#8212; NZ Govt A11y for Developers Workshop 2017</title>
+	<style>
+		html {background-color: #eee;}
+		code, kbd {font-size: 1.2em;}
+		kbd {background-color: #ededed; border-color: #fafafa #dadada #dadada #ededed; border-style: solid; border-width: 2px; padding: 0 2px 0 1px;}
+		pre {margin-top: 0;}
+		section {margin: 0;}
+		.code {border: 1px solid #ccc; padding: 0 10px; margin: 1em 0;}
+
+		.accordion {
+			display: inline-block;
+			width: 200px;			
+			background-color: #fff;
+			margin-bottom: 1em;
+		}
+
+		.accordion h3 {
+			margin: 0 0 1px;
+			width: 100%;
+		}
+		.accordion h3:last-of-type {margin: 0;}
+		.accordion h3 button {
+			background: #0ff url("img/rightArrow.png") no-repeat 5% center;
+			border: 0;
+			color: inherit;
+			font: inherit;
+			line-height: normal;
+			overflow: visible;
+			padding: 10px 10px 10px 30px;
+			width: 100%;
+			text-align: left;
+		}
+
+		.accordion h3 button[aria-expanded="true"] {
+			background-color: #ff0;
+			background-image: url("img/downArrow.png");
+
+		}
+
+		.accordion div[role="group"] {
+			display: none;
+		}
+
+		.accordion div[role="group"] div {
+			display: inline-block;
+			padding: 0 5%;
+
+			width: 90%;
+		}
+		.accordion form {margin: 1em 0;}
+		.accordion form div {margin-bottom: 1em;}
+	</style>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		$(function () {
+			$('.accordion').each(function(a) {
+				var $acc = $(this);
+				$('h3', $acc).each(function(i) {
+					var $h3 = $(this);
+					$h3.html('<button id="accordion' + i + '" aria-expanded="false" aria-controls="section' + i + '">' + $(this).html() + '</button>');
+					$h3.next('div').wrap('<div id="section' + i + '" role="group" aria-labelledby="accordion' + i + '"></section>');
+					var $sect = $h3.next('div[role="group"]');
+					var $butt = $h3.find('button');
+					$butt.on('click', function() {
+						if ($butt.attr('aria-expanded') == 'false') {
+							$acc.find('button[aria-expanded="true"]').removeAttr('aria-disabled').attr('aria-expanded', 'false');
+							$acc.find('div[role="group"]:visible').hide();
+							$butt.attr({'aria-expanded': 'true', 'aria-disabled': 'true'});
+							$sect.show();
+						}
+					});
+				})
+				$('h3:first button', $acc).attr({'aria-expanded': 'true', 'aria-disabled': 'true'});
+				$('div[role="group"]:first').show();
+			});
+		});
+	</script>	
+</head>
+<body>
+	<p><a href="index.html">Back to NZ Govt A11y for Developers Workshop 2017 demo files</a></p>
+	<h1>Accordion demo</h1>
+	<ul>
+		<li>In ARIA 1.1, accordions are no longer considered a case of tabbed interface. <a href="https://lists.w3.org/Archives/Public/public-aria/2016Jul/0172.html">Read this thread</a> and <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=26254">this bug report</a> for more.</li>
+		<li>Compared to a tabbed interface, each accordion panel of content is inline with its toggle control.</li>
+		<li>Accordions should only allow one panel to be expanded at any time.</li>
+		<li>If multiple panels can be expanded at the same time, that's just a collection of disclosure widgets (e.g. <code>details</code>/<code>summary</code>): the state of any single accordion panel does not depend on the state of any other.</li>
+		<li>In this example, one panel is always open, and its toggle control is set to <code>aria-disabled="true"</code>.</li>
+	</ul>
+	<section>
+		<h2>Wonderful Widgets, Inc.</h2>
+		<div class="accordion">
+				<h3>About us</h3>
+				<div>
+					<p>We sell wonderful widgets.</p>
+				</div>
+
+				<h3>Widgets</h3>
+				<div>
+					<ul>
+						<li>Accordion</li>
+						<li>Button</li>
+						<li>Combo Box</li>
+						<li>Date Picker</li>
+					</ul>
+				</div>
+
+				<h3>Order</h3>
+				<div>
+					<form action="#">
+						<div><label for="name">Name:</label><br><input type="text" id="name"></div>
+						<div><label for="email">Email:</label><br><input type="email" id="email"></div>
+						<div><label for="products">Choose your widgets:</label><br><select id="products" multiple="multiple">
+							<option value="a">Accordion</option>
+							<option value="b">Button</option>
+							<option value="c">Combo Box</option>
+							<option value="d">Date Picker</option>
+						</select></div>
+					</form>
+				</div>
+			</section>
+		</div>
+	</section>
+	<h2>Markup</h2>
+	<div class="code"><pre><code>
+	&lt;div class="accordion"&gt;
+  &lt;h3&gt;&lt;button id="accordion0" aria-expanded="true" aria-controls="section0" aria-disabled="true"&gt;About us&lt;/button&gt;&lt;/h3&gt;
+  &lt;div id="section0" role="group" aria-labelledby="accordion0" style="display: block;"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;&lt;button id="accordion1" aria-expanded="false" aria-controls="section1"&gt;Widgets&lt;/button&gt;&lt;/h3&gt;
+  &lt;div id="section1" role="group" aria-labelledby="accordion1" style="display: none;"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;&lt;button id="accordion2" aria-expanded="false" aria-controls="section2"&gt;Order&lt;/button&gt;&lt;/h3&gt;
+  &lt;div id="section2" role="group" aria-labelledby="accordion2" style="display: none;"&gt;
+    &lt;div&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+	</code></pre></div>
+</body>
+</html>
