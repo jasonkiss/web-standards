@@ -16,8 +16,34 @@
 		#buy a {font-size: 2em; padding: 10px; color: #333; background-color: rgba(255, 255, 255, 0.4); outline: 2px solid #fff; text-decoration: none;}
 		#buy a:hover, #buy a:focus {background-color: #333; color: #fff;}
 		#remaining {position: absolute; width: 100%; top: 15%; left: 0; text-align: center; background-color: #333; color: #fff; font-size: 1.8em;}
+
+		#loading {
+			display: none;
+			position: fixed;
+		    top: 50%;
+		    left: 50%;
+		    width: 200px;
+		    margin-left: -100px;
+		    height: 150px;
+		    margin-top: -75px;
+		    outline: 2px solid red;
+		    z-index: 100;
+		}
+		#loading img {
+			width: 100%;
+		}
+		#modalDialogOverlay {
+	        position:fixed;
+	        top:0; left:0;
+	        width:100%; height:100%;
+	        background-color:#000; opacity:0.5;
+	        margin:0;
+	        padding:0;
+	        z-index:10;
+	      }
+
 	</style>
-	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery-3.1.0.min.js"></script>	    
 	<script>
 		(function() {
 			$(function() {
@@ -87,43 +113,190 @@
 	</script>
 </head>
 <body>
-	<p><a href="index.html">Back to NZ Govt A11y for Developers Workshop 2017 demo files</a></p>
-	<h1>Live region demos</h1>
-	<h2>Additions/Removals</h2>
-	<div class="code"><pre><code>
-&lt;h3 id="users-online"&gt;Users online&lt;/h3&gt;
+	<div id="wrapper">
+		<p><a href="index.html">Back to NZ Govt A11y for Developers Workshop 2017 demo files</a></p>
+		<h1>Live region demos</h1>
+		<h2>Loading indicator</h2>
 
-&lt;ul aria-labelledby="users-online" aria-live=&quot;polite&quot; aria-relevant=&quot;additions removals&quot;&gt;&lt;/ul&gt;
-	</code></pre></div>
-	<div>
-		<p><code>aria-atomic="false"</code> (default value): only announce the changed nodes</p>
-		<p>Note: NVDA in FF doesn't currently announce removals, at least not by default.</p>
+
+		<button id="load-component">Load the new component (press <kbd>ESC</kbd> to cancel)</button>
+		<div aria-live="polite">
+			<div id="loading">
+		      <img src="img/loading.gif" alt="Loading">
+		      <a href="#">hey you</a>
+		      <a href="#">yeah right</a>	
+		    </div>
+		</div>
+		<script>
+			var ModalDialog = (function () {
+
+			var lastFocus, dialogId, dialog, nonDialog, overlay, focusableEls, firstFocusableEl, lastFocusableEl, 
+			focusableSelectorsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object:not([disabled]), embed, *[tabindex], *[contenteditable]";
+
+			function trapFocus(evt) {
+			  // if TAB key pressed
+			  if (evt.which == 9) {
+
+			    // get list of all children elements in given object
+			    var els = dialog.getElementsByTagName("*");
+
+			    // if SHIFT-TAB pressed
+			    if (evt.shiftKey) { 
+			      // if first focusable element has focus, go to the last focusable element
+			      if (evt.target == firstFocusableEl) {
+			        lastFocusableEl.focus();
+			        evt.preventDefault();
+			      }
+
+			    // else, if just TAB key pressed
+			    } else { 
+			      // if last focusable element has focus, go to the first focusable item
+			      if (evt.target == lastFocusableEl) {
+			        firstFocusableEl.focus();
+			        evt.preventDefault();
+			      }
+			    }
+			  }
+			}
+
+			function nonDialogAriaHidden(bool) {
+			  // get all children of <body> that aren't the the dialog
+			  var nonDialog = document.querySelectorAll("body > :not(#" + dialogId + ")");
+
+			  // for each child of <body> that isn't the dialog...
+			  for (var n = 0; n < nonDialog.length; ++n) {
+			    if (bool == true) {
+			      // set @aria-hidden="true" on non-dialog children of <body> to hide them from the a11y API
+			      nonDialog[n].setAttribute("aria-hidden", "true");
+			    } else {
+			      // remove @aria-hidden from non-dialog children of <body>
+			      nonDialog[n].removeAttribute("aria-hidden");
+			    }
+			  }
+			}        
+
+			return {
+
+			  show: function(trigger, dId) {
+
+			    // set reference to element that triggered the dialog
+			    lastFocus = trigger || document.activeElement;
+
+			    // set reference to current dialog ID
+			    dialogId = dId;
+
+			    // set reference to the dialog to be opened
+			    dialog = document.getElementById(dialogId);       
+
+			    // get node list of focusable elements in the object
+			    focusableEls = dialog.querySelectorAll(focusableSelectorsString);
+
+			    // get first and last focusable elements in the object
+			    firstFocusableEl = focusableEls[0];
+			    lastFocusableEl = focusableEls[focusableEls.length - 1];
+
+			    // show the dialog 
+			    dialog.style.display = "block";
+
+			    // create the overlay
+			    overlay = document.body.appendChild(document.createElement("div"));
+
+			    // give overlay ID for styling hook
+			    overlay.setAttribute("id", "modalDialogOverlay");
+
+			    // listen for click events on the overlay and reset focus to dialog
+			    overlay.addEventListener("click", function(event) {
+			      dialog.focus();
+			    }, true);
+
+			    // set @open on the dialog
+			    dialog.setAttribute("open", "open");
+			    
+			    // after displaying the dialog, focus the first focusable element inside it
+			    if (firstFocusableEl) {
+			    	firstFocusableEl.focus();
+			    }
+
+			    // set @aria-hidden="true" on all children of <body> that aren't the dialog
+			    nonDialogAriaHidden(true);
+
+			    // listen for keydown events 
+			    dialog.addEventListener("keydown", function(event) {
+			      // trap focus within dialog
+			      trapFocus(event);
+			    }, false);
+			  },
+
+			  hide: function() {
+
+			    if (dialog) {
+			      // remove @aria-hidden from non-dialog children of <body> to make them available to the a11y API 
+			      nonDialogAriaHidden(false);
+
+			      // set focus to the element that triggered the dialog
+			      lastFocus.focus();
+
+			      // remove @open on the dialog
+			      dialog.removeAttribute("open");
+
+			      // hide the dialog
+			      dialog.style.display = "none";
+			      
+			      // remove the overlay
+			      document.body.removeChild(overlay); 
+			    }
+			  }
+			}
+			})();
+
+			document.getElementById("load-component").addEventListener("click", function(e){
+		        ModalDialog.show(this, "loading");
+		      }, true);
+	    </script>
+
+	
+
+
+
+		<h2>Additions/Removals</h2>
+		<div class="code"><pre><code>
+	&lt;h3 id="users-online"&gt;Users online&lt;/h3&gt;
+
+	&lt;ul aria-labelledby="users-online" aria-live=&quot;polite&quot; aria-relevant=&quot;additions removals&quot;&gt;&lt;/ul&gt;
+		</code></pre></div>
+		<div>
+			<p><code>aria-atomic="false"</code> (default value): only announce the changed nodes</p>
+			<p>Note: NVDA in FF doesn't currently announce removals, at least not by default.</p>
+		</div>
+		<p>In the demo below, a <code>li</code> will be added/removed for each user as they sign in/out.</p>
+		<button id="start-users" class="stopped">Start demo</button>
+		<h3 id="users-online">Users online</h3> 
+		<ul aria-labelledby="users-online" id="users" aria-live="polite" aria-relevant="additions removals"></ul>
+		<hr>
+		<h2><code>role="alert"</code></h2>
+		<p><code>role="alert"</code> has <code>aria-live="assertive"</code> by default</p>
+		<div class="code"><pre><code>
+	&lt;h3&gt;Make someone happy...&lt;/h3&gt;
+
+	&lt;img ...&gt;
+
+	&lt;a href="#"&gt;Buy now!&lt;/a&gt;
+
+	&lt;div role="alert"&gt;&lt;/div&gt;
+		</code></pre>
+		</div>
+		<div id="alert">
+			<h3>Make someone happy with this stunning 87 piece bracelet.</h3>
+			<img src="img/kitsch.jpg" alt="A very kitsch bracelet with colourful plastic bits.">
+			<p id="buy"><a href="#">Buy now!</a></p>
+			<div id="remaining" role="alert"></div>
+		</div>
+		<footer>
+			<p><a href="https://www.flickr.com/photos/ikb/172843331/">Kitch bracelet image source</a></p>
+		</footer>
 	</div>
-	<p>In the demo below, a <code>li</code> will be added/removed for each user as they sign in/out.</p>
-	<button id="start-users" class="stopped">Start demo</button>
-	<h3 id="users-online">Users online</h3> 
-	<ul aria-labelledby="users-online" id="users" aria-live="polite" aria-relevant="additions removals"></ul>
-	<hr>
-	<h2><code>role="alert"</code></h2>
-	<p><code>role="alert"</code> has <code>aria-live="assertive"</code> by default</p>
-	<div class="code"><pre><code>
-&lt;h3&gt;Make someone happy...&lt;/h3&gt;
 
-&lt;img ...&gt;
+	
 
-&lt;a href="#"&gt;Buy now!&lt;/a&gt;
-
-&lt;div role="alert"&gt;&lt;/div&gt;
-	</code></pre>
-	</div>
-	<div id="alert">
-		<h3>Make someone happy with this stunning 87 piece bracelet.</h3>
-		<img src="img/kitsch.jpg" alt="A very kitsch bracelet with colourful plastic bits.">
-		<p id="buy"><a href="#">Buy now!</a></p>
-		<div id="remaining" role="alert"></div>
-	</div>
-	<footer>
-		<p><a href="https://www.flickr.com/photos/ikb/172843331/">Kitch bracelet image source</a></p>
-	</footer>
 </body>
 </html>

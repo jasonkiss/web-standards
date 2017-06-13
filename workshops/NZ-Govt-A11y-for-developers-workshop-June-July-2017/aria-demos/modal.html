@@ -237,7 +237,7 @@
           for (var r = 0; r < dismissReceivers.length; ++r) {
 
             // listen for ESC keypress event on the receiver element...
-            dismissReceivers[r].addEventListener("keypress", function(event) {
+            dismissReceivers[r].addEventListener("keydown", function(event) {
               // if ESC, close dialog
               if (event.keyCode == 27) {
 
