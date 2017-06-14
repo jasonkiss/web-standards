@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+	<head>
+		<meta charset="utf-8" />
+		<title>Simple dropdown menu</title>
+		<style>
+			html {
+				font-size: 100%;
+				font-family: sans-serif;
+			}
+			body {
+		    font-family: "ProximaNova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+		    margin: 0;
+		    padding: 0;
+			}
+			nav {
+				position: relative;
+				height: 92px; 
+				top: 108px;
+				padding-left: 200px;
+				background: #3c3c3c;
+			}
+			.logo {
+				position: absolute;
+				z-index: 99;
+			}
+			.menu, .submenu {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			.menu {
+				line-height: 1.6;
+			}
+			.menu li {
+				vertical-align: middle;
+			}
+			.menu > li {
+				padding: 29px 2.1rem 22px 1.5rem;
+				display: table-cell;
+			}
+			.menu a {
+				color: #fefefe;
+				text-decoration: none;
+				font-size: 1.5625rem;
+			}
+			.menu a:hover {border-bottom: 2px solid #fefefe;}
+			.submenu {
+				display: none;
+				position: absolute;
+				background: #303030;
+				width: 100%;
+				left: 0;
+				top: 100%;
+				z-index: 999;
+			}
+			.has-submenu.open {background-color: #303030;}
+			.submenu li {
+		    border-top: 2px solid #fefefe;
+			}
+			.has-submenu > a::after {
+				position: absolute;
+				content: " ";
+				background: transparent url(img/downArrow-white.png) no-repeat center right;
+				width: 20px;
+				height: 40px;
+			}
+			.has-submenu a[aria-expanded="true"]::after {
+				background: none;
+			}
+			.submenu a {
+				display: block;
+				font-size: 1.4rem;
+				font-weight: 200;
+				padding: .5rem .5rem .5rem 224px;
+			}
+			.submenu a:hover, .submenu a:focus {
+				background: #222;
+				border: none;
+			}
+		</style>
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script>
+			$(function() {
+				$(".menu > li").each(function() {
+					var $li = $(this);
+
+					if ($li.hasClass("has-submenu")) {
+						var $submenu = $(".submenu", $li);
+						
+						$("a[aria-haspopup]", $li).each(function() {
+							var $a = $(this);
+							
+							$a.on("click", function(e) {
+								e.preventDefault();
+								e.stopPropagation();
+								if ($a.attr("aria-expanded") === "false") {
+									closeMenus();
+									$a.attr("aria-expanded", "true");
+									$li.addClass("open");
+									$submenu.show();
+								} else {
+									closeMenus();
+								}
+							});
+
+						});
+
+					} else {
+						$("a", $li).on("focus", function() {
+							closeMenus();
+						});
+					}
+					$('html').on('click', function() {
+						closeMenus();
+					});
+					$('html').on('keydown', function (e) {
+						if (e.which == 27) {
+							$(".has-submenu.open > a").focus();
+							closeMenus();
+						} 
+					});
+
+				});
+
+				function closeMenus() {
+					$('a[aria-expanded="true"]').attr("aria-expanded", "false");
+					$(".submenu").hide();
+					$(".has-submenu.open").removeClass("open");
+				}
+
+			});
+		</script>
+	</head>
+	<body>
+			<h1>Simple dropdown menu</h1>
+			<img class="logo" src="img/logo.png" alt="He Tohu">
+			<nav aria-label="He Tohu sections navigation" role="navigation">
+				<ul class="menu">
+					<li>
+						<a href="/he-tohu/visit">Visit</a>
+					</li>
+					<li class="has-submenu">
+						<a href="#" aria-haspopup="true" aria-expanded="false" role="button">About</a>
+						<ul class="submenu">
+							<li>
+								<a href="/he-tohu/about/he-whakaputanga">He Whakaputanga</a>
+							</li>
+							<li>
+								<a href="/he-tohu/about/te-tiriti-o-waitangi">Te Tiriti o Waitangi</a>
+							</li>
+							<li>
+								<a href="/he-tohu/about/womens-suffrage-petition">Women's Suffrage Petition</a>
+							</li>
+							<li>
+								<a href="/he-tohu/about/exhibition-and-partnerships">Exhibition and partnerships</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/he-tohu/events">Events</a>
+					</li>
+					<li class="has-submenu">
+						<a href="#" aria-haspopup="true" aria-expanded="false" role="button">Learning</a>
+						<ul class="submenu">
+							<li>
+								<a href="/he-tohu/learning/social-inquiry-resources">Social inquiry resources</a>
+							</li>
+							<li>
+								<a href="/he-tohu/learning/he-rauemi">He rauemi ako mā ngā kura reo Māori</a>
+							</li>
+							<li>
+								<a href="/he-tohu/learning/school-visits">School visits</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/he-tohu/korero">Kōrero</a>
+					</li>
+				</ul>
+			</nav>	
+	</body>
+
+</html>
+
