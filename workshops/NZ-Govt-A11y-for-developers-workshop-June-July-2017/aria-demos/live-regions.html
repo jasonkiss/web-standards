@@ -120,13 +120,7 @@
 
 
 		<button id="load-component">Load the new component (press <kbd>ESC</kbd> to cancel)</button>
-		<div aria-live="polite">
-			<div id="loading">
-		      <img src="img/loading.gif" alt="Loading">
-		      <a href="#">hey you</a>
-		      <a href="#">yeah right</a>	
-		    </div>
-		</div>
+		
 		<script>
 			var ModalDialog = (function () {
 
@@ -160,10 +154,10 @@
 			}
 
 			function nonDialogAriaHidden(bool) {
-			  // get all children of <body> that aren't the the dialog
-			  var nonDialog = document.querySelectorAll("body > :not(#" + dialogId + ")");
+			  // get all children of <body> that aren't the the live region containing the dialog
+			  var nonDialog = document.querySelectorAll("body > :not(#live-region)");
 
-			  // for each child of <body> that isn't the dialog...
+			  // for each child of <body> that isn't the live region...
 			  for (var n = 0; n < nonDialog.length; ++n) {
 			    if (bool == true) {
 			      // set @aria-hidden="true" on non-dialog children of <body> to hide them from the a11y API
@@ -206,11 +200,11 @@
 
 			    // listen for click events on the overlay and reset focus to dialog
 			    overlay.addEventListener("click", function(event) {
-			      dialog.focus();
+			      ModalDialog.hide();
 			    }, true);
 
 			    // set @open on the dialog
-			    dialog.setAttribute("open", "open");
+			    dialog.classList.add("open");
 			    
 			    // after displaying the dialog, focus the first focusable element inside it
 			    if (firstFocusableEl) {
@@ -237,7 +231,7 @@
 			      lastFocus.focus();
 
 			      // remove @open on the dialog
-			      dialog.removeAttribute("open");
+			      dialog.classList.remove("open");
 
 			      // hide the dialog
 			      dialog.style.display = "none";
@@ -248,6 +242,15 @@
 			  }
 			}
 			})();
+
+			document.addEventListener("keydown", function(e) {
+				if (e.which == 27) {
+						if (document.getElementById("loading").classList.contains("open")) {
+							ModalDialog.hide()
+						}
+					} 
+				}, true);
+						
 
 			document.getElementById("load-component").addEventListener("click", function(e){
 		        ModalDialog.show(this, "loading");
@@ -296,7 +299,11 @@
 		</footer>
 	</div>
 
-	
+	<div id="live-region" aria-live="polite">
+			<div id="loading">
+		      <img src="img/loading.gif" alt="Processing">
+		    </div>
+		</div>
 
 </body>
 </html>
