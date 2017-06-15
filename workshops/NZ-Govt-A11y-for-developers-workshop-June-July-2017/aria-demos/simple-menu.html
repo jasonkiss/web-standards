@@ -103,6 +103,12 @@
 									closeMenus();
 								}
 							});
+							//because links with aria-haspopup have role=button, we need to also listen for spacebar
+							$a.on('keydown', function (e) {
+								if (e.which == 32) {
+									$a.click();
+								} 
+							});
 
 						});
 

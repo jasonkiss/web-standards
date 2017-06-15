@@ -177,10 +177,15 @@
 		function setNewComponent() {
 			var rnd = "component-" + Math.floor(Math.random() * 100000000);
 			ModalDialog.hide();
+			$("#live-region").append('<div id="component-loaded">The new component is now ready.</div>');
 			$("#wrapper").append('<div class="component" id="component-"' + rnd + '><img src="img/component.gif" alt="A brand new component!"><button id="' + rnd + '">Play with the new component!</button></div>');
 			$("#" + rnd).focus();
-			$("#live-region").append('<div id="component-loaded">The new component is now ready.</div>');
+			clearLiveRegion();
 
+		}
+
+		function clearLiveRegion() {
+			setTimeout(function() {$("#live-region").empty();}, 2000);
 		}
 
 		
@@ -191,12 +196,12 @@
 		<p><a href="index.html">Back to NZ Govt A11y for Developers Workshop 2017 demo files</a></p>
 		<h1>Loading progress indicator</h1>
 		<ul>
-			<li>"polite" live-region already in the DOM</li>
+			<li>"assertive" live-region already in the DOM (Why "assertive" and not "polite"?)</li>
 			<li>add/remove or show/hide nested "loading" GIF</li>
 		</ul>
 
 		<div class="code"><pre><code>
-&lt;div id="live-region" aria-live="polite"&gt;
+&lt;div id="live-region" aria-live="assertive"&gt;
 
    &lt;div id="loading"&gt;
      &lt;img src="img/loading.gif" alt="Processing"&gt;
@@ -226,6 +231,7 @@
 			if (e.which == 27) {
 				if (document.getElementById("loading").classList.contains("open")) {
 					ModalDialog.hide();
+					clearLiveRegion();
 				}
 			} 
 		}, true);
