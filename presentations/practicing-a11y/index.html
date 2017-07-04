@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league-custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1 class="title">Practicing accessibility</h1>
+				<h3 class="subtitle">Katherine Barcham</h3>
+				<h4 class="subtitle">Department of Internal Affairs</h4></section>
+				<section>
+						<section>
+							<h2>Who I'm thinking about?</h2>
+						<figure class="center">
+						<img src="img/verbal.jpg" alt="Person with words Non-verbal, Permanent; person with words Laryngitis, Temporary; person with words Heavy accent, Situational">
+						<cite><a href="https://www.microsoft.com/en-us/design/practice">Microsoft Inclusive Design Kit, CC-BY-ND-ND</a></cite>
+						</figure>
+						</section>
+						</section>
+						<section>
+							<h3 class="float">Disclaimer: I'm not a magician</h3>
+							<img src="img/magician.jpg" alt="Magician pulling a rabbit and flowers out of a hat.">
+						</section>
+						<section>
+							<h1>When seeing is an issue</h1>
+							<figure class="center">
+						<img src="img/blind.jpg" alt="Person with words Blind, Permanent; person with words Cataract, Temporary; person with words Distracted driver, Situational">
+						<cite><a href="https://www.microsoft.com/en-us/design/practice">Microsoft Inclusive Design Kit, CC-BY-ND-ND</a></cite>
+							</figure>
+						</section>
+						<section>
+							<img src="img/alt.jpg" alt="Warning sign with alt=warming next to it">
+							<h2>Text alternatives for images</h2>
+							<p>Anything you say with an image, also say with text.</p>
+						</section>
+						<section style="padding-bottom: 200px">
+							<h2>Who it affects</h2>
+							<ul>
+								<li>People who can't see images:</li>
+								<ul>
+									<li>vision disability</li>
+									<li>bad internet connection</li>
+									<li>old browser</li>
+									<li>limited data</li>
+								</ul>
+								<li>Search engines (Google)</li>
+							</ul>
+						</section>
+						<section>
+							<h2>Decorative or background images</h2>
+							<figure class="center">
+							<img src="img/decorative.jpg" alt="image of dachshund. Words: The benefits of owning a dog. There are many benefits to owning a dog. They are fun, loyal companions.">
+							<cite><a href="https://www.flickr.com/photos/14141796@N05/5521501965">m.maddo, CC BY-SA 2.0</a></cite>
+							</figure>
+						</section>
+						<section>
+							<h2>Meaningful images</h2>
+							<figure class="center">
+							<img src="img/meaning.jpg" alt="image of dachshund. Words: Chippy the hero does it again. Chippy has once again saved the life of his owner after she had a fall.">
+							<cite><a href="https://www.flickr.com/photos/14141796@N05/5521501965">m.maddo, CC BY-SA 2.0</a></cite>
+							</figure>
+						</section>
+						<section>
+							<h2>Text in images</h2>
+							<figure class="center">
+							<img src="img/textimg.jpg" alt="image of dachshund with word Dachshunds on top. Words underneath: Dachshunds are a popular dog breed.">
+							<cite><a href="https://www.flickr.com/photos/14141796@N05/5521501965">m.maddo, CC BY-SA 2.0</a></cite>
+							</figure>
+						</section>
+						<section>
+							<h2>Linked images</h2>
+							<figure class="center">
+							<img src="img/linkimg.jpg" alt="2 breeds of dog. Words: Pick a dog. Select a dog to see their personality traits.">
+							<cite><a href="https://www.flickr.com/photos/14141796@N05/5521501965">m.maddo, CC BY-SA 2.0</a></cite>
+							</figure>
+						</section>
+					<section>
+								<h2>Example time</h2>
+								<p><a href="http://www.threenow.co.nz/tv/grand-designs-nz/home.html">TV3</a></p>
+					</section>
+					</section>
+					<section>
+						<figure class="center">
+						<img src="img/cc.jpg" alt="Leopard hiding in yellow grass. Words: Colour contrast">
+						<cite><a href="https://www.microsoft.com/en-us/design/practice">Lukas Kaffer, CC BY-SA 3.0</a></cite>
+						</figure>
+						<p>The colour of text and images need to have enough contrast with their background to be easily read.</p>
+					</section>
+					<section>
+						<h2>Who it affects</h2>
+						<div class="left">
+						<p>Bad colour contrast affects more people that you'd think, including:
+						<ul>
+							<li>People with low vision</li>
+							<li>People in bright sun</li>
+							<li>People who’ve turned the brightness on their phone down to save their battery</li>
+							<li>People with colour vision deficiencies</li>
+							<li>Anyone looking through an old projector</li>
+							<li>Anyone over the age of 40.</li>
+						</ul>
+						</p>
+						</div>
+					</section>
+					<section>
+						<h2>Use of colour</h2>
+						<figure class="center">
+						<img src="img/usecolour.jpg" alt="Dialog box saying green button to save, red button to delete. Buttons are orange and yellow.">
+						</figure>
+						<p>Colour shouldn't be the only way that you communicate information.</p>
+					</section>
+					<section>
+						<h2>Who it affects</h2>
+						<p>Not everyone sees colours in the same way. Think about:
+						<ul>
+							<li>People with colourblindness (especially older people)</li>
+							<li>Screen readers</li>
+							<li>Same as contrast:</li>
+							<ul>
+							<li>people in bright sun</li>
+							<li>people on a screen with low contrast</li>
+							<li>people watching a presentation on an old projector</li>
+							</ul>
+							<li>People who can't read your mind.</li>
+						</ul>
+						</p>
+					</section>
+					<section>
+					<section>
+						<h2>How to test it</h2>
+						<ul>
+							<li>Print your page in black and white.</li>
+							<li>Use a colourblindness simulation tool like Colour Oracle, or an online tool like <a href="http://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis</a>.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Example time</h2>
+						<figure class="center">
+							<img src="img/colourexamples.jpg" alt="Black text with hard to read link colour. Graph in black and white.">
+						</figure>
+					</section>
+					</section>
+					<section>
+							<h1>When hearing is an issue</h1>
+							<figure class="center">
+						<img src="img/hearing.jpg" alt="Person with words Deaf, Permanent; person with words Ear infection, Temporary; person with words Bartender, Situational">
+						<cite><a href="https://www.microsoft.com/en-us/design/practice">Microsoft Inclusive Design Kit, CC-BY-ND-ND</a></cite>
+							</figure>
+						</section>
+						<section>
+							<img src="img/charade.jpg" alt="Photo from movie with captions.">
+							<h2>Captions and transcripts</h2>
+							<div class="left">
+							<p>Videos need captions.</p>
+							<p>Videos and audio need descriptive text transcripts.</p>
+							</div>
+						</section>
+						<section>
+						<h2>Who it affects</h2>
+						<p class="left">Videos are great for telling people things quickly but people can’t always hear the audio track, including:
+						<ul>
+							<li>People who can’t hear for any reason</li>
+							<li>People without headphones:</li>
+							<ul>
+								<li>in a noisy place</li>
+								<li>in a quiet place.</li>						   
+							</ul>
+							<li>People who might be listening to transcripts because:</li>
+							<ul>
+							<li>they can’t see the video</li>
+							<li>they’re looking at something else — like the dishes.</li>
+							</ul>
+							<li>Google and other search engines.</li>
+						</ul>
+						</p>
+					</section>
+						<section>
+						<h2>Example time</h2>
+						<figure class="center">
+							<img src="img/captions.jpg" alt="Still from video with 2 astronauts. caption reads ok we did a lot of things blow up there yet two big things.">
+							<cite><a href="https://www.youtube.com/watch?v=EBCmOXmmnMI">https://www.youtube.com/watch?v=EBCmOXmmnMI </a></cite>
+						</figure>
+						<p><a href="http://www.ird.govt.nz/help/demo/cs-changing-vid/#01">Transcript (IRD)</a> <a href="http://www.cic.gc.ca/english/department/media/multimedia/video/visitcanada/visitcanada.asp">Transcript in page (Service Canada)</a></p>
+					</section>
+					<section>
+							<h1 style="font-size: 3em">Barriers for everyone</h1>
+							<figure class="center">
+						<img src="img/barriers.jpg" alt="Stick figures of 15 people representing differnet disabilities Situational">
+						<cite><a href="https://www.microsoft.com/en-us/design/practice">Microsoft Inclusive Design Kit, CC-BY-ND-ND</a></cite>
+							</figure>
+						</section>
+						<section>
+							<h2>Doing text right</h2>
+							<img src="img/pagestructure.jpg" alt="Hand-drawn wireframe of a web page showing HTML markup." height="480px">
+							<div class="left">
+							<p>Titles, headings and links should be marked up with the correct HTML.</p>
+							</div>
+						</section>
+						<section>
+						<h2>Who it affects</h2>
+						<p class="left">Page titles, link context and headings affect:
+						<ul>
+							<li>Everyone, especially anyone:</li>
+							<ul><li>using assistive technology like screen readers or voice recognition</li>
+									<li>trying to skim the site or find information quickly</li>
+									<li>trying to navigate through the site quickly</li>
+									<li>who has changed their browser style sheets or display preferences</li>
+							</ul>
+ 								<li>Google and other search engines.</li> 
+							</ul>
+							</p>
+					</section>
+					<section>
+						<h2>Page titles</h2>
+							<img src="img/titles1.jpg" alt="Screenshot showing page titles in tabs and in Google search results.">
+					</section>
+					<section>
+					<section>
+						<h2 style="margin-bottom: -10px">Link context</h2>
+						<figure class="center">
+							<img src="img/linkbefore.jpg" alt="Screenshot showing page with bad link text." height="600">
+						</figure>
+					</section>
+					<section>
+						<img src="img/linkafter.jpg" alt="Screenshot showing revised page with better link text.">
+					</section>
+					</section>
+					<section>
+						<h2 style="float: left">Headings</h2>
+							<img style="float:right" src="img/words.jpg" alt="Screenshot showing page of text without headings.">
+							<aside class="notes">Show the top of the CAB Home equity release loans page. <a href="http://www.cab.org.nz/vat/money/lc/pages/homeequity.aspx">http://www.cab.org.nz/vat/money/lc/pages/homeequity.aspx</a>
+Show revised page (on laptop)</aside>
+					</section>
+					<section>
+						<h2>Example time</h2>
+						<p> VoiceOver demonstration - <a href="http://www.cab.org.nz/vat/money/lc/pages/homeequity.aspx">Home equity release loans - before</a>
+						<p><a href="https://www.airnewzealand.co.nz/plan">Air New Zealand</a></p>
+						<p><a href="https://tia.org.nz/about-tia/support-tia/">Support TIA</a></p>
+					</section>
+					<section>
+							<h1>When using your hands is an issue</h1>
+							<figure class="center">
+						<img src="img/hands.jpg" alt="Person with words One arm, Permanent; person with words Arm injury, Temporary; person with words New parent, Situational">
+						<cite><a href="https://www.microsoft.com/en-us/design/practice">Microsoft Inclusive Design Kit, CC-BY-ND-ND</a></cite>
+							</figure>
+						</section>
+						<section>
+							<img src="img/keyboard.jpg" alt="Computer keyboard.">
+							<h2>Using a keyboard</h2>
+							<div class="left">
+							<p>You should be able to do everything with a keyboard that you can do with a mouse.</p>
+							</div>
+						</section>
+						<section>
+						<h2>Who it affects</h2>
+						<p class="left">Not everyone can use a mouse to interact with your site:</p>
+						<ul>
+							<li>People who are using other parts of their body to get around the website</li>
+							<li>People who are blind and using a screen reader</li>
+							<li>People who have trouble holding or using a mouse because they might have:</li>
+							<ul>
+								<li>Arthritis</li>
+								<li>Repetitive Strain Injury</li>
+								<li>a cast on their arm, or</li>
+								<li>Parkinsons.</li>
+							</ul>
+							<li>People with a broken mouse or trackpad.</li>
+						</ul>
+					</section>
+						<section>
+						<h2>Example time</h2>
+							<p><a href="https://centralagenciesjobs.cass.govt.nz/home#main">Central agencies jobs</a></p>
+							<p><a href="http://anzacsightsound.org/">Sights and sounds</a></p>
+					</section>
+						<section>
+							<div style="float: left; width: 50%" >
+						<h2>Thanks for coming along today!</h2>
+						<h3>Any questions?</h3>
+						<p><a href="mailto:katherine.barcham@dia.govt.nz">katherine.barcham@dia.govt.nz</a> <br/><a href="https://twitter.com/kgbarcham">@kgbarcham</a></p>
+							</div>
+							<img style="float: right" src="img/crosby.jpg" alt="Dog with his head on an angle.">
+					</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
