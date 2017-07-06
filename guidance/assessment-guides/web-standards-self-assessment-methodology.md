@@ -112,7 +112,7 @@ The web developer extension for Chrome has various features to help simplify acc
 
 Once you’ve installed the extension, you can access it using the cog icon on the toolbar to the right of the address bar (shown below).
 
-![image alt text](image_0.jpg)
+![Screenshot showing Web Developer Extension in Chrome](img/chrome-wd-ext.jpg)
 
 ##### What you need to know
 
