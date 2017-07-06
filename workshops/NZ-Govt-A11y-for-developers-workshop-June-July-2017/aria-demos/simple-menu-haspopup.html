@@ -88,7 +88,7 @@
 					if ($li.hasClass("has-submenu")) {
 						var $submenu = $(".submenu", $li);
 						
-						$('a[role="button"]', $li).each(function() {
+						$("a[aria-haspopup]", $li).each(function() {
 							var $a = $(this);
 							
 							$a.on("click", function(e) {
@@ -103,7 +103,7 @@
 									closeMenus();
 								}
 							});
-							//because links have role=button, we need to also listen for spacebar
+							//because links with aria-haspopup have role=button, we need to also listen for spacebar
 							$a.on('keydown', function (e) {
 								if (e.which == 32) {
 									$a.click();
@@ -147,19 +147,19 @@
 						<a href="/he-tohu/visit">Visit</a>
 					</li>
 					<li class="has-submenu">
-						<a href="#" aria-expanded="false" role="button">About</a>
-						<ul class="submenu">
-							<li>
-								<a href="/he-tohu/about/he-whakaputanga">He Whakaputanga</a>
+						<a href="#" aria-haspopup="true" aria-expanded="false" role="button" aria-controls="menu2">About</a>
+						<ul class="submenu" role="menu" id="menu1">
+							<li role="presentation">
+								<a href="/he-tohu/about/he-whakaputanga" role="menuitem" tabindex="-1">He Whakaputanga</a>
 							</li>
-							<li>
-								<a href="/he-tohu/about/te-tiriti-o-waitangi">Te Tiriti o Waitangi</a>
+							<li role="presentation">
+								<a href="/he-tohu/about/te-tiriti-o-waitangi" role="menuitem" tabindex="-1">Te Tiriti o Waitangi</a>
 							</li>
-							<li>
-								<a href="/he-tohu/about/womens-suffrage-petition">Women's Suffrage Petition</a>
+							<li role="presentation">
+								<a href="/he-tohu/about/womens-suffrage-petition" role="menuitem" tabindex="-1">Women's Suffrage Petition</a>
 							</li>
-							<li>
-								<a href="/he-tohu/about/exhibition-and-partnerships">Exhibition and partnerships</a>
+							<li role="presentation">
+								<a href="/he-tohu/about/exhibition-and-partnerships" role="menuitem" tabindex="-1">Exhibition and partnerships</a>
 							</li>
 						</ul>
 					</li>
@@ -167,16 +167,16 @@
 						<a href="/he-tohu/events">Events</a>
 					</li>
 					<li class="has-submenu">
-						<a href="#" aria-expanded="false" role="button">Learning</a>
-						<ul class="submenu">
-							<li>
-								<a href="/he-tohu/learning/social-inquiry-resources">Social inquiry resources</a>
+						<a href="#" aria-haspopup="true" aria-expanded="false" role="button" aria-controls="menu2">Learning</a>
+						<ul class="submenu" role="menu" id="menu2">
+							<li role="presentation">
+								<a href="/he-tohu/learning/social-inquiry-resources" role="menuitem" tabindex="-1">Social inquiry resources</a>
 							</li>
-							<li>
-								<a href="/he-tohu/learning/he-rauemi">He rauemi ako mā ngā kura reo Māori</a>
+							<li role="presentation">
+								<a href="/he-tohu/learning/he-rauemi" role="menuitem" tabindex="-1">He rauemi ako mā ngā kura reo Māori</a>
 							</li>
-							<li>
-								<a href="/he-tohu/learning/school-visits">School visits</a>
+							<li role="presentation">
+								<a href="/he-tohu/learning/school-visits" role="menuitem" tabindex="-1">School visits</a>
 							</li>
 						</ul>
 					</li>
