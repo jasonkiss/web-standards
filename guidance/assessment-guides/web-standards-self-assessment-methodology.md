@@ -140,7 +140,7 @@ To use the Device Mode in Chrome:
 
 1. Open the developer tools.
 
-2. Device Mode is the second button on the left-hand side of the toolbar at the top.![image alt text](image_1.jpg)
+2. Device Mode is the second button on the left-hand side of the toolbar at the top.![Screenshot showing device mode button in Chrome](img/device-mode.jpg)
 
 3. The browser will switch into Device Mode and the web page screen size will change. 
 
@@ -150,7 +150,7 @@ To use the Device Mode in Chrome:
 
     2. Choose the device size you need.
 
-![image alt text](image_2.jpg)
+![Screenshot showing responsive menu changing to iPad device in Chrome](img/responsive-menu.jpg)
 
 [end]
 
@@ -174,7 +174,7 @@ You need to run the aXe tool on each page you test. You also need to run it for 
 
 2. Along the top line you should be able to select aXe.
 
-![image alt text](image_3.jpg) 
+![Screenshot showing location of aXe extension in Chrome](img/aXe-button.jpg) 
 
 1. Hit the "Analyze" button.
 
@@ -698,7 +698,7 @@ Outline images using the Web Developer extension as shown in Step 1.If you canâ€
 
 For example, the [Govt.nz website](https://www.govt.nz/) uses a CSS background image for the linked New Zealand Government logo in the site banner.
 
-![image alt text](image_4.png)
+![Govt.nz website with New Zealand Government logo outlined with a red box](img/gnz-css-img.jpg)
 
 1. Right-click on the image and inspect the code. The developer tools window opens and highlights an <a> element in the page.
 
@@ -708,7 +708,7 @@ For example, the [Govt.nz website](https://www.govt.nz/) uses a CSS background i
 
 4. That <div> contains a link, which youâ€™ve already inspected. Inside that <a> element is a <span> containing text that matches the text in the logo image. That text may not be visible to sighted users, but it serves as the text alternative for the CSS background image. It also serves as the link text for the link.
 
-![image alt text](image_5.png)
+![Screenshot showing source and CSS code in Inspector](img/img-inspect.jpg)
 
 ##### Alt text for CSS images
 
