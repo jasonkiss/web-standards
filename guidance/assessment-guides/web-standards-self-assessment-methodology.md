@@ -285,14 +285,16 @@ In unordered lists, the individual list items are marked up as `<li>` elements.
 
 These lists are used where the order of the list items has an impact on their meaning. They’re marked up with an `<ol>` element. Each list item in an ordered list is preceded by a number or letter. These can be arabic numerals, roman numerals, upper or lowercase letters.
 
-In ordered lists, the individual list items are marked up as `<li> elements.
+In ordered lists, the individual list items are marked up as `<li>` elements.
 
 ##### Example
 
 `<ol>`
+
 	`<li>First item in an ordered list</li>`
 	`<li>Second list item</li>`
 	`<li>The third and last item in this list</li>`
+
 `</ol>`
 
 #### Description or definition lists
@@ -803,13 +805,13 @@ To find out what captions you’ve got:
 
 [/end]
 
-8.       Check the page for a text transcript for any video or audio content. If there’s no transcript, record a failure.
+8. Check the page for a text transcript for any video or audio content. If there’s no transcript, record a failure.
 
-9.       If there’s a transcript, is it clearly labelled as being a transcript? If not, record a failure.
+9. If there’s a transcript, is it clearly labelled as being a transcript? If not, record a failure.
 
-10.   Compare the transcript with the video/audio content. Is it an accurate reflection of the meaningful audio or visual information? If not, record a failure.
+10. Compare the transcript with the video/audio content. Is it an accurate reflection of the meaningful audio or visual information? If not, record a failure.
 
-11.   Right-click and look at the page source (not the inspector):
+11. Right-click and look at the page source (not the inspector):
 
 * Do a search for "<iframe".
 
