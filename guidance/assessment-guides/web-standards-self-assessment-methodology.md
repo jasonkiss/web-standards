@@ -210,7 +210,7 @@ This will add a border around anything marked up as a heading and will show whic
 
     * act like a heading, e.g. it doesn’t introduce or describe the content after it.
 
-2. If content looks like and acts like a heading, but isn’t outlined as a heading, inspect its code to see if the heading is wrapped in a basic element like a <div> or <p> with an ARIA role="heading" and an aria-level attribute to show what level it is. For example, <p role=”heading” aria-level=”1”>About Us</p>. If it isn’t, record this as a failure.
+2. If content looks like and acts like a heading, but isn’t outlined as a heading, inspect its code to see if the heading is wrapped in a basic element like a `<div>` or `<p>` with an ARIA role="heading" and an aria-level attribute to show what level it is. For example, `<p role=”heading” aria-level=”1”>About Us</p>`. If it isn’t, record this as a failure.
 
 3. Check each heading to make sure the heading level is the appropriate given its position in the page’s content hierarchy. Otherwise, record this as a failure.
 
