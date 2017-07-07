@@ -204,17 +204,17 @@ You need to run the aXe tool on each page you test. You also need to run it for 
 
 This will add a border around anything marked up as a heading and will show which heading tag, e.g. `<h3>`, has been used.
 
-1. Record a failure if content is outlined as a heading, but doesn’t:
+3. Record a failure if content is outlined as a heading, but doesn’t:
 
     * look like a heading, e.g. it is not larger and bolder, or 
 
     * act like a heading, e.g. it doesn’t introduce or describe the content after it.
 
-2. If content looks like and acts like a heading, but isn’t outlined as a heading, inspect its code to see if the heading is wrapped in a basic element like a `<div>` or `<p>` with an ARIA role="heading" and an aria-level attribute to show what level it is. For example, `<p role=”heading” aria-level=”1”>About Us</p>`. If it isn’t, record this as a failure.
+4. If content looks like and acts like a heading, but isn’t outlined as a heading, inspect its code to see if the heading is wrapped in a basic element like a `<div>` or `<p>` with an ARIA role="heading" and an aria-level attribute to show what level it is. For example, `<p role=”heading” aria-level=”1”>About Us</p>`. If it isn’t, record this as a failure.
 
-3. Check each heading to make sure the heading level is the appropriate given its position in the page’s content hierarchy. Otherwise, record this as a failure.
+5. Check each heading to make sure the heading level is the appropriate given its position in the page’s content hierarchy. Otherwise, record this as a failure.
 
-4. Remember to resize your browser window and test at the site’s other responsive layout widths.
+6. Remember to resize your browser window and test at the site’s other responsive layout widths.
 
 ### [More information about headings]
 
@@ -222,11 +222,11 @@ Information, structure, and relationships conveyed through presentation must als
 
  A heading introduces or describes the content that follows it. It should also stand out from the rest of the page. If something looks and acts like a heading, it should be marked up as an HTML heading. Similarly, something that is marked up as an HTML heading should look and act like a heading.
 
-Headings establish a hierarchy or ranking. An <h1> has the highest ranking and <h6> has the lowest. So headings need to reflect the content hierarchy.  
+Headings establish a hierarchy or ranking. An `<h1>` has the highest ranking and `<h6>` has the lowest. So headings need to reflect the content hierarchy.  
 
 Think about whether your content is structured logically. Content structure should reflect a clear hierarchical order.
 
-Skipping heading levels, e.g. going from <h1> to <h3>, is not advised, but it is not a WCAG failure. A level 3 heading <h3> can be a subheading under a level 1 <h1> heading, because an <h3> is of a lower rank than both <h1>. But the reverse, using an <h2> as a subheading to an <h3> is considered a failure, because an <h2> is of a higher rank than an <h3>, and therefore doesn’t make sense as a subheading to an <h3>.
+Skipping heading levels, e.g. going from `<h1>` to `<h3>`, is not advised, but it is not a WCAG failure. A level 3 heading `<h3>` can be a subheading under a level 1 `<h1>` heading, because an `<h3>` is of a lower rank than both `<h1>`. But the reverse, using an `<h2>` as a subheading to an `<h3>` is considered a failure, because an `<h2>` is of a higher rank than an `<h3>`, and therefore doesn’t make sense as a subheading to an `<h3>`.
 
 Note: the heading that introduces the main content is usually the heading with the highest rank on the page, even if it isn’t the first heading on the page. Often menus or navigation items have headings and appear before the main content heading on the page. This is fine as long as they’re a lower ranked heading than the one introducing the main content.
 
@@ -243,17 +243,17 @@ Note: the heading that introduces the main content is usually the heading with t
 1. Scan the page you’re testing for content presented as a list of items.
 
 2. Open the Web Developer extension and select "Outline", and “Outline Block level elements”. 
-This will show you, among other things, all the headings, lists and tables on the page. It will also indicate which tag, e.g. <ul>, has been used to mark up each element.
+This will show you, among other things, all the headings, lists and tables on the page. It will also indicate which tag, e.g. `<ul>`, has been used to mark up each element.
 
 3. Make sure that the list uses the correct HTML markup for the type of list it is: 
 
-    * <ol> or <ul> and <li> for numbered or bulleted lists, e.g.
+    * `<ol>` or `<ul>` and `<li>` for numbered or bulleted lists, e.g.
 
-    * <dl>, <dt> and <dd> for description or definition lists, e.g.
+    * `<dl>`, `<dt>` and `<dd>` for description or definition lists, e.g.
 
 4. If the list does not use the correct HTML markup, record this as a failure.
 
-5. If the list uses the wrong list type, e.g. a sequence of steps is marked up as a <ul> instead of an <ol>, record a failure.
+5. If the list uses the wrong list type, e.g. a sequence of steps is marked up as a `<ul>` instead of an `<ol>`, record a failure.
 
 6. Remember to resize your browser window and test at the site’s other responsive layouts.
 
@@ -269,41 +269,41 @@ There are 3 types of list in HTML:
 
 #### Unordered lists
 
-These lists are used where the order of the list items doesn’t matter. They’re marked up using the <ul> element. Each list item is preceded by a simple bullet or similar. 
+These lists are used where the order of the list items doesn’t matter. They’re marked up using the `<ul>` element. Each list item is preceded by a simple bullet or similar. 
 
-In unordered lists, the individual list items are marked up as <li> elements.
+In unordered lists, the individual list items are marked up as `<li>` elements.
 
 ##### Example
 
-<ul>
+`<ul>
 	<li>An item in an unordered list</li>
 	<li>Another list item</li>
 	<li>One more item</li>
-</ul>
+</ul>`
 
 #### Ordered lists
 
-These lists are used where the order of the list items has an impact on their meaning. They’re marked up with an <ol> element. Each list item in an ordered list is preceded by a number or letter. These can be arabic numerals, roman numerals, upper or lowercase letters.
+These lists are used where the order of the list items has an impact on their meaning. They’re marked up with an `<ol>` element. Each list item in an ordered list is preceded by a number or letter. These can be arabic numerals, roman numerals, upper or lowercase letters.
 
-In ordered lists, the individual list items are marked up as <li> elements.
+In ordered lists, the individual list items are marked up as `<li> elements.
 
 ##### Example
 
-<ol>
+`<ol>
 	<li>First item in an ordered list</li>
 	<li>Second list item</li>
 	<li>The third and last item in this list</li>
-</ol>
+</ol>`
 
 #### Description or definition lists
 
-These are used for groups of terms and their descriptions or definitions, as might be found in a glossary, or a collection of questions and answers. The list is contained in a <dl> element. Each term in the group uses a <dt> element and each associated description or definition uses a <dd> element. 
+These are used for groups of terms and their descriptions or definitions, as might be found in a glossary, or a collection of questions and answers. The list is contained in a `<dl>` element. Each term in the group uses a `<dt>` element and each associated description or definition uses a `<dd>` element. 
 
 Example
 
 ##### Example
 
-<dl>
+`<dl>
 
 	<dt>browser</dt>
 
@@ -311,11 +311,11 @@ Example
 
 <dt>web</dt>
 
-		<dd>The structure spun by a [spider](https://en.wiktionary.org/wiki/spider) using silk secreted from its abdomen.</dd>
+		<dd>The structure spun by a `[spider](https://en.wiktionary.org/wiki/spider)` using silk secreted from its abdomen.</dd>
 
 		<dd>The World Wide Web hypertext system that operates over the Internet.</dd>
 
-</dl>
+</dl>`
 
 [end]
 
@@ -337,7 +337,7 @@ A data table’s column and row structure is expressed using the proper HTML mar
 
 ##### Simple tables
 
-Simple tables have one row of column headers and maybe one column of row headers as well. The easiest way to make a simple table accessible is to markup column and row headers with <th> header elements. The header content describes what each column or row of cells represents. Sometimes header cells use the scope attribute, e.g. <th scope="col"> to emphasise that the header applies to the entire column or row, but it isn’t necessary for a simple table. 
+Simple tables have one row of column headers and maybe one column of row headers as well. The easiest way to make a simple table accessible is to markup column and row headers with `<th>` header elements. The header content describes what each column or row of cells represents. Sometimes header cells use the scope attribute, e.g. `<th scope="col">` to emphasise that the header applies to the entire column or row, but it isn’t necessary for a simple table. 
 
 ###### Example of a simple table
 
@@ -360,7 +360,7 @@ Simple tables have one row of column headers and maybe one column of row headers
 </table>
 
 
-For an example of a simple table using <th> and scope attributes for both column and row headers, see the [table for the Web Accessibility Standard’s implementation schedule](https://webtoolkit.govt.nz/guidance/about-the-standards/about-the-web-accessibility-standard/#implementation). 
+For an example of a simple table using `<th>` and scope attributes for both column and row headers, see the [table for the Web Accessibility Standard’s implementation schedule](https://webtoolkit.govt.nz/guidance/about-the-standards/about-the-web-accessibility-standard/#implementation). 
 
 ##### Complex tables
 
@@ -373,12 +373,11 @@ Complex tables have multiple levels of row or column headers. Straightforward co
     <td>Departure date</td>
   </tr>
   <tr>
-    <td>Vienna</td>
+    <td rowspan="2">Vienna</td>
     <td>Hilary Bell</td>
     <td>4 October 2009</td>
   </tr>
   <tr>
-    <td></td>
     <td>Nicola Chang</td>
     <td>5 October 2009</td>
   </tr>
@@ -404,7 +403,7 @@ For tables with multi-level headers, use header and id attributes. Each header s
 
 You can also use the ARIA role rowheader or columnheader on the header cell’s element if a table uses:
 
-* <td> instead of <th>, or
+* `<td>` instead of `<th>`, or
 
 * divs and spans instead of standard HTML table markup.
 
@@ -412,11 +411,11 @@ You can also use the ARIA role rowheader or columnheader on the header cell’s 
 
 If a layout table is used, it must not include any of following HTML elements and attributes:
 
-* <th>, <thead>, <tfoot> and <caption> elements
+* `<th>`, `<thead>`, `<tfoot>` and `<caption>` elements
 
 * summary, scope or headers attributes.
 
-### If the table has any of these, the <table> element must have a role with a value of "presentation" or “none”, e.g. <table role=“presentation”>. This tells the browser and assistive technologies to ignore the table markup and just read the content as if it the table structure wasn’t there.
+### If the table has any of these, the `<table>` element must have a role with a value of "presentation" or “none”, e.g. `<table role=“presentation”>`. This tells the browser and assistive technologies to ignore the table markup and just read the content as if it the table structure wasn’t there.
 
 [/end]
 
@@ -434,25 +433,25 @@ If a layout table is used, it must not include any of following HTML elements an
 
 2. Look at the markup of its column and/or row headers. Once you record a pass you can move to the next test. Inspect the code in the header cell for any of the following:
 
-    * is marked up with a <th> element — most appropriate for simple tables
+    * is marked up with a `<th>` element — most appropriate for simple tables
 
-    * uses a <th> with a scope attribute e.g. <th scope="col”> for a column header, or <th scope="row”> for a row header — mostly used for complex tables
+    * uses a `<th>` with a scope attribute e.g. `<th scope="col”>` for a column header, or `<th scope="row”>` for a row header — mostly used for complex tables
 
     * has an id attribute, and the data cell references that id value using a headers attribute  — mostly used for complex tables
 
-    * doesn’t use <th> but instead uses the ARIA role rowheader or columnheader in the header cell element.
+    * doesn’t use `<th>` but instead uses the ARIA role rowheader or columnheader in the header cell element.
 
 3. If none of these options have been used to markup the header cell, record a failure.
 
 #### Layout tables
 
-4. If it’s a layout table, record a failure if the <table>  has any of the following:
+4. If it’s a layout table, record a failure if the `<table>`  has any of the following:
 
-    * <th>, <thead>, <tfoot> and <caption> elements
+    * `<th>`, `<thead>`, `<tfoot>` and `<caption>` elements
 
-    * a summary attribute on the <table> element
+    * a summary attribute on the `<table>` element
 
-    * scope or headers attributes on <td> elements.
+    * scope or headers attributes on `<td>` elements.
 
 5. Remember to resize your browser window and test at the site’s other responsive layouts.
 
@@ -619,8 +618,7 @@ If you happen to see this, record a failure.
   </tr>
   <tr>
     <td>The link contains an image and text that describes the link’s purpose or destination.</td>
-    <td>The alt text should be empty, i.e. alt="".
-</td>
+    <td>The alt text should be empty, i.e. alt="".</td>
   </tr>
   <tr>
     <td>The link contains an image and text, but the image has meaningful information that isn’t in the link text.</td>
@@ -659,8 +657,8 @@ The image must meet one of these criteria:
   <tr>
     <td>The image is too complex to describe with just alt text, e.g. a  chart, graph or infographic.</td>
     <td>Provide both alt text and a longer text alternative to relate the image’s meaningful information. This can be done in a number of ways:
-use a longdesc attribute that links to the description of the image, e.g. <img alt=“Alt text” longdesc=“URL to long description”>
-put the image and the long description text together in a <figure> element
+use a longdesc attribute that links to the description of the image, e.g. `<img alt=“Alt text” longdesc=“URL to long description”>`
+put the image and the long description text together in a `<figure>` element
 include the long description as text immediately following the image.</td>
   </tr>
 </table>
@@ -686,7 +684,7 @@ For complex content images, the long text alternative can be provided in a numbe
 
 ##### Finding CSS images
 
-Outline images using the Web Developer extension as shown in Step 1.If you can’t find an <img> element when you inspect the code for an image, it’s probably been added as a background image using CSS.  The easiest way to confirm this is with the Web Developer extension. 
+Outline images using the Web Developer extension as shown in Step 1.If you can’t find an `<img>` element when you inspect the code for an image, it’s probably been added as a background image using CSS.  The easiest way to confirm this is with the Web Developer extension. 
 
 1. Open the Web Developer extension and select ‘Images > Outline Background Images’.  This will add a visual border around each CSS background image on the page. 
 
@@ -700,13 +698,13 @@ For example, the [Govt.nz website](https://www.govt.nz/) uses a CSS background i
 
 ![Govt.nz website with New Zealand Government logo outlined with a red box](img/gnz-css-img.jpg)
 
-1. Right-click on the image and inspect the code. The developer tools window opens and highlights an <a> element in the page.
+1. Right-click on the image and inspect the code. The developer tools window opens and highlights an `<a>` element in the page.
 
 2. Look in the Styles panel for something that says background or background-image with a url(...) in its value. It will usually be near the top.
 
-3. The <a> element you’re currently inspecting doesn’t have a background image attached, so try inspecting its parent element, in this case the <div> containing the link. You’ll see the <div> has a background-image with a url(...) in the value, so you’ve found the right element.
+3. The `<a>` element you’re currently inspecting doesn’t have a background image attached, so try inspecting its parent element, in this case the `<div>` containing the link. You’ll see the `<div>` has a background-image with a url(...) in the value, so you’ve found the right element.
 
-4. That <div> contains a link, which you’ve already inspected. Inside that <a> element is a <span> containing text that matches the text in the logo image. That text may not be visible to sighted users, but it serves as the text alternative for the CSS background image. It also serves as the link text for the link.
+4. That `<div>` contains a link, which you’ve already inspected. Inside that `<a>` element is a `<span>` containing text that matches the text in the logo image. That text may not be visible to sighted users, but it serves as the text alternative for the CSS background image. It also serves as the link text for the link.
 
 ![Screenshot showing source and CSS code in Inspector](img/img-inspect.jpg)
 
@@ -726,7 +724,7 @@ Background images inserted using CSS should only be used for decorative images b
 
 #### Text alternatives
 
-Images that aren’t just decorative must have a text alternative that could replace the meaningful information in the image. This is called alt text and it’s usually done by using the alt attribute on the <img> element that inserted the image in the page. Decorative images have an empty alt attribute <img alt="">.
+Images that aren’t just decorative must have a text alternative that could replace the meaningful information in the image. This is called alt text and it’s usually done by using the alt attribute on the `<img>` element that inserted the image in the page. Decorative images have an empty alt attribute `<img alt="">`.
 
 People don’t always agree on what the correct alt text should be.  If you feel the alt text reasonably serves as a text replacement for the content of the image, given its surrounding context, that’s enough to pass the test.
 
@@ -818,7 +816,7 @@ To find out what captions you’ve got:
 
 11.   Right-click and look at the page source (not the inspector):
 
-* Do a search for "<iframe".
+* Do a search for "`<iframe".
 
 * If you find an iframe look for a title attribute with a descriptive name.
 
@@ -890,3 +888,4 @@ If you happen to see this, record a failure.
     <td>Usability 2.4.3 Unambiguous link on home page to website's privacy statement</td>
   </tr>
 </table>
+
