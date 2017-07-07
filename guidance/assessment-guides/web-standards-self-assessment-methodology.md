@@ -306,11 +306,15 @@ Example
 ##### Example
 
 `<dl>`
+
 `<dt>browser</dt>`
-	`<dd>A software application for navigatin information resources on the World Wide Web</dd>`
+
+	`<dd>A software application for navigating information resources on the World Wide Web</dd>`
+	
 `<dt>web</dt>`
-	`<dd>The structure spun by a `[spider](https://en.wiktionary.org/wiki/spider)` using silk secreted from its abdomen.</dd>`
+	`<dd>The structure spun by a spider using silk secreted from its abdomen.</dd>`
 	`<dd>The World Wide Web hypertext system that operates over the Internet.</dd>`
+	
 `</dl>`
 
 [end]
