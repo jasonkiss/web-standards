@@ -234,7 +234,7 @@ Note: the heading that introduces the main content is usually the heading with t
 
 ## Test 3: Lists
 
-**Impact of failure: **Failing this requirement means some people are denied important contextual information that helps them understand the content’s structure and meaning as it is shown on the page.
+**Impact of failure:** Failing this requirement means some people are denied important contextual information that helps them understand the content’s structure and meaning as it is shown on the page.
 
 **Related WCAG 2.0 success criteria:** [1.3.1 Information and Relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html).
 
@@ -275,11 +275,11 @@ In unordered lists, the individual list items are marked up as `<li>` elements.
 
 ##### Example
 
-`<ul>
-	<li>An item in an unordered list</li>
-	<li>Another list item</li>
-	<li>One more item</li>
-</ul>`
+`<ul>`
+	`<li>An item in an unordered list</li>`
+	`<li>Another list item</li>`
+	`<li>One more item</li>`
+`</ul>`
 
 #### Ordered lists
 
@@ -289,11 +289,11 @@ In ordered lists, the individual list items are marked up as `<li> elements.
 
 ##### Example
 
-`<ol>
-	<li>First item in an ordered list</li>
-	<li>Second list item</li>
-	<li>The third and last item in this list</li>
-</ol>`
+`<ol>`
+	`<li>First item in an ordered list</li>`
+	`<li>Second list item</li>`
+	`<li>The third and last item in this list</li>`
+`</ol>`
 
 #### Description or definition lists
 
@@ -303,25 +303,19 @@ Example
 
 ##### Example
 
-`<dl>
-
-	<dt>browser</dt>
-
-		<dd>A software application for navigatin information resources on the World Wide Web</dd>
-
-<dt>web</dt>
-
-		<dd>The structure spun by a `[spider](https://en.wiktionary.org/wiki/spider)` using silk secreted from its abdomen.</dd>
-
-		<dd>The World Wide Web hypertext system that operates over the Internet.</dd>
-
-</dl>`
+`<dl>`
+`<dt>browser</dt>`
+	`<dd>A software application for navigatin information resources on the World Wide Web</dd>`
+`<dt>web</dt>`
+	`<dd>The structure spun by a `[spider](https://en.wiktionary.org/wiki/spider)` using silk secreted from its abdomen.</dd>`
+	`<dd>The World Wide Web hypertext system that operates over the Internet.</dd>`
+`</dl>`
 
 [end]
 
 ## Test 4: Tables
 
-**Impact of failure: **Failing this requirement means some people won’t be able to associate table data with the row and column headers that give it context, and are consequently unable to make sense of the data.
+**Impact of failure:** Failing this requirement means some people won’t be able to associate table data with the row and column headers that give it context, and are consequently unable to make sense of the data.
 
 **Related WCAG 2.0 success criteria:** [1.3.1 Information and Relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html).
 
@@ -364,8 +358,9 @@ For an example of a simple table using `<th>` and scope attributes for both colu
 
 ##### Complex tables
 
-Complex tables have multiple levels of row or column headers. Straightforward complex tables may only need to use  the scope attribute to clarify how the column or row header cells apply to the different columns and rows. **_Example of a basic complex table_**
+Complex tables have multiple levels of row or column headers. Straightforward complex tables may only need to use  the scope attribute to clarify how the column or row header cells apply to the different columns and rows. 
 
+**_Example of a basic complex table_**
 <table>
   <tr>
     <td>Destination</td>
@@ -415,7 +410,7 @@ If a layout table is used, it must not include any of following HTML elements an
 
 * summary, scope or headers attributes.
 
-### If the table has any of these, the `<table>` element must have a role with a value of "presentation" or “none”, e.g. `<table role=“presentation”>`. This tells the browser and assistive technologies to ignore the table markup and just read the content as if it the table structure wasn’t there.
+If the table has any of these, the `<table>` element must have a role with a value of "presentation" or “none”, e.g. `<table role=“presentation”>`. This tells the browser and assistive technologies to ignore the table markup and just read the content as if it the table structure wasn’t there.
 
 [/end]
 
@@ -467,7 +462,7 @@ If you happen to see this, record a failure.
 
 **Impact of failure:** Failing this requirement means people who use a keyboard or other assistive devices instead of a mouse can’t use your site.
 
-**Related WCAG 2.0 success**** criteria:** [2.1.1 Keyboard](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html); [2.4.7 Focus Visible](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html); [2.1.2 No Keyboard Trap](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html).
+**Related WCAG 2.0 success criteria:** [2.1.1 Keyboard](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html); [2.4.7 Focus Visible](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html); [2.1.2 No Keyboard Trap](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html).
 
 ### How to test
 
@@ -608,8 +603,8 @@ If you happen to see this, record a failure.
 
 <table>
   <tr>
-    <td>Type of image link</td>
-    <td>What it needs to be accessible</td>
+    <th>Type of image link</th>
+    <th>What it needs to be accessible</th>
   </tr>
   <tr>
     <td>The link contains just the image with no surrounding words.
@@ -639,8 +634,8 @@ The image must meet one of these criteria:
 
 <table>
   <tr>
-    <td>Type of image</td>
-    <td>What it needs to be accessible</td>
+    <th>Type of image</th>
+    <th>What it needs to be accessible</th>
   </tr>
   <tr>
     <td>The image has meaningful information.</td>
@@ -657,9 +652,9 @@ The image must meet one of these criteria:
   <tr>
     <td>The image is too complex to describe with just alt text, e.g. a  chart, graph or infographic.</td>
     <td>Provide both alt text and a longer text alternative to relate the image’s meaningful information. This can be done in a number of ways:
-use a longdesc attribute that links to the description of the image, e.g. `<img alt=“Alt text” longdesc=“URL to long description”>`
-put the image and the long description text together in a `<figure>` element
-include the long description as text immediately following the image.</td>
+    * use a longdesc attribute that links to the description of the image, e.g. `<img alt=“Alt text” longdesc=“URL to long description”>`
+    * put the image and the long description text together in a `<figure>` element
+    * include the long description as text immediately following the image.</td>
   </tr>
 </table>
 
@@ -748,35 +743,35 @@ If you happen to see any of these, record a failure.
 
 ### How to test
 
-1.       Look for any video or audio content on the page.
+1. Look for any video or audio content on the page.
 
-2.   	Play the content.
+2. Play the content.
 
 #### Captions
 
-3.       If it’s a video, while it’s playing, turn on captions.
+3. If it’s a video, while it’s playing, turn on captions.
 
-4.       If there aren’t captions, check if the content is high-stakes content? If the content is high-stakes and there are no captions, record a failure.
+4. If there aren’t captions, check if the content is high-stakes content? If the content is high-stakes and there are no captions, record a failure.
 
 ##### [High-stakes content]
 
 high-stakes content is critical content that people need. Examples include content about:
 
-●        civil emergencies and responses
+ * civil emergencies and responses
 
-●        entitlement or access to benefits, education, consumer or other community protections, passports, or visas
+ * entitlement or access to benefits, education, consumer or other community protections, passports, or visas
 
-●        rights in criminal and civil proceedings
+ * rights in criminal and civil proceedings
 
-●        central government elections or referenda
+ * central government elections or referenda
 
-●        tax obligations and rebates
+ * tax obligations and rebates
 
-●        general health information, specific health advice, health and safety in employment.
+ * general health information, specific health advice, health and safety in employment.
 
 [/end]
 
-5.       If there aren’t captions and it’s not high-stakes content, was it published within the last 10 business days? If not, record a failure.
+5. If there aren’t captions and it’s not high-stakes content, was it published within the last 10 business days? If not, record a failure.
 
 ##### [Videos published in the last 10 days]
 
@@ -788,11 +783,11 @@ There is a grace period of 10 business days from the publish date to provide cap
 
 [/end]
 
-6.   	If there are captions, check they are an accurate rendition of all meaningful audio information. If not, record a failure.
+6. If there are captions, check they are an accurate rendition of all meaningful audio information. If not, record a failure.
 
 ##### [What is considered meaningful]
 
-7.       Check that you don’t have auto captions turned on. If you’ve only got auto-captions, record a failure.
+7. Check that you don’t have auto captions turned on. If you’ve only got auto-captions, record a failure.
 
 ##### [Auto captions]
 
@@ -816,7 +811,7 @@ To find out what captions you’ve got:
 
 11.   Right-click and look at the page source (not the inspector):
 
-* Do a search for "`<iframe".
+* Do a search for "<iframe".
 
 * If you find an iframe look for a title attribute with a descriptive name.
 
@@ -850,7 +845,7 @@ If you happen to see this, record a failure.
 
 ## Glossary
 
-**CSS: **Cascading Style Sheets. These are the most common way to describe how HTML elements should look on a page.
+**CSS**: Cascading Style Sheets. These are the most common way to describe how HTML elements should look on a page.
 
 **focus**: when you use the Tab key to "tab" through a web page, the browser sets keyboard “focus” to each interactive component (e.g. links, buttons, text inputs, etc). When something has focus, you’re able to interact with it using your keyboard, like pressing Enter on a link. There should also be some kind of visual focus indicator that makes it clear to sighted users which element currently has focus.
 
