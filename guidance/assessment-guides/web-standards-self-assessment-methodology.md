@@ -188,7 +188,7 @@ You need to run the aXe tool on each page you test. You also need to run it for 
 
 ## Test 2: Headings
 
-**Impact of failure: **Failing this requirement means some people are denied contextual information which helps them understand how content is structured on the page.
+**Impact of failure:** Failing this requirement means some people are denied contextual information which helps them understand how content is structured on the page.
 
 **Related WCAG 2.0 success criteria:** [1.3.1 Information and Relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html).
 
@@ -202,7 +202,7 @@ You need to run the aXe tool on each page you test. You also need to run it for 
 
     * "Outline Headings". 
 
-This will add a border around anything marked up as a heading and will show which heading tag, e.g. <h3>, has been used.
+This will add a border around anything marked up as a heading and will show which heading tag, e.g. `<h3>`, has been used.
 
 1. Record a failure if content is outlined as a heading, but doesn’t:
 
