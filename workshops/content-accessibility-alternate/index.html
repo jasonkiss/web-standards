@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>NZ Govt Content Accessibility Workshop &#8212; 2017</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night-custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1 class="title">Content Accessibility</h1>
+					<p>Katherine Barcham</p>
+					<p class="subtitle">Department of Internal Affairs</p>
+				</section>
+				<section>
+					<section>
+						<h2>Who am I thinking about?</h2>
+						<figure class="center">
+							<img src="img/verbal.jpg" alt="Person with words Non-verbal, Permanent; person with words Laryngitis, Temporary; person with words Heavy accent, Situational">
+							<cite><a href="https://www.microsoft.com/en-us/design/practice">Microsoft Inclusive Design Kit, CC-BY-ND-ND</a></cite>
+						</figure>
+					</section>
+					<section>
+						<h3 class="float">Disclaimer: I'm not a magician</h3>
+						<img src="img/magician.jpg" alt="Magician pulling a rabbit and flowers out of a hat.">
+					</section>
+				</section>
+				<section data-background="img/context.jpg" data-background-size="contain">
+					<h2 style="text-align: left;">Context</h2>
+					<p style="float: left; margin-top: 530px; font-size: 0.25em; text-indent: 50px;"><a style="color: #fff;" href="http://www.esa.int/spaceinimages/Images/2013/07/Cassini_s_Pale_Blue_Dot">Background image source</a></p>
+					<aside class="notes">All of the things I'm talking about today have to do with context. When you're making decisions about naming or describing things, you have to think about it in terms of its context. The same thing on a different page, or in a different situation will probably have a completely different set of contextual indicators.</aside>
+				</section>
+				<section>
+					<h2>Example</h2>
+					<a href="https://natlib.govt.nz/blog/">National Library blog</a>
+					<aside class="notes">Refugees img on this page is decorative. But when you click the link, then it provides context and meaning - so not decorative.</aside>
+				</section>
+				<section>
+					<h2 class="float">In the beginning...</h1>
+					<img src="img/sunrise-space.jpg" alt="">
+				</section>
+				<section>
+					<h2 style="color: #000; background-color: rgba(0,0,0,0.5); padding: 20px; margin-left: 50px;" class="float">Links</h2>
+						<img src="img/linkbefore.jpg" alt="Screenshot showing page with bad link text." height="600">
+						<aside class="notes"> Talking about the importance of link text, including front loading for screen reader 'scanners'</aside>
+				</section>
+				<section>
+					<h2>Writing good link text</h2>
+					<p class="yellow">Links should:</p>
+					<ul>
+						<li>look and be marked up consistently</li>
+						<li>be clear about where they will take the reader(!)</li>
+						<li>be descriptive</li>
+						<li>use keywords</li>						
+						<li>make sense when removed from its context.</li>
+					</ul>
+					<aside class="notes">Consistent navigation helps people understand how to move between the pages in your site. However you do them, keep them consistent.</aside>
+				</section>
+				</section>
+				<section>
+					<img src="img/linkafter.jpg" alt="Screenshot showing revised page with better link text.">
+				</section>
+				</section>
+				<section>
+					<h2>When seeing is an issue</h2>
+					<figure class="center">
+						<img src="img/blind.jpg" alt="Person with words Blind, Permanent; person with words Cataract, Temporary; person with words Distracted driver, Situational">
+						<cite><a href="https://www.microsoft.com/en-us/design/practice">Microsoft Inclusive Design Kit, CC-BY-ND-ND</a></cite>
+					</figure>
+				</section>
+				<section>
+					<img src="img/alt.jpg" alt="Warning sign with alt=warning next to it">
+					<h2>Text alternatives for images</h2>
+					<p>Anything you say with an image, also say with text.</p>
+				</section>
+				<section style="padding-bottom: 200px">
+					<h2>Who it affects</h2>
+					<ul>
+						<li>People who can't see images:</li>
+						<ul>
+							<li>vision disability</li>
+							<li>bad internet connection</li>
+							<li>old browser</li>
+							<li>limited data</li>
+						</ul>
+						<li>Search engines (Google)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Decorative or background images</h2>
+					<figure class="center">
+						<img src="img/decorative.jpg" alt="Photo of dachshund running. Words: The benefits of owning a dog. There are many benefits to owning a dog. They are fun, loyal companions.">
+						<cite><a href="https://www.flickr.com/photos/14141796@N05/5521501965">m.maddo, CC BY-SA 2.0</a></cite>
+					</figure>
+				</section>
+				<section>
+					<h2>Meaningful images</h2>
+					<figure class="center">
+						<img src="img/meaning.jpg" alt="Photo of dachshund running. Words: Chippy the hero does it again. Chippy has once again saved the life of his owner after she had a fall.">
+						<cite><a href="https://www.flickr.com/photos/14141796@N05/5521501965">m.maddo, CC BY-SA 2.0</a></cite>
+					</figure>
+				</section>
+				<section>
+					<h2>Text in images</h2>
+					<figure class="center">
+						<img src="img/textimg.jpg" alt="Photo of dachshund with word Dachshunds on top. Words underneath: Dachshunds are a popular dog breed.">
+						<cite><a href="https://www.flickr.com/photos/14141796@N05/5521501965">m.maddo, CC BY-SA 2.0</a></cite>
+					</figure>
+				</section>
+				<section>
+					<h2>Linked images</h2>
+					<figure class="center">
+						<img src="img/linkimg.jpg" alt="2 breeds of dog. Words: Pick a dog. Select a dog to see their personality traits.">
+						<cite><a href="https://www.flickr.com/photos/14141796@N05/5521501965">m.maddo, CC BY-SA 2.0</a></cite>
+					</figure>
+				</section>
+				<section>
+					<h2>Long descriptions</h2>
+					TBD - What goes in a long description
+
+
+				</section>
+				<section>
+					<h2>Example time</h2>
+					<p><a href="http://www.threenow.co.nz/tv/grand-designs-nz/home.html">TV3</a></p>
+				</section>
+				<section>
+					<h2>Captions and transcripts</h2>
+					<figure class="center">
+						<img src="img/hearing.jpg" alt="Person with words Deaf, Permanent; person with words Ear infection, Temporary; person with words Bartender, Situational">
+						<cite><a href="https://www.microsoft.com/en-us/design/practice">Microsoft Inclusive Design Kit, CC-BY-ND-ND</a></cite>
+					</figure>
+				</section>
+				<section>
+					<img src="img/charade.jpg" alt="Photo from movie with captions.">
+					<div class="left">
+					<p>Videos need captions.</p>
+					<p>Videos and audio need descriptive text transcripts.</p>
+					</div>
+				</section>
+				<section>
+					<h2>Who it affects</h2>
+					<p class="left">Videos are great for telling people things quickly but people can’t always hear the audio track, including:
+					<ul>
+						<li>People who can’t hear for any reason</li>
+						<li>People without headphones:</li>
+						<ul>
+							<li>in a noisy place</li>
+							<li>in a quiet place.</li>						   
+						</ul>
+						<li>People who might be listening to transcripts because:</li>
+						<ul>
+						<li>they can’t see the video</li>
+						<li>they’re looking at something else — like the dishes.</li>
+						</ul>
+						<li>Google and other search engines.</li>
+					</ul>
+					</p>
+				</section>
+				<section>
+					<h2>What goes in a transcript?</h2>
+						TBD - how you decide what is meaningful and needs to go into the transcript and what’s ‘decorative’.
+
+						Was going to use this example: https://practice.mvcot.govt.nz/knowledge-base-practice-frameworks/fetal-alcohol-spectrum-disorder/#null (you’ll need to expand the accordions to find the video). the transcript is just people talking. But the images at the beginning are also meaningful - alcohol and a baby.
+				</section>
+				<section>
+					<h2>Example time</h2>
+					<figure class="center">
+						<img src="img/captions.jpg" alt="Still from video with 2 astronauts. caption reads ok we did a lot of things blow up there yet two big things.">
+						<cite><a href="https://www.youtube.com/watch?v=EBCmOXmmnMI">https://www.youtube.com/watch?v=EBCmOXmmnMI </a></cite>
+					</figure>
+					<p><a href="http://www.ird.govt.nz/help/demo/cs-changing-vid/#01">Transcript (IRD)</a> <a href="http://www.cic.gc.ca/english/department/media/multimedia/video/visitcanada/visitcanada.asp">Transcript in page (Service Canada)</a></p>
+				</section>
+				<section>
+					<h2 style="font-size: 3em">Barriers for everyone</h1>
+					<figure class="center">
+						<img src="img/barriers.jpg" alt="Stick figures of 15 people representing differnet disabilities Situational">
+						<cite><a href="https://www.microsoft.com/en-us/design/practice">Microsoft Inclusive Design Kit, CC-BY-ND-ND</a></cite>
+					</figure>
+				</section>
+				<section>
+					<h2>Doing text right</h2>
+					<img src="img/pagestructure.jpg" alt="Hand-drawn wireframe of a web page showing HTML markup." height="380">
+					<div class="left">
+					<p>Headings should be marked up for structure.</p>
+					</div>
+				</section>
+				<section>
+					<h2>Who it affects</h2>
+					<p class="left">Headings affect:
+					<ul>
+						<li>Everyone, especially anyone:</li>
+						<ul><li>using assistive technology like screen readers or voice recognition</li>
+								<li>trying to skim the site or find information quickly</li>
+								<li>trying to navigate through the site quickly</li>
+								<li>who has changed their browser style sheets or display preferences</li>
+						</ul>
+								<li>Google and other search engines.</li> 
+						</ul>
+						</p>
+				</section>
+				<section>
+					<h2 style="float: left">Headings</h2>
+					<img style="float:right" src="img/words.jpg" alt="Screenshot showing page of text without headings.">
+					<aside class="notes">Show the top of the CAB Home equity release loans page. <a href="http://www.cab.org.nz/vat/money/lc/pages/homeequity.aspx">http://www.cab.org.nz/vat/money/lc/pages/homeequity.aspx</a> Show revised page (on laptop)</aside>
+				</section>
+				<section>
+					<h2>Example time</h2>
+					<p> VoiceOver demonstration - <a href="http://www.cab.org.nz/vat/money/lc/pages/homeequity.aspx">Home equity release loans - before</a>
+					<p><a href="https://www.airnewzealand.co.nz/plan">Air New Zealand</a></p>
+					<p><a href="https://tia.org.nz/about-tia/support-tia/">Support TIA</a></p>
+				</section>
+				<section>
+					<div style="float: left; width: 50%" >
+						<h2>Thanks for coming along today!</h2>
+						<h3>Any questions?</h3>
+						<p><a href="mailto:katherine.barcham@dia.govt.nz">katherine.barcham@dia.govt.nz</a> <br/><a href="https://twitter.com/kgbarcham">@kgbarcham</a></p>
+					</div>
+					<img style="float: right" src="img/crosby.jpg" alt="Dog with his head on an angle.">
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				showNotes: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
