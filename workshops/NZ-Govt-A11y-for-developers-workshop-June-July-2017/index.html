@@ -310,12 +310,29 @@
 					</div>
 				</section>
 				<section id="s21a" data-transition="zoom-in fade-out">
-					<h2>Tree of accessible objects</h2>
+					<h2>The Accessibility Tree</h2>
+					<p>A tree of <strong class="yellow">accessible objects</strong></p>
 					<figure class="center">
 						<img src="img/treestructure.jpg" alt="Diagram of a fictional accessibility tree with nodes showing different accessible objects.">
 						<cite><a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Image source</a></cite>
 					</figure>
 				</section>
+				<section id="s21b" data-transition="zoom-in fade-out">
+					<h2>Accessible object</h2>
+					<div style="border: 1px solid #fff; padding: 0.5em; margin-bottom: 1em;"><label for="email1">Your email address:</label> <input type="text" id="email1" aria-describedby="desc1" style="width: 7em; font-size: 0.75em; background-color:#0ff;"><div id="desc1" style="font-size: 0.5em; margin-top: 1em;">Your email address will never be shared.</div></div>
+					<div><pre><code class="html" data-trim> 
+&lt;label for="email"&gt;Your email address:&lt;/label&gt; 
+&lt;input type="text" id="email" aria-describedby="desc"&gt;
+&lt;div id="desc"&gt;Your email address will never be shared.&lt;/div&gt;
+					</code></pre></div>
+					<ul>
+						<li><b class="yellow">Role</b> → textbox</li>
+						<li><b class="yellow">Accessible name</b> → "Your email address:"</li>
+						<li><b class="yellow">Accessible description</b> → "Your email address will never be shared."</li>
+						<li><b class="yellow">States and properties</b>, e.g. focused, required, multi-line</li>
+						<li><b class="yellow">Value</b>, e.g. "web.standards@dia.govt.nz"</li>
+					</ul>
+				</section>			
 				<section id="s22" data-transition="zoom-in fade-out">
 					<h2>Inspecting the APIs</h2>
 					<h3 class="yellow">Windows</h3>
@@ -333,7 +350,17 @@
 						<li>Accerciser</li>
 					</ul>
 				</section>
-				<section id="s23" data-transition="zoom-in fade-out">
+				<section id="s23a" data-transition="zoom-in fade-out">
+					<h2>Turn on Chrome Accessibility Internals</h2>
+					<ol>
+						<li><a href="chrome://accessibility/">chrome://accessibility</a></li>
+						<li>Check all items under "Global accessibility mode:"</li>
+					</ol>
+					<figure class="center">
+						<img src="img/chrome-a11y-internals.png" alt="Screenshot of Chrome Accessibility Internals with all Global accessibility mode items checked.">
+					</figure>
+				</section>				
+				<section id="s23b" data-transition="zoom-in fade-out">
 					<h2>Demo: Mac Accessibility Inspector</h2>
 					<div class="float-left align-left" style="">
 						<h3 class="yellow">Types of pet</h3>
@@ -358,20 +385,11 @@
 					</div>
 					<img src="img/accessibility-inspector.png" alt="">
 				</section>	
-				<section id="s23a" data-transition="zoom-in fade-out">
-					<h2>Turn on Chrome Accessibility Internals</h2>
-					<ol>
-						<li>chrome://accessibility</li>
-						<li>Check all items under "Global accessibility mode:"</li>
-					</ol>
-					<figure class="center">
-						<img src="img/chrome-a11y-internals.png" alt="Screenshot of Chrome Accessibility Internals with all Global accessibility mode items checked.">
-					</figure>
-				</section>
-				<section id="s23b" data-transition="zoom-in fade-out">
+				
+				<section id="s24" data-transition="zoom-in fade-out">
 					<h2>Chrome Dev Tools Accessibility Experiment</h2>
 					<ol>
-						<li>chrome://flags</li>
+						<li><a href="chrome://flags">chrome://flags</a></li>
 						<li>Enable "Developer Tools experiments"</li>
 						<li>Restart Chrome</li>
 						<li>Developer Tools → Settings → Experiments → Accessibility Inspection</li>
@@ -379,31 +397,13 @@
 						<li>Inspect element → Check "Accessibility"</li>
 					</ol>
 				</section>
-				<section id="s24" data-transition="zoom-in fade-out">
-					<h2>Accessible object</h2>
-					<div style="border: 1px solid #fff; padding: 1em; margin-bottom: 1em;"><label for="sample-email">Your email address:</label> <input type="email" id="sample-email" aria-describedby="sample-email-desc" style="width: 7em; font-size: 0.75em"><div id="sample-email-desc" style="font-size: 0.5em; margin-top: 1em;">Your email address will never be shared.</div></div>
-					<ul>
-						<li><b class="yellow">Role</b>, e.g. textbox</li>
-						<li><b class="yellow">Name</b>, e.g. "Your email address:"</li>
-						<li><b class="yellow">Description</b>, e.g. "Your email address will never be shared."</li>
-						<li><b class="yellow">State</b>, e.g. focused</li>
-						<li><b class="yellow">Value</b>, e.g. "web.standards@dia.govt.nz"</li>
-					</ul>
-				</section>			
+				
 				<section id="s25">
 					<h2>What do developers need to do?</h2>
 				</section>
 				<section id="s26">
 					<div>
 						<img src="img/w3c.png" alt=""> <h2>Web Content Accessibility Guidelines (WCAG) 2.0</h2>
-					</div>
-					<div>
-						<ul>
-							<li><span class="big2 yellow">P</span>erceivable</li>
-							<li><span class="big2 yellow">O</span>perable</li>
-							<li><span class="big2 yellow">U</span>nderstandable</li>
-							<li><span class="big2 yellow">R</span>obust</li>
-						</ul>
 					</div>
 					<aside class="notes">
 						<p>The Web Content Accessible Guidelines (WCAG) 2.0 from the W3C is a collection of testable requirements for building accessible websites.</p>
@@ -461,17 +461,6 @@
 					<div class="center"><img src="img/wcag-quickref.png" alt="Screenshot of 'How to Meet WCAG 2.0' web page."></div>
 					<aside class="notes">
 						<p>Check out the quick reference guide to WCAG 2.0 techniques and failures from the W3C.</p>
-					</aside>
-				</section>
-				<section id="s31">
-					<h2>Use best practices</h2>
-					<ul class="yellow">
-						<li class="fragment">Progressive enhancement</li>
-						<li class="fragment">Responsive web design</li>
-						<li class="fragment">"Small-screen-first"</li>
-					</ul>
-					<aside class="notes">
-						<p>Follow best practices, like progressive enhancement, responsive web design, and mobile-first design.</p>
 					</aside>
 				</section>
 				<section id="s32">
