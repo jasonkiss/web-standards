@@ -12,14 +12,13 @@
 
 
 // Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
 
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #111;
 
-$mainFont: 'Open Sans', sans-serif;
+$mainFont: 'Gill Sans', 'Open Sans', sans-serif;
 $linkColor: #e7ad52;
 $linkColorHover: lighten( $linkColor, 20% );
 $headingFont: 'Futura', Impact, sans-serif;
@@ -41,14 +40,6 @@ $selectionBackgroundColor: #e7ad52;
 
 .reveal h3.subtitle, .reveal h4.subtitle {color: #e7ad52;}
 
-.reveal section img.plain, .reveal section section img, .reveal section figure img {
-  margin: 15px 0px;
-  border: #000;
-  box-shadow: none;
-	max-height: 100%;
-	max-width: 100%;
-}
-
 .reveal figure cite a:link, .reveal figure cite a:visited {
 	color: rgba(255, 255, 255, 0.8);
 }
@@ -60,7 +51,7 @@ $selectionBackgroundColor: #e7ad52;
 }
 .reveal figure img {display: block;
 }
-.reveal figure.center cite {
+.reveal cite {
 	position: absolute; 
 	left: 0; 
 	bottom: 15px; 
@@ -86,3 +77,11 @@ $selectionBackgroundColor: #e7ad52;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.reveal section img, .reveal section section img, .reveal section figure img {
+  margin: 15px 0px;
+  border: #000;
+  box-shadow: none;
+	max-height: 100%;
+	max-width: 100%;
+}
