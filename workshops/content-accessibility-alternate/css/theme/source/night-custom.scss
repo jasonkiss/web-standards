@@ -63,7 +63,6 @@ $selectionBackgroundColor: #e7ad52;
 	position: absolute;
 	left: 100px; 
 	top: 50px;
-  color: #fff
 }
 .reveal p.list  {
 	margin: 20px 0px 0px 0px;
@@ -76,6 +75,7 @@ $selectionBackgroundColor: #e7ad52;
 .reveal .yellow {color: #FFFF6B;}
 .reveal .green {color: #72FF6D;}
 .reveal .red {color: #FF3D3D;}
+.reveal .black {color: #000;}
 
 // Theme template ------------------------------
 @import "../template/theme";

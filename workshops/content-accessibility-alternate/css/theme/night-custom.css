@@ -41,8 +41,7 @@
 .reveal h3.float, .reveal h2.float {
   position: absolute;
   left: 100px;
-  top: 50px;
-  color: #fff; }
+  top: 50px; }
 
 .reveal p.list {
   margin: 20px 0px 0px 0px; }
@@ -65,6 +64,9 @@
 
 .reveal .red {
   color: #FF3D3D; }
+
+.reveal .black {
+  color: #000; }
 
 /*********************************************
  * GLOBAL STYLES
