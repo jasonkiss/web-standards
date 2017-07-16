@@ -31,6 +31,9 @@ $selectionBackgroundColor: #e7ad52;
 .reveal a {
   line-height: 1.3em;
   border-bottom: 1px solid;
+}.reveal a {
+  line-height: 1.3em;
+  border-bottom: 1px solid;
 }
 
 .reveal section h1 {
@@ -63,7 +66,6 @@ $selectionBackgroundColor: #e7ad52;
 	position: absolute;
 	left: 100px; 
 	top: 50px;
-  color: #fff
 }
 .reveal p.list  {
 	margin: 20px 0px 0px 0px;
@@ -73,6 +75,10 @@ $selectionBackgroundColor: #e7ad52;
 .middle {position: absolute; top: 50%; transform: translateY(-50%);
 }
 
+.reveal .yellow {color: #FFFF6B;}
+.reveal .green {color: #72FF6D;}
+.reveal .red {color: #FF3D3D;}
+.reveal .black {color: #000;}
 
 // Theme template ------------------------------
 @import "../template/theme";

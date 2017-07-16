@@ -9,6 +9,10 @@
   line-height: 1.3em;
   border-bottom: 1px solid; }
 
+.reveal a {
+  line-height: 1.3em;
+  border-bottom: 1px solid; }
+
 .reveal section h1 {
   line-height: 0.95em; }
 
@@ -41,8 +45,7 @@
 .reveal h3.float, .reveal h2.float {
   position: absolute;
   left: 100px;
-  top: 50px;
-  color: #fff; }
+  top: 50px; }
 
 .reveal p.list {
   margin: 20px 0px 0px 0px; }
@@ -56,6 +59,18 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%); }
+
+.reveal .yellow {
+  color: #FFFF6B; }
+
+.reveal .green {
+  color: #72FF6D; }
+
+.reveal .red {
+  color: #FF3D3D; }
+
+.reveal .black {
+  color: #000; }
 
 /*********************************************
  * GLOBAL STYLES
