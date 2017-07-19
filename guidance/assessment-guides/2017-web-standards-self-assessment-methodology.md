@@ -1,19 +1,17 @@
---- 
-layout: assessment-guide 
-title: Web Standards 2017 Self-Assessment Methodology 
+---
+layout: assessment-methodology 
+title: 2017 Web Standards Self-Assessment Methodology 
 draft: true 
 ---
 
 ## 1. Overview
 
-Blurb about the web standards and WCAG.
+<div class="ed">Blurb about the web standards and WCAG.</div>
 
 This document details what someone needs to know to conduct the 2017 Web Standards Self-Assessment. It outlines the:
 
 * tools needed and how to use them
-
 * tests required as part of the Self-Assessment
-
 * extra guidance for people less familiar with web accessibility.
 
 ### What we’re doing
@@ -29,13 +27,9 @@ These tests can't tell you if your website is fully accessible or usable. If you
 As well as using this document to conduct the 2017 Self-Assessment, organisations can also use it to:
 
 * prioritise areas to improve
-
 * report existing issues to management to get their support for training, remediation, resource allocation etc.
-
 * raise web accessibility knowledge and skills among their staff
-
 * test websites built by external companies for common accessibility issues
-
 * apply the testing process throughout a website’s development lifecycle to ensure it is continually accessible.
 
 ### Assessment results
@@ -55,11 +49,8 @@ We’re planning to review old issues and address new ones with different sets o
 If you’re doing the 2017 Web Standard Self-Assessment, you need to:
 
 * have basic knowledge HTML — enough to be able to inspect code and understand how elements are nested
-
 * use Chrome with the [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm) and [aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) extensions installed
-
 * have another browser (Internet Explorer or Firefox) for testing keyboard use.
-
 * know your website well enough to pick pages based on their content.
 
 We’ll be holding workshops to demonstrate the various testing techniques. Come along if you have questions. Someone will be there to answer any testing questions you have. If you're not sure how to use the software, bring a laptop with the software installed. We can show you how to use it and test your web pages.
@@ -75,11 +66,8 @@ Automated testing is really easy, so let’s start with the manual testing.
 The tools we’re using are the:
 
 * Chrome’s built-in developer tools — to inspect a web page’s code
-
 * Web Developer extension for Chrome — a semi-automated testing tool
-
 * Chrome Device Mode — to simulate viewport sizes, and 
-
 * aXe extension for Chrome — the automated testing tool.
 
 ### Developer tools
@@ -87,9 +75,7 @@ The tools we’re using are the:
 When you need to inspect the code, use built-in developer tools.
 
 1. As a general rule, right-click on an element in the web page.
-
 2. Select the option to inspect to open the developer tools. 
-
 3. The element you clicked on will be highlighted. 
 
 [Explore Chrome’s developer tools](https://developers.google.com/web/tools/chrome-devtools/) 
@@ -117,9 +103,7 @@ Once you’ve installed the extension, you can access it using the cog icon on t
 ##### What you need to know
 
 *  The highlighted area at the top is the menu. The Outline menu is shown.
-
 * Any selected item will have a green tick next to it.
-
 * To get rid of the pop up menu, just click in the page.
 
 ### Test with multiple viewport sizes
@@ -127,7 +111,6 @@ Once you’ve installed the extension, you can access it using the cog icon on t
 Accessibility issues that only appear on smaller screens will get picked up this way. As well as testing your pages at your browser’s normal desktop size, you also need to test at the following widths: 
 
 * 320px - the size of a small screen mobile phone like an iPhone 5 in portrait mode
-
 * 768px - roughly the size of a tablet like an iPad in portrait mode.
 
 To simulate a mobile or tablet experience on a desktop computer, you can resize your browser to approximately the size of a tablet or a smartphone. You can also use some browsers’ built-in tools, like Chrome’s Device Mode, to help with this. 
@@ -139,7 +122,6 @@ To simulate a mobile or tablet experience on a desktop computer, you can resize 
 To use the Device Mode in Chrome:
 
 1. Open the developer tools.
-
 2. Device Mode is the second button on the left-hand side of the toolbar at the top.![Screenshot showing device mode button in Chrome](img/device-mode.jpg)
 
 3. The browser will switch into Device Mode and the web page screen size will change. 
