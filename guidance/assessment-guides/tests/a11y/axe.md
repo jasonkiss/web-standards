@@ -9,16 +9,11 @@ You need to run the aXe tool on each page you test. You also need to run it for 
 
 1. Run the aXe extension in Chrome by opening the developer tools. To find them, right-click and choose inspect.
 
-2. Along the top line you should be able to select aXe.
+2. Along the top line you should be able to select aXe. (You may have to hit the >> toggle on the right of the toolbar to reveal the “aXe” option.)
+  ![Screenshot showing location of aXe extension in Chrome](../../img/aXe-button.jpg) 
+3. Hit the "Analyze" button.
+4. In the aXe summary pane, change the drop-down option from “show:all” to “show: violations”.
+6. Note down the error message text and the number of violations for that message. Paste the results in the field for desktop-size results.
+7. Resize your browser window to simulate an iPad (768x1024) and run “Analyze” again. Paste the results below in the field for tablet-size results.
+8. Finally, resize to simulate an iPhone 5 (320x568), re-run “Analyze” and paste the results in the field for phone-size results.
 
-![Screenshot showing location of aXe extension in Chrome](../../img/aXe-button.jpg) 
-
-1. Hit the "Analyze" button.
-
-2. In the left-hand pane, change "show:all" to “show: violations”.
-
-3. Record a summary of the results into the reporting tool and save them. 
-
-4. Note down the error message text and the number of violations for that message.
-
-5. Resize your browser window to simulate a mobile device and test at the site’s other responsive layout widths. If they give different results, paste the results below the earlier ones and note what screen size it was.
