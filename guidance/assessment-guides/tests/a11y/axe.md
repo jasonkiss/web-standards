@@ -11,7 +11,7 @@ You need to run the aXe tool on each page you test. You also need to run it for 
 
 2. Along the top line you should be able to select aXe.
 
-![Screenshot showing location of aXe extension in Chrome](img/aXe-button.jpg) 
+![Screenshot showing location of aXe extension in Chrome](../../img/aXe-button.jpg) 
 
 1. Hit the "Analyze" button.
 
