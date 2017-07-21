@@ -60,13 +60,20 @@ To simulate a mobile or tablet experience on a desktop computer, you could resiz
 
 To use the Device Mode in Chrome:
 
-1. Open the developer tools. 
+1. Open the developer tools.
+
 2. Device Mode is the second button on the left-hand side of the toolbar at the top of the Developer tools panel. 
+
 	![Screenshot showing device mode button in Chrome](/assets/img/device-mode.jpg)
+
 3. The browser will switch into Device Mode and the web page screen size will change.  
+
 4. Choose the viewport size you need by: 
-	1. Clicking on dropdown on the toolbar above the smaller web page. 
+
+	1. Clicking on dropdown on the toolbar above the smaller web page.
+
 		![Screenshot showing responsive menu changing to iPad device in Chrome](/assets/img/responsive-menu.jpg)
+
 	2. Choose the device size you need. 
 		
 [end]
