@@ -28,7 +28,7 @@ Note: the heading that introduces the main content is usually the heading with t
 
 	* “Outline Headings”.
 
-	This will add a border around anything marked up as a heading and will show which heading tag, e.g. `<h3>`, has been used.
+	 This will add a border around anything marked up as a heading and will show which heading tag, e.g. `<h3>`, has been used.
 
 3. Record a failure if content is outlined as a heading, but doesn’t: 
 
