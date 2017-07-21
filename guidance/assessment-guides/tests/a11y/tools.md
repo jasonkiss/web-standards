@@ -66,9 +66,9 @@ To use the Device Mode in Chrome:
 3. The browser will switch into Device Mode and the web page screen size will change.  
 4. Choose the viewport size you need by: 
 	1. Clicking on dropdown on the toolbar above the smaller web page. 
-	2. Choose the device size you need. 
 		![Screenshot showing responsive menu changing to iPad device in Chrome](/assets/img/responsive-menu.jpg)
-
+	2. Choose the device size you need. 
+		
 [end]
 
 ### aXe automated testing tool
