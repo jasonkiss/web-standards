@@ -1,6 +1,6 @@
-The 2017 Self-Assessments include some automated accessibility testing. These tests address approximately  only 25% of accessibility requirements.  Running the automated tests is really easy, so let’s start with the manual testing.
+Testing web content against the Web Accessibility Standard can be manual or automated. Automated accessibility tests address approximately only 25% of accessibility requirements. Running automated tests is generally fairly easy.
 
-The tools we’re using are:
+For manual testing, the tools we’re using are:
 
 * Chrome’s built-in developer tools — to inspect a web page’s code 
 * Web Developer extension for Chrome — a semi-automated testing tool 
