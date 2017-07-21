@@ -6,7 +6,7 @@ You need to run the aXe tool on each page you test. You also need to run it for 
 1. Run the aXe extension in Chrome by opening the developer tools. To find them, right-click and choose inspect.
 
 2. Along the top line you should be able to select aXe. (You may have to hit the >> toggle on the right of the toolbar to reveal the “aXe” option.)
-  ![Screenshot showing location of aXe extension in Chrome](img/aXe-button.jpg) 
+  ![Screenshot showing location of aXe extension in Chrome](/assets/img/aXe-button.jpg) 
 3. Hit the "Analyze" button.
 4. In the aXe summary pane, change the drop-down option from “show:all” to “show: violations”.
 6. Note down the error message text and the number of violations for that message. Paste the results in the field for desktop-size results.
