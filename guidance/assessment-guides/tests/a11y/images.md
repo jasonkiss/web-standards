@@ -1,5 +1,3 @@
-## Images
-
 **Impact of failure:** Failing this requirement means that users who can’t see non text content, like images, diagrams and charts, can’t get access to the information contained there.
 
 **Related WCAG 2.0 success criteria:** [1.1.1 Non-text content](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html); [4.1.2 Name, role, value](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html).
@@ -112,7 +110,7 @@ Outline images using the Web Developer extension as shown in Step 1.If you can�
 
 For example, the [Govt.nz website](https://www.govt.nz/) uses a CSS background image for the linked New Zealand Government logo in the site banner.
 
-![Govt.nz website with New Zealand Government logo outlined with a red box](img/gnz-css-img.jpg)
+![Govt.nz website with New Zealand Government logo outlined with a red box](/assets/img/gnz-css-img.jpg)
 
 1. Right-click on the image and inspect the code. The developer tools window opens and highlights an `<a>` element in the page.
 
@@ -122,7 +120,7 @@ For example, the [Govt.nz website](https://www.govt.nz/) uses a CSS background i
 
 4. That `<div>` contains a link, which you’ve already inspected. Inside that `<a>` element is a `<span>` containing text that matches the text in the logo image. That text may not be visible to sighted users, but it serves as the text alternative for the CSS background image. It also serves as the link text for the link.
 
-![Screenshot showing source and CSS code in Inspector](img/img-inspect.jpg)
+![Screenshot showing source and CSS code in Inspector](/assets/img/img-inspect.jpg)
 
 ##### Alt text for CSS images
 

@@ -1,5 +1,3 @@
-## Keyboard use
-
 **What you need:** Don’t use Chrome or Safari for this test — those browsers may add their own visible indication of keyboard focus.
 
 **Impact of failure:** Failing this requirement means people who use a keyboard or other assistive devices instead of a mouse can’t use your site.

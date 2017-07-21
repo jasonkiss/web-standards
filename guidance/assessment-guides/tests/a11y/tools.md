@@ -1,5 +1,3 @@
-## Tools for testing
-
 The Web Accessibility Standard Test Suite includes some automated testing, which can test about 25% of accessibility requirements.
 
 Automated testing is really easy, so let’s start with the manual testing.
@@ -39,7 +37,7 @@ The web developer extension for Chrome has various features to help simplify acc
 
 Once you’ve installed the extension, you can access it using the cog icon on the toolbar to the right of the address bar (shown below).
 
-![Screenshot showing Web Developer Extension in Chrome](img/chrome-wd-ext.jpg)
+![Screenshot showing Web Developer Extension in Chrome](/assets/img/chrome-wd-ext.jpg)
 
 ##### What you need to know
 
@@ -63,7 +61,7 @@ To simulate a mobile or tablet experience on a desktop computer, you can resize 
 To use the Device Mode in Chrome:
 
 1. Open the developer tools.
-2. Device Mode is the second button on the left-hand side of the toolbar at the top.![Screenshot showing device mode button in Chrome](img/device-mode.jpg)
+2. Device Mode is the second button on the left-hand side of the toolbar at the top.![Screenshot showing device mode button in Chrome](/assets/img/device-mode.jpg)
 
 3. The browser will switch into Device Mode and the web page screen size will change. 
 
@@ -73,4 +71,4 @@ To use the Device Mode in Chrome:
 
     2. Choose the device size you need.
 
-![Screenshot showing responsive menu changing to iPad device in Chrome](img/responsive-menu.jpg)
+![Screenshot showing responsive menu changing to iPad device in Chrome](/assets/img/responsive-menu.jpg)

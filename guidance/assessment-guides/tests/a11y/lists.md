@@ -1,5 +1,3 @@
-## Lists
-
 **Impact of failure:** Failing this requirement means some people are denied important contextual information that helps them understand the content’s structure and meaning as it is shown on the page.
 
 **Related WCAG 2.0 success criteria:** [1.3.1 Information and Relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html).

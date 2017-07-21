@@ -1,5 +1,3 @@
-## Tables
-
 **Impact of failure:** Failing this requirement means some people won’t be able to associate table data with the row and column headers that give it context, and are consequently unable to make sense of the data.
 
 **Related WCAG 2.0 success criteria:** [1.3.1 Information and Relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html).
