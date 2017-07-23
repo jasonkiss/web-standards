@@ -1,4 +1,8 @@
-<div class="ed">This test needs some work: it should be a standalone test with instructions for making full use of the aXe results. It's only for the purposes of the annual self-assessment that we only want the aXe issue summary.</div> 
+<div class="ed" markdown="1">
+
+**This test needs some work.** It should be a standalone test with instructions for making full use of the aXe results. It's only for the purposes of the annual self-assessment that we only want the aXe issue summary.
+
+</div> 
 
 You need to run the aXe tool on each page you test. You also need to run it for each viewport because different responsive designs may present different accessibility errors.
 

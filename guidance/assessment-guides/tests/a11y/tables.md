@@ -40,7 +40,9 @@ For an example of a simple table using `<th>` and `scope` attributes for both co
 
 ##### Complex tables
 
-<div class="ed">This section under review.</div>
+<div class="ed" markdown="1">
+This section under review.
+</div>
 
 Complex tables have multiple levels of row or column headers. 
 

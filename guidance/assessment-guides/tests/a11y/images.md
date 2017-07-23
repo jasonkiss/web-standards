@@ -14,7 +14,9 @@ For complex content images, the long text alternative can be provided in a numbe
 
 #### CSS Background images
 
-<div class="ed">Brief description of use of CSS to add content and decorative images.</div>
+<div class="ed" markdown="1">
+Brief description of use of CSS to add content and decorative images.
+</div>
 
 ##### [Finding CSS images]
 
@@ -42,7 +44,9 @@ Background images inserted using CSS should only be used for decorative images b
 
 [end]
 
-<div class="ed">Need examples!</div>
+<div class="ed" markdown="1">
+Need examples!
+</div>
 
 [end]
 
