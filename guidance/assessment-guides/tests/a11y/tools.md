@@ -35,7 +35,7 @@ The web developer extension for Chrome has various features to help simplify acc
 
 Once you’ve installed the extension, you can access it using the cog icon on the toolbar to the right of the address bar (shown below).
 
-![Screenshot showing Web Developer Extension in Chrome](/assets/img/chrome-wd-ext.jpg)
+![Screenshot showing Web Developer Extension in Chrome](http://govtnz.github.io/web-standards/assets/img/chrome-wd-ext.jpg)
 
 #### What you need to know
 
@@ -64,7 +64,7 @@ To use the Device Mode in Chrome:
 
 2. Device Mode is the second button on the left-hand side of the toolbar at the top of the Developer tools panel. 
 
-	![Screenshot showing device mode button in Chrome](/assets/img/device-mode.jpg)
+	![Screenshot showing device mode button in Chrome](http://govtnz.github.io/web-standards/assets/img/device-mode.jpg)
 
 3. The browser will switch into Device Mode and the web page screen size will change.  
 
@@ -72,7 +72,7 @@ To use the Device Mode in Chrome:
 
 	1. Clicking on dropdown on the toolbar above the smaller web page.
 
-		![Screenshot showing responsive menu changing to iPad device in Chrome](/assets/img/responsive-menu.jpg)
+		![Screenshot showing responsive menu changing to iPad device in Chrome](http://govtnz.github.io/web-standards/assets/img/responsive-menu.jpg)
 
 	2. Choose the device size you need. 
 		
