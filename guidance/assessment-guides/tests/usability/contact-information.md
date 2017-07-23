@@ -5,7 +5,7 @@
 
 <div class="details" markdown="1">
 
-### What are the contact information requirements?
+#### What are the contact information requirements?
 
 The website must link to a web page (“Contact Us Page”) that provides contact information for obtaining help related to the Website or for contacting the New Zealand Government organisation responsible for the website.
 
@@ -23,7 +23,7 @@ To enable even more points of contact with the organisation responsible for the 
 
 </div>
 
-### How to test
+#### How to test
 
 1. Check that a visible link to a "Contact Us Page" is present on the home page, and that it is clear from the link’s text that its target is the Contact Us Page for the Website. If there is such a link, skip to step 3.
 

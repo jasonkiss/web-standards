@@ -5,7 +5,7 @@
 
 <div class="details" markdown="1">
 
-### What information should be on the home page?
+#### What information should be on the home page?
 
 The Website’s home page must include:
 
@@ -19,7 +19,7 @@ Consistent with the [All-of-Government Brand Policy and Guidelines](http://www.s
 
 </div>
 
-### How to test
+#### How to test
 
 1.	Open the Website’s home page.
 2.	Check that the name or logo of the responsible organisation is present on the home page. If it isn't, record a failure.

@@ -4,31 +4,61 @@ title: Web Accessibility Standard Test Suite
 draft: true 
 ---
 
+<div class="details" markdown="1">
+
+## Overview
+
 The following are tests that anyone can perform with any web content to get an indication of certain common and significant accessibility issues as defined in the Web Accessibility Standard.
 
+</div>
+
+<div class="details" markdown="1">
 ## Tools you need for testing
 {% include_relative tests/a11y/tools.md %}
+</div>
 
-## Test 1: Run the aXe automated testing tool
+<div class="details" markdown="1">
+## Tests
+</div>
+
+<div class="details" markdown="1">
+### Test 1: Run the aXe automated testing tool
 {% include_relative tests/a11y/axe.md %}
+</div>
 
-## Test 2: Headings
+<div class="details" markdown="1">
+### Test 2: Headings
 {% include_relative tests/a11y/headings.md %}
+</div>
 
-## Test 3: Lists
+<div class="details" markdown="1">
+### Test 3: Lists
 {% include_relative tests/a11y/lists.md %}
+</div>
 
-## Test 4: Tables
+<div class="details" markdown="1">
+### Test 4: Tables
 {% include_relative tests/a11y/tables.md %}
+</div>
 
-## Test 5: Keyboard
+<div class="details" markdown="1">
+### Test 5: Keyboard
 {% include_relative tests/a11y/keyboard.md %}
+</div>
 
-## Test 6: Images
+<div class="details" markdown="1">
+### Test 6: Images
 {% include_relative tests/a11y/images.md %}
+</div>
 
-## Test 7: Captions and transcripts
+<div class="details" markdown="1">
+### Test 7: Captions and transcripts
 {% include_relative tests/a11y/captions-transcripts.md %}
+</div>
 
-## Glossary
+<div class="details" markdown="1">
+### Glossary
 {% include_relative glossary/a11y-terms.md %}
+</div>
+
+</div>

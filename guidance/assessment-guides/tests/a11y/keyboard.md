@@ -6,7 +6,7 @@
 
 <div class="details" markdown="1">
 
-### What you should know about keyboard
+#### What you should know about keyboard
 
 The keyboard is one of the more fundamental assistive devices because many other assistive technologies translate their commands into what are effectively keyboard commands. This means that a keyboard accessible website has a better chance of being usable with assistive technologies.
 
@@ -20,7 +20,7 @@ Also remember that unlike screen readers, you won’t see focus move to everythi
 
 </div>
 
-### How to test
+#### How to test
 
 Basic keyboard testing is easy. You’ll mostly use the <kbd>Tab</kbd>, <kbd>Enter</kbd> and arrow keys, as well as the <kbd>Space</kbd> key.
 
@@ -30,17 +30,17 @@ You need to test keyboard use for any type of content on your page. Not all the 
 
 1. Starting in the address bar, use the <kbd>Tab</kbd> key to move through the page. Use <kbd>Shift-Tab</kbd> if you need to move backwards.  
 
-#### Visible focus 
+##### Visible focus 
 
 1. While you move through the page, make sure you can see where the current focus is. Record a failure of visible focus if you can’t see anything. If it’s there but hard to see, just note it in the report.  
 
-#### Links and buttons
+##### Links and buttons
 
 1. Use the <kbd>Tab</kbd> to move to every link and press <kbd>Enter</kbd>.  Use the browser’s back button to go back to the previous page. Record a failure of keyboard functionality if the link doesn’t work with the <kbd>Enter</kbd> key.
 
 2. Use the <kbd>Tab</kbd> to move to each button and press the <kbd>Space</kbd> key. Check that the button performs the same action as when clicked on with a mouse. If you can’t activate the button with the <kbd>Space</kbd> key, record this as a failure of keyboard functionality.  
 
-#### Popup boxes
+##### Popup boxes
 
 1. If a popup box (sometimes known as a modal dialog or lightbox) appears, check that you can do the following: 
     1. easily move around the box  
@@ -53,7 +53,7 @@ You need to test keyboard use for any type of content on your page. Not all the 
 
 <div class="details" markdown="1">
 
-##### More about Popup boxes
+###### More about Popup boxes
 
 Modal or lightboxes are meant to stop the user from doing anything else on the page until they’ve finished with the box. An example is an image gallery lightbox — while viewing the images, the page content behind it is not available.
 
@@ -61,7 +61,7 @@ Typically the rest of the page will be partly dimmed to show that mouse users ca
 
 </div>
 
-#### Videos and carousels
+##### Videos and carousels
 
 1. Check that you can use the keyboard to control things like videos, carousels, sliders. Record a failure of keyboard functionality where you can’t. 
 
@@ -74,7 +74,7 @@ Typically the rest of the page will be partly dimmed to show that mouse users ca
         * use the keyboard to set focus to and activate each of its controls? 
         * switch between its panels? 
 
-#### Forms
+##### Forms
 
 1. Check that you can use the keyboard to complete a form. Record a failure of keyboard functionality where you can’t.If your page has a form, can you use the: 
     * <kbd>Tab</kbd> key to get to each form field? 
@@ -86,11 +86,11 @@ Typically the rest of the page will be partly dimmed to show that mouse users ca
     * up/down arrow keys to choose from drop-down options? 
     * enter key to submit the form? 
 
-#### Retest at other viewports
+##### Retest at other viewports
 
 1. Remember to resize your browser window and test at the site’s other viewports if there is any change page content or layout. 
 
-#### Other failure points 
+##### Other failure points 
 
 If you happen to see this, record a failure.
 

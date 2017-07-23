@@ -4,7 +4,7 @@
 
 <div class="details" markdown="1">
 
-### What you should know about headings
+#### What you should know about headings
 
 Information, structure, and relationships conveyed through presentation must also be reflected with proper HTML markup.
 
@@ -20,7 +20,7 @@ Note: the heading that introduces the main content is usually the heading with t
 
 </div>
 
-### How to test
+#### How to test
 
 1. If you have device mode on or the developer tools still open, close them.
 

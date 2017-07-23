@@ -1,6 +1,6 @@
 <div class="details" markdown="1">
 
-### What you should know about lists
+#### What you should know about lists
 
 There are 3 types of list in HTML:
 
@@ -8,13 +8,13 @@ There are 3 types of list in HTML:
 * ordered lists 
 * description or definition lists.  
 
-#### Unordered lists
+##### Unordered lists
 
 These lists are used where the order of the list items doesn’t matter. They’re marked up using the `<ul>` element. Each list item is preceded by a simple bullet or similar. 
 
 In unordered lists, the individual list items are marked up as `<li>` elements.
 
-##### Example
+###### Example
 
 ```html
 <ul>
@@ -24,7 +24,7 @@ In unordered lists, the individual list items are marked up as `<li>` elements.
 </ul>
 ```
 
-##### Ordered lists
+###### Ordered lists
 
 These lists are used where the order of the list items has an impact on their meaning. They’re marked up with an `<ol>` element. Each list item in an ordered list is preceded by a number or letter. These can be arabic numerals, roman numerals, upper or lowercase letters.
 
@@ -40,7 +40,7 @@ In ordered lists, the individual list items are marked up as `<li>` elements.
 </ol>
 ```
 
-##### Description or definition lists
+###### Description or definition lists
 
 These are used for groups of terms and their descriptions or definitions, as might be found in a glossary, or a collection of questions and answers. The list is contained in a `<dl>` element. Each term in the group uses a `<dt>` element and each associated description or definition uses a `<dd>` element. 
 
@@ -57,7 +57,7 @@ These are used for groups of terms and their descriptions or definitions, as mig
 </dl>
 ```
 
-##### Nested lists
+###### Nested lists
 
 Sometimes one or more list items (`<li>`...`</li>`) can contain another list. The nested list can be any type of list. In these cases the nested list is marked up as a complete list within the `<li>`...`</li>` of the parent list item.
 
@@ -77,7 +77,7 @@ Sometimes one or more list items (`<li>`...`</li>`) can contain another list. Th
 
 </div>
 
-### How to test
+#### How to test
 
 1. Scan the page you’re testing for content presented as a list of items. 
 

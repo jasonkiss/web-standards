@@ -4,7 +4,7 @@
 
 <div class="details" markdown="1">
 
-### What you should know about images and alt text
+#### What you should know about images and alt text
 
 Images that aren’t just decorative must have a text alternative that could replace the meaningful information in the image. This is called alt text and it’s usually done by using the alt attribute on the `<img>` element that inserted the image in the page. Decorative images have an empty alt attribute `<img alt="">`.
 
@@ -14,15 +14,15 @@ Every meaningful image in a page needs a short (~150 characters) alt text. Compl
 
 For complex content images, the long text alternative can be provided in a number of ways. An image’s long text alternative is supposed to be programmatically associated with the image, so that machines can tell they are related. This can be done in several ways, but for the purpose of this methodology, it is sufficient if a suitable long text alternative is available on the same page immediately next to its associated image, or on another web page clearly linked to from the image or a link next to the image.
 
-#### CSS Background images
+<div class="details" markdown="1">
+
+##### CSS Background images
 
 <div class="ed" markdown="1">
 Brief description of use of CSS to add content and decorative images.
 </div>
 
-<div class="details" markdown="1">
-
-##### Finding CSS images
+###### Finding CSS images
 
 Outline images using the Web Developer extension as shown in Step 1.If you can’t find an `<img>` element when you inspect the code for an image, it’s probably been added as a background image using CSS.  The easiest way to confirm this is with the Web Developer extension. 
 
@@ -54,7 +54,7 @@ Need examples!
 
 </div>
 
-### How to test
+#### How to test
 
 1. Find all the images in the content of the page. The easiest way to do this is to:
 
@@ -140,7 +140,7 @@ Need examples!
 
 2. Check for any images that contain meaningful information but haven’t been outlined. 
 
-### Other failure points
+#### Other failure points
 
 If you happen to see any of these, record a failure.
 

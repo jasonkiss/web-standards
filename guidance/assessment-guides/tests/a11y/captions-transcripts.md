@@ -4,13 +4,13 @@
 
 <div class="details" markdown="1">
 
-### What you should know about captions and transcripts
+#### What you should know about captions and transcripts
 
-#### Captions
+##### Captions
 
 Videos need captions, sometimes called subtitles.  Captions provide a text version of what people are hearing on video or audio content.
 
-#### Descriptive text transcript
+##### Descriptive text transcript
 
 Video and audio content needs a descriptive text transcript. 
 
@@ -24,13 +24,13 @@ A transcript allows a:
 
 </div>
 
-### How to test
+#### How to test
 
 1. Look for any video or audio content on the page.
 
 2. Play the content.
 
-#### Captions
+##### Captions
 
 3. If it’s a video, while it’s playing, turn on captions.
 
@@ -38,7 +38,7 @@ A transcript allows a:
 
 	 <div class="details" markdown="1">
 
-	 <h5>High-stakes content</h5>
+	 <h6>High-stakes content</h6>
 
 	 High-stakes content is critical content that people need. Examples include content about:
 
@@ -60,7 +60,7 @@ A transcript allows a:
 
 	 <div class="details" markdown="1">
 
-	 <h5>Videos published in the last 10 days</h5>
+	 <h6>Videos published in the last 10 days</h6>
 
 	 There is a grace period of 10 business days from the publish date to provide captions. To find out when it was published:
 
@@ -76,7 +76,7 @@ A transcript allows a:
 
 	 <div class="details" markdown="1">
 
-	 <h5>Auto captions</h5>
+	 <h6>Auto captions</h6>
 
 	 Don’t rely on auto-captions — they often don’t reflect what’s actually being said because of the differences in people’s ways of speaking. Automatic captions aren’t accessible because they’re not accurate enough. Captions in the specific language need to be listed.
 
@@ -104,7 +104,7 @@ A transcript allows a:
 
 * If the iframe doesn’t have one, record a failure for WCAG 4.1.2 (Name, role, value).
 
-### Other failure points
+#### Other failure points
 
 If you happen to see this, record a failure.
 

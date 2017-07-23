@@ -4,9 +4,9 @@
 
 <div class="details" markdown="1">
 
-### What you should know about tables
+#### What you should know about tables
 
-#### Data tables
+##### Data tables
 
 You have a data table if you need column headers and/or row headers to explain what the information in the cell means.
 
@@ -14,7 +14,7 @@ Otherwise it’s a layout table (see below).
 
 A data table’s column and row structure is expressed using the proper HTML markup.
 
-##### Simple tables
+###### Simple tables
 
 Simple tables have one row of column headers and maybe one column of row headers as well. The easiest way to make a simple table accessible is to markup column and row headers with `<th>` header elements. The header content describes what each column or row of cells represents. Sometimes header cells use the scope attribute, e.g. `<th scope=“col”>` to emphasise that the header applies to the entire column (or `<th scope=“row”>` for a row header), but it isn’t necessary for a simple table. 
 
@@ -40,7 +40,7 @@ Simple tables have one row of column headers and maybe one column of row headers
 
 For an example of a simple table using `<th>` and `scope` attributes for both column and row headers, see the [table for the Web Accessibility Standard’s implementation schedule](https://webtoolkit.govt.nz/guidance/about-the-standards/about-the-web-accessibility-standard/#implementation). 
 
-##### Complex tables
+###### Complex tables
 
 <div class="ed" markdown="1">
 This section under review.
@@ -73,7 +73,7 @@ Complex tables have multiple levels of row or column headers.
 
 A table like this need additional markup to be accessible. Straightforward complex tables may only need to use the `scope` attribute to clarify how the column or row header cells apply to the different columns and rows. 
 
-##### More complicated tables
+###### More complicated tables
 
 These can still be made accessible if you use:
 
@@ -90,7 +90,7 @@ You can also use the ARIA `rowheader` or `columnheader` role on the header cell�
 * `<div>` and `<span>` elements instead of standard HTML table markup. 
 **
 
-##### Layout tables
+###### Layout tables
 
 If a layout table is used, it must not include any of following HTML elements and attributes:
 
@@ -101,13 +101,13 @@ If the table has any of these, the `<table>` element must have a `role` attribut
 
 </div>
 
-### How to test
+#### How to test
 
 1. Scan the page you’re testing for tables. 
 2. For each table, decide if it’s a data table or a layout table. 
 3. Inspect the source code associated with each table. 
 
-#### Data tables
+##### Data tables
 
 1. Look at each data table. Is it simple or complex? 
 2. Look at the markup of its column and/or row headers. Once you record a pass you can move to the next test. Inspect the code in the header cell for any of the following: 
@@ -118,7 +118,7 @@ If the table has any of these, the `<table>` element must have a `role` attribut
 
 3. If none of these options have been used to markup the header cell, record a failure. 
 
-#### Layout tables
+##### Layout tables
 
 1. If it’s a layout table, record a failure if the `<table>`  has any of the following: 
 	* `<th>`, `<thead>`, `<tfoot>` and `<caption>` elements 
@@ -127,7 +127,7 @@ If the table has any of these, the `<table>` element must have a `role` attribut
 
 2. Remember to resize your browser window and test at the site’s other viewports if there is any change in page content or layout. 
 
-#### Other failure points
+##### Other failure points
 
 If you happen to see this, record a failure.
 
