@@ -2,6 +2,8 @@
 
 **Related WCAG 2.0 success criteria:** [1.3.1 Information and Relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html).
 
+<div class="details" markdown="1">
+
 ### What you should know about tables
 
 #### Data tables
@@ -97,7 +99,7 @@ If a layout table is used, it must not include any of following HTML elements an
 
 If the table has any of these, the `<table>` element must have a `role` attribute with a value of “presentation” or “none”, e.g. `<table role=“presentation”>`. This tells the browser and assistive technologies to ignore the table markup and just read the content as if it the table structure wasn’t there.
 
-[/end]
+</div>
 
 ### How to test
 

@@ -1,4 +1,6 @@
-### [What you should know about lists]
+<div class="details" markdown="1">
+
+### What you should know about lists
 
 There are 3 types of list in HTML:
 
@@ -72,7 +74,8 @@ Sometimes one or more list items (`<li>`...`</li>`) can contain another list. Th
 	<li>One more item</li>
 </ul>
 ```
-[end]
+
+</div>
 
 ### How to test
 

@@ -2,7 +2,9 @@
 
 **Related WCAG 2.0 success criteria:** [1.1.1 Non-text content](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html); [4.1.2 Name, role, value](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html).
 
-### [What you need to know about images and alt text]
+<div class="details" markdown="1">
+
+### What you should know about images and alt text
 
 Images that aren’t just decorative must have a text alternative that could replace the meaningful information in the image. This is called alt text and it’s usually done by using the alt attribute on the `<img>` element that inserted the image in the page. Decorative images have an empty alt attribute `<img alt="">`.
 
@@ -18,11 +20,13 @@ For complex content images, the long text alternative can be provided in a numbe
 Brief description of use of CSS to add content and decorative images.
 </div>
 
-##### [Finding CSS images]
+<div class="details" markdown="1">
 
-Outline images using the Web Developer extension as shown in Step 1.If you can’t find an &lt;img&gt; element when you inspect the code for an image, it’s probably been added as a background image using CSS.  The easiest way to confirm this is with the Web Developer extension. 
+##### Finding CSS images
 
-1. Open the Web Developer extension and select ‘Images &gt; Outline Background Images’.  This will add a visual border around each CSS background image on the page.  
+Outline images using the Web Developer extension as shown in Step 1.If you can’t find an `<img>` element when you inspect the code for an image, it’s probably been added as a background image using CSS.  The easiest way to confirm this is with the Web Developer extension. 
+
+1. Open the Web Developer extension and select ‘Images > Outline Background Images’.  This will add a visual border around each CSS background image on the page.  
 2. For each background image outlined on the page, inspect the code for the element to which the CSS background image is attached. 
 3. Once you find it, look for the text alternative in the code. 
 
@@ -30,25 +34,25 @@ Outline images using the Web Developer extension as shown in Step 1.If you can�
 
 For example, the [Govt.nz website](https://www.govt.nz/) uses a CSS background image for the linked New Zealand Government logo in the site banner.
 
-1. Right-click on the image and inspect the code. The developer tools window opens and highlights an &lt;a&gt; element in the page. 
+1. Right-click on the image and inspect the code. The developer tools window opens and highlights an `<a>` element in the page. 
 2. Look in the Styles panel for something that says background or background-image with a url(...) in its value. It will usually be near the top. 
-3. The &lt;a&gt; element you’re currently inspecting doesn’t have a background image attached, so try inspecting its parent element, in this case the &lt;div&gt; containing the link. You’ll see the &lt;div&gt; has a background-image with a url(...) in the value, so you’ve found the right element. 
-4. That &lt;div&gt; contains a link, which you’ve already inspected. Inside that &lt;a&gt; element is a &lt;span&gt; containing text that matches the text in the logo image. That text may not be visible to sighted users, but it serves as the text alternative for the CSS background image. It also serves as the link text for the link. 
+3. The `<a>` element you’re currently inspecting doesn’t have a background image attached, so try inspecting its parent element, in this case the `<div>` containing the link. You’ll see the `<div>` has a `background-image` property with a "url(...)"" in the value, so you’ve found the right element. 
+4. That `<div>` contains a link, which you’ve already inspected. Inside that `<a>` element is a `<span>` containing text that matches the text in the logo image. That text may not be visible to sighted users, but it serves as the text alternative for the CSS background image. It also serves as the link text for the link. 
 
 ###### Alt text for CSS images 
 
 Background images inserted using CSS should only be used for decorative images because you can’t yet put alt text on one. If they convey meaningful information they must have a text alternative near where the image appears. There are a number of ways to do this:
 
 - Add text but hide it offscreen so it isn’t visible, but is available to a screen reader user. 
-- Assign the element that has the CSS image a role of image (role=“img”) and use an aria-label attribute for the alt text. 
+- Assign the element that has the CSS image a `role` of `img` (`role="img"`) and use an `aria-label` attribute for the alt text. 
 
-[end]
+</div>
 
 <div class="ed" markdown="1">
 Need examples!
 </div>
 
-[end]
+</div>
 
 ### How to test
 

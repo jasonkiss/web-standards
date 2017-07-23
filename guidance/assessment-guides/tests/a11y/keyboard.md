@@ -4,7 +4,9 @@
 
 **Related WCAG 2.0 success criteria:** [2.1.1 Keyboard](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html); [2.4.7 Focus Visible](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html); [2.1.2 No Keyboard Trap](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html).
 
-### [What you need to know about keyboard]
+<div class="details" markdown="1">
+
+### What you should know about keyboard
 
 The keyboard is one of the more fundamental assistive devices because many other assistive technologies translate their commands into what are effectively keyboard commands. This means that a keyboard accessible website has a better chance of being usable with assistive technologies.
 
@@ -16,11 +18,11 @@ Depending on backgrounds and the style of the focus indicator, it can sometimes 
 
 Also remember that unlike screen readers, you won’t see focus move to everything on the page. Items that you can’t interact with, like headings or body text, don’t take keyboard focus. But items like forms, links, carousel controls, buttons, videos, dialog boxes do need interaction, so when they get keyboard focus, it should be visible to users.
 
-[/end]
+</div>
 
 ### How to test
 
-Basic keyboard testing is easy. You’ll mostly use the <kbd>Tab</kbd>, <kbd>Enter</kbd> and arrow keys, as well as the <kbd>Space</kbd> 
+Basic keyboard testing is easy. You’ll mostly use the <kbd>Tab</kbd>, <kbd>Enter</kbd> and arrow keys, as well as the <kbd>Space</kbd> key.
 
 [WebAIM: More detailed keyboard testing](http://webaim.org/techniques/keyboard/#testing)
 
@@ -49,22 +51,24 @@ You need to test keyboard use for any type of content on your page. Not all the 
 
 3. If the box is a modal or lightbox, make sure your tabbing is being restricted to the box. If you tab past the last item in the box, focus needs to loop to the beginning of the box. Record a failure of keyboard functionality if the keyboard focus continues on in the background, then close the box and keep testing. 
 
-#### [More about Popup boxes]
+<div class="details" markdown="1">
+
+##### More about Popup boxes
 
 Modal or lightboxes are meant to stop the user from doing anything else on the page until they’ve finished with the box. An example is an image gallery lightbox — while viewing the images, the page content behind it is not available.
 
 Typically the rest of the page will be partly dimmed to show that mouse users can’t click on anything outside the box. Keyboard focus should also be trapped within the box, and all content outside it should be unavailable to user interaction, including via assistive technologies like screen readers.
 
-[/end]
+</div>
 
 #### Videos and carousels
 
 1. Check that you can use the keyboard to control things like videos, carousels, sliders. Record a failure of keyboard functionality where you can’t. 
 
     * If your page has an embedded video, can you: 
-        - get to the video with the <kbd>Tab</kbd> key? 
-        - use each control in the player using some combination of <kbd>Enter</kbd>, <kbd>Space</kbd>, or arrow keys?  
-        - use the <kbd>Tab</kbd> key to move past the video player and down to any focusable elements that follow it? 
+        * get to the video with the <kbd>Tab</kbd> key? 
+        * use each control in the player using some combination of <kbd>Enter</kbd>, <kbd>Space</kbd>, or arrow keys?  
+        * use the <kbd>Tab</kbd> key to move past the video player and down to any focusable elements that follow it? 
 
     * If the page contains a carousel, can you: 
         * use the keyboard to set focus to and activate each of its controls? 
@@ -73,14 +77,14 @@ Typically the rest of the page will be partly dimmed to show that mouse users ca
 #### Forms
 
 1. Check that you can use the keyboard to complete a form. Record a failure of keyboard functionality where you can’t.If your page has a form, can you use the: 
-    - <kbd>Tab</kbd> key to get to each form field? 
-    - arrow keys in a group of radio buttons to change which radio button is selected? 
-    - <kbd>Space</kbd> key to check or uncheck a checkbox?  
-    - date picker/calendar widget by: 
-        - navigating the day, week, month and year using the <kbd>Tab</kbd> and/or arrow keys? 
-        - select a specific date with the <kbd>Enter</kbd> or <kbd>Space</kbd> keys? 
-    - up/down arrow keys to choose from drop-down options? 
-    - enter key to submit the form? 
+    * <kbd>Tab</kbd> key to get to each form field? 
+    * arrow keys in a group of radio buttons to change which radio button is selected? 
+    * <kbd>Space</kbd> key to check or uncheck a checkbox?  
+    * date picker/calendar widget by: 
+        * navigating the day, week, month and year using the <kbd>Tab</kbd> and/or arrow keys? 
+        * select a specific date with the <kbd>Enter</kbd> or <kbd>Space</kbd> keys? 
+    * up/down arrow keys to choose from drop-down options? 
+    * enter key to submit the form? 
 
 #### Retest at other viewports
 
@@ -90,4 +94,4 @@ Typically the rest of the page will be partly dimmed to show that mouse users ca
 
 If you happen to see this, record a failure.
 
-- Focus disappears from an element just as or right after it receives visible focus.
+* Focus disappears from an element just as or right after it receives visible focus.

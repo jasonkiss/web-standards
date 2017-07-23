@@ -1,3 +1,6 @@
+//convert all containers with class="details" to details/summary
+$(document).ready(function(){	
+
 	//test for native <details> support
 	function supports_details(){
 		return('open' in document.createElement('details'));
@@ -52,4 +55,13 @@
 			}}
 		);
 	}
-
+//get all containers with class="details"
+	var $allDetails = $('.details');
+	//for each details container
+	$allDetails.each(function() {
+		$details = $(this);
+		$summary = $details.find(">:first-child").wrap('<summary></summary>');
+		$details.wrapInner('<details></details>');
+	});
+	details();
+});

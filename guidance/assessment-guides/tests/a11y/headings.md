@@ -2,7 +2,9 @@
 
 **Related WCAG 2.0 success criteria:** [1.3.1 Information and Relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html).
 
-### [What you should know about headings]
+<div class="details" markdown="1">
+
+### What you should know about headings
 
 Information, structure, and relationships conveyed through presentation must also be reflected with proper HTML markup.
 
@@ -16,7 +18,7 @@ Skipping heading levels, e.g. going from `<h1>` to `<h3>`, is not advised, but i
 
 Note: the heading that introduces the main content is usually the heading with the highest rank on the page (usually an `<h1>`), even if it isn’t the first heading on the page. Often menus or navigation items have headings and appear before the main content heading on the page. This is fine as long as they’re a lower ranked heading than the one introducing the main content.
 
-[end]
+</div>
 
 ### How to test
 

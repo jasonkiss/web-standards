@@ -52,9 +52,9 @@ You’ll be asked to run some tests at desktop, as well as other screen resoluti
 
 To simulate a mobile or tablet experience on a desktop computer, you could resize your browser to approximately the size of a tablet or a smartphone. But it’s easier to use built-in tools like Chrome’s Device Mode to help with this. 
 
-#### [Using Chrome’s Device Mode]
+<div class="details" markdown="1">
 
-[Using Chrome's Device Mode to simulate mobile devices](https://developers.google.com/web/tools/chrome-devtools/device-mode/)
+#### Using Chrome’s Device Mode
 
 (For more information, see [Using Chrome's Device Mode to simulate mobile devices](https://developers.google.com/web/tools/chrome-devtools/device-mode/).)
 
@@ -76,7 +76,7 @@ To use the Device Mode in Chrome:
 
 	2. Choose the device size you need. 
 		
-[end]
+</div>
 
 ### aXe automated testing tool
 

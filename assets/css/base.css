@@ -2,6 +2,12 @@ body {
 	font: 1em/1.4 sans-serif;
 	margin: 0;
 }
+h1 {font-size: 2.25em;}
+h2 {font-size: 1.875em; margin-top: 2em; padding-top: 10px; text-shadow: 2px 2px 2px #ccc;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.125em;}
+h5 {font-size: 0.875em;}
+h6 {font-size: 0.75em;}
 header, footer, nav, main, article, section, aside {display: block;}
 code, kbd {font-size: 1.2em; color: #000;}
 code{background-color: #ffffee;}
@@ -13,6 +19,20 @@ thead th {background-color: #254a66; color: #fff; text-align: center;}
 tbody th {background-color: #ddd; color: #333; text-align: left;}
 td, td img {vertical-align: top;} 
 dt {font-size: 1.2em; font-style: normal; font-weight: bold;}
+blockquote {background-color: #eaeaea; padding: 0.3125em; margin-left: 0;}
+blockquote footer {margin-top: 1em;}
+details, summary {display: block;}
+details {background-color: #f5f5f5; border: 1px solid #ccc; margin: 5px; padding: 0.5em;}
+details details {background-color: #e5e5e5;}
+details.h2 {margin: 0.25em 0;}
+summary h2, summary h3, summary h4, summary h5 {display: inline;}
+summary h3, summary h4, summary h5 {font-size: 1.125em;}
+summary {padding: 0.25em 0.25em 0.25em 2em; background: #fff url(../img/rightArrow.png) no-repeat 0.5em center;}
+summary::-webkit-details-marker {display: none;}
+details[open] > summary {background-image: url(../img/downArrow.png);}
+summary:hover, summary:focus, details[open] summary:hover, details[open] summary:focus {background-color: #eee;}
+.detailsContent {display: none;}
+details[open] .detailsContent {display: block;}
 header {background: #000;}
 header .site-name {color: #fff; font-size: 2em; padding: 10px;} 
 nav.main, nav.bc {padding: 0 0 1em;}
@@ -34,3 +54,6 @@ footer .nz-govt {float: left; margin-bottom: 1em;}
 footer .dia {float: right; margin-bottom: 1em;}
 footer .dia img {display: block;}
 footer .copyright {clear: both;}
+
+.ed {border: 1px solid #f00; padding: 0.625em; font-style: italic;}
+.ed:before {content: "Ed.: ";}
