@@ -24,6 +24,8 @@ blockquote footer {margin-top: 1em;}
 details, summary {display: block;}
 details {background-color: #f5f5f5; border: 1px solid #ccc; margin: 5px; padding: 0.5em;}
 details details {background-color: #e5e5e5;}
+details details details {background-color: #d5d5d5;}
+details details details details {background-color: #f5f5f5;}
 summary h2, summary h3, summary h4, summary h5 {display: inline;}
 summary h4, summary h5 {font-size: 1.125em;}
 summary {padding: 0.25em 0.25em 0.25em 2em; background: #fff url(../img/rightArrow.png) no-repeat 0.5em center;}
