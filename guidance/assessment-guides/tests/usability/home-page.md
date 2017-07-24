@@ -7,9 +7,9 @@
 
 #### What information should be on the home page?
 
-The Website’s home page must include:
+The website’s home page must include:
 
-* the name and/or logo of the New Zealand Government organisation primarily responsible for the Website.
+* the name and/or logo of the New Zealand Government organisation primarily responsible for the website.
 
 * a visible link to newzealand.govt.nz or www.govt.nz.
 
@@ -21,6 +21,8 @@ Consistent with the [All-of-Government Brand Policy and Guidelines](http://www.s
 
 #### How to test
 
-1.	Open the Website’s home page.
-2.	Check that the name or logo of the responsible organisation is present on the home page. If it isn't, record a failure and note the reason.
-3. 	Check that a visible (image or text) link to newzealand.govt.nz or www.govt.nz is present on the home page. If it isn't, record a failure and note the reason.
+1. Open the website’s home page.
+
+2. Check that the name or logo of the responsible organisation is present on the home page. If it isn't, record a failure and note the reason.
+
+3. Check that a visible (image or text) link to newzealand.govt.nz or www.govt.nz is present on the home page. If it isn't, record a failure and note the reason.
