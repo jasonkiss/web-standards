@@ -31,8 +31,8 @@ The following are tests that anyone can perform with any website to test against
 <div class="details" markdown="1">
 
 ### 3. Copyright
+{% include_relative tests/usability/copyright.md %}
 
-TBD
 </div>
 
 <div class="details" markdown="1">
@@ -52,8 +52,8 @@ TBD
 <div class="details" markdown="1">
 
 ### 6. Printable web pages
+{% include_relative tests/usability/printable-web-pages.md %}
 
-TBD
 </div>
 
 </div>
