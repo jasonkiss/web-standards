@@ -18,7 +18,7 @@ th {font-weight: bold;}
 thead th {background-color: #254a66; color: #fff; text-align: center;}
 tbody th {background-color: #ddd; color: #333; text-align: left;}
 td, td img {vertical-align: top;} 
-dt {font-size: 1.2em; font-style: normal; font-weight: bold;}
+dt {font-size: 1.2em; font-style: normal; font-weight: bold; margin-top: 1em;}
 blockquote {background-color: #eaeaea; padding: 0.3125em; margin-left: 0;}
 blockquote footer {margin-top: 1em;}
 details, summary {display: block;}
