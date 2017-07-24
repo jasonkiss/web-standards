@@ -1,11 +1,11 @@
 
-**Impact of failure:** Failing these requirements means people who print web pages get different information than those who view it online.
+**Impact of failure:** Failing these requirements means people who print web pages might find them difficult to read or illegible.
 
 **Related Web Usability Standard requirements:** [2.6 Printable web pages](https://webtoolkit.govt.nz/standards/web-usability-standard/#printable).
 
 <div class="details" markdown="1">
 
-#### What are the requirements for printed web pages?
+#### What are the requirements for printable web pages?
 
 Each web page’s main content must be printable on standard sheets of paper. 
 
@@ -45,4 +45,4 @@ It is also recommended, but not required, that text content print by default as 
 
 	If these are on the printed copy of the page, record a failure, note the cause in the comments field and move to the next test.
 
-4. **_[Optional]_** Try and print out the page in colour, using the settings on the printer. If the stylesheet does not print out in black and white by default, record a failure, note the cause in the comments field.
+4. **_[Optional]_** Try to print the page in colour, using the printer's settings. If the page's text content does not print out in black and white by default, record a failure, and note the cause in the comments field.
