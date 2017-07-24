@@ -35,7 +35,7 @@ The website's licensing terms should align with New Zealand Government Open Acce
 
 #### How to test
 
-1. Review the home page for a visible link to a "General Copyright Statement".  Make sure that the link’s text clearly indicates that it's going to the website's General Copyright Statement.  If there's no link, or if the link text isn't clear, record a failure, note the cause in the comments field and move onto the next test
+1. Review the home page for a visible link to a General Copyright Statement.  Make sure that the link’s text clearly indicates that it's going to the website's General Copyright Statement.  If there's no link, or if the link text isn't clear, record a failure, note the cause in the comments field and move onto the next test.
 
 2. Check that the website includes a link to a web page that includes a General Copyright Statement about the copyright status of the website's content. Note: This link may or may not be present on the website’s home page. If the site doesn't link to such a page, record a failure, note the cause in the comments field and move on to the next test.
 
@@ -47,7 +47,7 @@ The website's licensing terms should align with New Zealand Government Open Acce
 
 	* sets out the licensing terms under which the website’s material can be re-used by others. 
 
-Otherwise, record a failure.
+Otherwise record a failure, note the cause in the comments field, and move onto the next test.
 
 4. Review the website for third party copyright material. If the website has any, check that the General Copyright Statement (or a statement near each item) states:
 
