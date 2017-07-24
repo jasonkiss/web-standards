@@ -72,11 +72,12 @@ The following are tests that anyone can perform with any web content to get an i
 
 </div>
 
+</div>
+
 <div class="details" markdown="1">
 
-### Glossary
+## Glossary
 {% include_relative glossary/a11y-terms.md %}
 
 </div>
 
-</div>

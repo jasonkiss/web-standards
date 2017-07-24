@@ -100,64 +100,91 @@ For each of these content types, aim to identify at least a couple of pages with
 </div>
 
 <div class="details" markdown="1">
+
 ## 4. Tools you need for testing
 {% include_relative tests/a11y/tools.md %}
+
 </div>
 
 <div class="details" markdown="1">
+
 ## 5. Web Accessibility Standard Tests
 
 <div class="details" markdown="1">
+
 ### Test 1: Run the aXe automated testing tool
 {% include_relative tests/a11y/axe.md %}
+
+
 </div>
 
 <div class="details" markdown="1">
+
 ### Test 2: Headings
 {% include_relative tests/a11y/headings.md %}
+
 </div>
 
 <div class="details" markdown="1">
+
 ### Test 3: Lists
 {% include_relative tests/a11y/lists.md %}
+
 </div>
 
 <div class="details" markdown="1">
+
 ### Test 4: Tables
 {% include_relative tests/a11y/tables.md %}
+
 </div>
 
 <div class="details" markdown="1">
+
 ### Test 5: Keyboard
 {% include_relative tests/a11y/keyboard.md %}
+
 </div>
 
 <div class="details" markdown="1">
+
 ### Test 6: Images
 {% include_relative tests/a11y/images.md %}
+
 </div>
 
 <div class="details" markdown="1">
+
 ### Test 7: Captions and transcripts
 {% include_relative tests/a11y/captions-transcripts.md %}
-</div>
 
-<div class="details" markdown="1">
-### Glossary
-{% include_relative glossary/a11y-terms.md %}
 </div>
 
 </div>
 
 <div class="details" markdown="1">
+
 ## 6. Web Usability Standard Tests
 
 <div class="details" markdown="1">
+
 ### Home page
 {% include_relative tests/usability/home-page.md %}
+
 </div>
 
 <div class="details" markdown="1">
+
 ### Contact information
 {% include_relative tests/usability/contact-information.md %}
+
+</div>
+
+</div>
+
+<div class="details" markdown="1">
+
+## Glossary
+{% include_relative glossary/a11y-terms.md %}
+
 </div>
