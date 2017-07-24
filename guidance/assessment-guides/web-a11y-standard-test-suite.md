@@ -23,8 +23,6 @@ The following are tests that anyone can perform with any web content to get an i
 
 ## Tests
 
-</div>
-
 <div class="details" markdown="1">
 
 ### Test 1: Run the aXe automated testing tool
