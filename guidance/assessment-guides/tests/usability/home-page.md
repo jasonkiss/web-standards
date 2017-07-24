@@ -22,5 +22,5 @@ Consistent with the [All-of-Government Brand Policy and Guidelines](http://www.s
 #### How to test
 
 1.	Open the Website’s home page.
-2.	Check that the name or logo of the responsible organisation is present on the home page. If it isn't, record a failure.
-3. 	Check that a visible (image or text) link to newzealand.govt.nz or www.govt.nz is present on the home page. If it isn't, record a failure.
+2.	Check that the name or logo of the responsible organisation is present on the home page. If it isn't, record a failure and note the reason.
+3. 	Check that a visible (image or text) link to newzealand.govt.nz or www.govt.nz is present on the home page. If it isn't, record a failure and note the reason.

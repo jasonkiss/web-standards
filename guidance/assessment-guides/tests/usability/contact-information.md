@@ -25,13 +25,13 @@ To enable even more points of contact with the organisation responsible for the 
 
 #### How to test
 
-1. Check that a visible link to a "Contact Us Page" is present on the home page, and that it is clear from the link’s text that its target is the Contact Us Page for the Website. If there is such a link, skip to step 3.
+1. Check that a visible link to a "Contact Us Page" is present on the home page, and that it is clear from the link’s text that its target is the Contact Us Page for the Website. If there is such a link, skip to step 3. Otherwise, record a failure, noting the reason.
 
-2. Review the website. Check that the website includes a link to a web page that provides contact information for obtaining help related to the site or for contacting the NZ Government organisation responsible for it. Note: This check may require some familiarity with the Website. If the site doesn't link to such a page, record a failure and move on to the next test.
+2. Review the website. Check that the website includes a link to a web page that provides contact information for obtaining help related to the site or for contacting the NZ Government organisation responsible for it. Note: This check may require some familiarity with the Website. If the site doesn't link to such a page, record a failure, noting the reason, and move on to the next test.
 
 3. Check that it is clear, from the content of the Contact Us Page, that the contact information on that page relates to the website. Otherwise, record a failure.
 
-4. Check that the Contact Us Page includes, and otherwise record a failure.:
+4. Check that the Contact Us Page includes, and otherwise record a failure, noting the reason.:
 
 	 * the address of an email account that is regularly monitored by the Website’s responsible organisation;
 
@@ -39,7 +39,7 @@ To enable even more points of contact with the organisation responsible for the 
 
 	 * a regularly monitored postal address. 
 
-5. **_[Optional]_** Check that the Contact Us Page includes:
+5. **_[Optional]_** Check that the Contact Us Page includes, and otherwise record a failure, noting the reason:
 
 	 * the number of a monitored telephone line;
 
