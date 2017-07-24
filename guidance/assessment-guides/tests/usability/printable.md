@@ -43,6 +43,6 @@ It is also recommended, but not required, that text content print by default as 
 
 	* search form.
 
-If these are on the printed copy of the page, record a failure, note the cause in the comments field and move to the next test.
+	If these are on the printed copy of the page, record a failure, note the cause in the comments field and move to the next test.
 
 4. **_[Optional]_** Try and print out the page in colour, using the settings on the printer. If the stylesheet does not print out in black and white by default, record a failure, note the cause in the comments field.
