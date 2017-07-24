@@ -37,16 +37,23 @@ TBD
 
 <div class="details" markdown="1">
 
-### 3. Privacy
+### 4. Privacy
 {% include_relative tests/usability/privacy.md %}
 
 </div>
 
 <div class="details" markdown="1">
 
-### 3. Links to non-HTML files
+### 5. Links to non-HTML files
 {% include_relative tests/usability/links-to-non-HTML-files.md %}
 
+</div>
+
+<div class="details" markdown="1">
+
+### 6. Printable web pages
+
+TBD
 </div>
 
 </div>
