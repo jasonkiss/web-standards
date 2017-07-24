@@ -42,4 +42,18 @@ TBD
 
 </div>
 
+<div class="details" markdown="1">
+
+### 3. Links to non-HTML files
+{% include_relative tests/usability/links-to-non-HTML-files.md %}
+
+</div>
+
+</div>
+
+<div class="details" markdown="1">
+
+## Glossary
+{% include_relative glossary/usability-terms.md %}
+
 </div>
