@@ -220,4 +220,6 @@ Attach these plans to your Self-Assessment results and return them to [web.stand
 ## 8. Glossary
 {% include_relative glossary/a11y-terms.md %}
 
+{% include_relative glossary/usability-terms.md %}
+
 </div>
