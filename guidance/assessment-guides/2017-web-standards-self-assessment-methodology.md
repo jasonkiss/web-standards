@@ -168,15 +168,41 @@ For each of these content types, aim to identify at least a couple of pages with
 
 <div class="details" markdown="1">
 
-### Home page
+### 1. Home page
 {% include_relative tests/usability/home-page.md %}
+
+</div>
+<div class="details" markdown="1">
+
+### 2. Contact information
+{% include_relative tests/usability/contact-information.md %}
+
+</div>
+<div class="details" markdown="1">
+
+### 3. Copyright
+{% include_relative tests/usability/copyright.md %}
 
 </div>
 
 <div class="details" markdown="1">
 
-### Contact information
-{% include_relative tests/usability/contact-information.md %}
+### 4. Privacy
+{% include_relative tests/usability/privacy.md %}
+
+</div>
+
+<div class="details" markdown="1">
+
+### 5. Links to non-HTML files
+{% include_relative tests/usability/links-to-non-HTML-files.md %}
+
+</div>
+
+<div class="details" markdown="1">
+
+### 6. Printable web pages
+{% include_relative tests/usability/printable-web-pages.md %}
 
 </div>
 
