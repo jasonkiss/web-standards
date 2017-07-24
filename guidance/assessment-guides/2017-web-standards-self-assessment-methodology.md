@@ -205,7 +205,7 @@ Next review which of the pages you tested recorded the worst results (column ###
 * Do they suggest opportunities for better educating content publishers? 
 * Do they suggest opportunities for content (or web sites) that could be due for retirement?
 
-The Web Standards team at DIA can help Public Service departments undertake this evaluation: contact [web.standards@dia.govt.nz](mailto:web.standards@dia.govt.nz) if you want assistance.
+The Web Standards team at DIA can help Public Service departments undertake this evaluation. Contact [web.standards@dia.govt.nz](mailto:web.standards@dia.govt.nz) if you want assistance.
 
 ### Report you plans
 
