@@ -184,7 +184,40 @@ For each of these content types, aim to identify at least a couple of pages with
 
 <div class="details" markdown="1">
 
-## Glossary
+## 7. Reporting back
+
+<div class="ed">
+Check this with RM for consideration in agency ICT maturity assessment.
+</div>
+
+### Consider your risk
+
+After you've completed the Self-Assessment spreadsheet, identify the tests that recorded the most failures (Row #### of the results spreadsheet). Review those failures and consider what risk your agency is exposed to as a result of those impacts. Read more about [Web Standards risk assessment](https://webtoolkit.govt.nz/guidance/testing-and-assessment/web-standards-risk-assessment/). 
+
+* How would you accommodate individuals or groups impacted by those failures, if you were required to? 
+* Do you need to escalate any risks to your management team, or update any risk registers that your agency maintains? 
+* Does your risk assessment suggest areas where your agency's web strategy or content publishing processes might need to be improved or reviewed?
+
+### Areas for improvement
+Next review which of the pages you tested recorded the worst results (column ### of the results spreadsheet). 
+
+* Do they suggest that there is any areas of content (or web sites) that could be better served by migration to a more appropriate platform or channel? 
+* Do they suggest opportunities for better educating content publishers? 
+* Do they suggest opportunities for content (or web sites) that could be due for retirement?
+
+The Web Standards team at DIA can help Public Service departments undertake this evaluation: contact [web.standards@dia.govt.nz](mailto:web.standards@dia.govt.nz) if you want assistance.
+
+### Report you plans
+
+As of 01 July 2017, all publicly available web pages owned by Public Service departments and Non-Public Service departments in the State Services are expected to fully meet the Web Accessibility and Web Usability Standards. Based on your self-assessment results and review, what plans does your agency's Chief Information Officer or similar have for addressing risks and opportunities, and for improving your agency's web presence with regard to the Web Standards?
+
+Attach these plans to your Self-Assessment results and return them to [web.standards@dia.govt.nz](mailto:web.standards@dia.govt.nz).
+
+</div>
+
+<div class="details" markdown="1">
+
+## 8. Glossary
 {% include_relative glossary/a11y-terms.md %}
 
 </div>
