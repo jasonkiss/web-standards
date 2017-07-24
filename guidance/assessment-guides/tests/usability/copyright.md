@@ -1,7 +1,7 @@
 
 **Impact of failure:** Failing these requirements means people can’t easily read the website's copyright information.
 
-**Related Web Usability Standard requirements:** [2.3 Copyright](https://webtoolkit.govt.nz/standards/web-usability-standard/#contact).
+**Related Web Usability Standard requirements:** [2.3 Copyright](https://webtoolkit.govt.nz/standards/web-usability-standard/#copyright).
 
 <div class="details" markdown="1">
 
